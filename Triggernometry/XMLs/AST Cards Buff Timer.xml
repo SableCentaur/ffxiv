@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedTrigger Enabled="true" IsReadme="True" Name="Cards Timer" Id="906dccee-4dbb-4147-977c-617de89d2c30" RegularExpression="\[.{14}15:[A-Z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):[0-9A-F]{4}:(?&lt;card&gt;(The Spear|The Balance|The Arrow|The Bole|The Ewer|The Spire|Lord Of Crowns|Lady Of Crowns)):[0-9A-F]{8}:(?&lt;name&gt;[A-Za-z']+ [A-Za-z']+)" Description="About:&#xD;&#xA;This trigger displays what cards you have played on party members, and the duration remaining for the buff on each card played, for the purpose of being able to see how long a card has left without needing to target the player it was placed on.&#xD;&#xA;The trigger is configured for a party list displayed at 100% size. If you have set your HUD to display the party list at a different size, the spacing of the icons may not be correct for you.&#xD;&#xA;This trigger is based on Illidra Ethorn's Swiftcast trigger.&#xD;&#xA;NOTE: This trigger will NOT work correctly with Triggernometry version 1.1.3.1 due to a bug with the party order list in the latest version. Please downgrade to 1.1.3.0.&#xD;&#xA;This trigger also will only work when the game language is set to English.&#xD;&#xA;&#xD;&#xA;Setup:&#xD;&#xA;1. Open the &quot;Move me!&quot; action and use the &quot;visual guide for placement&quot; button to move the icons next to your party list where you want the buff icons to show, then right click the image and click Save changes.&#xD;&#xA;- The image will initially be placed in the top left corner of your left-most monitor.&#xD;&#xA;- If you can't find the image, use Alt+F4 to exit the visual guide placement so you can move it manually by changing the values in the X and Y location expressions and clicking &quot;Test action&quot;.&#xD;&#xA;- Do NOT edit the location positions for any action other than the &quot;Move me!&quot; action, or the trigger will not work correctly.&#xD;&#xA;&#xD;&#xA;2. Ensure your party order settings in Triggernometry match your party order in game.&#xD;&#xA;Triggernometry party order settings may be found in Options &gt; Edit Configuration &gt; Final Fantasy XIV in the Triggernometry tab.&#xD;&#xA;Party order settings in Final Fantasy XIV may be found in System &gt; Character Configuration &gt; UI Settings (left tab) &gt; Party List (right tab) &gt; Role Sort Settings (button at the bottom).">
+    <Actions>
+      <Action OrderNumber="1" AuraName="ast.cardanchor" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid%20Buffs/AST/Small/moveme.png" AuraXIniExpression="0" AuraYIniExpression="0" AuraWIniExpression="30" AuraHIniExpression="312" AuraOIniExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" Description="Move me!" DescriptionOverride="True">
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Action>
+      <Action OrderNumber="2" AuraOp="DeactivateAura" AuraName="ast.${name}.card" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Action>
+      <Action OrderNumber="3" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="ast.${name}.cardcounter" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Action>
+      <Action OrderNumber="4" AuraName="ast.${name}.card" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/AST/Small/${card}.png" AuraXIniExpression="${_imageaura[ast.cardanchor].x}" AuraYIniExpression="${_imageaura[ast.cardanchor].y}+40*(${_ffxivparty[${name}].order}-1)" AuraWIniExpression="24" AuraHIniExpression="32" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="50" DebugLevel="Verbose">
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Action>
+      <Action OrderNumber="5" TextAuraEffect="Bold" TextAuraFontSize="11.25" TextAuraName="ast.${name}.cardcounter" TextAuraExpression="${numeric:15-${_since}}" TextAuraXIniExpression="${_imageaura[ast.cardanchor].x}-5" TextAuraYIniExpression="${_imageaura[ast.cardanchor].y}+40*(${_ffxivparty[${name}].order}-1)" TextAuraWIniExpression="32" TextAuraHIniExpression="32" TextAuraOIniExpression="100" TextAuraTTLTickExpression="15-${_since}" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="50">
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Action>
+    </Actions>
+    <Condition Enabled="true" Grouping="And">
+      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${name}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+      <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+    </Condition>
+    <Conditions />
+  </ExportedTrigger>
+</TriggernometryExport>
