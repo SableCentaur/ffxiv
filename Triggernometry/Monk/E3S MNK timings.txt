@@ -1,0 +1,33 @@
+:07 RoF
+:09 Brotherhood
+
+	1:29 untargetable
+	1:45 targetable
+
+		Delay margins: 17 seconds
+1:47 RoF	2:04
+1:51 Brotherhood
+
+3:18 RoF	3:35
+3:22 Brotherhood
+
+4:46 untargetable
+5:07 targetable
+
+		Delay margins: 49 s
+
+5:09 RoF	5:58
+5:13 Brotherhood
+
+6:45 RoF	7:34
+6:49 Brotherhood
+
+~6:52 lb3 is out
+
+8:16 RoF	9:05
+8:20 Brotherhood
+
+9:47 RoF	10:36
+9:51 Brotherhood
+
+11:00 enrage
