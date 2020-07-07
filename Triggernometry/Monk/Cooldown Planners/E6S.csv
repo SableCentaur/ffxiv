@@ -1,36 +1,36 @@
 ﻿Timestamp,Ability,Wait Time-E6S
 -12,Riddle Of Earth,
 -1,True North,11
-0:37,Mantra,38
-0:40,Feint,3
-0:50,Riddle Of Earth,10
-1:10,True North,20
-1:45,True North,35
-1:50,Riddle Of Earth,5
-2:39,Mantra,49
-2:48,Feint,9
-2:50,True North,2
-2:50,Riddle Of Earth,0
-3:10,True North,20
-3:52,Riddle Of Earth,42
-4:09,Mantra,17
-4:24,Feint,15
-4:39,True North,15
-4:49,True North,10
-5:05,Riddle Of Earth,16
-5:55,True North,50
-6:00,Feint,5
-6:05,Riddle Of Earth,5
-6:17,Mantra,12
-6:47,True North,30
-7:23,Riddle Of Earth,36
-7:23,True North,0
-7:42,True North,19
-7:55,Feint,13
-8:09,Mantra,14
-8:23,Riddle Of Earth,14
-8:59,True North,36
-9:30,Feint,31
-9:33,Riddle Of Earth,3
-10:08,True North,35
+00:37,Mantra,38
+00:47,Feint,10
+00:48,Riddle Of Earth,1
+01:10,True North,22
+01:45,True North,35
+01:48,Riddle Of Earth,3
+02:39,Mantra,51
+02:43,Feint,4
+02:48,Riddle Of Earth,5
+02:50,True North,2
+03:10,True North,20
+03:48,Riddle Of Earth,38
+04:09,Mantra,21
+04:14,Feint,5
+04:39,True North,25
+04:49,True North,10
+05:00,Riddle Of Earth,11
+05:55,True North,55
+06:00,Feint,5
+06:05,Riddle Of Earth,5
+06:17,Mantra,12
+06:47,True North,30
+07:23,Riddle Of Earth,36
+07:23,True North,0
+07:42,True North,19
+07:55,Feint,13
+08:10,Mantra,15
+08:23,Riddle Of Earth,13
+08:59,True North,36
+09:30,Feint,31
+10:08,True North,38
 10:20,True North,12
+20:00,True North,12
