@@ -30,6 +30,7 @@ function emojify(arr) {
   return arr;
 }
 
+Options.Triggers = [
   {
     zoneRegex: /^Eden's Verse: Fulmination \(Savage\)$/,
     filename: 'user e5s',
@@ -76,6 +77,7 @@ function emojify(arr) {
       ]);
     },
   },
+];
   
 // Play tts as well as the on screen text.
 let playTTS = {
