@@ -2,16 +2,16 @@
 <TriggernometryExport Version="1">
   <ExportedFolder Id="55edbe66-f920-4351-8178-7fadfe3cd75f" Name="Sable's Cooldowns Tracker" Enabled="true">
     <Folders>
-      <Folder Id="89338193-ddab-4185-9ae6-09c566737856" Name="SETUP" Enabled="true">
+      <Folder Id="89338193-ddab-4185-9ae6-09c566737856" Name="SETUP - README INSIDE" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Sequential="True" Name="Party List Settings - copy to Startup Folder" Id="302542b4-28fd-4f49-ae6d-744f9108d798" RegularExpression="" EditAutofire="True">
+          <Trigger Enabled="false" Sequential="True" Name="Party List Settings - copy to Startup Folder" Id="302542b4-28fd-4f49-ae6d-744f9108d798" RegularExpression="" EditAutofire="True">
             <Actions>
               <Action OrderNumber="1" ListVariableExpressionType="Numeric" ListVariableName="PartyList" ListVariableExpression="${_imageaura[PLPreview].x}" ListVariableIndex="1" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False" Description="Do Not Edit" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
-              <Action OrderNumber="2" AuraName="PLPreview" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid%20Buffs/AST/Small/moveme.png" AuraXIniExpression="3393" AuraYIniExpression="459" AuraWIniExpression="30" AuraHIniExpression="373" AuraOIniExpression="0" AuraTTLTickExpression="1-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Description="Party List Position for Single Monitor - &#xD;&#xA;Move this aura to where you want the initial auras to appear. &#xD;&#xA;Note: If the pictures in this aura don't line up well in your party list, you will need to edit the vertical padding&#xD;&#xA; variable, or change your party list element size in your FFXIV HUD." DescriptionOverride="True">
+              <Action OrderNumber="2" AuraName="PLPreview" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid%20Buffs/AST/Small/moveme.png" AuraXIniExpression="3393" AuraYIniExpression="459" AuraWIniExpression="30" AuraHIniExpression="373" AuraOIniExpression="0" AuraTTLTickExpression="1-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Description="Party List Position - &#xD;&#xA;Move this aura to where you want the initial auras to appear. &#xD;&#xA;Note: If the pictures in this aura don't line up well in your party list, you will need to edit the vertical padding&#xD;&#xA; variable action, or change your party list element size in your FFXIV HUD." DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${monitor}" ExpressionTypeL="String" ExpressionR="single" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
@@ -38,6 +38,11 @@
                 <Conditions />
               </Action>
             </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="false" IsReadme="True" Name="## INSTRUCTIONS - SEE DESCRIPTION TAB" Id="65a05f59-87b7-406a-92b6-fc26481faa48" RegularExpression="" Description="These triggers are based on Dansa's DoT and HoT triggers, with some additional customization and utility added by SableCentaur.&#xD;&#xA;Make sure your party list order in FFXIV matches your configured party order in Triggernometry's settings.&#xD;&#xA;Copy the Party List Settings in your Triggernometry startup folder and disable it in the remote repository.&#xD;&#xA;Open the settings trigger and configure it by moving the Position auras to where you want the auras to appear.&#xD;&#xA;- use the visual guide for placement to place the auras, but don't change any other settings in the action.&#xD;&#xA;Each of the other actions in these triggers are labeled as to what settings they change.&#xD;&#xA;If you don't understand what they do, just leave them alone.&#xD;&#xA;&#xD;&#xA;To turn off auras for abilities you don't care about, find the relevant ability in folders inside the DO NOT EDIT folder and enable/disable the trigger. Don't edit the triggers inside there, just enable/disable as you need.&#xD;&#xA;All of these triggers are designed for use at level 90; I don't plan to support them at levels below that, but if you find they don't work and fix it, feel free to send me a DM explaining what the issue was and how you fixed it.&#xD;&#xA;&#xD;&#xA;Support for these triggers is limited, but questions may be DM'd to SableCentaur#1297 on Discord.&#xD;&#xA;If your question is answered in these instructions or in Triggernometry's FAQ, I will not answer.">
+            <Actions />
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Trigger>
@@ -2020,7 +2025,7 @@
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="VisualizeCooldowns" Id="3820be60-5817-4fee-8bc2-f3e4b4a29b93" RegularExpression="^func(?&lt;eid&gt;[A-F0-9]{8}),(?&lt;ename&gt;[\S ]{1,50}),(?&lt;skill&gt;[A-Za-z- ']{1,25}),(?&lt;dur&gt;\d{1,3}),(?&lt;ef&gt;\d{1,3})(,(?&lt;charge&gt;\d))?" DebugLevel="Info">
+          <Trigger Enabled="false" Sequential="True" Name="VisualizeCooldowns" Id="3820be60-5817-4fee-8bc2-f3e4b4a29b93" RegularExpression="^func(?&lt;eid&gt;[A-F0-9]{8}),(?&lt;ename&gt;[\S ]{1,50}),(?&lt;skill&gt;[A-Za-z- ']{1,25}),(?&lt;dur&gt;\d{1,3}),(?&lt;ef&gt;\d{1,3})(,(?&lt;charge&gt;\d))?" DebugLevel="Info">
             <Actions>
               <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="d${eid}${skill}${charge}dur" VariableExpression="${_systemtimems}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
@@ -2067,51 +2072,53 @@
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="x CombatantRemoval" Id="852e1beb-32e0-4a5a-8312-48a5e58b8a11" RegularExpression="^.{15}04:(?&lt;eid&gt;[A-Fa-f0-9]{8}):Removing combatant (?&lt;ename&gt;[\S ]{1,50})\.  Max HP" DebugLevel="Verbose" PrevActions="Interrupt">
+          <Trigger Enabled="true" Sequential="True" Name="x CombatantRemoval" Id="6611a011-2177-43dd-87bc-6dd1e46ab732" RegularExpression="^.{14} AddCombatant 03:(?&lt;id&gt;(?:[^:]*)):(?&lt;name&gt;(?:[^:]*)):(?&lt;job&gt;(?:[^:]*)):" DebugLevel="Verbose" PrevActions="Interrupt">
             <Actions>
-              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1a25413f-d263-475c-9c74-935c2f09389a" TriggerText="func${eid},${ename},${lvar:${eid}dList[last]}" ActionType="Trigger">
+              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="6611a011-2177-43dd-87bc-6dd1e46ab732" TriggerText="${var:dMyJob}" Enabled="False" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
-                  <ConditionSingle Enabled="false" ExpressionL="${lvar:${eid}dList.indexof(${eid}${lvar:dJobHots[2]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${func:toupper:${job}}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
                 </Condition>
                 <Conditions />
               </Action>
-              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="852e1beb-32e0-4a5a-8312-48a5e58b8a11" TriggerText="[07:48:38.818] 04:${eid}:Removing combatant ${ename}.  Max HP " ActionType="Trigger">
-                <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
-                  <ConditionSingle Enabled="false" ExpressionL="${lvar:${eid}dList.indexof(${eid}${lvar:dJobHots[2]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="5564ed75-1f23-4979-abad-29bf8372dcf0" TriggerText="${var:dMyJob}" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${func:toupper:${job}}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
                 </Condition>
                 <Conditions />
               </Action>
-              <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="51018e43-3a58-47ce-bbc4-804c56866eda" TriggerText="func${eid},${ename},${lvar:dJobHots[2]}" Enabled="False" ActionType="Trigger">
-                <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:dHots.indexof(${eid}${lvar:dJobHots[2]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+              <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="a0cba41f-8be1-4aec-8f8c-31d3db36f150" TriggerText="${var:dMyJob}" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${func:toupper:${job}}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
                 </Condition>
                 <Conditions />
               </Action>
-              <Action OrderNumber="4" ListVariableName="${eid}dList" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="51018e43-3a58-47ce-bbc4-804c56866eda" TriggerText="func${eid},${ename},${lvar:dJobHots[2]}" ActionType="ListVariable">
-                <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${elvar:${eid}dList}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+              <Action OrderNumber="4" VariableOp="SetString" VariableName="dMyJob" VariableExpression="${func:toupper:${job}}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" VariableOp="UnsetRegex" VariableName="d[A-F0-9]{8}[A-Za-z 0-9]+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" ListVariableOp="UnsetRegex" ListVariableName="(d[A-Za-z]{0,5}((D|H)ots)|([A-F0-9]{8}dList))" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="4ec9b64b-0fc7-4796-a9b3-56b697c07110" TriggerForce="regexp" Enabled="False" ActionType="Trigger" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${job})}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
                 </Condition>
                 <Conditions />
               </Action>
             </Actions>
-            <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${elvar:${eid}dList}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
-              <ConditionSingle Enabled="false" ExpressionL="${lvar:${eid}dHots.indexof(${eid}${lvar:dJobHots[2]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
-              <ConditionSingle Enabled="false" ExpressionL="${lvar:${eid}dHots.indexof(${eid}${lvar:dJobHots[1]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
             <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
     </Folders>
-    <Triggers>
-      <Trigger Enabled="false" Name="## INSTRUCTIONS" Id="65a05f59-87b7-406a-92b6-fc26481faa48" RegularExpression="" Description="These triggers are based on Dansa's DoT and HoT triggers, with some additional customization and utility added by SableCentaur.&#xD;&#xA;Make sure your party list order in FFXIV matches your configured party order in Triggernometry's settings.&#xD;&#xA;Copy the Party List Settings in your Triggernometry startup folder and disable it in the remote repository.&#xD;&#xA;Open the settings trigger and configure it by moving the Position auras to where you want the auras to appear.&#xD;&#xA;- use the visual guide for placement to place the auras, but don't change any other settings in the action.&#xD;&#xA;Each of the other actions in these triggers are labeled as to what settings they change.&#xD;&#xA;If you don't understand what they do, just leave them alone.&#xD;&#xA;&#xD;&#xA;To turn off auras for abilities you don't care about, find the relevant ability in folders inside the DO NOT EDIT folder and enable/disable the trigger. Don't edit the triggers inside there, just enable/disable as you need.&#xD;&#xA;All of these triggers are designed for use at level 90; I don't plan to support them at levels below that, but if you find they don't work and fix it, feel free to send me a DM explaining what the issue was and how you fixed it.&#xD;&#xA;&#xD;&#xA;Support for these triggers is limited, but questions may be DM'd to SableCentaur#1297 on Discord.&#xD;&#xA;If your question is answered in these instructions or in Triggernometry's FAQ, I will not answer.">
-        <Actions />
-        <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
-      </Trigger>
-    </Triggers>
+    <Triggers />
   </ExportedFolder>
 </TriggernometryExport>
