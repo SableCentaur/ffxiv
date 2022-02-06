@@ -169,11 +169,13 @@
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},30,0" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1a25413f-d263-475c-9c74-935c2f09389a" TriggerText="func${eid},${ename},Standard Finish" Enabled="False" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${effect}" ExpressionTypeL="String" ExpressionR="loses" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -279,7 +281,6 @@
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},120,15" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -1340,7 +1341,6 @@
                         <Actions>
                           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},45,0" ActionType="Trigger">
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="true" Grouping="Or">
@@ -1493,7 +1493,6 @@
                         <Actions>
                           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},90,15" ActionType="Trigger">
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="true" Grouping="Or">
@@ -1638,30 +1637,33 @@
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="Shield Samba" Id="3a99e3f4-e06c-44cb-9d90-757481085217" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):3E8C:(?&lt;skill&gt;Shield Samba):">
+                  <Trigger Enabled="true" Name="Shield Samba" Id="3a99e3f4-e06c-44cb-9d90-757481085217" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):3E8C:(?&lt;skill&gt;Shield Samba):">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},90,15" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="Tactician" Id="b4f30b23-d088-468f-af0a-09b0f63411a8" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):41F9:(?&lt;skill&gt;Tactician):">
+                  <Trigger Enabled="true" Name="Tactician" Id="b4f30b23-d088-468f-af0a-09b0f63411a8" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):41F9:(?&lt;skill&gt;Tactician):">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},90,15" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="Troubadour" Id="cb87ebd7-791f-4b4c-b8b9-2502a2c0101d" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1CED:(?&lt;skill&gt;(Troubadour)):">
+                  <Trigger Enabled="true" Name="Troubadour" Id="cb87ebd7-791f-4b4c-b8b9-2502a2c0101d" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1CED:(?&lt;skill&gt;(Troubadour)):">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},90,15" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -1878,6 +1880,34 @@
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Name="Wipe Reset" Id="275a43b1-9dd4-4353-a5f1-79199695948a" RegularExpression="(wipeout|0038:end|21:([0-9,a-f,A-F]{8}):40000010)">
+            <Actions>
+              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="MNK" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="PGL" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="1a25413f-d263-475c-9c74-935c2f09389a" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="MNK" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="PGL" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" VariableOp="UnsetRegex" VariableName="d[A-F0-9]{8}[A-Za-z ]+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" ListVariableOp="UnsetRegex" ListVariableName="[A-F0-9]{8}dList" VariableOp="UnsetRegex" VariableName="d[A-F0-9]{8}[A-Za-z ]{0,50}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
