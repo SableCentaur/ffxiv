@@ -169,13 +169,11 @@
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},30,0" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1a25413f-d263-475c-9c74-935c2f09389a" TriggerText="func${eid},${ename},Standard Finish" Enabled="False" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${effect}" ExpressionTypeL="String" ExpressionR="loses" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -469,26 +467,31 @@
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Sequential="True" Name="SGE Phlegma" Id="b8f0633b-da93-4411-8143-4330a013e155" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):5EF9:(?&lt;skill&gt;Phlegma III):">
+                  <Trigger Enabled="true" Sequential="True" Name="SGE Phlegma" Id="b8f0633b-da93-4411-8143-4330a013e155" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):5EF9:(?&lt;skill&gt;Phlegma III):" PeriodRefire="Deny" RefirePeriodExpression="1000">
                     <Actions>
                       <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="d${eid}${skill}charges" VariableExpression="if(${evar:d${eid}${skill}charges},${var:d${eid}${skill}charges}-1,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="d${eid}${skill}CD" VariableExpression="if(${var:d${eid}${skill}charges}&gt;0,${_systemtimems}+45000,${var:d${eid}${skill}CD}+45000)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},${numeric:round((${var:d${eid}${skill}CD}-${_systemtimems})/1000)},0,2" ActionType="Trigger">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${evar:d${eid}${skill}dur}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},${numeric:round((${var:d${eid}${skill}CD}-${_systemtimems})/1000)},0" ActionType="Trigger">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${evar:d${eid}${skill}dur}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="d${eid}${skill}charges" VariableExpression="${var:d${eid}${skill}charges}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="${var:d${eid}${skill}CD}-${_systemtimems}">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -1641,7 +1644,6 @@
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},90,15" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -1652,7 +1654,6 @@
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},90,15" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -1663,7 +1664,6 @@
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},90,15" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -1888,26 +1888,21 @@
                   <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="MNK" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                   <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="PGL" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                 </Condition>
-                <Conditions />
               </Action>
               <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="1a25413f-d263-475c-9c74-935c2f09389a" TriggerForce="regexp" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="MNK" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                   <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="PGL" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                 </Condition>
-                <Conditions />
               </Action>
               <Action OrderNumber="3" VariableOp="UnsetRegex" VariableName="d[A-F0-9]{8}[A-Za-z ]+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="4" ListVariableOp="UnsetRegex" ListVariableName="[A-F0-9]{8}dList" VariableOp="UnsetRegex" VariableName="d[A-F0-9]{8}[A-Za-z ]{0,50}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
