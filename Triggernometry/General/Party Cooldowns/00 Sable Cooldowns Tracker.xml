@@ -217,8 +217,9 @@
                 <Triggers>
                   <Trigger Enabled="true" Name="WAR Inner Release" Id="0f3b8103-5063-4b3c-8f83-ef8f1104cef1" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1CDD:(?&lt;skill&gt;Inner Release):">
                     <Actions>
-                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},60,8" ActionType="Trigger">
+                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},60,15" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -235,10 +236,11 @@
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="PLD Requiescat" Id="a966fdba-9379-42d4-ae39-82ba86d5a83e" RegularExpression="\d{2}:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1CD7:(?&lt;skill&gt;Requiescat):">
+                  <Trigger Enabled="true" Name="PLD Requiescat OFF" Id="a966fdba-9379-42d4-ae39-82ba86d5a83e" RegularExpression="^.{14} StatusRemove 1E:[^:]*:(?&lt;skill&gt;Requiescat):[^:]*:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[^:]*):">
                     <Actions>
-                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},60,30" ActionType="Trigger">
+                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="0cec9d2d-5555-4e82-aba9-f9a785e20a51" TriggerText="func${eid},${ename},${skill},60,0" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -367,11 +369,9 @@
                   </Trigger>
                   <Trigger Enabled="true" Name="RDM Manafication" Id="7b1a2a96-f167-460a-a922-c60e5120102f" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1D61:(?&lt;skill&gt;Manafication):">
                     <Actions>
-                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},110,10" ActionType="Trigger">
+                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},110,15" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1a25413f-d263-475c-9c74-935c2f09389a" TriggerText="func${eid},${ename},${skill}" Enabled="False" ActionType="Trigger" ExecutionDelayExpression="90000">
-                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -382,9 +382,7 @@
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},11,11" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1a25413f-d263-475c-9c74-935c2f09389a" TriggerText="func${eid},${ename},${skill}" Enabled="False" ActionType="Trigger" ExecutionDelayExpression="90000">
-                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -447,10 +445,11 @@
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="DRK Delirium" Id="6646d87b-a31f-4b5c-8c71-72b756b4ded1" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1CDE:(?&lt;skill&gt;Delirium):">
+                  <Trigger Enabled="true" Name="DRK Delirium OFF" Id="6646d87b-a31f-4b5c-8c71-72b756b4ded1" RegularExpression="^.{14} StatusRemove 1E:7B4:(?&lt;skill&gt;Delirium):[^:]*:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[^:]*):">
                     <Actions>
-                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},60,15" ActionType="Trigger">
+                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="0cec9d2d-5555-4e82-aba9-f9a785e20a51" TriggerText="func${eid},${ename},${skill},60,0" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -467,7 +466,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Sequential="True" Name="SGE Phlegma" Id="b8f0633b-da93-4411-8143-4330a013e155" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):5EF9:(?&lt;skill&gt;Phlegma III):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                  <Trigger Enabled="true" Sequential="True" Name="SGE Phlegma" Id="b8f0633b-da93-4411-8143-4330a013e155" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):5EF9:(?&lt;skill&gt;Phlegma III):" PeriodRefire="Deny" RefirePeriodExpression="100">
                     <Actions>
                       <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="d${eid}${skill}charges" VariableExpression="if(${evar:d${eid}${skill}charges},${var:d${eid}${skill}charges}-1,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
@@ -570,15 +569,11 @@
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="false" Name="SAM Ogi Namikiri - broken" Id="56e5e6c8-03bf-483b-be28-d501db5b0af5" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):64B5:(?&lt;skill&gt;Ogi Namikiri):">
+                  <Trigger Enabled="true" Name="SAM Ogi Namikiri" Id="56e5e6c8-03bf-483b-be28-d501db5b0af5" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):64B5:(?&lt;skill&gt;Ogi Namikiri):">
                     <Actions>
-                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},120,0" Enabled="False" ActionType="Trigger">
+                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="0cec9d2d-5555-4e82-aba9-f9a785e20a51" TriggerText="func${eid},${ename},Ikishoten,120,0" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},Ikishoten,${numeric:round((${var:d${eid}${skill}CD}-${_systemtimems})/1000)},0" ActionType="Trigger">
-                        <Condition Enabled="false" Grouping="Or">
-                          <ConditionSingle Enabled="false" ExpressionL="${evar:d${eid}${skill}dur}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                        </Condition>
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -709,11 +704,13 @@
                   </Trigger>
                   <Trigger Enabled="true" Name="SAM Ikishoten" Id="70802bf9-8914-495b-afe4-19af78e2c509" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):4062:(?&lt;skill&gt;Ikishoten):">
                     <Actions>
-                      <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="d${eid}${skill}CD" VariableExpression="${_systemtimems}+120000" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="d${eid}${skill}CD" VariableExpression="${_systemtimems}+120000" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},120,30" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -739,6 +736,78 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
+                  </Trigger>
+                  <Trigger Enabled="true" Name="DRK Delirium" Id="0b47336e-2c74-41b5-a070-759beddeff4e" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1CDE:(?&lt;skill&gt;Delirium):">
+                    <Actions>
+                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},60,15" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="true" Name="RDM Manafication OFF" Id="93ea280b-0c4c-468a-8fe4-01090a8b7007" RegularExpression="^.{14} StatusRemove 1E:[^:]*:(?&lt;skill&gt;Manafication):[^:]*:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[^:]*):">
+                    <Actions>
+                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="0cec9d2d-5555-4e82-aba9-f9a785e20a51" TriggerText="func${eid},${ename},${skill},110,0" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="true" Name="RPR Enshroud" Id="2e9f6099-7e03-4a47-b576-2888236c90b0" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):5F4A:(?&lt;skill&gt;Enshroud):">
+                    <Actions>
+                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},15,15" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="true" Name="RPR Enshroud OFF" Id="d5218597-b719-43b5-8173-11726ef7bdd0" RegularExpression="^.{14} StatusRemove 1E:[^:]*:(?&lt;skill&gt;Enshroud)ed:[^:]*:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[^:]*):">
+                    <Actions>
+                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="0cec9d2d-5555-4e82-aba9-f9a785e20a51" TriggerText="func${eid},${ename},${skill},15,0" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="true" Name="PLD Requiescat" Id="3d3b2109-3a28-4944-8e0a-137fe64cea9c" RegularExpression="\d{2}:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1CD7:(?&lt;skill&gt;Requiescat):">
+                    <Actions>
+                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},60,30" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="true" Name="WAR Inner Release OFF" Id="328942a8-372d-4aaa-91c0-72a97e8d7c71" RegularExpression="^.{14} StatusRemove 1E:[^:]*:(?&lt;skill&gt;Inner Release):[^:]*:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[^:]*):">
+                    <Actions>
+                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="0cec9d2d-5555-4e82-aba9-f9a785e20a51" TriggerText="func${eid},${ename},${skill},60,0" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -1800,37 +1869,44 @@
             <Actions>
               <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="d${eid}${skill}${charge}dur" VariableExpression="${_systemtimems}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Action>
               <Action OrderNumber="2" AuraImageMode="StretchImage" AuraName="${eid}${skill}${charge}ic" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/General/Party Cooldowns/${skill}.png" AuraXIniExpression="${lvar:PartyList[1]}" AuraYIniExpression="4+${lvar:PartyList[2]}+${lvar:PartyList[4]}*(${_ffxivparty[${ename}].order}-1)" AuraWIniExpression="22" AuraHIniExpression="22" AuraOIniExpression="100" AuraXTickExpression="${lvar:PartyList[1]}+(${lvar:${eid}dList.indexof(${eid}${skill}${charge})}-1)*${lvar:PartyList[3]}*${lvar:PartyList[5]}" AuraTTLTickExpression="${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" DebugLevel="Info">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                   <ConditionSingle Enabled="true" ExpressionL="${charge}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                 </Condition>
+                <Conditions />
               </Action>
               <Action OrderNumber="3" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="8.25" TextAuraForeground="#3DCCF5" TextAuraOutline="Black" TextAuraName="${eid}${skill}${charge}tc" TextAuraExpression="${numeric:${ef}-${_since}}" TextAuraXIniExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraYIniExpression="${_imageaura[${eid}${skill}${charge}ic].y}+7" TextAuraWIniExpression="22" TextAuraHIniExpression="22" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraTTLTickExpression="${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" DebugLevel="Warning">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                   <ConditionSingle Enabled="true" ExpressionL="${charge}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                 </Condition>
+                <Conditions />
               </Action>
               <Action OrderNumber="4" ListVariableOp="Push" ListVariableName="${eid}dList" ListVariableExpression="${eid}${skill}${charge}" ListVariableIndex="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                   <ConditionSingle Enabled="true" ExpressionL="${charge}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                 </Condition>
+                <Conditions />
               </Action>
               <Action OrderNumber="5" ListVariableOp="SortAlphaAsc" ListVariableName="${eid}dList" ListVariableExpression="${eid}${skill}" ListVariableIndex="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
                 <Condition Enabled="false" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:dDots.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
+                <Conditions />
               </Action>
-              <Action OrderNumber="6" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="8.25" TextAuraName="${eid}${skill}${charge}tc" TextAuraExpression="${numeric:round((${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))/1000),1)}" TextAuraXIniExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraYIniExpression="${_imageaura[${eid}${skill}${charge}ic].y}+7" TextAuraWIniExpression="22" TextAuraHIniExpression="22" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraTTLTickExpression="${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="${ef}*1000" DebugLevel="Warning">
+              <Action OrderNumber="6" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="8.25" TextAuraName="${eid}${skill}${charge}tc" TextAuraExpression="${numeric:round((${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))/1000)}" TextAuraXIniExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraYIniExpression="${_imageaura[${eid}${skill}${charge}ic].y}+7" TextAuraWIniExpression="22" TextAuraHIniExpression="22" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraTTLTickExpression="${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="${ef}*1000" DebugLevel="Warning">
                 <Condition Enabled="false" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
+                <Conditions />
               </Action>
               <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1a25413f-d263-475c-9c74-935c2f09389a" TriggerText="func${eid},${ename},${skill},${charge}" ActionType="Trigger" ExecutionDelayExpression="(${dur}-${ef})*1000">
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
@@ -1903,6 +1979,53 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="VisualizeCooldowns Status Off" Id="0cec9d2d-5555-4e82-aba9-f9a785e20a51" RegularExpression="^func(?&lt;eid&gt;[A-F0-9]{8}),(?&lt;ename&gt;[\S ]{1,50}),(?&lt;skill&gt;[A-Za-z- ']{1,25}),(?&lt;dur&gt;\d{1,3}),(?&lt;ef&gt;\d{1,3})(,(?&lt;charge&gt;\d))?" DebugLevel="Info">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="d${eid}${skill}${charge}dur" VariableExpression="${_systemtimems}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" AuraImageMode="StretchImage" AuraName="${eid}${skill}${charge}ic" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/General/Party Cooldowns/${skill}.png" AuraXIniExpression="${lvar:PartyList[1]}" AuraYIniExpression="4+${lvar:PartyList[2]}+${lvar:PartyList[4]}*(${_ffxivparty[${ename}].order}-1)" AuraWIniExpression="22" AuraHIniExpression="22" AuraOIniExpression="100" AuraXTickExpression="${lvar:PartyList[1]}+(${lvar:${eid}dList.indexof(${eid}${skill}${charge})}-1)*${lvar:PartyList[3]}*${lvar:PartyList[5]}" AuraTTLTickExpression="${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" DebugLevel="Info">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${charge}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="8.25" TextAuraForeground="#3DCCF5" TextAuraOutline="Black" TextAuraName="${eid}${skill}${charge}tc" TextAuraExpression="${numeric:${ef}-${_since}}" TextAuraXIniExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraYIniExpression="${_imageaura[${eid}${skill}${charge}ic].y}+7" TextAuraWIniExpression="22" TextAuraHIniExpression="22" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraTTLTickExpression="${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" DebugLevel="Warning">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${charge}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" ListVariableOp="Push" ListVariableName="${eid}dList" ListVariableExpression="${eid}${skill}${charge}" ListVariableIndex="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${charge}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" ListVariableOp="SortAlphaAsc" ListVariableName="${eid}dList" ListVariableExpression="${eid}${skill}" ListVariableIndex="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:dDots.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="8.25" TextAuraName="${eid}${skill}${charge}tc" TextAuraExpression="${numeric:round((${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))/1000)}" TextAuraXIniExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraYIniExpression="${_imageaura[${eid}${skill}${charge}ic].y}+7" TextAuraWIniExpression="22" TextAuraHIniExpression="22" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraTTLTickExpression="${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="${ef}*1000" DebugLevel="Warning">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1a25413f-d263-475c-9c74-935c2f09389a" TriggerText="func${eid},${ename},${skill},${charge}" Enabled="False" ActionType="Trigger" ExecutionDelayExpression="(${dur}-${ef})*1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
