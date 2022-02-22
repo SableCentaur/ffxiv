@@ -9,33 +9,26 @@
             <Actions>
               <Action OrderNumber="1" ListVariableExpressionType="Numeric" ListVariableName="PartyList" ListVariableExpression="${_imageaura[PLPreview].x}" ListVariableIndex="1" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False" Description="Do Not Edit" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="2" AuraName="PLPreview" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid%20Buffs/AST/Small/moveme.png" AuraXIniExpression="65" AuraYIniExpression="71" AuraWIniExpression="30" AuraHIniExpression="373" AuraOIniExpression="0" AuraTTLTickExpression="1-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Description="Party List Position - &#xD;&#xA;Move this aura to where you want the initial auras to appear. &#xD;&#xA;Note: If the pictures in this aura don't line up well in your party list, you will need to edit the vertical padding&#xD;&#xA; variable action, or change your party list element size in your FFXIV HUD." DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${monitor}" ExpressionTypeL="String" ExpressionR="single" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
-                <Conditions />
               </Action>
               <Action OrderNumber="3" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PartyList" ListVariableExpression="${_imageaura[PLPreview].x}" ListVariableIndex="1" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="50" Asynchronous="False" Description="Do Not Edit" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="4" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PartyList" ListVariableExpression="${_imageaura[PLPreview].y}" ListVariableIndex="2" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="50" Asynchronous="False" Description="Do Not Edit" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="5" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PartyList" ListVariableExpression="26" ListVariableIndex="1" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="50" Asynchronous="False" Description="Padding value - how much horizontal space to put between each icon (only edit if you want them to be closer together or farther apart)" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="6" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PartyList" ListVariableExpression="40" ListVariableIndex="1" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="50" Asynchronous="False" Description="Padding value - how much vertical space to put between each icon (only edit if the auras are not lining up well with your party list)" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="7" ListVariableOp="Push" ListVariableName="PartyList" ListVariableExpression="-1" ListVariableIndex="1" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="50" Asynchronous="False" Description="Aura grow direction: -1 is left, 1 is right" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
@@ -53,7 +46,7 @@
               <Folder Id="3d4ca94c-58f8-4157-9dc4-3d294aed8b50" Name="Raidwide/Shared" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="DRG Battle Litany" Id="3ba201d9-abcd-41cf-a5af-dd80a8060c2d" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):DE5:(?&lt;skill&gt;Battle Litany):">
+                  <Trigger Enabled="true" Name="DRG Battle Litany" Id="3ba201d9-abcd-41cf-a5af-dd80a8060c2d" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):DE5:(?&lt;skill&gt;Battle Litany):" PeriodRefire="Deny" RefirePeriodExpression="100">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},120,15" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
@@ -63,20 +56,22 @@
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="BRD Battle Voice" Id="91ffb566-3d8a-4f25-8b27-d077d6066911" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):76:(?&lt;skill&gt;Battle Voice):">
+                  <Trigger Enabled="true" Name="BRD Battle Voice" Id="91ffb566-3d8a-4f25-8b27-d077d6066911" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):76:(?&lt;skill&gt;Battle Voice):" PeriodRefire="Deny" RefirePeriodExpression="100">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},120,15" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="MNK Brotherhood" Id="5630160c-dde1-40e4-bedc-52c4ec465a0a" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1CE4:(?&lt;skill&gt;Brotherhood):">
+                  <Trigger Enabled="true" Name="MNK Brotherhood" Id="5630160c-dde1-40e4-bedc-52c4ec465a0a" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1CE4:(?&lt;skill&gt;Brotherhood):" PeriodRefire="Deny" RefirePeriodExpression="100">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},120,15" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -93,10 +88,11 @@
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="SMN Searing Light" Id="c9a7cc6e-0773-4b82-b66f-f47921a87837" RegularExpression="^.{14} ActionEffect 15:[A-Za-z0-9]{8}:Carbuncle:64F2:(?&lt;skill&gt;Searing Light):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\w '-]{1,50}):">
+                  <Trigger Enabled="true" Name="SMN Searing Light" Id="c9a7cc6e-0773-4b82-b66f-f47921a87837" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):[A-Za-z0-9]{8}:Carbuncle:64F2:(?&lt;skill&gt;Searing Light):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\w '-]{1,50}):" PeriodRefire="Deny" RefirePeriodExpression="100">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},120,30" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="And">
@@ -104,10 +100,11 @@
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].job}" ExpressionTypeL="String" ExpressionR="SMN" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="AST Divination" Id="48f4d96b-60d0-4182-b2fb-7539057b574c" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):40A8:(?&lt;skill&gt;Divination):">
+                  <Trigger Enabled="true" Name="AST Divination" Id="48f4d96b-60d0-4182-b2fb-7539057b574c" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):40A8:(?&lt;skill&gt;Divination):" PeriodRefire="Deny" RefirePeriodExpression="100">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},120,15" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -124,28 +121,32 @@
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="RDM Embolden" Id="eac54cd0-12ea-4868-a221-2c39344865d9" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1D60:(?&lt;skill&gt;(Embolden)):">
+                  <Trigger Enabled="true" Name="RDM Embolden" Id="eac54cd0-12ea-4868-a221-2c39344865d9" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1D60:(?&lt;skill&gt;(Embolden)):" PeriodRefire="Deny" RefirePeriodExpression="100">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},120,20" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1a25413f-d263-475c-9c74-935c2f09389a" TriggerText="func${eid},${ename},${skill}" Enabled="False" ActionType="Trigger" ExecutionDelayExpression="90000">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="DNC Technical Finish" Id="a6e20d51-db2c-45ec-88b7-4fc63d875ed4" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):(3E84|3F41|3F42|3F43|3F44):(Single |Double |Triple |Quadruple )?(?&lt;skill&gt;Technical Finish):">
+                  <Trigger Enabled="true" Name="DNC Technical Finish" Id="a6e20d51-db2c-45ec-88b7-4fc63d875ed4" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):(3E84|3F41|3F42|3F43|3F44):(Single |Double |Triple |Quadruple )?(?&lt;skill&gt;Technical Finish):" PeriodRefire="Deny" RefirePeriodExpression="100">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},${numeric:round(120-(${_systemtimems}-${var:d${eid}Technical Stepdur})/1000)},20" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1a25413f-d263-475c-9c74-935c2f09389a" TriggerText="func${eid},${ename},Technical Step" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${effect}" ExpressionTypeL="String" ExpressionR="loses" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -172,15 +173,17 @@
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="DNC Standard Step" Id="9ed61030-6e92-4e34-9c77-63cd56729f45" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):3E7D:(?&lt;skill&gt;(Standard Step)):">
+                  <Trigger Enabled="true" Name="DNC Standard Step" Id="9ed61030-6e92-4e34-9c77-63cd56729f45" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):3E7D:(?&lt;skill&gt;(Standard Step)):" PeriodRefire="Deny" RefirePeriodExpression="100">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},30,0" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1a25413f-d263-475c-9c74-935c2f09389a" TriggerText="func${eid},${ename},Standard Finish" Enabled="False" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${effect}" ExpressionTypeL="String" ExpressionR="loses" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -197,20 +200,22 @@
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="RPR Arcane Circle" Id="b63630b3-4a7e-44b9-b1f6-0618d62c9a2d" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):5F55:(?&lt;skill&gt;Arcane Circle):">
+                  <Trigger Enabled="true" Name="RPR Arcane Circle" Id="b63630b3-4a7e-44b9-b1f6-0618d62c9a2d" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):5F55:(?&lt;skill&gt;Arcane Circle):" PeriodRefire="Deny" RefirePeriodExpression="100">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},120,20" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="BRD Radiant Finale" Id="3e9810dc-bfd6-49c7-884c-926582dbfb22" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):64B9:(?&lt;skill&gt;Radiant Finale):">
+                  <Trigger Enabled="true" Name="BRD Radiant Finale" Id="3e9810dc-bfd6-49c7-884c-926582dbfb22" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):64B9:(?&lt;skill&gt;Radiant Finale):" PeriodRefire="Deny" RefirePeriodExpression="100">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},110,15" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -382,10 +387,11 @@
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="RDM Enchanted Riposte" Id="36b6b4c9-7a5c-4a23-91e8-c5ffe93ce946" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1D6(?:7|A):(?&lt;skill&gt;Enchanted) (?:Riposte|Moulinet):" PeriodRefire="Deny" RefirePeriodExpression="8000">
+                  <Trigger Enabled="true" Name="RDM Enchanted Combo" Id="36b6b4c9-7a5c-4a23-91e8-c5ffe93ce946" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1D6(?:7|A):(?&lt;skill&gt;Enchanted) (?:Riposte|Moulinet):" PeriodRefire="Deny" RefirePeriodExpression="8000">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},11,11" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -426,27 +432,22 @@
                     <Actions>
                       <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="d${eid}${skill}charges" VariableExpression="if(${evar:d${eid}${skill}charges},${var:d${eid}${skill}charges}-1,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="d${eid}${skill}CD" VariableExpression="if(${var:d${eid}${skill}charges}&gt;0,${_systemtimems}+60000,${var:d${eid}${skill}CD}+60000)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},${numeric:round((${var:d${eid}${skill}CD}-${_systemtimems})/1000)},0,2" ActionType="Trigger">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${evar:d${eid}${skill}dur}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                         </Condition>
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},${numeric:round((${var:d${eid}${skill}CD}-${_systemtimems})/1000)},0" ActionType="Trigger">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${evar:d${eid}${skill}dur}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="d${eid}${skill}charges" VariableExpression="${var:d${eid}${skill}charges}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="${var:d${eid}${skill}CD}-${_systemtimems}">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -595,16 +596,18 @@
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},120,10" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="MCH Chainsaw" Id="72bbf3cc-2200-4333-94c9-283035a1338a" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):64BC:(?&lt;skill&gt;Chain Saw):">
+                  <Trigger Enabled="true" Name="MCH Chainsaw" Id="72bbf3cc-2200-4333-94c9-283035a1338a" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):64BC:(?&lt;skill&gt;Chain Saw):" PeriodRefire="Deny" RefirePeriodExpression="100">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},60,0" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -828,10 +831,11 @@
                           <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Trigger>
-                      <Trigger Enabled="true" Name="Dark Missionary" Id="da5fae47-9701-4ad0-a6ef-83c1b6c7132d" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):4057:(?&lt;skill&gt;(Dark Missionary)):">
+                      <Trigger Enabled="true" Name="Dark Missionary" Id="da5fae47-9701-4ad0-a6ef-83c1b6c7132d" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):4057:(?&lt;skill&gt;(Dark Missionary)):" PeriodRefire="Deny" RefirePeriodExpression="100">
                         <Actions>
                           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},90,15" ActionType="Trigger">
                             <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="true" Grouping="Or">
@@ -954,10 +958,11 @@
                           <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Trigger>
-                      <Trigger Enabled="true" Name="Passage Of Arms" Id="545c7180-f626-45e2-bf5e-d3d77d3f8a9c" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1CD9:(?&lt;skill&gt;(Passage of Arms)):">
+                      <Trigger Enabled="true" Name="Passage Of Arms" Id="545c7180-f626-45e2-bf5e-d3d77d3f8a9c" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1CD9:(?&lt;skill&gt;(Passage of Arms)):" PeriodRefire="Deny" RefirePeriodExpression="100">
                         <Actions>
                           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},120,0" ActionType="Trigger">
                             <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="true" Grouping="Or">
@@ -989,10 +994,11 @@
                   <Folder Id="19c4b660-53d3-4dd7-b104-66cfd7c2e2ea" Name="GNB" Enabled="true">
                     <Folders />
                     <Triggers>
-                      <Trigger Enabled="true" Name="Heart Of Light" Id="b90d95a3-ffa0-476c-9c21-1556727e54ef" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):3F20:(?&lt;skill&gt;(Heart of Light)):">
+                      <Trigger Enabled="true" Name="Heart Of Light" Id="b90d95a3-ffa0-476c-9c21-1556727e54ef" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):3F20:(?&lt;skill&gt;(Heart of Light)):" PeriodRefire="Deny" RefirePeriodExpression="100">
                         <Actions>
                           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},90,15" ActionType="Trigger">
                             <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="true" Grouping="Or">
@@ -1100,10 +1106,11 @@
                           <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Trigger>
-                      <Trigger Enabled="true" Name="Shake It Off" Id="c0dfd2ab-d94f-4599-a9fc-5af6ada72beb" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1CDC:(?&lt;skill&gt;(Shake It Off)):">
+                      <Trigger Enabled="true" Name="Shake It Off" Id="c0dfd2ab-d94f-4599-a9fc-5af6ada72beb" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1CDC:(?&lt;skill&gt;(Shake It Off)):" PeriodRefire="Deny" RefirePeriodExpression="100">
                         <Actions>
                           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},90,15" ActionType="Trigger">
                             <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="true" Grouping="Or">
@@ -1231,10 +1238,11 @@
                           <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Trigger>
-                      <Trigger Enabled="true" Name="Indomitability" Id="5c4a1013-66f1-453f-9d85-93b2726faa4c" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):DFF:(?&lt;skill&gt;Indomitability):">
+                      <Trigger Enabled="true" Name="Indomitability" Id="5c4a1013-66f1-453f-9d85-93b2726faa4c" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):DFF:(?&lt;skill&gt;Indomitability):" PeriodRefire="Deny" RefirePeriodExpression="100">
                         <Actions>
                           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},30,0" ActionType="Trigger">
                             <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="true" Grouping="Or">
@@ -1321,10 +1329,11 @@
                           <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Trigger>
-                      <Trigger Enabled="true" Name="Expedient" Id="1e8b02b4-4ccb-4dcb-88ac-8d0810f65758" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):650C:(?&lt;skill&gt;Expedient):">
+                      <Trigger Enabled="true" Name="Expedient" Id="1e8b02b4-4ccb-4dcb-88ac-8d0810f65758" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):650C:(?&lt;skill&gt;Expedient):" PeriodRefire="Deny" RefirePeriodExpression="100">
                         <Actions>
                           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},120,20" ActionType="Trigger">
                             <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="true" Grouping="Or">
@@ -1366,10 +1375,11 @@
                           <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Trigger>
-                      <Trigger Enabled="true" Name="Plenary Indulgence" Id="6a88c861-507b-4828-86fe-3d0faec0c288" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1D09:(?&lt;skill&gt;Plenary Indulgence):">
+                      <Trigger Enabled="true" Name="Plenary Indulgence" Id="6a88c861-507b-4828-86fe-3d0faec0c288" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1D09:(?&lt;skill&gt;Plenary Indulgence):" PeriodRefire="Deny" RefirePeriodExpression="100">
                         <Actions>
                           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},60,10" ActionType="Trigger">
                             <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="true" Grouping="Or">
@@ -1396,10 +1406,11 @@
                           <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Trigger>
-                      <Trigger Enabled="true" Name="Assize" Id="7aacf384-f29b-4e44-8155-b91b2caeab99" RegularExpression="^.{14} AOEActionEffect 16:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):DF3:(?&lt;skill&gt;Assize):">
+                      <Trigger Enabled="true" Name="Assize" Id="7aacf384-f29b-4e44-8155-b91b2caeab99" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):DF3:(?&lt;skill&gt;Assize):" PeriodRefire="Deny" RefirePeriodExpression="100">
                         <Actions>
                           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},45,0" ActionType="Trigger">
                             <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="true" Grouping="Or">
@@ -1431,20 +1442,22 @@
                   <Folder Id="1781e531-9db7-43ef-96b1-198b58f54991" Name="AST" Enabled="true">
                     <Folders />
                     <Triggers>
-                      <Trigger Enabled="true" Name="Macrocosmos" Id="d6277e56-ed56-43ee-b227-a5dda5acbd68" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):6512:(?&lt;skill&gt;Macrocosmos):">
+                      <Trigger Enabled="true" Name="Macrocosmos" Id="d6277e56-ed56-43ee-b227-a5dda5acbd68" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):6512:(?&lt;skill&gt;Macrocosmos):" PeriodRefire="Deny" RefirePeriodExpression="100">
                         <Actions>
                           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},180,15" ActionType="Trigger">
                             <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Trigger>
-                      <Trigger Enabled="true" Name="Collective Unconscious" Id="b7ee93b7-ec34-4c2c-b7bc-e3be226b578c" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):E1D:(?&lt;skill&gt;Collective Unconscious):">
+                      <Trigger Enabled="true" Name="Collective Unconscious" Id="b7ee93b7-ec34-4c2c-b7bc-e3be226b578c" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):E1D:(?&lt;skill&gt;Collective Unconscious):" RefirePeriodExpression="100">
                         <Actions>
                           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},60,0" ActionType="Trigger">
                             <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="true" Grouping="Or">
@@ -1464,17 +1477,18 @@
                           <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Trigger>
-                      <Trigger Enabled="true" Name="Earthly Star" Id="9d9ab9e4-9863-40c1-a7eb-621e7922b07e" RegularExpression="^.{14} AOEActionEffect 16:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1D0F:(?&lt;skill&gt;Earthly Star):">
+                      <Trigger Enabled="true" Name="Earthly Star" Id="9d9ab9e4-9863-40c1-a7eb-621e7922b07e" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1D0F:(?&lt;skill&gt;Earthly Star):" PeriodRefire="Deny" RefirePeriodExpression="100">
                         <Actions>
                           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},60,20" ActionType="Trigger">
                             <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Trigger>
-                      <Trigger Enabled="true" Name="Celestial Opposition" Id="75d283e0-92d2-4fbe-9669-03d96c895a88" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):40A9:(?&lt;skill&gt;Celestial Opposition):">
+                      <Trigger Enabled="true" Name="Celestial Opposition" Id="75d283e0-92d2-4fbe-9669-03d96c895a88" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):40A9:(?&lt;skill&gt;Celestial Opposition):" PeriodRefire="Deny" RefirePeriodExpression="100">
                         <Actions>
                           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},60,0" ActionType="Trigger">
                             <Condition Enabled="false" Grouping="Or" />
@@ -1528,10 +1542,11 @@
                   <Folder Id="48f4a59d-0647-4306-9bbd-30ee15f631fa" Name="SGE" Enabled="true">
                     <Folders />
                     <Triggers>
-                      <Trigger Enabled="true" Name="Pneuma" Id="fad442e5-bba2-4bad-8d73-62a68523f340" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):5EFE:(?&lt;skill&gt;Pneuma):">
+                      <Trigger Enabled="true" Name="Pneuma" Id="fad442e5-bba2-4bad-8d73-62a68523f340" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):5EFE:(?&lt;skill&gt;Pneuma):" PeriodRefire="Deny" RefirePeriodExpression="100">
                         <Actions>
                           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},120,0" ActionType="Trigger">
                             <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="true" Grouping="Or">
@@ -1558,20 +1573,22 @@
                           <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Trigger>
-                      <Trigger Enabled="true" Name="Kerachole" Id="1e96ea50-f101-4f25-b7c7-7af15b0f25f3" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):5EEA:(?&lt;skill&gt;Kerachole):">
+                      <Trigger Enabled="true" Name="Kerachole" Id="1e96ea50-f101-4f25-b7c7-7af15b0f25f3" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):5EEA:(?&lt;skill&gt;Kerachole):" PeriodRefire="Deny" RefirePeriodExpression="100">
                         <Actions>
                           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},30,15" ActionType="Trigger">
                             <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Trigger>
-                      <Trigger Enabled="true" Name="Ixochole" Id="97a6a3ff-1fe0-4514-8006-1d10cfc52289" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):5EEB:(?&lt;skill&gt;Ixochole):">
+                      <Trigger Enabled="true" Name="Ixochole" Id="97a6a3ff-1fe0-4514-8006-1d10cfc52289" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):5EEB:(?&lt;skill&gt;Ixochole):" PeriodRefire="Deny" RefirePeriodExpression="100">
                         <Actions>
                           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},30,0" ActionType="Trigger">
                             <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="true" Grouping="Or">
@@ -1608,20 +1625,22 @@
                           <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Trigger>
-                      <Trigger Enabled="true" Name="Holos" Id="bf5e4bcd-ae98-49af-ae43-8ad8f2315a50" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):5EF6:(?&lt;skill&gt;Holos):">
+                      <Trigger Enabled="true" Name="Holos" Id="bf5e4bcd-ae98-49af-ae43-8ad8f2315a50" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):5EF6:(?&lt;skill&gt;Holos):" PeriodRefire="Deny" RefirePeriodExpression="100">
                         <Actions>
                           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},120,20" ActionType="Trigger">
                             <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Trigger>
-                      <Trigger Enabled="true" Name="Panhaima" Id="6c821ac6-6188-4b74-827a-10b3e855f678" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):5EF7:(?&lt;skill&gt;Panhaima):">
+                      <Trigger Enabled="true" Name="Panhaima" Id="6c821ac6-6188-4b74-827a-10b3e855f678" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):5EF7:(?&lt;skill&gt;Panhaima):" PeriodRefire="Deny" RefirePeriodExpression="100">
                         <Actions>
                           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},120,15" ActionType="Trigger">
                             <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="true" Grouping="Or">
@@ -1686,40 +1705,44 @@
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="Mantra" Id="d3fd2a5e-91a7-4a20-a641-0f55ede5efbe" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):41:(?&lt;skill&gt;Mantra):">
+                  <Trigger Enabled="true" Name="Mantra" Id="d3fd2a5e-91a7-4a20-a641-0f55ede5efbe" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):41:(?&lt;skill&gt;Mantra):" PeriodRefire="Deny" RefirePeriodExpression="100">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},90,15" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="Shield Samba" Id="3a99e3f4-e06c-44cb-9d90-757481085217" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):3E8C:(?&lt;skill&gt;Shield Samba):">
+                  <Trigger Enabled="true" Name="Shield Samba" Id="3a99e3f4-e06c-44cb-9d90-757481085217" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):3E8C:(?&lt;skill&gt;Shield Samba):" PeriodRefire="Deny" RefirePeriodExpression="100">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},90,15" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="Tactician" Id="b4f30b23-d088-468f-af0a-09b0f63411a8" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):41F9:(?&lt;skill&gt;Tactician):">
+                  <Trigger Enabled="true" Name="Tactician" Id="b4f30b23-d088-468f-af0a-09b0f63411a8" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):41F9:(?&lt;skill&gt;Tactician):" PeriodRefire="Deny" RefirePeriodExpression="100">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},90,15" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="Troubadour" Id="cb87ebd7-791f-4b4c-b8b9-2502a2c0101d" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1CED:(?&lt;skill&gt;(Troubadour)):">
+                  <Trigger Enabled="true" Name="Troubadour" Id="cb87ebd7-791f-4b4c-b8b9-2502a2c0101d" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):1CED:(?&lt;skill&gt;(Troubadour)):" PeriodRefire="Deny" RefirePeriodExpression="100">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},90,15" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -1736,10 +1759,11 @@
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="Curing Waltz" Id="f5f0195e-5586-4813-86f1-f2a510118232" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):3E8F:(?&lt;skill&gt;Curing Waltz):">
+                  <Trigger Enabled="true" Name="Curing Waltz" Id="f5f0195e-5586-4813-86f1-f2a510118232" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):3E8F:(?&lt;skill&gt;Curing Waltz):" PeriodRefire="Deny" RefirePeriodExpression="100">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},60,0" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -1756,30 +1780,33 @@
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="Arcane Crest" Id="286bd852-ba25-4cb9-8861-04f1232b0bff" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):5F54:(?&lt;skill&gt;Arcane Crest):">
+                  <Trigger Enabled="true" Name="Arcane Crest" Id="286bd852-ba25-4cb9-8861-04f1232b0bff" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):5F54:(?&lt;skill&gt;Arcane Crest):" PeriodRefire="Deny" RefirePeriodExpression="100">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},30,20" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="Improvisation" Id="512fc3de-bb89-4132-b1e0-25386ab4221c" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):3E8E:(?&lt;skill&gt;Improvisation):">
+                  <Trigger Enabled="true" Name="Improvisation" Id="512fc3de-bb89-4132-b1e0-25386ab4221c" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):3E8E:(?&lt;skill&gt;Improvisation):" PeriodRefire="Deny" RefirePeriodExpression="100">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},120,15" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="Magick Barrier" Id="b342140e-73b6-4e51-80e0-a7ce86a97f03" RegularExpression="^.{14} ActionEffect 15:(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):6501:(?&lt;skill&gt;Magick Barrier):">
+                  <Trigger Enabled="true" Name="Magick Barrier" Id="b342140e-73b6-4e51-80e0-a7ce86a97f03" RegularExpression="^.{14} (?:ActionEffect|AOEActionEffect) 1(?:5|6):(?&lt;eid&gt;[A-F0-9]{8}):(?&lt;ename&gt;[\S ]{1,50}):6501:(?&lt;skill&gt;Magick Barrier):" PeriodRefire="Deny" RefirePeriodExpression="100">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3820be60-5817-4fee-8bc2-f3e4b4a29b93" TriggerText="func${eid},${ename},${skill},120,10" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
