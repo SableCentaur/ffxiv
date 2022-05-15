@@ -1,0 +1,1182 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="8374b445-0d04-442f-96b1-bbf610caefed" Name="Raid Buffs" Enabled="true">
+    <Folders>
+      <Folder Id="e54697e7-7880-4c2f-9b0a-d4cc84e9eead" Name="Auras" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Sequential="True" Name="AST Card" Id="18ed5241-dbd4-4a97-83d1-34f0e94f7049" RegularExpression="15:[A-Z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):[0-9A-F]{4}:the (?&lt;card&gt;(Spear|Balance|Arrow|Bole|Ewer|Spire)):[0-9A-F]{8}:(?&lt;name&gt;[A-Za-z']+ [A-Za-z']+)" PrevActions="Interrupt">
+            <Actions>
+              <Action OrderNumber="0" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="astcard" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astcard)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="1" ListVariableOp="SortAlphaAsc" ListVariableName="buffs" ListVariableExpression="astcard" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astcard)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" AuraName="buffs.card" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/AST/Big/${card}.png" AuraXIniExpression="${lvar:BuffsList[1]}" AuraYIniExpression="${lvar:BuffsList[2]}" AuraWIniExpression="42" AuraHIniExpression="43" AuraOIniExpression="100" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(astcard)}-1)*45" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.cardcounter2" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.cardcounter" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" AuraImageMode="StretchImage" AuraName="buffs.divination" AuraImage="E:\Files\Documents\Fun\FF\Raid Buffs\Resized\divination_cooldown.png" AuraXIniExpression="${_imageaura[buffs.divination].x}" AuraYIniExpression="${_imageaura[buffs.divination].y}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="60" AuraTTLTickExpression="600-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" ExecutionDelayExpression="15000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.cardcounter2" TextAuraExpression="${numeric:15-${_since}}" TextAuraXIniExpression="${_imageaura[buffs.card].x}+2-3" TextAuraYIniExpression="${_imageaura[buffs.card].y}+2-1" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buffs.card].x}+2-3" TextAuraYTickExpression="${_imageaura[buffs.card].y}+2-1" TextAuraTTLTickExpression="15-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.cardcounter" TextAuraExpression="${_textaura[buffs.cardcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.cardcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.cardcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.cardcounter2].x}-2" TextAuraYTickExpression="${_textaura[buffs.cardcounter2].y}-2" TextAuraTTLTickExpression="15-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" ListVariableOp="Remove" ListVariableName="buffs" ListVariableExpression="astcard" ListVariableIndex="${lvar:buffs.indexof(astcard)}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="16100" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astcard)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="9" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="divinationcounter2" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" ExecutionDelayExpression="105000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="divinationcounter" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="12" AuraOp="DeactivateAura" AuraName="divination" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" ExecutionDelayExpression="600000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="false" ExpressionL="${_ffxivparty[${player}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="DRG Dragon Sight" Id="fa28017f-571c-4ef9-9e52-e52ad49b3b21" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):(1CE6):[^:]*:[A-Za-z0-9]{8}:(?&lt;player2&gt;[A-Za-z']+ ?[A-Za-z']+):" PrevActions="Interrupt">
+            <Actions>
+              <Action OrderNumber="-1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="drgsight" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(drgsight)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="1" ListVariableOp="SortAlphaAsc" ListVariableName="buffs" ListVariableExpression="astcard" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astcard)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.drgsightcounter" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.drgsightcounter2" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" AuraName="buffs.drgsight" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/dragon_sight.png" AuraXIniExpression="${lvar:BuffsList[1]}" AuraYIniExpression="${lvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(drgsight)}-1)*45" AuraTTLTickExpression="20-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.drgsightcounter2" TextAuraExpression="${numeric:20-${_since}}" TextAuraXIniExpression="${_imageaura[buffs.drgsight].x}+2" TextAuraYIniExpression="${_imageaura[buffs.drgsight].y}+2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buffs.drgsight].x}+2" TextAuraTTLTickExpression="120-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.drgsightcounter" TextAuraExpression="${_textaura[buffs.drgsightcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.drgsightcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.drgsightcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.drgsightcounter2].x}-2" TextAuraTTLTickExpression="120-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" AuraImageMode="StretchImage" AuraName="buffs.drgsight" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/dragon_sight_cooldown.png" AuraXIniExpression="${_imageaura[buffs.drgsight].x}" AuraYIniExpression="${_imageaura[buffs.drgsight].y}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="60" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(drgsight)}-1)*45" AuraTTLTickExpression="600-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="20000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.drgsightcounter2" TextAuraExpression="${numeric:120-${_since}}" TextAuraXIniExpression="${_imageaura[buffs.drgsight].x}+2" TextAuraYIniExpression="${_imageaura[buffs.drgsight].y}+2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buffs.drgsight].x}+2" TextAuraTTLTickExpression="120-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.drgsightcounter" TextAuraExpression="${_textaura[buffs.drgsightcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.drgsightcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.drgsightcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.drgsightcounter2].x}-2" TextAuraTTLTickExpression="120-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" ListVariableOp="Remove" ListVariableName="buffs" ListVariableExpression="drgsight" ListVariableIndex="${lvar:buffs.indexof(drgsight)}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="600000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(drgsight)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="12" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="battlelitcounter" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" RefireInterrupt="True" />
+              <Action OrderNumber="12" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="battlelitcounter2" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" ExecutionDelayExpression="160000" RefireInterrupt="True" />
+              <Action OrderNumber="14" AuraOp="DeactivateAura" AuraName="battlelit" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" ExecutionDelayExpression="600000" />
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${player}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${player2}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="BRD Army's Paeon" Id="2a11720c-a04a-4b56-ba3e-f26a213550e0" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):74:" PrevActions="Interrupt">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="brdsong" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(brdsong)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="SortAlphaAsc" ListVariableName="buffs" ListVariableExpression="astcard" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astcard)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" AuraName="buffs.song" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/armys_paeon.png" AuraXIniExpression="${lvar:BuffsList[1]}" AuraYIniExpression="${lvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(brdsong)}-1)*45" AuraTTLTickExpression="45-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" ListVariableOp="Remove" ListVariableName="buffs" ListVariableExpression="brdsong" ListVariableIndex="${lvar:buffs.indexof(brdsong)}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="46000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(brdsong)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="5" AuraOp="DeactivateAura" AuraName="armys" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" ExecutionDelayExpression="30000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="BRD Battle Voice" Id="cdc38b6d-6e04-4707-884a-4f28adab7bea" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):76:" PrevActions="Interrupt">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="brdbattlevoice" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(brdbattlevoice)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="SortAlphaAsc" ListVariableName="buffs" ListVariableExpression="astcard" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astcard)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.battlevoicecounter" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.battlevoicecounter2" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" AuraName="buffs.battlevoice" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/battle_voice.png" AuraXIniExpression="${lvar:BuffsList[1]}" AuraYIniExpression="${lvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(brdbattlevoice)}-1)*45" AuraTTLTickExpression="20-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.battlevoicecounter2" TextAuraExpression="${numeric:15-${_since}}" TextAuraXIniExpression="${_imageaura[buffs.battlevoice].x}+2" TextAuraYIniExpression="${_imageaura[buffs.battlevoice].y}+2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buffs.battlevoice].x}+2" TextAuraTTLTickExpression="120-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.battlevoicecounter" TextAuraExpression="${_textaura[buffs.battlevoicecounter2].text}" TextAuraXIniExpression="${_textaura[buffs.battlevoicecounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.battlevoicecounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.battlevoicecounter2].x}-2" TextAuraTTLTickExpression="120-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" AuraName="buffs.battlevoice" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/battle_voice_cooldown.png" AuraXIniExpression="${_imageaura[buffs.battlevoice].x}" AuraYIniExpression="${_imageaura[buffs.battlevoice].y}" AuraWIniExpression="50" AuraHIniExpression="50" AuraOIniExpression="60" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(brdbattlevoice)}-1)*45" AuraTTLTickExpression="600-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="15000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.battlevoicecounter2" TextAuraExpression="${numeric:120-${_since}}" TextAuraXIniExpression="${_imageaura[buffs.battlevoice].x}+2" TextAuraYIniExpression="${_imageaura[buffs.battlevoice].y}+2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buffs.battlevoice].x}+2" TextAuraTTLTickExpression="120-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.battlevoicecounter" TextAuraExpression="${_textaura[buffs.battlevoicecounter2].text}" TextAuraXIniExpression="${_textaura[buffs.battlevoicecounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.battlevoicecounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.battlevoicecounter2].x}-2" TextAuraTTLTickExpression="120-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" ListVariableOp="Remove" ListVariableName="buffs" ListVariableExpression="brdbattlevoice" ListVariableIndex="${lvar:buffs.indexof(brdbattlevoice)}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="600000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(brdbattlevoice)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="12" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="battlevoicecounter" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" ExecutionDelayExpression="160000" RefireInterrupt="True" />
+              <Action OrderNumber="13" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="battlevoicecounter2" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" RefireInterrupt="True" />
+              <Action OrderNumber="14" AuraOp="DeactivateAura" AuraName="battlevoice" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" ExecutionDelayExpression="600000" />
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="BRD Mages Ballad" Id="40446c48-04bf-4d52-b46b-d5884c55d2d7" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):72:" PrevActions="Interrupt">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="brdsong" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(brdsong)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="SortAlphaAsc" ListVariableName="buffs" ListVariableExpression="astcard" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astcard)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" AuraName="buffs.song" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/mages_ballad.png" AuraXIniExpression="${lvar:BuffsList[1]}" AuraYIniExpression="${lvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(brdsong)}-1)*45" AuraTTLTickExpression="45-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" ListVariableOp="Remove" ListVariableName="buffs" ListVariableExpression="brdsong" ListVariableIndex="${lvar:buffs.indexof(brdsong)}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="46000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(brdsong)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="5" AuraOp="DeactivateAura" AuraName="mages" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" ExecutionDelayExpression="30000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="BRD Wanderer's Minuet" Id="7d03b9b9-eab7-4ff2-8108-22e327b4f3c5" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):DE7:" PrevActions="Interrupt">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="brdsong" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(brdsong)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="SortAlphaAsc" ListVariableName="buffs" ListVariableExpression="astcard" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astcard)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" AuraName="buffs.song" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/wanderers_minuet.png" AuraXIniExpression="${lvar:BuffsList[1]}" AuraYIniExpression="${lvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(brdsong)}-1)*45" AuraTTLTickExpression="45-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" ListVariableOp="Remove" ListVariableName="buffs" ListVariableExpression="brdsong" ListVariableIndex="${lvar:buffs.indexof(brdsong)}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="46000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(brdsong)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="5" AuraOp="DeactivateAura" AuraName="wanderers" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" ExecutionDelayExpression="30000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="false" Name="Brotherhood" Id="dce2f5ef-433a-40eb-b00f-a4aefd98fd5a" RegularExpression="^\[.{14}[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):1CE4:" PrevActions="Interrupt">
+            <Actions>
+              <Action OrderNumber="1" AuraName="buffs.brotherhood" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/brotherhood.png" AuraXIniExpression="${lvar:BuffsList[1]}+50*0" AuraYIniExpression="${lvar:BuffsList[2]}+50*1" AuraWIniExpression="50" AuraHIniExpression="50" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.brotherhoodcounter" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.brotherhoodcounter2" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.brotherhoodcounter2" TextAuraExpression="${numeric:15-${_since}}" TextAuraXIniExpression="${_imageaura[buffs.brotherhood].x}+2" TextAuraYIniExpression="${_imageaura[buffs.brotherhood].y}+2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraTTLTickExpression="90-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.brotherhoodcounter" TextAuraExpression="${_textaura[buffs.brotherhoodcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.brotherhoodcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.brotherhoodcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraTTLTickExpression="90-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" AuraName="buffs.brotherhood" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/brotherhood_cooldown.png" AuraXIniExpression="${_imageaura[buffs.brotherhood].x}" AuraYIniExpression="${_imageaura[buffs.brotherhood].y}" AuraWIniExpression="50" AuraHIniExpression="50" AuraOIniExpression="60" AuraTTLTickExpression="600-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="15000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.brotherhoodcounter2" TextAuraExpression="${numeric:90-${_since}}" TextAuraXIniExpression="${_textaura[buffs.brotherhoodcounter2].x}" TextAuraYIniExpression="${_textaura[buffs.brotherhoodcounter2].y}" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraTTLTickExpression="90-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.brotherhoodcounter" TextAuraExpression="${_textaura[buffs.brotherhoodcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.brotherhoodcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.brotherhoodcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraTTLTickExpression="90-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="brotherhoodcounter" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" ExecutionDelayExpression="75000" RefireInterrupt="True" />
+              <Action OrderNumber="10" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="brotherhoodcounter2" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" RefireInterrupt="True" />
+              <Action OrderNumber="11" AuraOp="DeactivateAura" AuraName="brotherhood" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" ExecutionDelayExpression="600000" />
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="Brotherhood 2" Id="e643cb88-84c2-4171-9992-8a36bbef7572" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):1CE4:" PrevActions="Interrupt">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="mnkbrotherhood" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(mnkbrotherhood)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="SortAlphaAsc" ListVariableName="buffs" ListVariableExpression="astcard" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astcard)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" AuraName="buffs.bhood" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/brotherhood.png" AuraXIniExpression="${lvar:BuffsList[1]}" AuraYIniExpression="${lvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(mnkbrotherhood)}-1)*45" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.bhoodcounter" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.bhoodcounter2" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.bhoodcounter2" TextAuraExpression="${numeric:15-${_since}}" TextAuraXIniExpression="${_imageaura[buffs.bhood].x}+2" TextAuraYIniExpression="${_imageaura[buffs.bhood].y}+2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buffs.bhood].x}+2" TextAuraTTLTickExpression="120-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.bhoodcounter" TextAuraExpression="${_textaura[buffs.bhoodcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.bhoodcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.bhoodcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.bhoodcounter2].x}-2" TextAuraTTLTickExpression="60-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" AuraName="buffs.bhood" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/brotherhood_cooldown.png" AuraXIniExpression="${_imageaura[buffs.bhood].x}" AuraYIniExpression="${_imageaura[buffs.bhood].y}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="60" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(mnkbrotherhood)}-1)*45" AuraTTLTickExpression="600-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="15000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.bhoodcounter2" TextAuraExpression="${numeric:120-${_since}}" TextAuraXIniExpression="${_textaura[buffs.bhoodcounter2].x}" TextAuraYIniExpression="${_textaura[buffs.bhoodcounter2].y}" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buffs.bhood].x}+2" TextAuraTTLTickExpression="120-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.bhoodcounter" TextAuraExpression="${_textaura[buffs.bhoodcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.bhoodcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.bhoodcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.bhoodcounter2].x}-2" TextAuraTTLTickExpression="120-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" ListVariableOp="Remove" ListVariableName="buffs" ListVariableExpression="mnkbrotherhood" ListVariableIndex="${lvar:buffs.indexof(mnkbrotherhood)}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="600000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(mnkbrotherhood)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="Chain Stratagem" Id="b6517596-1214-4657-965d-43defd9f5151" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):1D0C:" PrevActions="Interrupt">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="schchain" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(schchain)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="SortAlphaAsc" ListVariableName="buffs" ListVariableExpression="astcard" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astcard)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" AuraName="buffs.chain" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/chain_stratagem.png" AuraXIniExpression="${lvar:BuffsList[1]}" AuraYIniExpression="${lvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(schchain)}-1)*45" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.chaincounter" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.chaincounter2" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.chaincounter2" TextAuraExpression="${numeric:15-${_since}}" TextAuraXIniExpression="${_imageaura[buffs.chain].x}+2" TextAuraYIniExpression="${_imageaura[buffs.chain].y}+2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buffs.chain].x}+2" TextAuraTTLTickExpression="120-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.chaincounter" TextAuraExpression="${_textaura[buffs.chaincounter2].text}" TextAuraXIniExpression="${_textaura[buffs.chaincounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.chaincounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.chaincounter2].x}-2" TextAuraTTLTickExpression="120-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" AuraName="buffs.chain" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/chain_stratagem_cooldown.png" AuraXIniExpression="${_imageaura[buffs.chain].x}" AuraYIniExpression="${_imageaura[buffs.chain].y}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="60" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(schchain)}-1)*45" AuraTTLTickExpression="600-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="15000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.chaincounter2" TextAuraExpression="${numeric:120-${_since}}" TextAuraXIniExpression="${_imageaura[buffs.chain].x}+2" TextAuraYIniExpression="${_imageaura[buffs.chain].y}+2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buffs.chain].x}+2" TextAuraTTLTickExpression="120-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.chaincounter" TextAuraExpression="${_textaura[buffs.chaincounter2].text}" TextAuraXIniExpression="${_textaura[buffs.chaincounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.chaincounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.chaincounter2].x}-2" TextAuraTTLTickExpression="120-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" ListVariableOp="Remove" ListVariableName="buffs" ListVariableExpression="schchain" ListVariableIndex="${lvar:buffs.indexof(schchain)}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="600000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(schchain)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="12" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="chaincounter" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" ExecutionDelayExpression="105000" RefireInterrupt="True" />
+              <Action OrderNumber="13" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="chaincounter2" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" RefireInterrupt="True" />
+              <Action OrderNumber="14" AuraOp="DeactivateAura" AuraName="chain" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" ExecutionDelayExpression="600000" />
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="Devotion" Id="5d7d840e-7534-4a31-a3e4-d53d4015afe3" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:[^:]*:64C9:[^:]*:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="3000">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="smndevotion" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(smndevotion)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="SortAlphaAsc" ListVariableName="buffs" ListVariableExpression="astcard" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astcard)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" AuraName="buffs.devotion" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/devotion.png" AuraXIniExpression="${lvar:BuffsList[1]}" AuraYIniExpression="${lvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(smndevotion)}-1)*45" AuraTTLTickExpression="120-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.devotioncounter" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.devotioncounter2" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.devotioncounter2" TextAuraExpression="${numeric:30-${_since}}" TextAuraXIniExpression="${_imageaura[buffs.devotion].x}+2" TextAuraYIniExpression="${_imageaura[buffs.devotion].y}+2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buffs.devotion].x}+2" TextAuraTTLTickExpression="120-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.devotioncounter" TextAuraExpression="${_textaura[buffs.devotioncounter2].text}" TextAuraXIniExpression="${_textaura[buffs.devotioncounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.devotioncounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.devotioncounter2].x}-2" TextAuraTTLTickExpression="120-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" AuraName="buffs.devotion" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/devotion_cooldown.png" AuraXIniExpression="${_imageaura[buffs.devotion].x}" AuraYIniExpression="${_imageaura[buffs.devotion].y}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="60" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(smndevotion)}-1)*45" AuraTTLTickExpression="600-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="30000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.devotioncounter2" TextAuraExpression="${numeric:120-${_since}}" TextAuraXIniExpression="${_imageaura[buffs.devotion].x}+2" TextAuraYIniExpression="${_imageaura[buffs.devotion].y}+2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buffs.devotion].x}+2" TextAuraTTLTickExpression="120-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.devotioncounter" TextAuraExpression="${_textaura[buffs.devotioncounter2].text}" TextAuraXIniExpression="${_textaura[buffs.devotioncounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.devotioncounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.devotioncounter2].x}-2" TextAuraTTLTickExpression="180-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" ListVariableOp="Remove" ListVariableName="buffs" ListVariableExpression="smndevotion" ListVariableIndex="${lvar:buffs.indexof(smndevotion)}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="600000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(smndevotion)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="12" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="devotioncounter" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" ExecutionDelayExpression="165000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="13" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="devotioncounter2" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" RefireInterrupt="True" />
+              <Action OrderNumber="14" AuraOp="DeactivateAura" AuraName="devotion" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" ExecutionDelayExpression="600000" />
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="DNC Devilment" Id="4c150ce7-4419-4964-94cf-faaa40a41089" RegularExpression="[0-9A-Z]{2}:[0-9A-Z]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):3E8B:" PrevActions="Interrupt">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="dncdevilment" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(dncdevilment)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="SortAlphaAsc" ListVariableName="buffs" ListVariableExpression="astcard" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astcard)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" AuraName="buffs.devilment" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/devilment.png" AuraXIniExpression="${lvar:BuffsList[1]}" AuraYIniExpression="${lvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(dncdevilment)}-1)*45" AuraTTLTickExpression="20-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.devilmentcounter" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.devilmentcounter2" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.devilmentcounter2" TextAuraExpression="${numeric:19-${_since}}" TextAuraXIniExpression="2+${_imageaura[buffs.devilment].x}" TextAuraYIniExpression="2+${_imageaura[buffs.devilment].y}" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="2+${_imageaura[buffs.devilment].x}" TextAuraTTLTickExpression="120-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.devilmentcounter" TextAuraExpression="${_textaura[buffs.devilmentcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.devilmentcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.devilmentcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.devilmentcounter2].x}-2" TextAuraTTLTickExpression="120-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" AuraName="buffs.devilment" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/devilment_cooldown.png" AuraXIniExpression="${_imageaura[buffs.devilment].x}" AuraYIniExpression="${_imageaura[buffs.devilment].y}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="60" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(dncdevilment)}-1)*45" AuraTTLTickExpression="600-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="19000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.devilmentcounter2" TextAuraExpression="${numeric:119-${_since}}" TextAuraXIniExpression="2+${_imageaura[buffs.devilment].x}" TextAuraYIniExpression="2+${_imageaura[buffs.devilment].y}" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="2+${_imageaura[buffs.devilment].x}" TextAuraTTLTickExpression="119-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.devilmentcounter" TextAuraExpression="${_textaura[buffs.devilmentcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.devilmentcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.devilmentcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.devilmentcounter2].x}-2" TextAuraTTLTickExpression="119-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" ListVariableOp="Remove" ListVariableName="buffs" ListVariableExpression="dncdevilment" ListVariableIndex="${lvar:buffs.indexof(dncdevilment)}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="600000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(dncdevilment)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="12" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="devilmentcounter" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" ExecutionDelayExpression="100000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="13" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="devilmentcounter2" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="14" AuraOp="DeactivateAura" AuraName="devilment" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" ExecutionDelayExpression="600000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="false" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${player}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="DNC Technical Finish" Id="d47ce49d-7971-4377-ba54-9dc07e7c8637" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):(3E84|3F41|3F42|3F43|3F44):" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="dnctechnical" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(dnctechnical)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="SortAlphaAsc" ListVariableName="buffs" ListVariableExpression="astcard" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astcard)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" AuraName="buffs.technical" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/technical_finish.png" AuraXIniExpression="${lvar:BuffsList[1]}" AuraYIniExpression="${lvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(dnctechnical)}-1)*45" AuraTTLTickExpression="20-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.technicalcounter" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.technicalcounter2" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.technicalcounter2" TextAuraExpression="${numeric:20-${_since}}" TextAuraXIniExpression="2+${_imageaura[buffs.technical].x}" TextAuraYIniExpression="2+${_imageaura[buffs.technical].y}" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="2+${_imageaura[buffs.technical].x}" TextAuraTTLTickExpression="116-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.technicalcounter" TextAuraExpression="${_textaura[buffs.technicalcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.technicalcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.technicalcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.technicalcounter2].x}-2" TextAuraTTLTickExpression="116-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" AuraName="buffs.technical" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/technical_finish_cooldown.png" AuraXIniExpression="${_imageaura[buffs.technical].x}" AuraYIniExpression="${_imageaura[buffs.technical].y}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="60" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(dnctechnical)}-1)*45" AuraTTLTickExpression="600-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="20000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.technicalcounter2" TextAuraExpression="${numeric:120-${_since}}" TextAuraXIniExpression="2+${_imageaura[buffs.technical].x}" TextAuraYIniExpression="2+${_imageaura[buffs.technical].y}" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="2+${_imageaura[buffs.technical].x}" TextAuraTTLTickExpression="116-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.technicalcounter" TextAuraExpression="${_textaura[buffs.technicalcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.technicalcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.technicalcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.technicalcounter2].x}-2" TextAuraTTLTickExpression="116-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" ListVariableOp="Remove" ListVariableName="buffs" ListVariableExpression="dnctechnical" ListVariableIndex="${lvar:buffs.indexof(dnctechnical)}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="600000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(dnctechnical)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="12" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="technicalcounter" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" ExecutionDelayExpression="95000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="13" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="technicalcounter2" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="14" AuraOp="DeactivateAura" AuraName="technical" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" ExecutionDelayExpression="600000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="false" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="Embolden" Id="10ee7d6d-3239-461b-9d26-9b0be48a48c0" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):1D60:" PrevActions="Interrupt">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="rdmembolden" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(rdmembolden)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="SortAlphaAsc" ListVariableName="buffs" ListVariableExpression="astcard" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astcard)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="buffs.embolden" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/embolden.png" AuraXIniExpression="${lvar:BuffsList[1]}" AuraYIniExpression="${lvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(rdmembolden)}-1)*45" AuraTTLTickExpression="20-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.emboldencounter2" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.emboldencounter" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.emboldencounter2" TextAuraExpression="${numeric:20-${_since}}" TextAuraXIniExpression="2+${_imageaura[buffs.embolden].x}" TextAuraYIniExpression="2+${_imageaura[buffs.embolden].y}" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="2+${_imageaura[buffs.embolden].x}" TextAuraTTLTickExpression="120-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.emboldencounter" TextAuraExpression="${_textaura[buffs.emboldencounter2].text}" TextAuraXIniExpression="${_textaura[buffs.emboldencounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.emboldencounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.emboldencounter2].x}-2" TextAuraTTLTickExpression="120-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" AuraImageMode="StretchImage" AuraName="buffs.embolden" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/embolden_cooldown.png" AuraXIniExpression="${_imageaura[buffs.embolden].x}" AuraYIniExpression="${_imageaura[buffs.embolden].y}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="60" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(rdmembolden)}-1)*45" AuraTTLTickExpression="600-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="20000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.emboldencounter2" TextAuraExpression="${numeric:120-${_since}}" TextAuraXIniExpression="2+${_imageaura[buffs.embolden].x}" TextAuraYIniExpression="2+${_imageaura[buffs.embolden].y}" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="2+${_imageaura[buffs.embolden].x}" TextAuraTTLTickExpression="120-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.emboldencounter" TextAuraExpression="${_textaura[buffs.emboldencounter2].text}" TextAuraXIniExpression="${_textaura[buffs.emboldencounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.emboldencounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.emboldencounter2].x}-2" TextAuraTTLTickExpression="120-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" ListVariableOp="Remove" ListVariableName="buffs" ListVariableExpression="rdmembolden" ListVariableIndex="${lvar:buffs.indexof(rdmembolden)}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="600000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(rdmembolden)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="12" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="emboldencounter2" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" ExecutionDelayExpression="100000" RefireInterrupt="True" />
+              <Action OrderNumber="13" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="emboldencounter" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="14" AuraOp="DeactivateAura" AuraName="embolden" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" ExecutionDelayExpression="600000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="false" Name="Fey Wind" Id="8196fbc3-9988-4a1d-ad0d-1c037ebab115" RegularExpression="(use|uses) Fey Wind" PrevActions="Interrupt">
+            <Actions>
+              <Action OrderNumber="1" AuraName="fey" AuraImage="D:\Program Files\Advanced Combat Tracker\Triggernometry_1_0_5_0\Raid Buffs\Resized\fey_wind.png" AuraXIniExpression="1400" AuraYIniExpression="885" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" RefireInterrupt="True" />
+              <Action OrderNumber="2" AuraName="fey" AuraImage="D:\Program Files\Advanced Combat Tracker\Triggernometry_1_0_5_0\Raid Buffs\Resized\fey_wind_cooldown.png" AuraXIniExpression="1400" AuraYIniExpression="885" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="60" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="30000" RefireInterrupt="True" />
+              <Action OrderNumber="3" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="feycounter2" TextAuraExpression="${numeric:60-${_since}}" TextAuraXIniExpression="1402" TextAuraYIniExpression="887" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="feycounter" TextAuraExpression="${numeric:60-${_since}}" TextAuraXIniExpression="1400" TextAuraYIniExpression="885" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="feycounter" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="30000" RefireInterrupt="True" />
+              <Action OrderNumber="6" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="feycounter2" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True" />
+              <Action OrderNumber="7" AuraOp="DeactivateAura" AuraName="fey" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="600000" />
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="false" Name="Foe Requiem activate" Id="fd1688d3-8972-4530-9068-aa4c1e43add3" RegularExpression="(?&lt;name&gt;[A-Za-z']+ [A-Za-z']+):[0-9A-F]{2}:Foe Requiem">
+            <Actions>
+              <Action OrderNumber="1" AuraImageMode="StretchImage" AuraName="foe" AuraImage="D:\Program Files\Advanced Combat Tracker\Triggernometry_1_0_5_0\Raid Buffs\Resized\foe_requiem.png" AuraXIniExpression="1300" AuraYIniExpression="885" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" RefireInterrupt="True" />
+              <Action OrderNumber="2" PlaySoundFileExpression="D:\Program Files\Advanced Combat Tracker\Triggernometry_1_0_4_1\Sound Files\requiem.mp3" UseTTSTextExpression="Requiem" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" RefireInterrupt="True" />
+              <Action OrderNumber="3" AuraOp="DeactivateAura" AuraName="foe" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="600000" />
+            </Actions>
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${name}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="false" Name="Foe Requiem end" Id="44c30157-0f32-4d02-bfb2-5714acbacc73" RegularExpression="(?&lt;name&gt;[A-Za-z']+ [A-Za-z']+) loses the effect of Foe Requiem">
+            <Actions>
+              <Action OrderNumber="1" AuraOp="DeactivateAura" AuraName="foe" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" RefireInterrupt="True" />
+            </Actions>
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${name}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="Trick Attack" Id="7c9a28f9-0edf-4f74-818c-9f2991a9df1e" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):8C8:" PrevActions="Interrupt">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="nintrick" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(nintrick)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="SortAlphaAsc" ListVariableName="buffs" ListVariableExpression="astcard" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astcard)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" AuraName="buffs.trick" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/trick_attack.png" AuraXIniExpression="${lvar:BuffsList[1]}" AuraYIniExpression="${lvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(nintrick)}-1)*45" AuraTTLTickExpression="20-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.trickcounter" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.trickcounter2" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.trickcounter2" TextAuraExpression="${numeric:20-${_since}}" TextAuraXIniExpression="${_imageaura[buffs.trick].x}+2" TextAuraYIniExpression="${_imageaura[buffs.trick].y}+2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buffs.trick].x}+2" TextAuraTTLTickExpression="120-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.trickcounter" TextAuraExpression="${_textaura[buffs.trickcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.trickcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.trickcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.trickcounter2].x}-2" TextAuraTTLTickExpression="120-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" AuraName="buffs.trick" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/trick_attack_cooldown.png" AuraXIniExpression="${_imageaura[buffs.trick].x}" AuraYIniExpression="${_imageaura[buffs.trick].y}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="60" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(nintrick)}-1)*45" AuraTTLTickExpression="600-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="20000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.trickcounter2" TextAuraExpression="${numeric:120-${_since}}" TextAuraXIniExpression="${_imageaura[buffs.trick].x}+2" TextAuraYIniExpression="${_imageaura[buffs.trick].y}+2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buffs.trick].x}+2" TextAuraTTLTickExpression="120-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.trickcounter" TextAuraExpression="${_textaura[buffs.trickcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.trickcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.trickcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.trickcounter2].x}-2" TextAuraTTLTickExpression="120-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" ListVariableOp="Remove" ListVariableName="buffs" ListVariableExpression="nintrick" ListVariableIndex="${lvar:buffs.indexof(nintrick)}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="600000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(nintrick)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="DRG Battle Litany" Id="55300856-6eb2-410b-a99e-de98756952bb" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):DE5:" PrevActions="Interrupt">
+            <Actions>
+              <Action OrderNumber="-1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="drglitany" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(drglitany)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="1" ListVariableOp="SortAlphaAsc" ListVariableName="buffs" ListVariableExpression="astcard" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astcard)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" AuraName="buffs.battlelit" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/battle_litany.png" AuraXIniExpression="${lvar:BuffsList[1]}" AuraYIniExpression="${lvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(drglitany)}-1)*45" AuraTTLTickExpression="20-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.battlelitcounter" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.battlelitcounter2" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.battlelitcounter2" TextAuraExpression="${numeric:15-${_since}}" TextAuraXIniExpression="${_imageaura[buffs.battlelit].x}+2" TextAuraYIniExpression="${_imageaura[buffs.battlelit].y}+2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buffs.battlelit].x}+2" TextAuraTTLTickExpression="180-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.battlelitcounter" TextAuraExpression="${_textaura[buffs.battlelitcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.battlelitcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.battlelitcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.battlelitcounter2].x}-2" TextAuraTTLTickExpression="180-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" AuraImageMode="StretchImage" AuraName="buffs.battlelit" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/battle_litany_cooldown.png" AuraXIniExpression="${_imageaura[buffs.battlelit].x}" AuraYIniExpression="${_imageaura[buffs.battlelit].y}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="60" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(drglitany)}-1)*45" AuraTTLTickExpression="600-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="15000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.battlelitcounter2" TextAuraExpression="${numeric:120-${_since}}" TextAuraXIniExpression="${_imageaura[buffs.battlelit].x}+2" TextAuraYIniExpression="${_imageaura[buffs.battlelit].y}+2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buffs.battlelit].x}+2" TextAuraTTLTickExpression="120-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.battlelitcounter" TextAuraExpression="${_textaura[buffs.battlelitcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.battlelitcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.battlelitcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.battlelitcounter2].x}-2" TextAuraTTLTickExpression="120-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" ListVariableOp="Remove" ListVariableName="buffs" ListVariableExpression="drglitany" ListVariableIndex="${lvar:buffs.indexof(drglitany)}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="600000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(drglitany)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="12" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="battlelitcounter" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" RefireInterrupt="True" />
+              <Action OrderNumber="12" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="battlelitcounter2" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" ExecutionDelayExpression="160000" RefireInterrupt="True" />
+              <Action OrderNumber="14" AuraOp="DeactivateAura" AuraName="battlelit" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" ExecutionDelayExpression="600000" />
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="AST Divination" Id="a1fbbb94-422f-4881-af7e-c691b659662f" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):40A8:" PrevActions="Interrupt">
+            <Actions>
+              <Action OrderNumber="0" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="astdivination" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astdivination)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="1" AuraName="buffs.divination" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/divination.png" AuraXIniExpression="${lvar:BuffsList[1]}" AuraYIniExpression="${lvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(astdivination)}-1)*45" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="SortAlphaAsc" ListVariableName="buffs" ListVariableExpression="astcard" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astcard)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="4" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.divinationcounter" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.divinationcounter2" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.divinationcounter2" TextAuraExpression="${numeric:15-${_since}}" TextAuraXIniExpression="${_imageaura[buffs.divination].x}+2" TextAuraYIniExpression="${_imageaura[buffs.divination].y}+2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buffs.divination].x}+2" TextAuraTTLTickExpression="120-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.divinationcounter" TextAuraExpression="${_textaura[buffs.divinationcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.divinationcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.divinationcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.divinationcounter2].x}-2" TextAuraTTLTickExpression="120-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" AuraImageMode="StretchImage" AuraName="buffs.divination" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/divination_cooldown.png" AuraXIniExpression="${_imageaura[buffs.divination].x}" AuraYIniExpression="${_imageaura[buffs.divination].y}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="60" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(astdivination)}-1)*45" AuraTTLTickExpression="600-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="15000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.divinationcounter2" TextAuraExpression="${numeric:120-${_since}}" TextAuraXIniExpression="${_textaura[buffs.divinationcounter2].x}" TextAuraYIniExpression="${_textaura[buffs.divinationcounter2].y}" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buffs.divination].x}+2" TextAuraTTLTickExpression="120-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.divinationcounter" TextAuraExpression="${_textaura[buffs.divinationcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.divinationcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.divinationcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.divinationcounter2].x}-2" TextAuraTTLTickExpression="120-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="divinationcounter2" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" ExecutionDelayExpression="105000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" ListVariableOp="Remove" ListVariableName="buffs" ListVariableExpression="astdivination" ListVariableIndex="${lvar:buffs.indexof(astdivination)}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="600000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astdivination)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="12" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="divinationcounter" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="14" AuraOp="DeactivateAura" AuraName="divination" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" ExecutionDelayExpression="600000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="RPR Arcane Circle" Id="08ea5a68-3118-4a9e-9f73-188b4c797d89" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):5F55:" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="rprarcanecircle" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(rprarcanecircle)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="SortAlphaAsc" ListVariableName="buffs" ListVariableExpression="astcard" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" AuraName="buffs.arcanecircle" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/arcane_circle.png" AuraXIniExpression="${lvar:BuffsList[1]}" AuraYIniExpression="${lvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(rprarcanecircle)}-1)*45" AuraTTLTickExpression="20-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.arcanecirclecounter" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.arcanecirclecounter2" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.arcanecirclecounter2" TextAuraExpression="${numeric:20-${_since}}" TextAuraXIniExpression="2+${_imageaura[buffs.arcanecircle].x}" TextAuraYIniExpression="2+${_imageaura[buffs.arcanecircle].y}" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="2+${_imageaura[buffs.arcanecircle].x}" TextAuraTTLTickExpression="116-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.arcanecirclecounter" TextAuraExpression="${_textaura[buffs.arcanecirclecounter2].text}" TextAuraXIniExpression="${_textaura[buffs.arcanecirclecounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.arcanecirclecounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.arcanecirclecounter2].x}-2" TextAuraTTLTickExpression="116-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" AuraName="buffs.arcanecircle" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/arcane_circle_cooldown.png" AuraXIniExpression="${_imageaura[buffs.arcanecircle].x}" AuraYIniExpression="${_imageaura[buffs.arcanecircle].y}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="60" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(rprarcanecircle)}-1)*45" AuraTTLTickExpression="600-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="20000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.arcanecirclecounter2" TextAuraExpression="${numeric:120-${_since}}" TextAuraXIniExpression="2+${_imageaura[buffs.arcanecircle].x}" TextAuraYIniExpression="2+${_imageaura[buffs.arcanecircle].y}" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="2+${_imageaura[buffs.arcanecircle].x}" TextAuraTTLTickExpression="116-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.arcanecirclecounter" TextAuraExpression="${_textaura[buffs.arcanecirclecounter2].text}" TextAuraXIniExpression="${_textaura[buffs.arcanecirclecounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.arcanecirclecounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.arcanecirclecounter2].x}-2" TextAuraTTLTickExpression="116-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" ListVariableOp="Remove" ListVariableName="buffs" ListVariableExpression="rprarcanecircle" ListVariableIndex="${lvar:buffs.indexof(rprarcanecircle)}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="600000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(rprarcanecircle)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="12" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="arcanecirclecounter" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" ExecutionDelayExpression="95000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="false" Sequential="True" Name="BRD Radiant Finale" Id="175e6132-4d5e-4015-bdff-d87af831e34e" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):(64B9):" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="dnctechnical" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(dnctechnical)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="SortAlphaAsc" ListVariableName="buffs" ListVariableExpression="astcard" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astcard)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" AuraName="buffs.technical" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/technical_finish.png" AuraXIniExpression="${lvar:BuffsList[1]}" AuraYIniExpression="${lvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(dnctechnical)}-1)*45" AuraTTLTickExpression="20-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.technicalcounter" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.technicalcounter2" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.technicalcounter2" TextAuraExpression="${numeric:20-${_since}}" TextAuraXIniExpression="2+${_imageaura[buffs.technical].x}" TextAuraYIniExpression="2+${_imageaura[buffs.technical].y}" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="2+${_imageaura[buffs.technical].x}" TextAuraTTLTickExpression="116-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.technicalcounter" TextAuraExpression="${_textaura[buffs.technicalcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.technicalcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.technicalcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.technicalcounter2].x}-2" TextAuraTTLTickExpression="116-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" AuraName="buffs.technical" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/technical_finish_cooldown.png" AuraXIniExpression="${_imageaura[buffs.technical].x}" AuraYIniExpression="${_imageaura[buffs.technical].y}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="60" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(dnctechnical)}-1)*45" AuraTTLTickExpression="600-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="20000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.technicalcounter2" TextAuraExpression="${numeric:120-${_since}}" TextAuraXIniExpression="2+${_imageaura[buffs.technical].x}" TextAuraYIniExpression="2+${_imageaura[buffs.technical].y}" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="2+${_imageaura[buffs.technical].x}" TextAuraTTLTickExpression="116-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.technicalcounter" TextAuraExpression="${_textaura[buffs.technicalcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.technicalcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.technicalcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.technicalcounter2].x}-2" TextAuraTTLTickExpression="116-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" ListVariableOp="Remove" ListVariableName="buffs" ListVariableExpression="dnctechnical" ListVariableIndex="${lvar:buffs.indexof(dnctechnical)}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="600000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(dnctechnical)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="12" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="technicalcounter" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" ExecutionDelayExpression="95000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="13" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="technicalcounter2" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="14" AuraOp="DeactivateAura" AuraName="technical" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" ExecutionDelayExpression="600000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="false" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="BRD Radiant Finale" Id="3770f200-c923-4946-b3e4-ec90bdf65177" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):(64B9):" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="brdradiant" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(brdradiant)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="SortAlphaAsc" ListVariableName="buffs" ListVariableExpression="astcard" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astcard)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" AuraName="buffs.radiant" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/radiant_finale.png" AuraXIniExpression="${lvar:BuffsList[1]}" AuraYIniExpression="${lvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(brdradiant)}-1)*45" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.radiantcounter" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.radiantcounter2" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.radiantcounter2" TextAuraExpression="${numeric:15-${_since}}" TextAuraXIniExpression="2+${_imageaura[buffs.radiant].x}" TextAuraYIniExpression="2+${_imageaura[buffs.radiant].y}" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="2+${_imageaura[buffs.radiant].x}" TextAuraTTLTickExpression="110-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.radiantcounter" TextAuraExpression="${_textaura[buffs.radiantcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.radiantcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.radiantcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.radiantcounter2].x}-2" TextAuraTTLTickExpression="110-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" AuraName="buffs.radiant" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/radiant_finale_cooldown.png" AuraXIniExpression="${_imageaura[buffs.radiant].x}" AuraYIniExpression="${_imageaura[buffs.radiant].y}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="60" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(brdradiant)}-1)*45" AuraTTLTickExpression="600-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="15000" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.radiantcounter2" TextAuraExpression="${numeric:120-${_since}}" TextAuraXIniExpression="2+${_imageaura[buffs.radiant].x}" TextAuraYIniExpression="2+${_imageaura[buffs.radiant].y}" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="2+${_imageaura[buffs.radiant].x}" TextAuraTTLTickExpression="116-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.radiantcounter" TextAuraExpression="${_textaura[buffs.radiantcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.radiantcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.radiantcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.radiantcounter2].x}-2" TextAuraTTLTickExpression="116-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" ListVariableOp="Remove" ListVariableName="buffs" ListVariableExpression="brdradiant" ListVariableIndex="${lvar:buffs.indexof(brdradiant)}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="600000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(brdradiant)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="false" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers>
+      <Trigger Enabled="true" Name="1 - Buffs Test" Id="98d9c862-7e95-4081-90ae-9420fd5ec2e4" RegularExpression="^\[.{14}00:[A-Za-z0-9]{4}:((?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):)?_buffs test">
+        <Actions>
+          <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="18ed5241-dbd4-4a97-83d1-34f0e94f7049" TriggerText="[11:41:30.461] 15:106AF938:John Doe:1234:The Spear:4001C2DC:${_ffxivplayer}:" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="a1fbbb94-422f-4881-af7e-c691b659662f" TriggerText="[12:15:18.503] 12:106AF938:${_ffxivplayer}:40A8:" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="2a11720c-a04a-4b56-ba3e-f26a213550e0" TriggerText="[11:41:30.461] 15:106AF938:${_ffxivplayer}:74:" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="cdc38b6d-6e04-4707-884a-4f28adab7bea" TriggerText="[11:41:30.461] 15:106AF938:${_ffxivplayer}:76:" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3770f200-c923-4946-b3e4-ec90bdf65177" TriggerText="16:107CAF33:${_ffxivplayer}:64B9:Radiant Finale:" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="55300856-6eb2-410b-a99e-de98756952bb" TriggerText="[12:21:43.572] 12:106AF938:${_ffxivplayer}:DE5:" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="fa28017f-571c-4ef9-9e52-e52ad49b3b21" TriggerText="[11:41:30.461] 15:106AF938:${_ffxivplayer}:1CE6:Dragon Sight:4001C2DC:John Doe:" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="8" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="e643cb88-84c2-4171-9992-8a36bbef7572" TriggerText="[11:41:30.461] 15:106AF938:${_ffxivplayer}:1CE4:" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="9" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="7d03b9b9-eab7-4ff2-8108-22e327b4f3c5" TriggerText="[11:41:30.461] 15:106AF938:${_ffxivplayer}:1D0C:" TriggerForce="conditions" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="5d7d840e-7534-4a31-a3e4-d53d4015afe3" TriggerText="[16:55:03.570] ActionEffect 15:1064CBD3:${_ffxivplayer}:64C9:Searing Light:" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="4c150ce7-4419-4964-94cf-faaa40a41089" TriggerText="[12:15:18.503] 1A:106AF938:${_ffxivplayer}:3E8B:" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="12" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="d47ce49d-7971-4377-ba54-9dc07e7c8637" TriggerText="[12:15:18.503] 12:106AF938:${_ffxivplayer}:3E84:" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="13" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="7c9a28f9-0edf-4f74-818c-9f2991a9df1e" TriggerText="12:12341234:${_ffxivplayer}:5F55:" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="14" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="10ee7d6d-3239-461b-9d26-9b0be48a48c0" TriggerText="[12:15:18.503] 12:106AF938:${_ffxivplayer}:1D60:" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="15" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="7c9a28f9-0edf-4f74-818c-9f2991a9df1e" TriggerText="Sable uses Battle Litany" TriggerForce="regexp" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="16" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b6517596-1214-4657-965d-43defd9f5151" TriggerText="Sable uses Battle Litany" TriggerForce="regexp" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
+      <Trigger Enabled="true" Name="2 - Buffs Off" Id="d7c49482-4acb-4795-acdb-0132a7761e09" RegularExpression="">
+        <Actions>
+          <Action OrderNumber="1" AuraOp="DeactivateAuraRegex" AuraName="buffs[A-Za-z0-9.-]+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="8.25" TextAuraName="buffs[A-Za-z0-9.-]+" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" AuraOp="DeactivateAuraRegex" AuraName="(hots|dots|mnk|ast)[A-Za-z0-9.-]+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="8.25" TextAuraName="(hots|dots|mnk|ast)[A-Za-z0-9.-]+" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" ListVariableName="buffs" ListVariableExpression="astcard" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astcard)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="18ed5241-dbd4-4a97-83d1-34f0e94f7049" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="59321766-8a30-413a-b212-1c7f8eda2964" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="8" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="fa28017f-571c-4ef9-9e52-e52ad49b3b21" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="9" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="55300856-6eb2-410b-a99e-de98756952bb" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="2a11720c-a04a-4b56-ba3e-f26a213550e0" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="cdc38b6d-6e04-4707-884a-4f28adab7bea" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="12" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="3770f200-c923-4946-b3e4-ec90bdf65177" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="13" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="40446c48-04bf-4d52-b46b-d5884c55d2d7" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="14" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="7d03b9b9-eab7-4ff2-8108-22e327b4f3c5" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="15" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="e643cb88-84c2-4171-9992-8a36bbef7572" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="16" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="b6517596-1214-4657-965d-43defd9f5151" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="17" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="4c150ce7-4419-4964-94cf-faaa40a41089" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="18" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="5d7d840e-7534-4a31-a3e4-d53d4015afe3" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="19" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="18ed5241-dbd4-4a97-83d1-34f0e94f7049" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="20" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="10ee7d6d-3239-461b-9d26-9b0be48a48c0" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="21" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="d47ce49d-7971-4377-ba54-9dc07e7c8637" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="22" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="08ea5a68-3118-4a9e-9f73-188b4c797d89" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="23" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="7c9a28f9-0edf-4f74-818c-9f2991a9df1e" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
+      <Trigger Enabled="true" Sequential="True" Name="0 - Buffs Positions - COPY ME TO STARTUP FOLDER" Id="197640ee-f3df-44fc-9b43-8db9faa84a1e" RegularExpression="^setup (?&lt;monitor&gt;[a-zA-Z]*)\.">
+        <Actions>
+          <Action OrderNumber="1" ListVariableExpressionType="Numeric" ListVariableName="BuffsList" ListVariableExpression="${_imageaura[buffs.preview1].x}" ListVariableIndex="1" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" AuraName="buffs.preview1" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid%20Buffs/Preview.png" AuraXIniExpression="2079" AuraYIniExpression="1183" AuraWIniExpression="601" AuraHIniExpression="48" AuraOIniExpression="0" AuraTTLTickExpression="10-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" RefireInterrupt="True" Description="Buffs Position - EDIT ME &gt; USE VISUAL GUIDE FOR PLACEMENT" DescriptionOverride="True">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${monitor}" ExpressionTypeL="String" ExpressionR="single" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="3" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="BuffsList" ListVariableExpression="${_imageaura[buffs.preview1].x}" ListVariableIndex="1" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="50" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="BuffsList" ListVariableExpression="${_imageaura[buffs.preview1].y}" ListVariableIndex="1" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="50" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
+      <Trigger Enabled="true" Name="2 - Cancel Buffs" Id="c04de102-725d-4966-820d-70671dae90d1" RegularExpression="">
+        <Actions>
+          <Action OrderNumber="1" AuraOp="DeactivateAuraRegex" AuraName="buffs[A-Za-z0-9.-]+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="8.25" TextAuraName="buffs[A-Za-z0-9.-]+" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" AuraOp="DeactivateAuraRegex" AuraName="(hots|dots|mnk|ast)[A-Za-z0-9.-]+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="8.25" TextAuraName="(hots|dots|mnk|ast)[A-Za-z0-9.-]+" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="18ed5241-dbd4-4a97-83d1-34f0e94f7049" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="59321766-8a30-413a-b212-1c7f8eda2964" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="fa28017f-571c-4ef9-9e52-e52ad49b3b21" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="8" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="55300856-6eb2-410b-a99e-de98756952bb" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="9" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="2a11720c-a04a-4b56-ba3e-f26a213550e0" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="cdc38b6d-6e04-4707-884a-4f28adab7bea" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="40446c48-04bf-4d52-b46b-d5884c55d2d7" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="12" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="3770f200-c923-4946-b3e4-ec90bdf65177" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="13" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="7d03b9b9-eab7-4ff2-8108-22e327b4f3c5" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="14" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="e643cb88-84c2-4171-9992-8a36bbef7572" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="15" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="b6517596-1214-4657-965d-43defd9f5151" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="16" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="4c150ce7-4419-4964-94cf-faaa40a41089" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="17" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="5d7d840e-7534-4a31-a3e4-d53d4015afe3" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="18" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="18ed5241-dbd4-4a97-83d1-34f0e94f7049" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="19" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="10ee7d6d-3239-461b-9d26-9b0be48a48c0" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="20" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="d47ce49d-7971-4377-ba54-9dc07e7c8637" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="21" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="7c9a28f9-0edf-4f74-818c-9f2991a9df1e" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="22" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="08ea5a68-3118-4a9e-9f73-188b4c797d89" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
+      <Trigger Enabled="true" Name="On Wipe" Id="a6fe869e-0180-4b6d-84c0-a5fb8c1973ac" RegularExpression="(wipeout|0038:end|21:([0-9,a-f,A-F]{8}):40000010)">
+        <Actions>
+          <Action OrderNumber="1" OBSControlType="StopRecording" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ObsControl">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="EndEncounter">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" AuraOp="DeactivateAllAura" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="8.25" TextAuraName="[A-Za-z0-9.-]+counter2?" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
