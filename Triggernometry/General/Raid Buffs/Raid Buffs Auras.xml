@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="b62a8c22-2a3a-49a0-a6f5-d6dc5a72207b" Name="Raid Buffs" Enabled="true">
+  <ExportedFolder Id="5b57a1c3-9d51-4f82-b37f-417d3d246a64" Name="Raid Buffs" Enabled="true">
     <Folders>
-      <Folder Id="e97639c6-b95a-40ca-ae58-1abb176fbee6" Name="Auras" Enabled="true">
+      <Folder Id="113eb459-18ad-465e-9a81-d8b4c5eac065" Name="Auras" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Sequential="True" Name="AST Card" Id="d531923b-8936-482d-a515-c663aab7ce4d" RegularExpression="15:[A-Z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):[0-9A-F]{4}:the (?&lt;card&gt;(Spear|Balance|Arrow|Bole|Ewer|Spire)):[0-9A-F]{8}:(?&lt;name&gt;[A-Za-z']+ [A-Za-z']+)" PrevActions="Interrupt">
+          <Trigger Enabled="true" Sequential="True" Name="AST Card" Id="98d736a5-7345-4f73-9c77-c28e1f37e788" RegularExpression="15:[A-Z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):[0-9A-F]{4}:the (?&lt;card&gt;(Spear|Balance|Arrow|Bole|Ewer|Spire)):[0-9A-F]{8}:(?&lt;name&gt;[A-Za-z']+ [A-Za-z']+)" PrevActions="Interrupt">
             <Actions>
               <Action OrderNumber="0" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="astcard" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
@@ -56,7 +56,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="DRG Dragon Sight" Id="00bd16ce-b26b-41d3-8d61-82a72683681e" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):(1CE6):[^:]*:[A-Za-z0-9]{8}:(?&lt;player2&gt;[A-Za-z']+ ?[A-Za-z']+):" PrevActions="Interrupt">
+          <Trigger Enabled="true" Sequential="True" Name="DRG Dragon Sight" Id="3089b04f-ee6c-45e7-ae20-9c176a4790e3" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):(1CE6):[^:]*:[A-Za-z0-9]{8}:(?&lt;player2&gt;[A-Za-z']+ ?[A-Za-z']+):" PrevActions="Interrupt">
             <Actions>
               <Action OrderNumber="-1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="drgsight" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
@@ -107,7 +107,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="BRD Army's Paeon" Id="381c7673-39d6-473c-a5b9-803389f7a1ec" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):74:" PrevActions="Interrupt">
+          <Trigger Enabled="true" Sequential="True" Name="BRD Army's Paeon" Id="0b105f3e-7c37-4de8-99b8-f1e224ace577" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):74:" PrevActions="Interrupt">
             <Actions>
               <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="brdsong" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
@@ -136,7 +136,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="BRD Battle Voice" Id="fb29a947-0684-423f-bf16-fb715c02ab52" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):76:" PrevActions="Interrupt">
+          <Trigger Enabled="true" Sequential="True" Name="BRD Battle Voice" Id="64cefe7e-cf24-42b0-82f0-278fbc73b131" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):76:" PrevActions="Interrupt">
             <Actions>
               <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="brdbattlevoice" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
@@ -186,7 +186,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="BRD Mages Ballad" Id="5f7a84ee-dbb0-407f-a5f6-cf794821393d" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):72:" PrevActions="Interrupt">
+          <Trigger Enabled="true" Sequential="True" Name="BRD Mages Ballad" Id="c5f3bcf8-5b7b-41fe-81e2-c1c656a39306" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):72:" PrevActions="Interrupt">
             <Actions>
               <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="brdsong" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
@@ -215,7 +215,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="BRD Wanderer's Minuet" Id="82159b05-9ba9-469f-b234-257120a9ec59" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):DE7:" PrevActions="Interrupt">
+          <Trigger Enabled="true" Sequential="True" Name="BRD Wanderer's Minuet" Id="c5394f40-40f6-4ae9-bcc6-d4f1cdac289d" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):DE7:" PrevActions="Interrupt">
             <Actions>
               <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="brdsong" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
@@ -244,42 +244,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="false" Name="Brotherhood" Id="fa754641-b5d8-43d7-b0f5-c722d87c5cd4" RegularExpression="^\[.{14}[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):1CE4:" PrevActions="Interrupt">
-            <Actions>
-              <Action OrderNumber="1" AuraName="buffs.brotherhood" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/brotherhood.png" AuraXIniExpression="${lvar:BuffsList[1]}+50*0" AuraYIniExpression="${lvar:BuffsList[2]}+50*1" AuraWIniExpression="50" AuraHIniExpression="50" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" RefireInterrupt="True">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="2" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.brotherhoodcounter" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="3" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.brotherhoodcounter2" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="4" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.brotherhoodcounter2" TextAuraExpression="${numeric:15-${_since}}" TextAuraXIniExpression="${_imageaura[buffs.brotherhood].x}+2" TextAuraYIniExpression="${_imageaura[buffs.brotherhood].y}+2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraTTLTickExpression="90-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="5" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.brotherhoodcounter" TextAuraExpression="${_textaura[buffs.brotherhoodcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.brotherhoodcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.brotherhoodcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraTTLTickExpression="90-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="6" AuraName="buffs.brotherhood" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/brotherhood_cooldown.png" AuraXIniExpression="${_imageaura[buffs.brotherhood].x}" AuraYIniExpression="${_imageaura[buffs.brotherhood].y}" AuraWIniExpression="50" AuraHIniExpression="50" AuraOIniExpression="60" AuraTTLTickExpression="600-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="15000" RefireInterrupt="True">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="7" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.brotherhoodcounter2" TextAuraExpression="${numeric:90-${_since}}" TextAuraXIniExpression="${_textaura[buffs.brotherhoodcounter2].x}" TextAuraYIniExpression="${_textaura[buffs.brotherhoodcounter2].y}" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraTTLTickExpression="90-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="8" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.brotherhoodcounter" TextAuraExpression="${_textaura[buffs.brotherhoodcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.brotherhoodcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.brotherhoodcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraTTLTickExpression="90-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="9" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="brotherhoodcounter" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" ExecutionDelayExpression="75000" RefireInterrupt="True" />
-              <Action OrderNumber="10" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="brotherhoodcounter2" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" RefireInterrupt="True" />
-              <Action OrderNumber="11" AuraOp="DeactivateAura" AuraName="brotherhood" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" ExecutionDelayExpression="600000" />
-            </Actions>
-            <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-            </Condition>
-            <Conditions />
-          </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="Brotherhood 2" Id="bd05f3b2-2b38-45d9-8862-292b6a1d453a" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):1CE4:" PrevActions="Interrupt">
+          <Trigger Enabled="true" Sequential="True" Name="Brotherhood 2" Id="10e03c8e-0b48-48ec-9958-dfa6260d42c6" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):1CE4:" PrevActions="Interrupt">
             <Actions>
               <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="mnkbrotherhood" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
@@ -326,7 +291,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="Chain Stratagem" Id="a7e5b8a5-0a39-46e6-adb5-c470982a3645" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):1D0C:" PrevActions="Interrupt">
+          <Trigger Enabled="true" Sequential="True" Name="Chain Stratagem" Id="b9b8cdc9-e437-4765-b1b0-e2bf4b5f9072" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):1D0C:" PrevActions="Interrupt">
             <Actions>
               <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="schchain" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
@@ -374,7 +339,7 @@
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="Devotion" Id="cb4e5252-2319-4614-bbd3-ee72d910cd94" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:[^:]*:64C9:[^:]*:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="3000">
+          <Trigger Enabled="true" Sequential="True" Name="Devotion" Id="689cfa02-8a84-4103-bd4e-893237cd3e24" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:[^:]*:64C9:[^:]*:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="3000">
             <Actions>
               <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="smndevotion" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
@@ -426,7 +391,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="DNC Devilment" Id="aae17540-2961-4384-892f-fe426e704a32" RegularExpression="[0-9A-Z]{2}:[0-9A-Z]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):3E8B:" PrevActions="Interrupt">
+          <Trigger Enabled="true" Sequential="True" Name="DNC Devilment" Id="f4b3613b-a4e5-46b2-b8ee-eef6ffe9cfca" RegularExpression="[0-9A-Z]{2}:[0-9A-Z]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):3E8B:" PrevActions="Interrupt">
             <Actions>
               <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="dncdevilment" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
@@ -483,7 +448,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="DNC Technical Finish" Id="a7146fb9-d34e-4731-9f4c-21abd52be554" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):(3E84|3F41|3F42|3F43|3F44):" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
+          <Trigger Enabled="true" Sequential="True" Name="DNC Technical Finish" Id="90aaaebe-2e5e-4ebf-a4fb-6b68712a66e5" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):(3E84|3F41|3F42|3F43|3F44):" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
               <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="dnctechnical" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
@@ -540,7 +505,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="Embolden" Id="9a5032cd-399a-4d5d-9532-d35ba401d675" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):1D60:" PrevActions="Interrupt">
+          <Trigger Enabled="true" Sequential="True" Name="Embolden" Id="7765c2d0-fb8a-4854-8175-49df4ff8de75" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):1D60:" PrevActions="Interrupt">
             <Actions>
               <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="rdmembolden" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
@@ -594,44 +559,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="false" Name="Fey Wind" Id="304998c5-de23-4e53-a646-cb83f422ab06" RegularExpression="(use|uses) Fey Wind" PrevActions="Interrupt">
-            <Actions>
-              <Action OrderNumber="1" AuraName="fey" AuraImage="D:\Program Files\Advanced Combat Tracker\Triggernometry_1_0_5_0\Raid Buffs\Resized\fey_wind.png" AuraXIniExpression="1400" AuraYIniExpression="885" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" RefireInterrupt="True" />
-              <Action OrderNumber="2" AuraName="fey" AuraImage="D:\Program Files\Advanced Combat Tracker\Triggernometry_1_0_5_0\Raid Buffs\Resized\fey_wind_cooldown.png" AuraXIniExpression="1400" AuraYIniExpression="885" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="60" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="30000" RefireInterrupt="True" />
-              <Action OrderNumber="3" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="feycounter2" TextAuraExpression="${numeric:60-${_since}}" TextAuraXIniExpression="1402" TextAuraYIniExpression="887" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="4" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="feycounter" TextAuraExpression="${numeric:60-${_since}}" TextAuraXIniExpression="1400" TextAuraYIniExpression="885" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="5" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="feycounter" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="30000" RefireInterrupt="True" />
-              <Action OrderNumber="6" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="feycounter2" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True" />
-              <Action OrderNumber="7" AuraOp="DeactivateAura" AuraName="fey" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="600000" />
-            </Actions>
-            <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
-          </Trigger>
-          <Trigger Enabled="false" Name="Foe Requiem activate" Id="c4f20ff0-8272-416a-b7eb-aab9c46a39bd" RegularExpression="(?&lt;name&gt;[A-Za-z']+ [A-Za-z']+):[0-9A-F]{2}:Foe Requiem">
-            <Actions>
-              <Action OrderNumber="1" AuraImageMode="StretchImage" AuraName="foe" AuraImage="D:\Program Files\Advanced Combat Tracker\Triggernometry_1_0_5_0\Raid Buffs\Resized\foe_requiem.png" AuraXIniExpression="1300" AuraYIniExpression="885" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" RefireInterrupt="True" />
-              <Action OrderNumber="2" PlaySoundFileExpression="D:\Program Files\Advanced Combat Tracker\Triggernometry_1_0_4_1\Sound Files\requiem.mp3" UseTTSTextExpression="Requiem" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" RefireInterrupt="True" />
-              <Action OrderNumber="3" AuraOp="DeactivateAura" AuraName="foe" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="600000" />
-            </Actions>
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${name}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-            </Condition>
-            <Conditions />
-          </Trigger>
-          <Trigger Enabled="false" Name="Foe Requiem end" Id="fadbddaf-78b3-47f3-b613-65b826e42f3a" RegularExpression="(?&lt;name&gt;[A-Za-z']+ [A-Za-z']+) loses the effect of Foe Requiem">
-            <Actions>
-              <Action OrderNumber="1" AuraOp="DeactivateAura" AuraName="foe" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" RefireInterrupt="True" />
-            </Actions>
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${name}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-            </Condition>
-            <Conditions />
-          </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="Trick Attack" Id="3f7c58e9-e2c9-4429-a643-cee7135a67fc" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):8C8:" PrevActions="Interrupt">
+          <Trigger Enabled="true" Sequential="True" Name="Trick Attack" Id="92a7914d-7cbc-4790-b7a5-d35a29802074" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):8C8:" PrevActions="Interrupt">
             <Actions>
               <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="nintrick" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
@@ -676,7 +604,7 @@
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="DRG Battle Litany" Id="953812ed-d1ff-405a-a7e1-9ac3dd02949b" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):DE5:" PrevActions="Interrupt">
+          <Trigger Enabled="true" Sequential="True" Name="DRG Battle Litany" Id="65f5bb26-3434-4062-a7d9-9f4757aa1178" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):DE5:" PrevActions="Interrupt">
             <Actions>
               <Action OrderNumber="-1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="drglitany" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
@@ -726,7 +654,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="AST Divination" Id="f0f6ef9e-a65c-4355-b0be-bed5b8e888ca" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):40A8:" PrevActions="Interrupt">
+          <Trigger Enabled="true" Sequential="True" Name="AST Divination" Id="6d38678d-9340-4ccf-9bfb-d64935c502ef" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):40A8:" PrevActions="Interrupt">
             <Actions>
               <Action OrderNumber="0" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="astdivination" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
@@ -782,7 +710,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="RPR Arcane Circle" Id="c0b5b42c-3373-47f7-9209-b342afe2d81f" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):5F55:" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
+          <Trigger Enabled="true" Sequential="True" Name="RPR Arcane Circle" Id="c323ae2c-db51-4e21-a2f7-c807a456e1e4" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):5F55:" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
               <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="rprarcanecircle" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
@@ -830,64 +758,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="false" Sequential="True" Name="BRD Radiant Finale" Id="8db9c592-eade-4118-ab8f-d28b3878b124" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):(64B9):" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
-            <Actions>
-              <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="dnctechnical" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
-                <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(dnctechnical)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                </Condition>
-              </Action>
-              <Action OrderNumber="2" ListVariableOp="SortAlphaAsc" ListVariableName="buffs" ListVariableExpression="astcard" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
-                <Condition Enabled="false" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astcard)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                </Condition>
-              </Action>
-              <Action OrderNumber="3" AuraName="buffs.technical" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/technical_finish.png" AuraXIniExpression="${lvar:BuffsList[1]}" AuraYIniExpression="${lvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(dnctechnical)}-1)*45" AuraTTLTickExpression="20-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" RefireInterrupt="True">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="4" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.technicalcounter" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="5" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="buffs.technicalcounter2" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" RefireInterrupt="True">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="6" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.technicalcounter2" TextAuraExpression="${numeric:20-${_since}}" TextAuraXIniExpression="2+${_imageaura[buffs.technical].x}" TextAuraYIniExpression="2+${_imageaura[buffs.technical].y}" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="2+${_imageaura[buffs.technical].x}" TextAuraTTLTickExpression="116-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="7" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.technicalcounter" TextAuraExpression="${_textaura[buffs.technicalcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.technicalcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.technicalcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.technicalcounter2].x}-2" TextAuraTTLTickExpression="116-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="8" AuraName="buffs.technical" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid Buffs/Resized/technical_finish_cooldown.png" AuraXIniExpression="${_imageaura[buffs.technical].x}" AuraYIniExpression="${_imageaura[buffs.technical].y}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="60" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffs.indexof(dnctechnical)}-1)*45" AuraTTLTickExpression="600-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="20000" RefireInterrupt="True">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="9" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraOutline="Aqua" TextAuraName="buffs.technicalcounter2" TextAuraExpression="${numeric:120-${_since}}" TextAuraXIniExpression="2+${_imageaura[buffs.technical].x}" TextAuraYIniExpression="2+${_imageaura[buffs.technical].y}" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="2+${_imageaura[buffs.technical].x}" TextAuraTTLTickExpression="116-${_since}" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="10" TextAuraEffect="Bold" TextAuraFontSize="15.75" TextAuraForeground="#26C6DA" TextAuraOutline="Black" TextAuraName="buffs.technicalcounter" TextAuraExpression="${_textaura[buffs.technicalcounter2].text}" TextAuraXIniExpression="${_textaura[buffs.technicalcounter2].x}-2" TextAuraYIniExpression="${_textaura[buffs.technicalcounter2].y}-2" TextAuraWIniExpression="44" TextAuraHIniExpression="40" TextAuraOIniExpression="100" TextAuraXTickExpression="${_textaura[buffs.technicalcounter2].x}-2" TextAuraTTLTickExpression="116-${_since}" TextAuraUseOutline="True" TextAuraFontName="Century Gothic" ActionType="TextAura" ExecutionDelayExpression="10" RefireInterrupt="True">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="11" ListVariableOp="Remove" ListVariableName="buffs" ListVariableExpression="dnctechnical" ListVariableIndex="${lvar:buffs.indexof(dnctechnical)}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="600000" Asynchronous="False">
-                <Condition Enabled="false" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(dnctechnical)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                </Condition>
-              </Action>
-              <Action OrderNumber="12" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="technicalcounter" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" ExecutionDelayExpression="95000" RefireInterrupt="True">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="13" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="technicalcounter2" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" RefireInterrupt="True">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="14" AuraOp="DeactivateAura" AuraName="technical" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" ExecutionDelayExpression="600000">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-            </Actions>
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="false" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-            </Condition>
-            <Conditions />
-          </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="BRD Radiant Finale" Id="06507408-d6e6-45da-bd4e-116d3c987efe" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):(64B9):" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
+          <Trigger Enabled="true" Sequential="True" Name="BRD Radiant Finale" Id="762082fd-e61e-4b2d-ac97-1dae07cb77d9" RegularExpression="[0-9]{2}:[A-Za-z0-9]{8}:(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+):(64B9):" PrevActions="Interrupt" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
               <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffs" ListVariableExpression="brdradiant" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
@@ -939,64 +810,64 @@
       </Folder>
     </Folders>
     <Triggers>
-      <Trigger Enabled="true" Name="1 - Buffs Test" Id="594b7ce6-c08d-4fa0-9407-fec19c4b99bc" RegularExpression="_buffs test">
+      <Trigger Enabled="true" Name="1 - Buffs Test" Id="352cf86f-c4b3-4974-9bb8-45497d45a31d" RegularExpression="_buffs test">
         <Actions>
-          <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="d531923b-8936-482d-a515-c663aab7ce4d" TriggerText="[11:41:30.461] 15:106AF938:John Doe:1234:The Spear:4001C2DC:${_ffxivplayer}:" ActionType="Trigger">
+          <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="98d736a5-7345-4f73-9c77-c28e1f37e788" TriggerText="[11:41:30.461] 15:106AF938:John Doe:1234:The Spear:4001C2DC:${_ffxivplayer}:" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="f0f6ef9e-a65c-4355-b0be-bed5b8e888ca" TriggerText="[12:15:18.503] 12:106AF938:${_ffxivplayer}:40A8:" ActionType="Trigger">
+          <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="6d38678d-9340-4ccf-9bfb-d64935c502ef" TriggerText="[12:15:18.503] 12:106AF938:${_ffxivplayer}:40A8:" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="381c7673-39d6-473c-a5b9-803389f7a1ec" TriggerText="[11:41:30.461] 15:106AF938:${_ffxivplayer}:74:" ActionType="Trigger">
+          <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="0b105f3e-7c37-4de8-99b8-f1e224ace577" TriggerText="[11:41:30.461] 15:106AF938:${_ffxivplayer}:74:" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="fb29a947-0684-423f-bf16-fb715c02ab52" TriggerText="[11:41:30.461] 15:106AF938:${_ffxivplayer}:76:" ActionType="Trigger">
+          <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="64cefe7e-cf24-42b0-82f0-278fbc73b131" TriggerText="[11:41:30.461] 15:106AF938:${_ffxivplayer}:76:" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="06507408-d6e6-45da-bd4e-116d3c987efe" TriggerText="16:107CAF33:${_ffxivplayer}:64B9:Radiant Finale:" ActionType="Trigger">
+          <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="762082fd-e61e-4b2d-ac97-1dae07cb77d9" TriggerText="16:107CAF33:${_ffxivplayer}:64B9:Radiant Finale:" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="82159b05-9ba9-469f-b234-257120a9ec59" TriggerText="[11:41:30.461] 15:106AF938:${_ffxivplayer}:1D0C:" TriggerForce="conditions" ActionType="Trigger">
+          <Action OrderNumber="6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c5394f40-40f6-4ae9-bcc6-d4f1cdac289d" TriggerText="[11:41:30.461] 15:106AF938:${_ffxivplayer}:1D0C:" TriggerForce="conditions" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="bd05f3b2-2b38-45d9-8862-292b6a1d453a" TriggerText="[11:41:30.461] 15:106AF938:${_ffxivplayer}:1CE4:" ActionType="Trigger">
+          <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="10e03c8e-0b48-48ec-9958-dfa6260d42c6" TriggerText="[11:41:30.461] 15:106AF938:${_ffxivplayer}:1CE4:" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="8" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="a7e5b8a5-0a39-46e6-adb5-c470982a3645" TriggerText="Sable uses Battle Litany" TriggerForce="regexp" ActionType="Trigger">
+          <Action OrderNumber="8" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b9b8cdc9-e437-4765-b1b0-e2bf4b5f9072" TriggerText="Sable uses Battle Litany" TriggerForce="regexp" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="9" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="cb4e5252-2319-4614-bbd3-ee72d910cd94" TriggerText="15:1074BA31:Sable C':64C9:Searing Light:1074BA31:${_ffxivplayer}:" ActionType="Trigger">
+          <Action OrderNumber="9" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="689cfa02-8a84-4103-bd4e-893237cd3e24" TriggerText="15:1074BA31:Sable C':64C9:Searing Light:1074BA31:${_ffxivplayer}:" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="aae17540-2961-4384-892f-fe426e704a32" TriggerText="[12:15:18.503] 1A:106AF938:${_ffxivplayer}:3E8B:" ActionType="Trigger">
+          <Action OrderNumber="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="f4b3613b-a4e5-46b2-b8ee-eef6ffe9cfca" TriggerText="[12:15:18.503] 1A:106AF938:${_ffxivplayer}:3E8B:" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="a7146fb9-d34e-4731-9f4c-21abd52be554" TriggerText="[12:15:18.503] 12:106AF938:${_ffxivplayer}:3E84:" ActionType="Trigger">
+          <Action OrderNumber="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="90aaaebe-2e5e-4ebf-a4fb-6b68712a66e5" TriggerText="[12:15:18.503] 12:106AF938:${_ffxivplayer}:3E84:" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="12" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="953812ed-d1ff-405a-a7e1-9ac3dd02949b" TriggerText="[12:21:43.572] 12:106AF938:${_ffxivplayer}:DE5:" ActionType="Trigger">
+          <Action OrderNumber="12" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="65f5bb26-3434-4062-a7d9-9f4757aa1178" TriggerText="[12:21:43.572] 12:106AF938:${_ffxivplayer}:DE5:" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="13" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="00bd16ce-b26b-41d3-8d61-82a72683681e" TriggerText="[11:41:30.461] 15:106AF938:${_ffxivplayer}:1CE6:Dragon Sight:4001C2DC:John Doe:" ActionType="Trigger">
+          <Action OrderNumber="13" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3089b04f-ee6c-45e7-ae20-9c176a4790e3" TriggerText="[11:41:30.461] 15:106AF938:${_ffxivplayer}:1CE6:Dragon Sight:4001C2DC:John Doe:" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="14" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3f7c58e9-e2c9-4429-a643-cee7135a67fc" TriggerText="12:12341234:${_ffxivplayer}:5F55:" ActionType="Trigger">
+          <Action OrderNumber="14" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="92a7914d-7cbc-4790-b7a5-d35a29802074" TriggerText="12:12341234:${_ffxivplayer}:5F55:" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="15" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="9a5032cd-399a-4d5d-9532-d35ba401d675" TriggerText="[12:15:18.503] 12:106AF938:${_ffxivplayer}:1D60:" ActionType="Trigger">
+          <Action OrderNumber="15" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="7765c2d0-fb8a-4854-8175-49df4ff8de75" TriggerText="[12:15:18.503] 12:106AF938:${_ffxivplayer}:1D60:" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="16" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c0b5b42c-3373-47f7-9209-b342afe2d81f" TriggerText="[12:15:18.503] 12:106AF938:${_ffxivplayer}:5F55:" ActionType="Trigger">
+          <Action OrderNumber="16" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c323ae2c-db51-4e21-a2f7-c807a456e1e4" TriggerText="[12:15:18.503] 12:106AF938:${_ffxivplayer}:5F55:" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="17" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3f7c58e9-e2c9-4429-a643-cee7135a67fc" TriggerText="Sable uses Battle Litany" TriggerForce="regexp" ActionType="Trigger">
+          <Action OrderNumber="17" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="92a7914d-7cbc-4790-b7a5-d35a29802074" TriggerText="Sable uses Battle Litany" TriggerForce="regexp" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
         <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="2 - Buffs Off" Id="7efd095d-0eb3-4992-8329-23e598fee16d" RegularExpression="_buffs off">
+      <Trigger Enabled="true" Name="2 - Buffs Off" Id="c0013fe9-6bd7-46fb-9289-81e2125fe3da" RegularExpression="_buffs off">
         <Actions>
           <Action OrderNumber="1" AuraOp="DeactivateAuraRegex" AuraName="buffs[A-Za-z0-9.-]+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
             <Condition Enabled="false" Grouping="Or" />
@@ -1015,65 +886,62 @@
               <ConditionSingle Enabled="true" ExpressionL="${lvar:buffs.indexof(astcard)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="d531923b-8936-482d-a515-c663aab7ce4d" ActionType="Trigger">
+          <Action OrderNumber="6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="98d736a5-7345-4f73-9c77-c28e1f37e788" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="59321766-8a30-413a-b212-1c7f8eda2964" ActionType="Trigger">
+          <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="6d38678d-9340-4ccf-9bfb-d64935c502ef" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="8" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="00bd16ce-b26b-41d3-8d61-82a72683681e" ActionType="Trigger">
+          <Action OrderNumber="8" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="0b105f3e-7c37-4de8-99b8-f1e224ace577" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="9" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="953812ed-d1ff-405a-a7e1-9ac3dd02949b" ActionType="Trigger">
+          <Action OrderNumber="9" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="64cefe7e-cf24-42b0-82f0-278fbc73b131" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="381c7673-39d6-473c-a5b9-803389f7a1ec" ActionType="Trigger">
+          <Action OrderNumber="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="762082fd-e61e-4b2d-ac97-1dae07cb77d9" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="fb29a947-0684-423f-bf16-fb715c02ab52" ActionType="Trigger">
+          <Action OrderNumber="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="c5f3bcf8-5b7b-41fe-81e2-c1c656a39306" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="12" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="06507408-d6e6-45da-bd4e-116d3c987efe" ActionType="Trigger">
+          <Action OrderNumber="12" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="c5394f40-40f6-4ae9-bcc6-d4f1cdac289d" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="13" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="5f7a84ee-dbb0-407f-a5f6-cf794821393d" ActionType="Trigger">
+          <Action OrderNumber="13" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="10e03c8e-0b48-48ec-9958-dfa6260d42c6" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="14" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="82159b05-9ba9-469f-b234-257120a9ec59" ActionType="Trigger">
+          <Action OrderNumber="14" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="b9b8cdc9-e437-4765-b1b0-e2bf4b5f9072" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="15" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="bd05f3b2-2b38-45d9-8862-292b6a1d453a" ActionType="Trigger">
+          <Action OrderNumber="15" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="689cfa02-8a84-4103-bd4e-893237cd3e24" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="16" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="a7e5b8a5-0a39-46e6-adb5-c470982a3645" ActionType="Trigger">
+          <Action OrderNumber="16" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="f4b3613b-a4e5-46b2-b8ee-eef6ffe9cfca" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="17" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="aae17540-2961-4384-892f-fe426e704a32" ActionType="Trigger">
+          <Action OrderNumber="17" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="90aaaebe-2e5e-4ebf-a4fb-6b68712a66e5" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="18" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="cb4e5252-2319-4614-bbd3-ee72d910cd94" ActionType="Trigger">
+          <Action OrderNumber="18" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="65f5bb26-3434-4062-a7d9-9f4757aa1178" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="19" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="d531923b-8936-482d-a515-c663aab7ce4d" ActionType="Trigger">
+          <Action OrderNumber="19" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="3089b04f-ee6c-45e7-ae20-9c176a4790e3" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="20" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="9a5032cd-399a-4d5d-9532-d35ba401d675" ActionType="Trigger">
+          <Action OrderNumber="20" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="7765c2d0-fb8a-4854-8175-49df4ff8de75" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="21" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="a7146fb9-d34e-4731-9f4c-21abd52be554" ActionType="Trigger">
+          <Action OrderNumber="21" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="c323ae2c-db51-4e21-a2f7-c807a456e1e4" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="22" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="c0b5b42c-3373-47f7-9209-b342afe2d81f" ActionType="Trigger">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="23" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="3f7c58e9-e2c9-4429-a643-cee7135a67fc" ActionType="Trigger">
+          <Action OrderNumber="22" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="92a7914d-7cbc-4790-b7a5-d35a29802074" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
         <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Sequential="True" Name="0 - Buffs Positions" Id="5c181008-cdcc-44b2-bc50-85ac4ac1a057" RegularExpression="^setup (?&lt;monitor&gt;[a-zA-Z]*)\.">
+      <Trigger Enabled="true" Sequential="True" Name="0 - Buffs Positions" Id="c44f404b-c31f-4d9c-baba-bce20957954d" RegularExpression="^setup (?&lt;monitor&gt;[a-zA-Z]*)\.">
         <Actions>
           <Action OrderNumber="1" ListVariableExpressionType="Numeric" ListVariableName="BuffsList" ListVariableExpression="${_imageaura[buffs.preview1].x}" ListVariableIndex="1" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
@@ -1145,7 +1013,7 @@
         <Condition Enabled="false" Grouping="Or" />
         <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="2 - Cancel Buffs" Id="5a34279f-d26c-4a4d-a68c-83fb1252923d" RegularExpression="">
+      <Trigger Enabled="true" Name="2 - Cancel Buffs" Id="17d75111-207f-463f-8861-bb97a05438ba" RegularExpression="">
         <Actions>
           <Action OrderNumber="1" AuraOp="DeactivateAuraRegex" AuraName="buffs[A-Za-z0-9.-]+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura">
             <Condition Enabled="false" Grouping="Or" />
@@ -1159,65 +1027,65 @@
           <Action OrderNumber="4" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="8.25" TextAuraName="(hots|dots|mnk|ast)[A-Za-z0-9.-]+" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="d531923b-8936-482d-a515-c663aab7ce4d" ActionType="Trigger">
+          <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="98d736a5-7345-4f73-9c77-c28e1f37e788" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
           <Action OrderNumber="6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="59321766-8a30-413a-b212-1c7f8eda2964" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="00bd16ce-b26b-41d3-8d61-82a72683681e" ActionType="Trigger">
+          <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="3089b04f-ee6c-45e7-ae20-9c176a4790e3" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="8" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="953812ed-d1ff-405a-a7e1-9ac3dd02949b" ActionType="Trigger">
+          <Action OrderNumber="8" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="65f5bb26-3434-4062-a7d9-9f4757aa1178" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="9" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="381c7673-39d6-473c-a5b9-803389f7a1ec" ActionType="Trigger">
+          <Action OrderNumber="9" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="0b105f3e-7c37-4de8-99b8-f1e224ace577" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="fb29a947-0684-423f-bf16-fb715c02ab52" ActionType="Trigger">
+          <Action OrderNumber="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="64cefe7e-cf24-42b0-82f0-278fbc73b131" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="5f7a84ee-dbb0-407f-a5f6-cf794821393d" ActionType="Trigger">
+          <Action OrderNumber="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="c5f3bcf8-5b7b-41fe-81e2-c1c656a39306" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="12" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="06507408-d6e6-45da-bd4e-116d3c987efe" ActionType="Trigger">
+          <Action OrderNumber="12" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="762082fd-e61e-4b2d-ac97-1dae07cb77d9" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="13" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="82159b05-9ba9-469f-b234-257120a9ec59" ActionType="Trigger">
+          <Action OrderNumber="13" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="c5394f40-40f6-4ae9-bcc6-d4f1cdac289d" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="14" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="bd05f3b2-2b38-45d9-8862-292b6a1d453a" ActionType="Trigger">
+          <Action OrderNumber="14" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="10e03c8e-0b48-48ec-9958-dfa6260d42c6" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="15" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="a7e5b8a5-0a39-46e6-adb5-c470982a3645" ActionType="Trigger">
+          <Action OrderNumber="15" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="b9b8cdc9-e437-4765-b1b0-e2bf4b5f9072" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="16" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="aae17540-2961-4384-892f-fe426e704a32" ActionType="Trigger">
+          <Action OrderNumber="16" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="f4b3613b-a4e5-46b2-b8ee-eef6ffe9cfca" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="17" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="cb4e5252-2319-4614-bbd3-ee72d910cd94" ActionType="Trigger">
+          <Action OrderNumber="17" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="689cfa02-8a84-4103-bd4e-893237cd3e24" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="18" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="d531923b-8936-482d-a515-c663aab7ce4d" ActionType="Trigger">
+          <Action OrderNumber="18" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="98d736a5-7345-4f73-9c77-c28e1f37e788" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="19" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="9a5032cd-399a-4d5d-9532-d35ba401d675" ActionType="Trigger">
+          <Action OrderNumber="19" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="7765c2d0-fb8a-4854-8175-49df4ff8de75" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="20" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="a7146fb9-d34e-4731-9f4c-21abd52be554" ActionType="Trigger">
+          <Action OrderNumber="20" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="90aaaebe-2e5e-4ebf-a4fb-6b68712a66e5" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="21" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="3f7c58e9-e2c9-4429-a643-cee7135a67fc" ActionType="Trigger">
+          <Action OrderNumber="21" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="92a7914d-7cbc-4790-b7a5-d35a29802074" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="22" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="c0b5b42c-3373-47f7-9209-b342afe2d81f" ActionType="Trigger">
+          <Action OrderNumber="22" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="c323ae2c-db51-4e21-a2f7-c807a456e1e4" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
         <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="On Wipe" Id="f94866ef-22d1-4b88-abce-bcdf728f558e" RegularExpression="(wipeout|0038:end|21:([0-9,a-f,A-F]{8}):40000010)">
+      <Trigger Enabled="true" Name="On Wipe" Id="2317d9ff-626e-4c18-a8c9-50186156ef7e" RegularExpression="(wipeout|0038:end|21:([0-9,a-f,A-F]{8}):40000010)">
         <Actions>
           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="EndEncounter">
             <Condition Enabled="false" Grouping="Or" />
@@ -1229,12 +1097,12 @@
         <Condition Enabled="false" Grouping="Or" />
         <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Source="FFXIVNetwork" Name="Zone change" Id="73286a0a-4137-4252-8aa1-4340f0fff234" RegularExpression="^01\|[^|]*\|[^|]*\|(?&lt;zone&gt;[^|]*)">
+      <Trigger Enabled="true" Source="FFXIVNetwork" Name="Zone change" Id="5785b4a2-f647-4cdc-a203-9caa6487b007" RegularExpression="^01\|[^|]*\|[^|]*\|(?&lt;zone&gt;[^|]*)">
         <Actions>
-          <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="f94866ef-22d1-4b88-abce-bcdf728f558e" TriggerForce="regexp" ActionType="Trigger">
+          <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="2317d9ff-626e-4c18-a8c9-50186156ef7e" TriggerForce="regexp" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="7efd095d-0eb3-4992-8329-23e598fee16d" TriggerForce="regexp" ActionType="Trigger">
+          <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c0013fe9-6bd7-46fb-9289-81e2125fe3da" TriggerForce="regexp" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
