@@ -62,14 +62,13 @@
               <ConditionSingle Enabled="false" ExpressionL="${ename}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Name="DNC,1,devilment,120,20,1" Id="6610a999-b11f-4c45-9570-f045d13732ef" RegularExpression="^26\|[^\|]*\|721\|(?:[^\|]*\|){2}(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|[A-Z0-9]{8}\|(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+)\|">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Name="DNC,1,devilment,120,20,1" Id="6610a999-b11f-4c45-9570-f045d13732ef" RegularExpression="^26\|[^\|]*\|721\|(?:[^\|]*\|){2}(?&lt;eid&gt;[A-F0-9]{8})\|[^\|]*\|[A-Z0-9]{8}\|(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+)\|">
             <Actions>
               <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="68d0bf52-bfa2-48f6-91bf-c7dceb897669" TriggerText="func${eid},${_triggername}" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
             <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Trigger>
@@ -444,7 +443,7 @@
           <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="dbe41177-30d8-41dc-b9f7-184731c02546" TriggerText="21||12341234|${_ffxivplayer}|64B9|||${_ffxivplayer}|" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="6610a999-b11f-4c45-9570-f045d13732ef" TriggerText="26||721|||11111111|${_ffxivplayer}|12345678|ffxiv player|" ActionType="Trigger">
+          <Action OrderNumber="6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="6610a999-b11f-4c45-9570-f045d13732ef" TriggerText="26||721|||11111111|ffxiv player|12345678|${_ffxivplayer}|" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
           <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="ae09fb8e-e864-4ff5-b62b-3ad555a8a2e6" TriggerText="21||12341234|${_ffxivplayer}|3E7E|" ActionType="Trigger">
