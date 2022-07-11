@@ -62,13 +62,14 @@
               <ConditionSingle Enabled="false" ExpressionL="${ename}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Name="DNC,1,devilment,120,20,1" Id="6610a999-b11f-4c45-9570-f045d13732ef" RegularExpression="^26\|[^\|]*\|721\|(?:[^\|]*\|){2}(?&lt;eid&gt;[A-F0-9]{8})\|[^\|]*\|[A-Z0-9]{8}\|(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+)\|">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Name="DNC,1,devilment,120,20,1" Id="6610a999-b11f-4c45-9570-f045d13732ef" RegularExpression="^26\|[^\|]*\|721\|(?:[^\|]*\|){2}(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|[A-Z0-9]{8}\|(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+)\|">
             <Actions>
               <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="68d0bf52-bfa2-48f6-91bf-c7dceb897669" TriggerText="func${eid},${_triggername}" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
             <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Trigger>
@@ -426,9 +427,9 @@
       </Folder>
     </Folders>
     <Triggers>
-      <Trigger Enabled="true" Name="1 - Buffs Test" Id="5c2a31d2-cf1c-41c4-8244-fb0251e23177" RegularExpression="^\[[^\]]*\][^:]*00:0038::_buffs test">
+      <Trigger Enabled="true" Source="FFXIVNetwork" Name="1 - Buffs Test" Id="5c2a31d2-cf1c-41c4-8244-fb0251e23177" RegularExpression="^00\|[^\|]*\|0038\|\|_buffs test">
         <Actions>
-          <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3e897aa7-b202-458c-bca4-6ed0f6819881" TriggerText="21||||1131|||Sable Centaura|" ActionType="Trigger">
+          <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3e897aa7-b202-458c-bca4-6ed0f6819881" TriggerText="21||||1131|||${_ffxivplayer}|" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
           <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="921141b9-fdf3-428f-9143-36b370dea309" TriggerText="22||12341234|${_ffxivplayer}|40A8|||${_ffxivplayer}|" ActionType="Trigger">
@@ -443,7 +444,7 @@
           <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="dbe41177-30d8-41dc-b9f7-184731c02546" TriggerText="21||12341234|${_ffxivplayer}|64B9|||${_ffxivplayer}|" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="6610a999-b11f-4c45-9570-f045d13732ef" TriggerText="26||721|||11111111|ffxiv player|12345678|${_ffxivplayer}|" ActionType="Trigger">
+          <Action OrderNumber="6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="6610a999-b11f-4c45-9570-f045d13732ef" TriggerText="26||721|||11111111|${_ffxivplayer}|12345678|ffxiv player|" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
           <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="ae09fb8e-e864-4ff5-b62b-3ad555a8a2e6" TriggerText="21||12341234|${_ffxivplayer}|3E7E|" ActionType="Trigger">
@@ -538,7 +539,13 @@
               <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="PGL" ExpressionTypeR="String" ConditionType="StringEqualCase" />
             </Condition>
           </Action>
-          <Action OrderNumber="2" AuraOp="DeactivateAuraRegex" AuraName="buff.*" ListVariableOp="UnsetRegex" ListVariableName="buffsList" VariableOp="UnsetRegex" VariableName="d[A-F0-9]{8}[A-Za-z ]{0,50}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="8.25" TextAuraName="buff.*" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
+          <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="ae09fb8e-e864-4ff5-b62b-3ad555a8a2e6" TriggerForce="regexp" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="MNK" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+              <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="PGL" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="3" AuraOp="DeactivateAuraRegex" AuraName="buff.*" ListVariableOp="UnsetRegex" ListVariableName="buffsList" VariableOp="UnsetRegex" VariableName="d[A-F0-9]{8}[A-Za-z ]{0,50}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="8.25" TextAuraName="buff.*" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
