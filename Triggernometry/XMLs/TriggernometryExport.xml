@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedTrigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Earth Towers" Id="a6d52613-9ed2-433a-b4a8-ea9a742bb142" RegularExpression="^21\|(?:[^\|]*\|){3}79DB\|(?:[^\|]*\|){2}(?&lt;player&gt;[^\|]*)\|">
+    <Actions>
+      <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="encvarsP8SEarthTowers" ListVariableExpression="${player}" OBSEndPoint="" VariableOp="SetString" VariableName="encvarsP8SEarthTowersAdjust" VariableExpression="PLAYER NAME" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Description="ENABLE AND EDIT ME FOR ADJUST PLAYER NAME INPUT &gt; change &quot;Expression&quot; field to player's name (correct case and spelling)" DescriptionOverride="True">
+        <Condition Enabled="true" Grouping="Or">
+          <ConditionSingle Enabled="true" ExpressionL="${evar:encvarsP8SEarthTowersAdjust}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+        </Condition>
+      </Action>
+      <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="encvarsP8SEarthTowers" ListVariableExpression="${player}" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+        <Condition Enabled="false" Grouping="Or" />
+      </Action>
+      <Action OrderNumber="3" ListVariableName="encvars.P8SEarthTowers" OBSEndPoint="" UseTTSTextExpression="first tower" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="a6d52613-9ed2-433a-b4a8-ea9a742bb142" ActionType="UseTTS" Asynchronous="False" RefireInterrupt="True">
+        <Condition Enabled="true" Grouping="And">
+          <ConditionSingle Enabled="true" ExpressionL="${lvar:encvarsP8SEarthTowers.size}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+          <ConditionSingle Enabled="false" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+          <ConditionSingle Enabled="true" ExpressionL="${lvar:encvarsP8SEarthTowers.indexof(${_ffxivplayer})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+        </Condition>
+      </Action>
+      <Action OrderNumber="4" ListVariableName="encvars.P8SEarthTowers" OBSEndPoint="" UseTTSTextExpression="second tower" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="a6d52613-9ed2-433a-b4a8-ea9a742bb142" ActionType="UseTTS" Asynchronous="False">
+        <Condition Enabled="true" Grouping="And">
+          <ConditionSingle Enabled="false" ExpressionL="${lvar:encvarsP8SEarthTowers.size}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+          <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+        </Condition>
+      </Action>
+      <Action OrderNumber="5" ListVariableName="encvars.P8SEarthTowers" OBSEndPoint="" UseTTSTextExpression="adjust" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="a6d52613-9ed2-433a-b4a8-ea9a742bb142" ActionType="UseTTS" ExecutionDelayExpression="1000" Asynchronous="False" RefireInterrupt="True">
+        <Condition Enabled="true" Grouping="Or">
+          <ConditionGroup Enabled="true" Grouping="And">
+            <ConditionSingle Enabled="true" ExpressionL="${lvar:encvarsP8SEarthTowers.indexof(${var:encvarsP8SEarthTowersAdjust})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            <ConditionSingle Enabled="true" ExpressionL="${lvar:encvarsP8SEarthTowers.indexof(${_ffxivplayer})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            <ConditionSingle Enabled="true" ExpressionL="${evar:encvarsP8SEarthTowersAdjust}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            <ConditionSingle Enabled="true" ExpressionL="${lvar:encvarsP8SEarthTowers.size}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+          </ConditionGroup>
+          <ConditionGroup Enabled="true" Grouping="And">
+            <ConditionSingle Enabled="true" ExpressionL="${lvar:encvarsP8SEarthTowers.indexof(${var:encvarsP8SEarthTowersAdjust})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            <ConditionSingle Enabled="true" ExpressionL="${lvar:encvarsP8SEarthTowers.indexof(${_ffxivplayer})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            <ConditionSingle Enabled="true" ExpressionL="${lvar:encvarsP8SEarthTowers.size}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+            <ConditionSingle Enabled="true" ExpressionL="${evar:encvarsP8SEarthTowersAdjust}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+          </ConditionGroup>
+        </Condition>
+      </Action>
+      <Action OrderNumber="6" ListVariableName="encvarsP8SEarthTowers" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+        <Condition Enabled="true" Grouping="Or">
+          <ConditionSingle Enabled="true" ExpressionL="${lvar:encvarsP8SEarthTowers.size}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+        </Condition>
+      </Action>
+      <Action OrderNumber="7" ListVariableName="encvarsP8SEarthTowers" OBSEndPoint="" VariableName="encvarsP8SEarthTowersAdjust" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" RefireInterrupt="True">
+        <Condition Enabled="true" Grouping="Or">
+          <ConditionSingle Enabled="true" ExpressionL="${lvar:encvarsP8SEarthTowers.size}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+        </Condition>
+      </Action>
+    </Actions>
+    <Condition Enabled="false" Grouping="Or" />
+    <Conditions />
+  </ExportedTrigger>
+</TriggernometryExport>
