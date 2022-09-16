@@ -2,7 +2,7 @@
 <TriggernometryExport Version="1">
   <ExportedFolder Id="fa69ec8a-cb80-4cc8-b206-6efdc835e62f" Name="00 Sable's Cooldowns Tracker" Enabled="true">
     <Folders>
-      <Folder Id="bf46c486-df88-40ae-912e-8e89459092a3" Name="SETUP - README INSIDE" Enabled="true">
+      <Folder Id="bf46c486-df88-40ae-912e-8e89459092a3" Name="zz - INFORMATION - README INSIDE" Enabled="false">
         <Folders>
           <Folder Id="c624ac3e-2c7f-444c-aa4f-432b32d9f054" Name="Startup" Enabled="true">
             <Folders />
@@ -12,7 +12,7 @@
                   <Action OrderNumber="1" ListVariableExpressionType="Numeric" ListVariableName="PartyList" ListVariableExpression="${_imageaura[PLPreview].x}" ListVariableIndex="1" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False" Description="Do Not Edit" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="2" AuraName="PLPreview" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid%20Buffs/AST/Small/moveme.png" AuraXIniExpression="-1068" AuraYIniExpression="491" AuraWIniExpression="30" AuraHIniExpression="322" AuraOIniExpression="0" AuraTTLTickExpression="1-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Description="Party List Position - &#xD;&#xA;Move this aura to where you want the initial auras to appear. &#xD;&#xA;Note: If the pictures in this aura don't line up well in your party list, you will need to edit the vertical padding&#xD;&#xA; variable action, or change your party list element size in your FFXIV HUD." DescriptionOverride="True">
+                  <Action OrderNumber="2" AuraName="PLPreview" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid%20Buffs/AST/Small/moveme.png" AuraXIniExpression="25" AuraYIniExpression="23" AuraWIniExpression="30" AuraHIniExpression="322" AuraOIniExpression="0" AuraTTLTickExpression="1-${_since}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Description="Party List Position - &#xD;&#xA;Move this aura to where you want the initial auras to appear. &#xD;&#xA;Note: If the pictures in this aura don't line up well in your party list, you will need to edit the vertical padding&#xD;&#xA; variable action, or change your party list element size in your FFXIV HUD." DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${monitor}" ExpressionTypeL="String" ExpressionR="single" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
@@ -23,7 +23,7 @@
                   <Action OrderNumber="4" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PartyList" ListVariableExpression="${_imageaura[PLPreview].y}" ListVariableIndex="2" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="50" Asynchronous="False" Description="Do Not Edit" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="5" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PartyList" ListVariableExpression="32" ListVariableIndex="1" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="50" Asynchronous="False" Description="Padding value - how much horizontal space to put between each icon - Default 26" DescriptionOverride="True">
+                  <Action OrderNumber="5" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PartyList" ListVariableExpression="27" ListVariableIndex="1" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="50" Asynchronous="False" Description="Padding value - how much horizontal space to put between each icon - Default 27" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                   <Action OrderNumber="6" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PartyList" ListVariableExpression="40" ListVariableIndex="1" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="50" Asynchronous="False" Description="Padding value - how much vertical space to put between each icon - Default 40" DescriptionOverride="True">
@@ -32,7 +32,10 @@
                   <Action OrderNumber="7" ListVariableOp="Push" ListVariableName="PartyList" ListVariableExpression="-1" ListVariableIndex="1" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="50" Asynchronous="False" Description="Aura grow direction: -1 is left, 1 is right" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="8" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PartyList" ListVariableExpression="30" ListVariableIndex="2" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="50" Asynchronous="False" Description="Width &amp; Height value - determines the size of each icon - Default 22" DescriptionOverride="True">
+                  <Action OrderNumber="8" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PartyList" ListVariableExpression="25" ListVariableIndex="2" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="50" Asynchronous="False" Description="Width &amp; Height value - determines the size of each icon - Default 25" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="9" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PartyList" ListVariableExpression="100" ListVariableIndex="2" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="50" Asynchronous="False" Description="Opacity value - determines the transparency of each icon - Default 100" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
@@ -42,13 +45,18 @@
           </Folder>
         </Folders>
         <Triggers>
-          <Trigger Enabled="false" IsReadme="True" Name="## INSTRUCTIONS - SEE DESCRIPTION TAB" Id="9535d65b-ce8b-458b-80a7-c1be9e1f0f93" RegularExpression="" Description="These triggers are based on Dansa's HoT triggers, with some additional customization and utility added by SableCentaur.&#xD;&#xA;Make sure your party list order in FFXIV matches your configured party order in Triggernometry's settings.&#xD;&#xA;Copy the Party List Settings in your Triggernometry startup folder and disable it in the remote repository.&#xD;&#xA;Open the settings trigger and configure it by moving the Position auras to where you want the auras to appear.&#xD;&#xA;- use the visual guide for placement to place the auras, but don't change any other settings in the action.&#xD;&#xA;Each of the other actions in these triggers are labeled as to what settings they change.&#xD;&#xA;If you don't understand what they do, just leave them alone.&#xD;&#xA;&#xD;&#xA;To turn off auras for abilities you don't care about, find the relevant ability in folders inside the DO NOT EDIT folder and enable/disable the trigger. Don't edit the triggers inside there, just enable/disable as you need.&#xD;&#xA;All of these triggers are designed for use at level 90; I don't plan to support them at levels below that, but if you make a fix, pull requests are welcome.&#xD;&#xA;&#xD;&#xA;Support for these triggers is limited, but questions may be DM'd to SableCentaur#1297 on Discord.&#xD;&#xA;If your question is answered in these instructions or in Triggernometry's FAQ, I will not answer.">
+          <Trigger Enabled="false" IsReadme="True" Name="## INSTRUCTIONS - SEE DESCRIPTION TAB" Id="9535d65b-ce8b-458b-80a7-c1be9e1f0f93" RegularExpression="" Description="These triggers are based on Dansa's HoT triggers, with additional customization and functionality added by SableCentaur.&#xD;&#xA;1. Make sure your party list order in FFXIV matches your configured party order in Triggernometry's settings.&#xD;&#xA;	Addendum: For now, the Telesto plugin for Dalamud is required for this repo to work properly.&#xD;&#xA;	Please install it before trying to use this repo.&#xD;&#xA;	https://github.com/paissaheavyindustries/Dalamud-Repo&#xD;&#xA;2. Copy the Party List Settings to your Triggernometry startup folder and disable it in the remote repository.&#xD;&#xA;3. Open the settings trigger and configure it.&#xD;&#xA;	Open the Party List Position action and use the visual guide for placement to place the aura.&#xD;&#xA;	After moving the aura to the desired location, right click the image and click Save Settings.&#xD;&#xA;	Each of the other actions in these triggers are labeled as to what settings they change.&#xD;&#xA;&#xD;&#xA;To turn off auras for abilities you don't care about, find the relevant ability in folders inside the MultiCooldowns folder&#xD;&#xA;	Enable/disable the triggers as desired. &#xD;&#xA;All the triggers are designed for use at level 90.&#xD;&#xA;I don't plan to support them at levels below that, but if you make a fix, pull requests are welcome.&#xD;&#xA;&#xD;&#xA;Support for these triggers is limited, but questions/comments/suggestions may be DM'd to SableCentaur#1297 on Discord.&#xD;&#xA;If your question is answered in these instructions or in Triggernometry's FAQ, I will not answer.">
             <Actions />
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
+          <Trigger Enabled="false" Name="updates - see description tab" Id="b9e31756-65d8-4fe9-8f67-99645c23866c" RegularExpression="" Description="9.16.22&#xD;&#xA;	added functionality for &quot;counter&quot; abilities&#xD;&#xA;		when buff is active, aura shows number of stacks remaining instead of duration left&#xD;&#xA;		when buff falls off, aura will switch to showing CD&#xD;&#xA;		ex. Soteria, Manafication, Delirium, Blood Weapon, Requiescat. also affects Technical Step&#xD;&#xA;	added functionality for other abilities that can end early but don't have stacks&#xD;&#xA;		when buff is active, aura shows time left until it ends automatically&#xD;&#xA;		when buff falls off or ability is ended, aura will switch to showing CD&#xD;&#xA;		for abilities that trigger other buffs (regen from arcane crest, invuln from living dead, etc), these effects&#xD;&#xA;		will show up as a separate aura from the original ability's cooldown&#xD;&#xA;		ex. Macrocosmos, Earthly Star, Living Dead, Arcane Crest, Divine Veil&#xD;&#xA;	added customizability to party list settings&#xD;&#xA;		new options include changing the width/height and opacity of icons&#xD;&#xA;		text size customizability is impossible for now :(&#xD;&#xA;		to use these new options, copy and paste a new copy of the Party List Settings trigger to the startup folder&#xD;&#xA;		and customize as desired&#xD;&#xA;	actions with multiple charges now use a single trigger to queue aura activation&#xD;&#xA;		most of these triggers still have disabled actions, will clean these up later after ensuring consistency&#xD;&#xA;		as a result of this change, there are much fewer messy variables left over when exiting duties!&#xD;&#xA;	removed outdated references to DoT tracker&#xD;&#xA;	simplified HoT logic&#xD;&#xA;	converted all triggers to use network lines&#xD;&#xA;	added Telesto compatibility to allow for continued use until Trig party data populates correctly again&#xD;&#xA;		https://github.com/paissaheavyindustries/Triggernometry/issues/71&#xD;&#xA;		if/when this is fixed, it should be possible to go back to using it without Telesto with no updates needed&#xD;&#xA;	updated level requirement to show Kerachole as a regen for SGE&#xD;&#xA;	added new abilities to track&#xD;&#xA;		AST - Draw, Exaltation, BLM - Amplifier, PLD - Divine Veil, SGE - Physis&#xD;&#xA;	added wipe command to allow easier testing and cleanup&#xD;&#xA;	reorganized folders to make abilities easier to find, and backend/aura commands less intrusive&#xD;&#xA;	updated instructions&#xD;&#xA;&#xD;&#xA;Planned:&#xD;&#xA;	adjust regex and conditionals to use only the character IDs, remove names from logic&#xD;&#xA;	add suggested abilities (currently disabled triggers)&#xD;&#xA;	consolidate end early cd trigger to the initialize cd trigger&#xD;&#xA;">
+            <Actions />
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
         </Triggers>
       </Folder>
-      <Folder Id="6628d2d1-eb98-4e53-8477-933a0d565e99" Name="MultiCooldowns" Enabled="true">
+      <Folder Id="6628d2d1-eb98-4e53-8477-933a0d565e99" Name="## MultiCooldowns" Enabled="true">
         <Folders>
           <Folder Id="04b996a4-595e-443d-9e13-cf83806d7f23" Name="Buffs/DMG cooldowns" Enabled="true">
             <Folders>
@@ -348,7 +356,6 @@
                         <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                       </ConditionGroup>
                     </Condition>
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -1493,7 +1500,6 @@
                         <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                       </ConditionGroup>
                     </Condition>
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -1699,7 +1705,7 @@
                       </Action>
                       <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="dJobHots" ListVariableExpression="Kerachole" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
                         <Condition Enabled="true" Grouping="And">
-                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="50" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="78" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
                           <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="SGE" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
                       </Action>
@@ -3685,7 +3691,6 @@
                         <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                       </ConditionGroup>
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Source="FFXIVNetwork" Name="TODO: Shade Shift" Id="e7fac0b1-c5bf-4f4c-a856-91c053bc4f60" RegularExpression="">
                     <Actions>
@@ -3703,7 +3708,6 @@
                         <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                       </ConditionGroup>
                     </Condition>
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -3750,9 +3754,9 @@
               <Folder Id="39aa7605-d03d-4730-a4cc-152ebddd8c93" Name="Aura Commands" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="01 - CD Charges" Id="4d732b49-1dcd-4af6-9be3-f20c588a1dfe" RegularExpression="^func(?&lt;eid&gt;[A-F0-9]{8}),(?&lt;ename&gt;[^,]*),(?&lt;skill&gt;[A-Za-z- ']{1,25}),(?&lt;dur&gt;\d{1,3}),(?&lt;ef&gt;\d*)(?:,)?(?&lt;charge&gt;\d*)?,?c?(?&lt;count&gt;\d*)" PeriodRefire="Deny">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="01 - CD Charges" Id="4d732b49-1dcd-4af6-9be3-f20c588a1dfe" RegularExpression="^func(?&lt;eid&gt;[A-F0-9]{8}),(?&lt;ename&gt;[^,]*),(?&lt;skill&gt;[A-Za-z- ']{1,25}),(?&lt;dur&gt;\d{1,3}),(?&lt;ef&gt;\d*)(?:,)?(?&lt;charge&gt;\d*)?,?c?(?&lt;count&gt;\d*)" PeriodRefire="Deny" Description="func${eid},${ename},${skill},30,0,2">
                     <Actions>
-                      <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="d${eid}${skill}charges" VariableExpression="if(${evar:d${eid}${skill}charges},${var:d${eid}${skill}charges}-1,${charges}-1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="d${eid}${skill}charges" VariableExpression="if(${evar:d${eid}${skill}charges},${var:d${eid}${skill}charges}-1,${charge}-1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                       <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="d${eid}${skill}CD" VariableExpression="if(${evar:d${eid}${skill}CD}&gt;0,${var:d${eid}${skill}CD}+${dur}*1000,${_systemtimems}+${dur}*1000)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
@@ -3772,17 +3776,17 @@
                       </Action>
                       <Action OrderNumber="6" VariableName="d${eid}${skill}CD" VariableExpression="${var:d${eid}${skill}charges}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="1000">
                         <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${var:d${eid}${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${var:d${eid}${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="${charge}" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="7" VariableName="d${eid}${skill}charges" VariableExpression="${var:d${eid}${skill}charges}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="7" VariableName="d${eid}${skill}charge" VariableExpression="${var:d${eid}${skill}charges}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${var:d${eid}${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="${charges}" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${var:d${eid}${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="${charge}" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="8" VariableName="d${eid}${skill}charge" VariableExpression="${var:d${eid}${skill}charges}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="8" VariableName="d${eid}${skill}charges" VariableExpression="${var:d${eid}${skill}charges}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${var:d${eid}${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="${charges}" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${var:d${eid}${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="${charge}" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
                         </Condition>
                       </Action>
                     </Actions>
@@ -3801,7 +3805,7 @@
                   </Trigger>
                   <Trigger Enabled="true" Sequential="True" Name="02 - CD End Early" Id="3757765f-9a1b-4876-9c6f-5e2ab2512e86" RegularExpression="^func(?&lt;eid&gt;[A-F0-9]{8}),(?&lt;ename&gt;[^,]*),(?&lt;skill&gt;[^,]*),(?&lt;dur&gt;\d*),(?&lt;ef&gt;\d*),?(?&lt;charge&gt;\d*)?" DebugLevel="Info">
                     <Actions>
-                      <Action OrderNumber="1" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="8.25" TextAuraName="${eid}${skill}${charge}tc" TextAuraExpression="${numeric:round((${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))/1000)}" TextAuraXIniExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraYIniExpression="${_imageaura[${eid}${skill}${charge}ic].y}+7" TextAuraWIniExpression="${_imageaura[${eid}${skill}${charge}ic].w}" TextAuraHIniExpression="${_imageaura[${eid}${skill}${charge}ic].h}" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraTTLTickExpression="${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="${ef}*1000" DebugLevel="Warning">
+                      <Action OrderNumber="1" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="8.25" TextAuraName="${eid}${skill}${charge}tc" TextAuraExpression="${numeric:round((${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))/1000)}" TextAuraXIniExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraYIniExpression="${_imageaura[${eid}${skill}${charge}ic].y}+7" TextAuraWIniExpression="${_imageaura[${eid}${skill}${charge}ic].w}" TextAuraHIniExpression="${_imageaura[${eid}${skill}${charge}ic].h}" TextAuraOIniExpression="${_imageaura[${eid}${skill}${charge}ic].opacity}" TextAuraXTickExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraTTLTickExpression="${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="${ef}*1000" DebugLevel="Warning">
                         <Condition Enabled="false" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
@@ -3828,19 +3832,19 @@
                       <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="d${eid}${skill}${charge}dur" VariableExpression="${_systemtimems}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="2" AuraImageMode="StretchImage" AuraName="${eid}${skill}${charge}ic" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/General/Party Cooldowns/${skill}.png" AuraXIniExpression="${lvar:PartyList[1]}" AuraYIniExpression="4+${lvar:PartyList[2]}+${lvar:PartyList[4]}*(${_ffxivparty[${ename}].order}-1)" AuraWIniExpression="22" AuraHIniExpression="22" AuraOIniExpression="100" AuraXTickExpression="${lvar:PartyList[1]}+(${lvar:${eid}dList.indexof(${eid}${skill}${charge})}-1)*${lvar:PartyList[3]}*${lvar:PartyList[5]}" AuraTTLTickExpression="${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" DebugLevel="Info" Description="Activates Image Aura - Uses Triggernometry Party List, currently broken&#xD;&#xA;" DescriptionOverride="True">
+                      <Action OrderNumber="2" AuraImageMode="StretchImage" AuraName="${eid}${skill}${charge}ic" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/General/Party Cooldowns/${skill}.png" AuraXIniExpression="${lvar:PartyList[1]}" AuraYIniExpression="4+${lvar:PartyList[2]}+${lvar:PartyList[4]}*(${_ffxivparty[${ename}].order}-1)" AuraWIniExpression="${lvar:PartyList[6]}" AuraHIniExpression="${lvar:PartyList[6]}" AuraOIniExpression="${lvar:PartyList[7]}" AuraXTickExpression="${lvar:PartyList[1]}+(${lvar:${eid}dList.indexof(${eid}${skill}${charge})}-1)*${lvar:PartyList[3]}*${lvar:PartyList[5]}" AuraTTLTickExpression="${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" DebugLevel="Info" Description="Activates Image Aura - Uses Triggernometry Party List, currently broken&#xD;&#xA;" DescriptionOverride="True">
                         <Condition Enabled="false" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                           <ConditionSingle Enabled="true" ExpressionL="${charge}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="${eid}${skill}${charge}ic" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/General/Party Cooldowns/${skill}.png" AuraXIniExpression="${lvar:PartyList[1]}" AuraYIniExpression="4+${lvar:PartyList[2]}+${lvar:PartyList[4]}*(${lvar:dTelestoPartyMembers.indexof(${ename})}-1)" AuraWIniExpression="${lvar:PartyList[6]}" AuraHIniExpression="${lvar:PartyList[6]}" AuraOIniExpression="100" AuraXTickExpression="${lvar:PartyList[1]}+(${lvar:${eid}dList.indexof(${eid}${skill}${charge})}-1)*${lvar:PartyList[3]}*${lvar:PartyList[5]}" AuraTTLTickExpression="${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" DebugLevel="Info" Description="Activates Image Aura - Uses Telesto" DescriptionOverride="True">
+                      <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="${eid}${skill}${charge}ic" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/General/Party Cooldowns/${skill}.png" AuraXIniExpression="${lvar:PartyList[1]}" AuraYIniExpression="4+${lvar:PartyList[2]}+${lvar:PartyList[4]}*(${lvar:dTelestoPartyMembers.indexof(${ename})}-1)" AuraWIniExpression="${lvar:PartyList[6]}" AuraHIniExpression="${lvar:PartyList[6]}" AuraOIniExpression="${lvar:PartyList[7]}" AuraXTickExpression="${lvar:PartyList[1]}+(${lvar:${eid}dList.indexof(${eid}${skill}${charge})}-1)*${lvar:PartyList[3]}*${lvar:PartyList[5]}" AuraTTLTickExpression="${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" DebugLevel="Info" Description="Activates Image Aura - Uses Telesto" DescriptionOverride="True">
                         <Condition Enabled="false" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                           <ConditionSingle Enabled="true" ExpressionL="${charge}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="4" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="12" TextAuraForeground="#3DCCF5" TextAuraOutline="Black" TextAuraName="${eid}${skill}${charge}tc" TextAuraExpression="${numeric:${ef}-${_since}}" TextAuraXIniExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraYIniExpression="${_imageaura[${eid}${skill}${charge}ic].y}+7" TextAuraWIniExpression="${_imageaura[${eid}${skill}${charge}ic].w}" TextAuraHIniExpression="${_imageaura[${eid}${skill}${charge}ic].h}" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraTTLTickExpression="${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" DebugLevel="Warning">
+                      <Action OrderNumber="4" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="9.75" TextAuraForeground="#80FFFF" TextAuraOutline="Black" TextAuraName="${eid}${skill}${charge}tc" TextAuraExpression="${numeric:${ef}-${_since}}" TextAuraXIniExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraYIniExpression="${_imageaura[${eid}${skill}${charge}ic].y}+7" TextAuraWIniExpression="${_imageaura[${eid}${skill}${charge}ic].w}" TextAuraHIniExpression="${_imageaura[${eid}${skill}${charge}ic].h}" TextAuraOIniExpression="${_imageaura[${eid}${skill}${charge}ic].opacity}" TextAuraXTickExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraTTLTickExpression="${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" DebugLevel="Warning">
                         <Condition Enabled="false" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                           <ConditionGroup Enabled="false" Grouping="Or">
@@ -3849,7 +3853,7 @@
                           </ConditionGroup>
                         </Condition>
                       </Action>
-                      <Action OrderNumber="5" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="12" TextAuraForeground="#80FFFF" TextAuraOutline="Black" TextAuraName="${eid}${skill}${charge}tc" TextAuraExpression="${var:${eid}${skill}count}" TextAuraXIniExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraYIniExpression="${_imageaura[${eid}${skill}${charge}ic].y}+7" TextAuraWIniExpression="${_imageaura[${eid}${skill}${charge}ic].w}" TextAuraHIniExpression="${_imageaura[${eid}${skill}${charge}ic].h}" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraTTLTickExpression="${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" DebugLevel="Warning">
+                      <Action OrderNumber="5" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="9.75" TextAuraForeground="#80FFFF" TextAuraOutline="Black" TextAuraName="${eid}${skill}${charge}tc" TextAuraExpression="${var:${eid}${skill}count}" TextAuraXIniExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraYIniExpression="${_imageaura[${eid}${skill}${charge}ic].y}+7" TextAuraWIniExpression="${_imageaura[${eid}${skill}${charge}ic].w}" TextAuraHIniExpression="${_imageaura[${eid}${skill}${charge}ic].h}" TextAuraOIniExpression="${_imageaura[${eid}${skill}${charge}ic].opacity}" TextAuraXTickExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraTTLTickExpression="${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" DebugLevel="Warning">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                           <ConditionGroup Enabled="false" Grouping="Or">
@@ -3869,7 +3873,7 @@
                           <ConditionSingle Enabled="true" ExpressionL="${lvar:dDots.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="8" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="12" TextAuraName="${eid}${skill}${charge}tc" TextAuraExpression="${numeric:round((${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))/1000)}" TextAuraXIniExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraYIniExpression="${_imageaura[${eid}${skill}${charge}ic].y}+7" TextAuraWIniExpression="${_imageaura[${eid}${skill}${charge}ic].w}" TextAuraHIniExpression="${_imageaura[${eid}${skill}${charge}ic].h}" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraTTLTickExpression="${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="${ef}*1000" DebugLevel="Warning">
+                      <Action OrderNumber="8" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="9.75" TextAuraName="${eid}${skill}${charge}tc" TextAuraExpression="${numeric:round((${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))/1000)}" TextAuraXIniExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraYIniExpression="${_imageaura[${eid}${skill}${charge}ic].y}+7" TextAuraWIniExpression="${_imageaura[${eid}${skill}${charge}ic].w}" TextAuraHIniExpression="${_imageaura[${eid}${skill}${charge}ic].h}" TextAuraOIniExpression="${_imageaura[${eid}${skill}${charge}ic].opacity}" TextAuraXTickExpression="${_imageaura[${eid}${skill}${charge}ic].x}" TextAuraTTLTickExpression="${var:d${eid}${skill}${charge}dur}-${_systemtimems}+(${dur}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" ExecutionDelayExpression="${ef}*1000" DebugLevel="Warning">
                         <Condition Enabled="false" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
@@ -3899,7 +3903,7 @@
                       <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="d${eid}aa${skill}dur" VariableExpression="${_systemtimems}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="2" AuraImageMode="StretchImage" AuraName="${eid}aa${skill}ic" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/General/Party Cooldowns/${skill}.png" AuraXIniExpression="${lvar:PartyList[1]}" AuraYIniExpression="4+${lvar:PartyList[2]}+${lvar:PartyList[4]}*(${_ffxivparty[${ename}].order}-1)" AuraWIniExpression="22" AuraHIniExpression="22" AuraOIniExpression="100" AuraXTickExpression="${lvar:PartyList[1]}+(${lvar:${eid}dList.indexof(${eid}aa${skill})}-1)*${lvar:PartyList[3]}*${lvar:PartyList[5]}" AuraTTLTickExpression="${var:d${eid}aa${skill}dur}-${_systemtimems}+(${dur}*1000))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" DebugLevel="Info" Description="Activates Image Aura - Uses Triggernometry Party List, currently broken&#xD;&#xA;" DescriptionOverride="True">
+                      <Action OrderNumber="2" AuraImageMode="StretchImage" AuraName="${eid}aa${skill}ic" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/General/Party Cooldowns/${skill}.png" AuraXIniExpression="${lvar:PartyList[1]}" AuraYIniExpression="4+${lvar:PartyList[2]}+${lvar:PartyList[4]}*(${_ffxivparty[${ename}].order}-1)" AuraWIniExpression="${lvar:PartyList[6]}" AuraHIniExpression="${lvar:PartyList[6]}" AuraOIniExpression="${lvar:PartyList[7]}" AuraXTickExpression="${lvar:PartyList[1]}+(${lvar:${eid}dList.indexof(${eid}aa${skill})}-1)*${lvar:PartyList[3]}*${lvar:PartyList[5]}" AuraTTLTickExpression="${var:d${eid}aa${skill}dur}-${_systemtimems}+(${dur}*1000))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" DebugLevel="Info" Description="Activates Image Aura - Uses Triggernometry Party List, currently broken&#xD;&#xA;" DescriptionOverride="True">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid}aa${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                           <ConditionGroup Enabled="false" Grouping="Or">
@@ -3914,7 +3918,7 @@
                           </ConditionGroup>
                         </Condition>
                       </Action>
-                      <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="${eid}aa${skill}ic" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/General/Party Cooldowns/${skill}.png" AuraXIniExpression="${lvar:PartyList[1]}" AuraYIniExpression="4+${lvar:PartyList[2]}+${lvar:PartyList[4]}*(${lvar:dTelestoPartyMembers.indexof(${ename})}-1)" AuraWIniExpression="${lvar:PartyList[6]}" AuraHIniExpression="${lvar:PartyList[6]}" AuraOIniExpression="100" AuraXTickExpression="${lvar:PartyList[1]}+(${lvar:${eid}dList.indexof(${eid}aa${skill})}-1)*${lvar:PartyList[3]}*${lvar:PartyList[5]}" AuraTTLTickExpression="${var:d${eid}aa${skill}dur}-${_systemtimems}+(${dur}*1000))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" DebugLevel="Info" Description="Activates Image Aura - Uses Telesto" DescriptionOverride="True">
+                      <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="${eid}aa${skill}ic" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/General/Party Cooldowns/${skill}.png" AuraXIniExpression="${lvar:PartyList[1]}" AuraYIniExpression="4+${lvar:PartyList[2]}+${lvar:PartyList[4]}*(${lvar:dTelestoPartyMembers.indexof(${ename})}-1)" AuraWIniExpression="${lvar:PartyList[6]}" AuraHIniExpression="${lvar:PartyList[6]}" AuraOIniExpression="${lvar:PartyList[7]}" AuraXTickExpression="${lvar:PartyList[1]}+(${lvar:${eid}dList.indexof(${eid}aa${skill})}-1)*${lvar:PartyList[3]}*${lvar:PartyList[5]}" AuraTTLTickExpression="${var:d${eid}aa${skill}dur}-${_systemtimems}+(${dur}*1000))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" DebugLevel="Info" Description="Activates Image Aura - Uses Telesto" DescriptionOverride="True">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid}aa${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                           <ConditionGroup Enabled="false" Grouping="Or">
@@ -3929,7 +3933,7 @@
                           </ConditionGroup>
                         </Condition>
                       </Action>
-                      <Action OrderNumber="4" TextAuraEffect="Bold" TextAuraFontSize="11.25" TextAuraName="${eid}aa${skill}tc" TextAuraExpression="${numeric:round((${var:d${eid}aa${skill}dur}-${_systemtimems}+(${dur}*1000))/1000),1)}" TextAuraXIniExpression="${_imageaura[${eid}aa${skill}ic].x}" TextAuraYIniExpression="${_imageaura[${eid}aa${skill}ic].y}" TextAuraWIniExpression="${_imageaura[${eid}aa${skill}ic].w}" TextAuraHIniExpression="${_imageaura[${eid}aa${skill}ic].h}" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[${eid}aa${skill}ic].x}" TextAuraTTLTickExpression="${var:d${eid}aa${skill}dur}-${_systemtimems}+(${dur}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" DebugLevel="Warning">
+                      <Action OrderNumber="4" TextAuraEffect="Bold" TextAuraFontSize="11.25" TextAuraName="${eid}aa${skill}tc" TextAuraExpression="${numeric:round((${var:d${eid}aa${skill}dur}-${_systemtimems}+(${dur}*1000))/1000),1)}" TextAuraXIniExpression="${_imageaura[${eid}aa${skill}ic].x}" TextAuraYIniExpression="${_imageaura[${eid}aa${skill}ic].y}" TextAuraWIniExpression="${_imageaura[${eid}aa${skill}ic].w}" TextAuraHIniExpression="${_imageaura[${eid}aa${skill}ic].h}" TextAuraOIniExpression="${_imageaura[${eid}aa${skill}ic].opacity}" TextAuraXTickExpression="${_imageaura[${eid}aa${skill}ic].x}" TextAuraTTLTickExpression="${var:d${eid}aa${skill}dur}-${_systemtimems}+(${dur}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" DebugLevel="Warning">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid}aa${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
@@ -4015,7 +4019,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="Wipe Reset" Id="90d97ef6-f4b4-49f5-beea-eba5b8bd6b29" RegularExpression="^33\|[^|]*\|[^|]*\|400000(?&gt;03|0F)\|">
                     <Actions>
@@ -4051,46 +4054,29 @@
                       <Action OrderNumber="1" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="SystemBeep">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="bc619bef-b3a4-47cc-ba1e-c067482b8041" TriggerText="func${eid},${ename},${lvar:dJobHots[1]}" Enabled="False" ActionType="Trigger">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid}${lvar:dJobHots[1]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
-                          <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid}${lvar:dJobHots[2]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="bc619bef-b3a4-47cc-ba1e-c067482b8041" TriggerText="func${eid},${ename},${lvar:dJobHots[2]}" Enabled="False" ActionType="Trigger">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="false" ExpressionL="${lvar:dHots.indexof(${eid}${lvar:dJobHots[2]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
-                          <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid}${lvar:dJobHots[2]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="d1ccbfee-7ce8-45b3-b2db-dfa678f54343" TriggerText="func${lvar:${eid}dList[1]}" ActionType="Trigger">
+                      <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="d1ccbfee-7ce8-45b3-b2db-dfa678f54343" TriggerText="func${lvar:${eid}dList[1]}" ActionType="Trigger">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="de55381d-b854-47fd-a8c2-da2154244aed" TriggerText="04|.|${eid}|${ename}|" ActionType="Trigger">
+                      <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="de55381d-b854-47fd-a8c2-da2154244aed" TriggerText="04|.|${eid}|${ename}|" ActionType="Trigger">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="6" ListVariableName="${eid}dHots" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="bc619bef-b3a4-47cc-ba1e-c067482b8041" TriggerText="func${eid},${ename},${lvar:dJobHots[2]}" Enabled="False" ActionType="ListVariable">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${elvar:${eid}dList}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="7" ListVariableName="${eid}dList" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="bc619bef-b3a4-47cc-ba1e-c067482b8041" TriggerText="func${eid},${ename},${lvar:dJobHots[2]}" ActionType="ListVariable">
+                      <Action OrderNumber="4" ListVariableName="${eid}dList" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="bc619bef-b3a4-47cc-ba1e-c067482b8041" TriggerText="func${eid},${ename},${lvar:dJobHots[2]}" ActionType="ListVariable">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="false" ExpressionL="${elvar:${eid}dList}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                           <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="8" ListVariableName="${eid}dList" VariableOp="UnsetRegex" VariableName="d${eid}.*" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="bc619bef-b3a4-47cc-ba1e-c067482b8041" TriggerText="func${eid},${ename},${lvar:dJobHots[2]}" ActionType="Variable">
+                      <Action OrderNumber="5" ListVariableName="${eid}dList" VariableOp="UnsetRegex" VariableName="d${eid}.*" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="bc619bef-b3a4-47cc-ba1e-c067482b8041" TriggerText="func${eid},${ename},${lvar:dJobHots[2]}" ActionType="Variable">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="false" ExpressionL="${elvar:${eid}dList}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                           <ConditionSingle Enabled="true" ExpressionL="${elvar:${eid}dList}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="9" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="247f5b1c-4dfa-40a9-b505-16b7eabda991" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                      <Action OrderNumber="6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="247f5b1c-4dfa-40a9-b505-16b7eabda991" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${job})}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
                         </Condition>
@@ -4105,31 +4091,20 @@
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Add Combatant" Id="cb9b100f-6b58-487e-b9b5-e253cfd78f4f" RegularExpression="^03\|[^|]*\|(?&lt;eid&gt;[A-Fa-f0-9]{8})\|(?&lt;ename&gt;[^|]*)\|" DebugLevel="Verbose" PrevActions="Interrupt">
                     <Actions>
-                      <Action OrderNumber="1" SystemBeepFreqExpression="500" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="SystemBeep">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="cb9b100f-6b58-487e-b9b5-e253cfd78f4f" TriggerText="${var:dMyJob}" Enabled="False" ActionType="Trigger">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${func:toupper:${job}}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="90d97ef6-f4b4-49f5-beea-eba5b8bd6b29" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="90d97ef6-f4b4-49f5-beea-eba5b8bd6b29" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${job})}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="4" VariableOp="SetString" VariableName="dMyJob" VariableExpression="${func:toupper:${job}}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Variable">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="247f5b1c-4dfa-40a9-b505-16b7eabda991" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                      <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="247f5b1c-4dfa-40a9-b505-16b7eabda991" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${job})}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="6" VariableOp="SetString" VariableName="dMyJob" VariableExpression="${_ffxivparty[1].job}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="3" VariableOp="SetString" VariableName="dMyJob" VariableExpression="${_ffxivparty[1].job}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="7" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d8310ec-eee9-41a3-86f1-d8163c759c17" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="500">
+                      <Action OrderNumber="4" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d8310ec-eee9-41a3-86f1-d8163c759c17" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="500">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                     </Actions>
