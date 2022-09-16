@@ -204,9 +204,12 @@
                       </ConditionGroup>
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="DNC Technical Step" Id="a0c0b1ce-ce6e-4406-8834-9d85539b6eaa" RegularExpression="^21\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|3E7E\|(?&lt;skill&gt;Technical Step)\|">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="DNC Technical Step Countdown" Id="a0c0b1ce-ce6e-4406-8834-9d85539b6eaa" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|3E(?:7F|80|81|82)\|">
                     <Actions>
-                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="a5304afb-e63e-4883-88c3-d739efa2f32b" TriggerText="func${eid},${ename},${skill},120,15" ActionType="Trigger">
+                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="a5304afb-e63e-4883-88c3-d739efa2f32b" TriggerText="func${eid},${ename},${skill},120,15,c5" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${eid}${skill}count" VariableExpression="${var:${eid}${skill}count}-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Description="${numeric:${count}}">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                     </Actions>
@@ -310,6 +313,27 @@
                         <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                       </ConditionGroup>
                     </Condition>
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="DNC Technical Step" Id="fd5a08c1-5f68-4940-b690-2c1fdf820029" RegularExpression="^21\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|3E7E\|(?&lt;skill&gt;Technical Step)\|">
+                    <Actions>
+                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="a5304afb-e63e-4883-88c3-d739efa2f32b" TriggerText="func${eid},${ename},${skill},120,15,c5" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${eid}${skill}count" VariableExpression="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Description="${numeric:${count}}">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="false" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${name})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                        <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${ename})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                        <ConditionSingle Enabled="false" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      </ConditionGroup>
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      </ConditionGroup>
+                    </Condition>
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -3979,7 +4003,7 @@
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="CD Visualize" Id="a5304afb-e63e-4883-88c3-d739efa2f32b" RegularExpression="^func(?&lt;eid&gt;[A-F0-9]{8}),(?&lt;ename&gt;[^,]*),(?&lt;skill&gt;[A-Za-z- ']{1,25}),(?&lt;dur&gt;\d*),(?&lt;ef&gt;\d*)(?:,)?(?&lt;charge&gt;\d*)?,?c?(?&lt;count&gt;\d*)" DebugLevel="Info">
             <Actions>
-              <Action OrderNumber="1" TextAuraAlignment="MiddleLeft" TextAuraFontSize="8.25" TextAuraForeground="Yellow" TextAuraBackground="Black" TextAuraName="_debug_p0" TextAuraExpression="func${eid},${ename},${skill},${dur},${ef},${charge},${count}" TextAuraXIniExpression="-2431" TextAuraYIniExpression="1209" TextAuraWIniExpression="392" TextAuraHIniExpression="70" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
+              <Action OrderNumber="1" TextAuraAlignment="MiddleLeft" TextAuraFontSize="8.25" TextAuraForeground="Yellow" TextAuraBackground="Black" TextAuraName="_debug_p0" TextAuraExpression="func${eid},${ename},${skill},${dur},${ef},${charge},${count}" TextAuraXIniExpression="-2431" TextAuraYIniExpression="1209" TextAuraWIniExpression="392" TextAuraHIniExpression="70" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="d${eid}${skill}${charge}dur" VariableExpression="${_systemtimems}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
