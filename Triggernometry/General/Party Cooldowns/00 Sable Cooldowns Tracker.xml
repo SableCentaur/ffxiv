@@ -1342,7 +1342,7 @@
                           </ConditionGroup>
                         </Condition>
                       </Trigger>
-                      <Trigger Enabled="true" Source="FFXIVNetwork" Name="Shake It Off,ID:1CDC - 90,0" Id="56db1ee2-edbb-4e74-a338-657d3ab82cb5" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;1CDC)\|" PeriodRefire="Deny" RefirePeriodExpression="100" Description="Template Trigger">
+                      <Trigger Enabled="true" Source="FFXIVNetwork" Name="Shake It Off,ID:1CDC - 90,0" Id="56db1ee2-edbb-4e74-a338-657d3ab82cb5" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;1CDC)\|[^|]*\|(?&lt;nid&gt;[A-F0-9]{8})\|" Description="Template Trigger">
                         <Actions>
                           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="44dc4eb6-7520-440e-be5b-3df4e959052a" TriggerText="func${eid},${ename},${id},${func:substring(${numeric:${func:indexof(&quot;-&quot;):${_triggername}}+2}):${_triggername}}" ActionType="Trigger">
                             <Condition Enabled="false" Grouping="Or" />
@@ -1353,6 +1353,7 @@
                             <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                             <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                           </ConditionGroup>
+                          <ConditionSingle Enabled="true" ExpressionL="${eid}" ExpressionTypeL="String" ExpressionR="${nid}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="Holmgang,ID:2B - 240,10" Id="83cb2c3e-ee30-4117-b5a7-67f4d6db463a" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;2B)\|" PeriodRefire="Deny" RefirePeriodExpression="100" Description="Template Trigger">
@@ -1373,7 +1374,7 @@
                   <Folder Id="7e61a242-d815-4ade-8d4d-55d60de8bc8f" Name="PLD" Enabled="true">
                     <Folders />
                     <Triggers>
-                      <Trigger Enabled="true" Source="FFXIVNetwork" Name="Sentinel,ID:11 - 120,15" Id="0c1ab4ec-5a62-4bd2-97ec-874d0f3b6051" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;11)\|" PeriodRefire="Deny" RefirePeriodExpression="100" Description="Template Trigger">
+                      <Trigger Enabled="true" Source="FFXIVNetwork" Name="Sentinel,ID:11 - 120,15" Id="0c1ab4ec-5a62-4bd2-97ec-874d0f3b6051" RegularExpression="^21\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;11)\|" Description="Template Trigger">
                         <Actions>
                           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="44dc4eb6-7520-440e-be5b-3df4e959052a" TriggerText="func${eid},${ename},${id},${func:substring(${numeric:${func:indexof(&quot;-&quot;):${_triggername}}+2}):${_triggername}}" ActionType="Trigger">
                             <Condition Enabled="false" Grouping="Or" />
@@ -1795,7 +1796,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="DNC Curing Waltz,ID:3E8F - 60,0" Id="e2ddff21-92ac-415c-9150-f99037902a5c" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;3E8F)\|[^|]*\|(?&lt;nid&gt;[A-F0-9]{8})\|" PeriodRefire="Deny" RefirePeriodExpression="100">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="DNC Curing Waltz,ID:3E8F - 60,0" Id="e2ddff21-92ac-415c-9150-f99037902a5c" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;3E8F)\|[^|]*\|(?&lt;nid&gt;[A-F0-9]{8})\|">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="44dc4eb6-7520-440e-be5b-3df4e959052a" TriggerText="func${eid},${ename},${id},${func:substring(${numeric:${func:indexof(&quot;-&quot;):${_triggername}}+2}):${_triggername}}" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
@@ -1809,7 +1810,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${eid}" ExpressionTypeL="String" ExpressionR="${nid}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="DNC Improvisation,ID:3E8E - 120,0" Id="5ed15c66-c681-4ad0-a12b-333ddc5a1c0e" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;3E8E)\|[^|]*\|(?&lt;nid&gt;[A-F0-9]{8})\|" PeriodRefire="Deny" RefirePeriodExpression="100">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="DNC Improvisation,ID:3E8E - 120,0" Id="5ed15c66-c681-4ad0-a12b-333ddc5a1c0e" RegularExpression="^21\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;3E8E)\|">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="44dc4eb6-7520-440e-be5b-3df4e959052a" TriggerText="func${eid},${ename},${id},${func:substring(${numeric:${func:indexof(&quot;-&quot;):${_triggername}}+2}):${_triggername}}" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
@@ -1820,10 +1821,9 @@
                         <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                       </ConditionGroup>
-                      <ConditionSingle Enabled="true" ExpressionL="${eid}" ExpressionTypeL="String" ExpressionR="${nid}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="DNC Shield Samba,ID:3E8C - 90,15" Id="740af394-daf2-481a-941f-e7a27eec308b" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;3E8C)\|[^|]*\|(?&lt;nid&gt;[A-F0-9]{8})\|" PeriodRefire="Deny" RefirePeriodExpression="100">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="DNC Shield Samba,ID:3E8C - 90,15" Id="740af394-daf2-481a-941f-e7a27eec308b" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;3E8C)\|[^|]*\|(?&lt;nid&gt;[A-F0-9]{8})\|">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="44dc4eb6-7520-440e-be5b-3df4e959052a" TriggerText="func${eid},${ename},${id},${func:substring(${numeric:${func:indexof(&quot;-&quot;):${_triggername}}+2}):${_triggername}}" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
@@ -1889,7 +1889,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="RPR Crest of Time Returned,ID:A26 - 30,15" Id="98e5cb73-fb37-46b9-a09b-6af6a38aac14" RegularExpression="^26\|[^|]*\|(?&lt;id&gt;A26)\|[^|]*\|(?&lt;ef&gt;[^|]*)\|(?&lt;eid&gt;[A-F0-9]{8})*\|(?&lt;ename&gt;[^|]*)\|(?&lt;nid&gt;[A-F0-9]{8})\|" PeriodRefire="Deny" RefirePeriodExpression="100">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="RPR Crest of Time Returned,ID:A26 - 30,15" Id="98e5cb73-fb37-46b9-a09b-6af6a38aac14" RegularExpression="^26\|[^|]*\|(?&lt;id&gt;A26)\|[^|]*\|(?&lt;ef&gt;[^|]*)\|(?&lt;eid&gt;[A-F0-9]{8})*\|(?&lt;ename&gt;[^|]*)\|(?&lt;nid&gt;[A-F0-9]{8})\|">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="44dc4eb6-7520-440e-be5b-3df4e959052a" TriggerText="func${eid},${ename},${id},${numeric:round((${var:d${eid}5F54CD}-${_systemtimems})/1000)},15" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
@@ -1918,7 +1918,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="MNK Mantra,ID:41 - 90,15" Id="83d8a86b-a525-49bb-b4ec-1e84cab98c92" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;41)\|[^|]*\|(?&lt;nid&gt;[A-F0-9]{8})\|" PeriodRefire="Deny" RefirePeriodExpression="100">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="MNK Mantra,ID:41 - 90,15" Id="83d8a86b-a525-49bb-b4ec-1e84cab98c92" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;41)\|[^|]*\|(?&lt;nid&gt;[A-F0-9]{8})\|">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="44dc4eb6-7520-440e-be5b-3df4e959052a" TriggerText="func${eid},${ename},${id},${func:substring(${numeric:${func:indexof(&quot;-&quot;):${_triggername}}+2}):${_triggername}}" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
@@ -1932,7 +1932,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${eid}" ExpressionTypeL="String" ExpressionR="${nid}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="RDM Magick Barrier,ID:6501 - 120,10" Id="5c729681-7cfd-47a4-98d4-561d0e330734" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;6501)\|[^|]*\|(?&lt;nid&gt;[A-F0-9]{8})\|" PeriodRefire="Deny" RefirePeriodExpression="100">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="RDM Magick Barrier,ID:6501 - 120,10" Id="5c729681-7cfd-47a4-98d4-561d0e330734" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;6501)\|[^|]*\|(?&lt;nid&gt;[A-F0-9]{8})\|">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="44dc4eb6-7520-440e-be5b-3df4e959052a" TriggerText="func${eid},${ename},${id},${func:substring(${numeric:${func:indexof(&quot;-&quot;):${_triggername}}+2}):${_triggername}}" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
@@ -1946,7 +1946,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${eid}" ExpressionTypeL="String" ExpressionR="${nid}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="BRD Troubadour,ID:1CED - 90,15" Id="50dbf5c6-b0fe-489d-95c5-0b19b25b2ee1" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;1CED)\|[^|]*\|(?&lt;nid&gt;[A-F0-9]{8})\|" PeriodRefire="Deny" RefirePeriodExpression="100">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="BRD Troubadour,ID:1CED - 90,15" Id="50dbf5c6-b0fe-489d-95c5-0b19b25b2ee1" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;1CED)\|[^|]*\|(?&lt;nid&gt;[A-F0-9]{8})\|">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="44dc4eb6-7520-440e-be5b-3df4e959052a" TriggerText="func${eid},${ename},${id},${func:substring(${numeric:${func:indexof(&quot;-&quot;):${_triggername}}+2}):${_triggername}}" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
@@ -1960,7 +1960,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${eid}" ExpressionTypeL="String" ExpressionR="${nid}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="MCH Tactician,ID:41F9 - 90,15" Id="e4c69ec8-56d2-4aad-8aba-ba48e73afc68" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;41F9)\|[^|]*\|(?&lt;nid&gt;[A-F0-9]{8})\|" PeriodRefire="Deny" RefirePeriodExpression="100">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="MCH Tactician,ID:41F9 - 90,15" Id="e4c69ec8-56d2-4aad-8aba-ba48e73afc68" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;41F9)\|[^|]*\|(?&lt;nid&gt;[A-F0-9]{8})\|">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="44dc4eb6-7520-440e-be5b-3df4e959052a" TriggerText="func${eid},${ename},${id},${func:substring(${numeric:${func:indexof(&quot;-&quot;):${_triggername}}+2}):${_triggername}}" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
@@ -2703,13 +2703,13 @@
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].id}" ExpressionTypeL="String" ExpressionR="${eid}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="${eid}${id}${charge}ic" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/General/Party Cooldowns/Action IDs/${id}.png" AuraXIniExpression="${lvar:PartyList[1]}" AuraYIniExpression="4+${lvar:PartyList[2]}+${lvar:PartyList[4]}*(${_ffxivparty[${eid}].order}-1)" AuraWIniExpression="${lvar:PartyList[6]}" AuraHIniExpression="${lvar:PartyList[6]}" AuraOIniExpression="${lvar:PartyList[7]}" AuraXTickExpression="${lvar:PartyList[1]}+(${lvar:${eid}dList.indexof(${eid},${id},${charge})}-1)*${lvar:PartyList[3]}*${lvar:PartyList[5]}" AuraTTLTickExpression="${var:d${eid}${id}${charge}used}-${_systemtimems}+(${cd}*1000))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" DebugLevel="Info" Description="Activates Image Aura - Uses Triggernometry Party List" DescriptionOverride="True">
+                  <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="${eid}${id}${charge}ic" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/General/Party Cooldowns/Action IDs/${id}.png" AuraXIniExpression="${lvar:PartyList[1]}" AuraYIniExpression="4+${lvar:PartyList[2]}+${lvar:PartyList[4]}*(${_ffxivparty[${eid}].order}-1)" AuraWIniExpression="${lvar:PartyList[6]}" AuraHIniExpression="${lvar:PartyList[6]}" AuraOIniExpression="${lvar:PartyList[7]}" AuraXTickExpression="${lvar:PartyList[1]}+(${lvar:${eid}dList.indexof(${eid},${id},${charge})}-1)*${lvar:PartyList[3]}*${lvar:PartyList[5]}" AuraTTLTickExpression="${var:d${eid}${id}${charge}used}-${_systemtimems}+(${cd}*1000))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" DebugLevel="Info" Description="Activates Image Aura - Uses Triggernometry Party List" DescriptionOverride="True">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].order}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                     </Condition>
                   </Action>
                   <Action OrderNumber="4" AuraImageMode="StretchImage" AuraName="${eid}${id}${charge}ic" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/General/Party Cooldowns/Action IDs/${id}.png" AuraXIniExpression="${lvar:PartyList[1]}" AuraYIniExpression="4+${lvar:PartyList[2]}+${lvar:PartyList[4]}*(${lvar:dTelestoPartyMembers.indexof(${eid})}-1)" AuraWIniExpression="${lvar:PartyList[6]}" AuraHIniExpression="${lvar:PartyList[6]}" AuraOIniExpression="${lvar:PartyList[7]}" AuraXTickExpression="${lvar:PartyList[1]}+(${lvar:${eid}dList.indexof(${eid},${id},${charge})}-1)*${lvar:PartyList[3]}*${lvar:PartyList[5]}" AuraTTLTickExpression="${var:d${eid}${id}${charge}used}-${_systemtimems}+(${cd}*1000))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" DebugLevel="Info" Description="Activates Image Aura - Uses Telesto (only fires when triggernometry party list not working)" DescriptionOverride="True">
-                    <Condition Enabled="true" Grouping="Or">
+                    <Condition Enabled="false" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].order}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Action>
@@ -2766,7 +2766,7 @@
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="d${eid}aa${id}used" VariableExpression="${_systemtimems}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="2" AuraImageMode="StretchImage" AuraName="${eid}aa${id}ic" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/General/Party Cooldowns/HoT IDs/${id}.png" AuraXIniExpression="${lvar:PartyList[1]}" AuraYIniExpression="4+${lvar:PartyList[2]}+${lvar:PartyList[4]}*(${_ffxivparty[${eid}].order}-1)" AuraWIniExpression="${lvar:PartyList[6]}" AuraHIniExpression="${lvar:PartyList[6]}" AuraOIniExpression="${lvar:PartyList[7]}" AuraXTickExpression="${lvar:PartyList[1]}+(${lvar:${eid}dList.indexof(${eid}aa${id})}-1)*${lvar:PartyList[3]}*${lvar:PartyList[5]}" AuraTTLTickExpression="${var:d${eid}aa${id}used}-${_systemtimems}+(${ef}*1000))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" DebugLevel="Info" Description="Activates Image Aura - Uses Triggernometry Party List, currently broken&#xD;&#xA;" DescriptionOverride="True">
+                  <Action OrderNumber="2" AuraImageMode="StretchImage" AuraName="${eid}aa${id}ic" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/General/Party Cooldowns/HoT IDs/${id}.png" AuraXIniExpression="${lvar:PartyList[1]}" AuraYIniExpression="4+${lvar:PartyList[2]}+${lvar:PartyList[4]}*(${_ffxivparty[${eid}].order}-1)" AuraWIniExpression="${lvar:PartyList[6]}" AuraHIniExpression="${lvar:PartyList[6]}" AuraOIniExpression="${lvar:PartyList[7]}" AuraXTickExpression="${lvar:PartyList[1]}+(${lvar:${eid}dList.indexof(${eid}aa${id})}-1)*${lvar:PartyList[3]}*${lvar:PartyList[5]}" AuraTTLTickExpression="${var:d${eid}aa${id}used}-${_systemtimems}+(${ef}*1000))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Aura" DebugLevel="Info" Description="Activates Image Aura - Uses Triggernometry Party List, currently broken&#xD;&#xA;" DescriptionOverride="True">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid}aa${id})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].order}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
@@ -2775,7 +2775,7 @@
                   <Action OrderNumber="3" AuraImageMode="StretchImage" AuraName="${eid}aa${id}ic" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/General/Party Cooldowns/HoT IDs/${id}.png" AuraXIniExpression="${lvar:PartyList[1]}" AuraYIniExpression="4+${lvar:PartyList[2]}+${lvar:PartyList[4]}*(${lvar:dTelestoPartyMembers.indexof(${eid})}-1)" AuraWIniExpression="${lvar:PartyList[6]}" AuraHIniExpression="${lvar:PartyList[6]}" AuraOIniExpression="${lvar:PartyList[7]}" AuraXTickExpression="${lvar:PartyList[1]}+(${lvar:${eid}dList.indexof(${eid}aa${id})}-1)*${lvar:PartyList[3]}*${lvar:PartyList[5]}" AuraTTLTickExpression="${var:d${eid}aa${id}used}-${_systemtimems}+(${ef}*1000))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" DebugLevel="Info" Description="Activates Image Aura - Uses Telesto" DescriptionOverride="True">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid}aa${id})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].order}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      <ConditionSingle Enabled="false" ExpressionL="${_ffxivparty[${eid}].order}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Action>
                   <Action OrderNumber="4" TextAuraAlignment="TopCenter" TextAuraEffect="Bold" TextAuraFontSize="11.25" TextAuraForeground="#80FFCC" TextAuraOutline="Black" TextAuraName="${eid}aa${id}tc" TextAuraExpression="${numeric:round((${var:d${eid}aa${id}used}-${_systemtimems}+(${ef}*1000))/1000),1)}" TextAuraXIniExpression="${_imageaura[${eid}aa${id}ic].x}" TextAuraYIniExpression="${_imageaura[${eid}aa${id}ic].y}-5" TextAuraWIniExpression="${_imageaura[${eid}aa${id}ic].w}" TextAuraHIniExpression="${_imageaura[${eid}aa${id}ic].h}" TextAuraOIniExpression="${_imageaura[${eid}aa${id}ic].opacity}" TextAuraXTickExpression="${_imageaura[${eid}aa${id}ic].x}" TextAuraTTLTickExpression="${var:d${eid}aa${id}used}-${_systemtimems}+(${ef}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" DebugLevel="Warning">
