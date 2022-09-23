@@ -460,68 +460,14 @@
                       <Folder Id="9eb646fa-f46e-4727-85cf-dcc20012ea5f" Name="Melee" Enabled="true">
                         <Folders />
                         <Triggers>
-                          <Trigger Enabled="false" Source="FFXIVNetwork" Name="DRG Geirskogul TODO" Id="d00d5658-b751-4cf4-839d-7ff48d8a23a9" RegularExpression="" Description="get 2 stacks with mirage dive, then use geirskogul to unlock nastrond &amp; stardiver">
+                          <Trigger Enabled="false" Source="FFXIVNetwork" Name="DRG Nastrond TODO" Id="d00d5658-b751-4cf4-839d-7ff48d8a23a9" RegularExpression="" Description="get 2 stacks with mirage dive, then use geirskogul to unlock nastrond &amp; stardiver">
                             <Actions />
                             <Condition Enabled="true" Grouping="Or">
                               <ConditionGroup Enabled="true" Grouping="And">
-                                <ConditionSingle Enabled="false" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${ename})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                 <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                               </ConditionGroup>
                               <ConditionGroup Enabled="true" Grouping="And">
                                 <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                                <ConditionSingle Enabled="false" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                              </ConditionGroup>
-                            </Condition>
-                          </Trigger>
-                          <Trigger Enabled="false" Source="FFXIVNetwork" Name="DRG Mirage Dive TODO" Id="0196b887-98a0-402d-a153-080cce366bcf" RegularExpression="" Description="get 2 stacks with mirage dive, then use geirskogul to unlock nastrond &amp; stardiver&#xD;&#xA;can hold 2 stacks max">
-                            <Actions />
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionGroup Enabled="true" Grouping="And">
-                                <ConditionSingle Enabled="false" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${ename})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                                <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                              </ConditionGroup>
-                              <ConditionGroup Enabled="true" Grouping="And">
-                                <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                                <ConditionSingle Enabled="false" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                              </ConditionGroup>
-                            </Condition>
-                          </Trigger>
-                          <Trigger Enabled="false" Source="FFXIVNetwork" Name="DRG Nastrond TODO" Id="2383e4ec-ab6f-429b-b9f5-48c12bcf2856" RegularExpression="" Description="get 2 stacks with mirage dive, then use geirskogul to unlock nastrond &amp; stardiver">
-                            <Actions />
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionGroup Enabled="true" Grouping="And">
-                                <ConditionSingle Enabled="false" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${ename})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                                <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                              </ConditionGroup>
-                              <ConditionGroup Enabled="true" Grouping="And">
-                                <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                                <ConditionSingle Enabled="false" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                              </ConditionGroup>
-                            </Condition>
-                          </Trigger>
-                          <Trigger Enabled="false" Source="FFXIVNetwork" Name="DRG Stardiver TODO" Id="e88726b1-a08e-4a34-b2e3-6fc1a7063813" RegularExpression="" Description="used once during life of the dragon&#xD;&#xA;get 2 stacks with mirage dive, then use geirskogul to unlock nastrond &amp; stardiver">
-                            <Actions />
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionGroup Enabled="true" Grouping="And">
-                                <ConditionSingle Enabled="false" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${ename})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                                <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                              </ConditionGroup>
-                              <ConditionGroup Enabled="true" Grouping="And">
-                                <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                                <ConditionSingle Enabled="false" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                              </ConditionGroup>
-                            </Condition>
-                          </Trigger>
-                          <Trigger Enabled="false" Source="FFXIVNetwork" Name="DRG Wyrmwind Thrust TODO" Id="fa9293c8-21bd-4655-a008-fa3cb6e3ee1c" RegularExpression="" Description="get 2 stacks with raiden thrust or draconian fury&#xD;&#xA;can hold 2 stacks max">
-                            <Actions />
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionGroup Enabled="true" Grouping="And">
-                                <ConditionSingle Enabled="false" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${ename})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                                <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                              </ConditionGroup>
-                              <ConditionGroup Enabled="true" Grouping="And">
-                                <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                                <ConditionSingle Enabled="false" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                               </ConditionGroup>
                             </Condition>
                           </Trigger>
@@ -623,23 +569,6 @@
                               <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid},${id},${charge})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                             </Condition>
                           </Trigger>
-                          <Trigger Enabled="false" Source="FFXIVNetwork" Name="RPR Enshroud Improvements TODO" Id="3688ebe6-6d3d-4515-b19a-bb5e49116211" RegularExpression="" Description="track gauge - plentiful harvest gives 50, gibbet/gallows/guillotine give 10, enshroud requires 50. can hold max 100&#xD;&#xA;track casts under enshroud as stacks">
-                            <Actions>
-                              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="44dc4eb6-7520-440e-be5b-3df4e959052a" TriggerText="func${eid},${ename},${skill},60,15" ActionType="Trigger">
-                                <Condition Enabled="false" Grouping="Or" />
-                              </Action>
-                            </Actions>
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionGroup Enabled="true" Grouping="And">
-                                <ConditionSingle Enabled="false" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${ename})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                                <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                              </ConditionGroup>
-                              <ConditionGroup Enabled="true" Grouping="And">
-                                <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                                <ConditionSingle Enabled="false" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                              </ConditionGroup>
-                            </Condition>
-                          </Trigger>
                           <Trigger Enabled="true" Source="FFXIVNetwork" Name="RPR Gluttony,ID:5F49 - 60,0" Id="fa687fec-f9ad-4fcc-874e-55ba66a5df41" RegularExpression="^21\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;5F49)\|" PeriodRefire="Deny">
                             <Actions>
                               <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="44dc4eb6-7520-440e-be5b-3df4e959052a" TriggerText="func${eid},${ename},${id},${func:substring(${numeric:${func:indexof(&quot;-&quot;):${_triggername}}+2}):${_triggername}}" ActionType="Trigger">
@@ -677,40 +606,6 @@
                               <ConditionGroup Enabled="true" Grouping="Or">
                                 <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                                 <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                              </ConditionGroup>
-                            </Condition>
-                          </Trigger>
-                          <Trigger Enabled="false" Source="FFXIVNetwork" Name="SAM Sen TODO" Id="3c0b8fd7-6a3d-4312-8aab-83de633df26a" RegularExpression="" Description="track sen &amp; show how many are available at any given time&#xD;&#xA;use midare icon&#xD;&#xA;don't forget hagakure">
-                            <Actions>
-                              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="44dc4eb6-7520-440e-be5b-3df4e959052a" TriggerText="func${eid},${ename},${skill},60,15" ActionType="Trigger">
-                                <Condition Enabled="false" Grouping="Or" />
-                              </Action>
-                            </Actions>
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionGroup Enabled="true" Grouping="And">
-                                <ConditionSingle Enabled="false" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${ename})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                                <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                              </ConditionGroup>
-                              <ConditionGroup Enabled="true" Grouping="And">
-                                <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                                <ConditionSingle Enabled="false" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                              </ConditionGroup>
-                            </Condition>
-                          </Trigger>
-                          <Trigger Enabled="false" Source="FFXIVNetwork" Name="SAM Shoha TODO" Id="e1b8f12b-da55-4b53-9fda-0934e2b574f0" RegularExpression="" Description="track meditation&#xD;&#xA;use shoha icon&#xD;&#xA;check if it's possible to track meditate?">
-                            <Actions>
-                              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="44dc4eb6-7520-440e-be5b-3df4e959052a" TriggerText="func${eid},${ename},${skill},60,15" ActionType="Trigger">
-                                <Condition Enabled="false" Grouping="Or" />
-                              </Action>
-                            </Actions>
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionGroup Enabled="true" Grouping="And">
-                                <ConditionSingle Enabled="false" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${ename})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                                <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                              </ConditionGroup>
-                              <ConditionGroup Enabled="true" Grouping="And">
-                                <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                                <ConditionSingle Enabled="false" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                               </ConditionGroup>
                             </Condition>
                           </Trigger>
@@ -782,6 +677,90 @@
                               <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                             </Condition>
                           </Trigger>
+                          <Trigger Enabled="false" Source="FFXIVNetwork" Name="DRG Mirage Dive TODO" Id="3dde71c0-1a23-4aa5-a1f7-537bc25ade64" RegularExpression="" Description="get 2 stacks with mirage dive, then use geirskogul to unlock nastrond &amp; stardiver">
+                            <Actions />
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionGroup Enabled="true" Grouping="And">
+                                <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                              </ConditionGroup>
+                              <ConditionGroup Enabled="true" Grouping="And">
+                                <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                              </ConditionGroup>
+                            </Condition>
+                            <Conditions />
+                          </Trigger>
+                          <Trigger Enabled="false" Source="FFXIVNetwork" Name="DRG Geirskogul TODO" Id="bbbbd234-5dba-461c-aee2-8d4d2cf96e78" RegularExpression="" Description="get 2 stacks with mirage dive, then use geirskogul to unlock nastrond &amp; stardiver">
+                            <Actions />
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionGroup Enabled="true" Grouping="And">
+                                <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                              </ConditionGroup>
+                              <ConditionGroup Enabled="true" Grouping="And">
+                                <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                              </ConditionGroup>
+                            </Condition>
+                            <Conditions />
+                          </Trigger>
+                          <Trigger Enabled="false" Source="FFXIVNetwork" Name="DRG Stardiver TODO" Id="c047f968-73d4-4318-80cb-43a9250cf71d" RegularExpression="" Description="get 2 stacks with mirage dive, then use geirskogul to unlock nastrond &amp; stardiver">
+                            <Actions />
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionGroup Enabled="true" Grouping="And">
+                                <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                              </ConditionGroup>
+                              <ConditionGroup Enabled="true" Grouping="And">
+                                <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                              </ConditionGroup>
+                            </Condition>
+                            <Conditions />
+                          </Trigger>
+                          <Trigger Enabled="false" Source="FFXIVNetwork" Name="DRG Wyrmwind Thrust TODO" Id="ed913a8c-7a2f-44fa-bcfc-50ab03f8a336" RegularExpression="" Description="get 2 stacks with mirage dive, then use geirskogul to unlock nastrond &amp; stardiver">
+                            <Actions />
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionGroup Enabled="true" Grouping="And">
+                                <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                              </ConditionGroup>
+                              <ConditionGroup Enabled="true" Grouping="And">
+                                <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                              </ConditionGroup>
+                            </Condition>
+                            <Conditions />
+                          </Trigger>
+                          <Trigger Enabled="false" Source="FFXIVNetwork" Name="RPR Enshroud TODO" Id="26092b69-3664-4c60-b3d5-9a9fb33af1b7" RegularExpression="" Description="get 2 stacks with mirage dive, then use geirskogul to unlock nastrond &amp; stardiver">
+                            <Actions />
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionGroup Enabled="true" Grouping="And">
+                                <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                              </ConditionGroup>
+                              <ConditionGroup Enabled="true" Grouping="And">
+                                <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                              </ConditionGroup>
+                            </Condition>
+                            <Conditions />
+                          </Trigger>
+                          <Trigger Enabled="false" Source="FFXIVNetwork" Name="SAM Sen TODO" Id="6ba4aa89-1bdc-4b0e-ba7b-a0a39c33f698" RegularExpression="" Description="get 2 stacks with mirage dive, then use geirskogul to unlock nastrond &amp; stardiver">
+                            <Actions />
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionGroup Enabled="true" Grouping="And">
+                                <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                              </ConditionGroup>
+                              <ConditionGroup Enabled="true" Grouping="And">
+                                <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                              </ConditionGroup>
+                            </Condition>
+                            <Conditions />
+                          </Trigger>
+                          <Trigger Enabled="false" Source="FFXIVNetwork" Name="SAM Shoha TODO" Id="eae779a3-a67d-49df-8160-a742651c77c4" RegularExpression="" Description="get 2 stacks with mirage dive, then use geirskogul to unlock nastrond &amp; stardiver">
+                            <Actions />
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionGroup Enabled="true" Grouping="And">
+                                <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                              </ConditionGroup>
+                              <ConditionGroup Enabled="true" Grouping="And">
+                                <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                              </ConditionGroup>
+                            </Condition>
+                            <Conditions />
+                          </Trigger>
                         </Triggers>
                       </Folder>
                       <Folder Id="6f35d0ab-8513-49b3-86b0-b662d1b3f2f0" Name="Ranged" Enabled="true">
@@ -819,12 +798,10 @@
                             </Actions>
                             <Condition Enabled="true" Grouping="Or">
                               <ConditionGroup Enabled="true" Grouping="And">
-                                <ConditionSingle Enabled="false" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${ename})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                 <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                               </ConditionGroup>
                               <ConditionGroup Enabled="true" Grouping="And">
                                 <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                                <ConditionSingle Enabled="false" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                               </ConditionGroup>
                             </Condition>
                           </Trigger>
@@ -1064,7 +1041,7 @@
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                         </Actions>
-                        <Condition Enabled="false" Grouping="Or">
+                        <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                           <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                         </Condition>
