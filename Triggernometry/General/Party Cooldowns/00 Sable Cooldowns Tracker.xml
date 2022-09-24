@@ -4070,7 +4070,7 @@
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Add Combatant" Id="2d011bea-1ed2-4ae1-98ec-088e33bc72ef" RegularExpression="^03\|[^|]*\|(?&lt;eid&gt;[A-Fa-f0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;job&gt;[^|]*)\|(?&lt;level&gt;[^|]*)\|" DebugLevel="Verbose" PrevActions="Interrupt">
                     <Actions>
-                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="6e8e192e-d5c8-43b5-96d9-658cdc25f6b4" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="6c222587-773b-4623-9a1e-519e145b9e29" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${job})}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
                         </Condition>
