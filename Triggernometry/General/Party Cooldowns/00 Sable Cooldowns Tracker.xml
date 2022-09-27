@@ -511,7 +511,6 @@
                                     <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                                   </ConditionGroup>
                                 </Condition>
-                                <Conditions />
                               </Trigger>
                               <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="SMN Enkindle Bahamut/Phoenix,ID:1D05/4084 - 15,15" Id="d2a1fcd8-129c-4de7-b7a7-fc5e1511cdbb" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;1D05|4084)\|" PeriodRefire="Deny" RefirePeriodExpression="100" Description="64EB Crimson Cyclone&#xD;&#xA;651D Crimson Strike&#xD;&#xA;64EC Mountain Buster&#xD;&#xA;64ED Slipstream">
                                 <Actions>
@@ -525,7 +524,6 @@
                                     <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                                   </ConditionGroup>
                                 </Condition>
-                                <Conditions />
                               </Trigger>
                               <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="SMN Primal Favor Counter,ID:64DE/DFE/64E6 - 30,30,s4" Id="86dc804f-40b1-4c59-83b1-535450916fa8" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;64E[BCD6]|651D|DFE)\|[^|]*\|(?&lt;nid&gt;[A-F0-9]{8})" PeriodRefire="Deny" RefirePeriodExpression="100" Description="64EB Crimson Cyclone&#xD;&#xA;651D Crimson Strike&#xD;&#xA;64EC Mountain Buster&#xD;&#xA;64ED Slipstream">
                                 <Actions>
@@ -556,7 +554,6 @@
                                     <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                                   </ConditionGroup>
                                 </Condition>
-                                <Conditions />
                               </Trigger>
                               <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="SMN Primal Summon,ID:64EE/64EF/64F0 - 30,30,s5,p1" Id="b19e147c-6f21-4147-bafc-4fbdaf173c05" RegularExpression="^21\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;64E[EF]|64F0)\|" PeriodRefire="Deny" RefirePeriodExpression="100" Description="I don't want to show the CD on these, but I can show how many elemental attunements they have, and the primal favors for garuda and ifrit&#xD;&#xA;will be kinda complicated because all three of them are different&#xD;&#xA;prob should add astral flow and enkindle for phoenix and bahamut too">
                                 <Actions>
@@ -631,7 +628,6 @@
                                     <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                                   </ConditionGroup>
                                 </Condition>
-                                <Conditions />
                               </Trigger>
                               <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="SMN Rekindle,ID:64E6 - 30,0" Id="a95cf088-701e-4cb5-b096-3bee9d39a629" RegularExpression="^30\|[^|]*\|(?&lt;id&gt;A90)\|[^|]*\|(?&lt;ef&gt;[^|]*)\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;nid&gt;[A-F0-9]{8})\|" PeriodRefire="Deny" RefirePeriodExpression="100" Description="64EB Crimson Cyclone&#xD;&#xA;651D Crimson Strike&#xD;&#xA;64EC Mountain Buster&#xD;&#xA;64ED Slipstream">
                                 <Actions>
@@ -645,7 +641,6 @@
                                     <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                                   </ConditionGroup>
                                 </Condition>
-                                <Conditions />
                               </Trigger>
                               <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="SMN Summon Bahamut,ID:1D03 - 60,15" Id="dfa85007-f7f8-4f3e-a246-249488915b46" RegularExpression="^21\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;1D03)\|" PeriodRefire="Deny" RefirePeriodExpression="100">
                                 <Actions>
@@ -737,7 +732,6 @@
                                     <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                                   </ConditionGroup>
                                 </Condition>
-                                <Conditions />
                               </Trigger>
                             </Triggers>
                           </Folder>
@@ -944,7 +938,6 @@
                                   </ConditionGroup>
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${eid}].level}" ExpressionTypeL="Numeric" ExpressionR="50" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
                                 </Condition>
-                                <Conditions />
                               </Trigger>
                             </Triggers>
                           </Folder>
@@ -991,7 +984,6 @@
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                                   <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                 </Condition>
-                                <Conditions />
                               </Trigger>
                               <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="NIN Phantom Kamaitachi,ID:AA3 - 45,45,s1,p1" Id="25b4d98a-6324-45e5-92c3-ac994548eeb9" RegularExpression="^26\|[^|]*\|(?&lt;id&gt;AA3)\|[^|]*\|(?&lt;ef&gt;[^|]*)\|(?&lt;eid&gt;[A-F0-9]{8})*\|(?&lt;ename&gt;[^|]*)\|">
                                 <Actions>
@@ -1101,7 +1093,6 @@
                                     <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                   </ConditionGroup>
                                 </Condition>
-                                <Conditions />
                               </Trigger>
                               <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="SAM Meditate ON,ID:4CF - 60,15,s1" Id="d7db6939-137c-40f5-b5fe-be17ef9569de" RegularExpression="^26\|[^|]*\|(?&lt;id&gt;4CF)\|[^|]*\|(?&lt;ef&gt;[^|]*)\|(?&lt;eid&gt;[A-F0-9]{8})*\|(?&lt;ename&gt;[^|]*)\|">
                                 <Actions>
@@ -1129,7 +1120,6 @@
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                                   <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                 </Condition>
-                                <Conditions />
                               </Trigger>
                               <Trigger Enabled="true" Source="FFXIVNetwork" Name="SAM Meikyo Shisui OFF,ID:4D1 - 55,0,2" Id="f136d56b-3977-4c04-9805-1c8ee6279b47" RegularExpression="^30\|[^|]*\|(?&lt;id&gt;4D1)\|[^|]*\|(?&lt;ef&gt;[^|]*)\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|">
                                 <Actions>
@@ -1141,7 +1131,6 @@
                                   <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                                 </Condition>
-                                <Conditions />
                               </Trigger>
                               <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="SAM Meikyo Shisui ON,ID:4D1 - 55,15,2,s3" Id="7ebbb3af-b8f4-48ee-bb71-aaf70fad1e30" RegularExpression="^26\|[^|]*\|(?&lt;id&gt;4D1)\|[^|]*\|(?&lt;ef&gt;[^|]*)\|(?&lt;eid&gt;[A-F0-9]{8})*\|(?&lt;ename&gt;[^|]*)\|(?:[^|]*\|){2}(?&lt;stack&gt;[^|]*)\|">
                                 <Actions>
@@ -1166,7 +1155,6 @@
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                                   <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                 </Condition>
-                                <Conditions />
                               </Trigger>
                               <Trigger Enabled="true" Source="FFXIVNetwork" Name="SAM Sen ADD,ID:1EBB see description - 300,300,s3,c1" Id="6ba4aa89-1bdc-4b0e-ba7b-a0a39c33f698" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[^|]*)\|[^|]*\|(?&lt;id&gt;1D3[89ACD])\|[^|]*\|[^|]*\|[^|]*\|\w[^D](?&lt;flags&gt;71\d003)\|" PeriodRefire="Deny" RefirePeriodExpression="100" Description="1D39 - Gekko&#xD;&#xA;1D3A - Kasha&#xD;&#xA;1D38 - Yukikaze&#xD;&#xA;1D3C - Mangetsu&#xD;&#xA;1D3D - Oka">
                                 <Actions>
@@ -1226,7 +1214,6 @@
                                     <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                                   </ConditionGroup>
                                 </Condition>
-                                <Conditions />
                               </Trigger>
                               <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="SAM Shoha ADD,ID:4067 - 300,300,s3,c1" Id="888dd399-392f-4c6f-939b-98f5f9922859" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;1D4[01]|1D3F|64B5)\|" PeriodRefire="Deny" RefirePeriodExpression="100">
                                 <Actions>
@@ -1248,7 +1235,6 @@
                                   </ConditionGroup>
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${eid}].level}" ExpressionTypeL="Numeric" ExpressionR="80" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
                                 </Condition>
-                                <Conditions />
                               </Trigger>
                               <Trigger Enabled="true" Source="FFXIVNetwork" Name="SAM Shoha/Shoha II OFF,ID:4067 - 0,0" Id="eae779a3-a67d-49df-8160-a742651c77c4" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;4067|64B3)\|" PeriodRefire="Deny" RefirePeriodExpression="100">
                                 <Actions>
@@ -1348,7 +1334,6 @@
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                                   <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                 </Condition>
-                                <Conditions />
                               </Trigger>
                               <Trigger Enabled="true" Source="FFXIVNetwork" Name="BRD DoTs,ID:1CEE/1CEF/DE8 - 45,45,s1,p1" Id="2f61a178-3d69-402e-8b35-e53a50c2d688" RegularExpression="^21\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;DE8|1CE[EF])\|">
                                 <Actions>
@@ -1375,7 +1360,6 @@
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                                   <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                 </Condition>
-                                <Conditions />
                               </Trigger>
                             </Triggers>
                           </Folder>
@@ -1471,7 +1455,6 @@
                                     <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                                   </ConditionGroup>
                                 </Condition>
-                                <Conditions />
                               </Trigger>
                               <Trigger Enabled="true" Source="FFXIVNetwork" Name="MCH Hypercharge,ID:4339 - 10,8" Id="9b27c312-c6a6-4b3e-840b-5764619e90f3" RegularExpression="^21\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;4339)\|" PeriodRefire="Deny">
                                 <Actions>
@@ -1483,7 +1466,6 @@
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                                   <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                 </Condition>
-                                <Conditions />
                               </Trigger>
                               <Trigger Enabled="true" Source="FFXIVNetwork" Name="MCH Reassemble,ID:B3C - 55,0,2" Id="4cf26bcf-33f0-4845-a459-59d8dc64ee71" RegularExpression="^21\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;B3C)\|" PeriodRefire="Deny">
                                 <Actions>
@@ -1497,7 +1479,6 @@
                                     <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                                   </ConditionGroup>
                                 </Condition>
-                                <Conditions />
                               </Trigger>
                             </Triggers>
                           </Folder>
@@ -1546,7 +1527,6 @@
                               <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                               <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                             </Condition>
-                            <Conditions />
                           </Trigger>
                           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="AST Astrodyne,ID:650E - 15,15" Id="2399b39b-0fef-426f-9035-1150b7682281" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;113[123456]|650E)\|" PeriodRefire="Deny" RefirePeriodExpression="100">
                             <Actions>
@@ -1580,7 +1560,6 @@
                               </ConditionGroup>
                               <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${eid}].level}" ExpressionTypeL="Numeric" ExpressionR="50" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
                             </Condition>
-                            <Conditions />
                           </Trigger>
                         </Triggers>
                       </Folder>
@@ -1640,7 +1619,6 @@
                               </ConditionGroup>
                               <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].level}" ExpressionTypeL="Numeric" ExpressionR="74" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
                             </Condition>
-                            <Conditions />
                           </Trigger>
                           <Trigger Enabled="true" Source="FFXIVNetwork" Name="WHM Afflatus Misery,ID:4097 - 0,0" Id="ebd44262-8c9d-48bc-b850-b0600cb9dc75" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;4097)\|" PeriodRefire="Deny" RefirePeriodExpression="100" Description="1D39 - Gekko&#xD;&#xA;1D3A - Kasha&#xD;&#xA;1D38 - Yukikaze&#xD;&#xA;1D3C - Mangetsu&#xD;&#xA;1D3D - Oka">
                             <Actions>
@@ -1656,7 +1634,6 @@
                                 <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                               </ConditionGroup>
                             </Condition>
-                            <Conditions />
                           </Trigger>
                         </Triggers>
                       </Folder>
@@ -3171,7 +3148,6 @@
                           </ConditionGroup>
                           <ConditionSingle Enabled="true" ExpressionL="${eid}" ExpressionTypeL="String" ExpressionR="${nid}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -3370,7 +3346,6 @@
                           <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                           <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -3522,7 +3497,6 @@
                           <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                           <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -3563,7 +3537,6 @@
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                 </Condition>
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="FFXIVNetwork" Name="Surecast,ID:1D87 - 120,6" Id="1a721d08-6296-4b93-a9fe-568a5af90a86" RegularExpression="^21\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;1D87)\|" PeriodRefire="Deny">
                 <Actions>
@@ -4154,7 +4127,7 @@
                   <Action OrderNumber="9" ListVariableExpressionType="Numeric" ListVariableName="TTSList" ListVariableExpression="${_imageaura[PLPreview].x}" ListVariableIndex="1" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TableVariableName="TTSList" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="481827ed-2683-47d2-80bd-096602e40673" TriggerText="[32A] role [healer] [firstname - Living Dead]" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="10" ListVariableExpressionType="Numeric" ListVariableName="TTSList" ListVariableExpression="${_imageaura[PLPreview].x}" ListVariableIndex="1" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TableVariableName="TTSList" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="481827ed-2683-47d2-80bd-096602e40673" TriggerText="[32B] role [healer] [firstname - Walking Dead]" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                  <Action OrderNumber="10" ListVariableExpressionType="Numeric" ListVariableName="TTSList" ListVariableExpression="${_imageaura[PLPreview].x}" ListVariableIndex="1" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TableVariableName="TTSList" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="481827ed-2683-47d2-80bd-096602e40673" TriggerText="[32B] role [healer] [Walking Dead]" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                   <Action OrderNumber="11" ListVariableExpressionType="Numeric" ListVariableName="TTSList" ListVariableExpression="${_imageaura[PLPreview].x}" ListVariableIndex="1" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" TableVariableName="TTSList" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="481827ed-2683-47d2-80bd-096602e40673" TriggerText="[3E8C] job [MCH BRD DNC] [Shield Samba]" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
@@ -4255,7 +4228,6 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
     </Triggers>
   </ExportedFolder>
