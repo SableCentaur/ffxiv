@@ -4058,7 +4058,7 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembernames.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                     </Condition>
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Add Combatant" Id="2d011bea-1ed2-4ae1-98ec-088e33bc72ef" RegularExpression="^03\|[^|]*\|(?&lt;eid&gt;[A-Fa-f0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;job&gt;[^|]*)\|(?&lt;level&gt;[^|]*)\|" DebugLevel="Verbose" PrevActions="Interrupt">
