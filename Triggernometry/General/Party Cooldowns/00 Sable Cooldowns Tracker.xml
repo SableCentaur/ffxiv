@@ -2946,10 +2946,8 @@
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="SMN Rekindle,64E6 - 45,30,s1,p1" Id="f5702a98-9723-4095-ac47-674d4e9a2a67" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;64E6)\|[^|]*\|(?&lt;nid&gt;[A-F0-9]{8})" PeriodRefire="Deny" RefirePeriodExpression="100" Description="64EB Crimson Cyclone&#xD;&#xA;651D Crimson Strike&#xD;&#xA;64EC Mountain Buster&#xD;&#xA;64ED Slipstream">
                     <Actions>
-                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="44dc4eb6-7520-440e-be5b-3df4e959052a" TriggerText="func${eid},${ename},${id},${func:substring(${numeric:${func:indexof(&quot;-&quot;):${_triggername}}+2}):${_triggername}}" ActionType="Trigger">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="64E6" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                        </Condition>
+                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="44dc4eb6-7520-440e-be5b-3df4e959052a" TriggerText="func${nid},${ename},${id},${func:substring(${numeric:${func:indexof(&quot;-&quot;):${_triggername}}+2}):${_triggername}}" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="And">
