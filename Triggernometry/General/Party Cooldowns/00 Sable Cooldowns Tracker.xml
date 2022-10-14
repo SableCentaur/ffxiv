@@ -114,7 +114,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="DNC Technical Step,ID:3E7E - 120,15,s5,p1,c1" Id="c2badc7a-64ce-4d11-bae4-ad1ff6f40e38" RegularExpression="^21\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;3E7E)\|" PeriodRefire="Deny">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="DNC Technical Step,ID:3E7E - 120,15,s5,p1" Id="c2badc7a-64ce-4d11-bae4-ad1ff6f40e38" RegularExpression="^21\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;3E7E)\|" PeriodRefire="Deny">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="44dc4eb6-7520-440e-be5b-3df4e959052a" TriggerText="func${eid},${ename},${id},${func:substring(${numeric:${func:indexof(&quot;-&quot;):${_triggername}}+2}):${_triggername}}" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
@@ -525,7 +525,7 @@
                                   </ConditionGroup>
                                 </Condition>
                               </Trigger>
-                              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="SMN Primal Favor Counter,ID:64DE/DFE/64E6 - 30,30,s4" Id="86dc804f-40b1-4c59-83b1-535450916fa8" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;64E[BCD6]|651D|DFE)\|[^|]*\|(?&lt;nid&gt;[A-F0-9]{8})" PeriodRefire="Deny" RefirePeriodExpression="100" Description="64EB Crimson Cyclone&#xD;&#xA;651D Crimson Strike&#xD;&#xA;64EC Mountain Buster&#xD;&#xA;64ED Slipstream">
+                              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="SMN Primal Favor Counter,ID:64DE/DFE/64E6 - 30,30,s4" Id="86dc804f-40b1-4c59-83b1-535450916fa8" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;64E[BCD]|651D|DFE)\|[^|]*\|(?&lt;nid&gt;[A-F0-9]{8})" PeriodRefire="Deny" RefirePeriodExpression="100" Description="64EB Crimson Cyclone&#xD;&#xA;651D Crimson Strike&#xD;&#xA;64EC Mountain Buster&#xD;&#xA;64ED Slipstream">
                                 <Actions>
                                   <Action OrderNumber="1" OBSEndPoint="" VariableOp="SetNumeric" VariableName="d${eid}64DEstack" VariableExpression="${var:d${eid}64DEstack}-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Description="${numeric:${count}}">
                                     <Condition Enabled="true" Grouping="And">
@@ -542,7 +542,7 @@
                                       <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="DFE" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                                     </Condition>
                                   </Action>
-                                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="44dc4eb6-7520-440e-be5b-3df4e959052a" TriggerText="func${nid},${ename},64E6,45,30,s1,p1" ActionType="Trigger">
+                                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="44dc4eb6-7520-440e-be5b-3df4e959052a" TriggerText="func${nid},${ename},64E6,45,30,s1,p1" Enabled="False" ActionType="Trigger">
                                     <Condition Enabled="true" Grouping="Or">
                                       <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="64E6" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                                     </Condition>
@@ -620,19 +620,6 @@
                                       <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="64F0" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                                       <ConditionSingle Enabled="true" ExpressionL="${evar:d${eid}64F0stack}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                     </Condition>
-                                  </Action>
-                                </Actions>
-                                <Condition Enabled="true" Grouping="And">
-                                  <ConditionGroup Enabled="true" Grouping="Or">
-                                    <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                                    <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                                  </ConditionGroup>
-                                </Condition>
-                              </Trigger>
-                              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="SMN Rekindle,ID:64E6 - 30,0" Id="a95cf088-701e-4cb5-b096-3bee9d39a629" RegularExpression="^30\|[^|]*\|(?&lt;id&gt;A90)\|[^|]*\|(?&lt;ef&gt;[^|]*)\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;nid&gt;[A-F0-9]{8})\|" PeriodRefire="Deny" RefirePeriodExpression="100" Description="64EB Crimson Cyclone&#xD;&#xA;651D Crimson Strike&#xD;&#xA;64EC Mountain Buster&#xD;&#xA;64ED Slipstream">
-                                <Actions>
-                                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="be3a3aba-6b44-4b39-8e23-d16f48638951" TriggerText="func${nid},${ename},64E6,${numeric:round(15+(${_systemtimems}-${var:d${nid}64E6used})/1000)},0" ActionType="Trigger">
-                                    <Condition Enabled="false" Grouping="Or" />
                                   </Action>
                                 </Actions>
                                 <Condition Enabled="true" Grouping="And">
@@ -949,7 +936,6 @@
                                   <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid},64A4,)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${eid}].job}" ExpressionTypeL="String" ExpressionR="MNK" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                                 </Condition>
-                                <Conditions />
                               </Trigger>
                             </Triggers>
                           </Folder>
@@ -1271,7 +1257,7 @@
                                   </ConditionGroup>
                                 </Condition>
                               </Trigger>
-                              <Trigger Enabled="true" Source="FFXIVNetwork" Name="SAM Sen OFF,ID:1EBB see description - 0,0" Id="c82073ec-3f81-4a4a-8253-826b0f1fe678" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;1D4[01]|1D3F)\|" PeriodRefire="Deny" RefirePeriodExpression="100" Description="1D39 - Gekko&#xD;&#xA;1D3A - Kasha&#xD;&#xA;1D38 - Yukikaze&#xD;&#xA;1D3C - Mangetsu&#xD;&#xA;1D3D - Oka">
+                              <Trigger Enabled="true" Source="FFXIVNetwork" Name="SAM Sen OFF,ID:1EBB see description - 0,0" Id="c82073ec-3f81-4a4a-8253-826b0f1fe678" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;1D4[01]|1D3F)\|" PeriodRefire="Deny" RefirePeriodExpression="100" Description="1D41 - Higanbana&#xD;&#xA;1D3F - Midare Setsugekka&#xD;&#xA;1D40 - Tenka Goken">
                                 <Actions>
                                   <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8222ef77-6c7e-48af-be40-15253b787300" TriggerText="func${eid},1EBB" ActionType="Trigger">
                                     <Condition Enabled="false" Grouping="Or" />
@@ -1479,14 +1465,13 @@
                                   </ConditionGroup>
                                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${eid}].job}" ExpressionTypeL="String" ExpressionR="BRD" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                                 </Condition>
-                                <Conditions />
                               </Trigger>
                             </Triggers>
                           </Folder>
                           <Folder Id="9cd01b74-08c5-4b60-9bff-3242b8802018" Name="DNC" Enabled="true">
                             <Folders />
                             <Triggers>
-                              <Trigger Enabled="true" Source="FFXIVNetwork" Name="DNC Flourish,ID:3E8D - 60,0" Id="53e48ea6-b589-441a-a6c4-6fd03fe65c1f" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;3E8D)\|" PeriodRefire="Deny" RefirePeriodExpression="100">
+                              <Trigger Enabled="true" Source="FFXIVNetwork" Name="DNC Flourish,ID:3E8D - 60,0" Id="53e48ea6-b589-441a-a6c4-6fd03fe65c1f" RegularExpression="^21\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;3E8D)\|">
                                 <Actions>
                                   <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="44dc4eb6-7520-440e-be5b-3df4e959052a" TriggerText="func${eid},${ename},${id},${func:substring(${numeric:${func:indexof(&quot;-&quot;):${_triggername}}+2}):${_triggername}}" ActionType="Trigger">
                                     <Condition Enabled="false" Grouping="Or" />
@@ -1769,7 +1754,6 @@
                               <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid},4097,)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                               <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${eid}].job}" ExpressionTypeL="String" ExpressionR="WHM" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                             </Condition>
-                            <Conditions />
                           </Trigger>
                         </Triggers>
                       </Folder>
@@ -2018,7 +2002,7 @@
                                 <Condition Enabled="false" Grouping="Or" />
                               </Action>
                             </Actions>
-                            <Condition Enabled="false" Grouping="Or">
+                            <Condition Enabled="true" Grouping="Or">
                               <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                               <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                             </Condition>
@@ -2049,7 +2033,7 @@
             </Folders>
             <Triggers />
           </Folder>
-          <Folder FFXIVJobFilter="554193387520" Id="522e1648-267f-412c-bd4b-63ab07a8cfa6" Name="HoTs" Enabled="true">
+          <Folder FFXIVJobFilter="554193387520" Id="522e1648-267f-412c-bd4b-63ab07a8cfa6" Name="HoTs" Enabled="false">
             <Folders>
               <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="4294967296" Id="fc8f14b4-b8fc-4fe8-86bf-7c31e319c158" Name="Astrologian" Enabled="true">
                 <Folders />
@@ -2758,6 +2742,7 @@
                         <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                       </ConditionGroup>
                       <ConditionSingle Enabled="true" ExpressionL="${eid}" ExpressionTypeL="String" ExpressionR="${nid}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].job}" ExpressionTypeL="String" ExpressionR="dnc" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="DNC Improvisation,ID:3E8E - 120,0" Id="5ed15c66-c681-4ad0-a12b-333ddc5a1c0e" RegularExpression="^21\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;3E8E)\|">
@@ -2957,6 +2942,35 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                    </Condition>
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="SMN Rekindle,64E6 - 45,30,s1,p1" Id="f5702a98-9723-4095-ac47-674d4e9a2a67" RegularExpression="^2[12]\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;id&gt;64E6)\|[^|]*\|(?&lt;nid&gt;[A-F0-9]{8})" PeriodRefire="Deny" RefirePeriodExpression="100" Description="64EB Crimson Cyclone&#xD;&#xA;651D Crimson Strike&#xD;&#xA;64EC Mountain Buster&#xD;&#xA;64ED Slipstream">
+                    <Actions>
+                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="44dc4eb6-7520-440e-be5b-3df4e959052a" TriggerText="func${eid},${ename},${id},${func:substring(${numeric:${func:indexof(&quot;-&quot;):${_triggername}}+2}):${_triggername}}" ActionType="Trigger">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="64E6" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionGroup Enabled="true" Grouping="Or">
+                        <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      </ConditionGroup>
+                    </Condition>
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="SMN Rekindle Effect,ID:64E6 - 30,0" Id="a95cf088-701e-4cb5-b096-3bee9d39a629" RegularExpression="^30\|[^|]*\|(?&lt;id&gt;A90)\|[^|]*\|(?&lt;ef&gt;[^|]*)\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;nid&gt;[A-F0-9]{8})\|" PeriodRefire="Deny" RefirePeriodExpression="100">
+                    <Actions>
+                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="be3a3aba-6b44-4b39-8e23-d16f48638951" TriggerText="func${nid},${ename},64E6,${numeric:round(15+(${_systemtimems}-${var:d${nid}64E6used})/1000)},0" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionGroup Enabled="true" Grouping="Or">
+                        <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      </ConditionGroup>
                     </Condition>
                   </Trigger>
                 </Triggers>
@@ -3319,7 +3333,7 @@
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="Excogitation OFF,ID:4C4 - 45,0" Id="a35d635f-a9cf-4eea-ab5b-f55f068c4871" RegularExpression="^30\|[^|]*\|(?&lt;id&gt;4C4)\|[^|]*\|(?&lt;ef&gt;[^|]*)\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^|]*)\|">
                         <Actions>
-                          <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="be3a3aba-6b44-4b39-8e23-d16f48638951" TriggerText="func${eid},${ename},${id},${func:substring(${numeric:${func:indexof(&quot;-&quot;):${_triggername}}+2}):${_triggername}}" ActionType="Trigger">
+                          <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="be3a3aba-6b44-4b39-8e23-d16f48638951" TriggerText="func${eid},${ename},${id},${func:substring(${numeric:${func:indexof(&quot;-&quot;):${_triggername}}+2}):${_triggername}}" ActionType="Trigger" ExecutionDelayExpression="500">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                         </Actions>
@@ -3757,21 +3771,27 @@
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.indexof(${eid},${id},${charge})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Source="None" Name="03 - CD Remove" Id="8222ef77-6c7e-48af-be40-15253b787300" RegularExpression="^func(?&lt;eid&gt;[A-F0-9]{8}),(?&lt;id&gt;\w+)(?:,(?&lt;charge&gt;\d))?">
+                  <Trigger Enabled="true" Source="None" Name="03 - CD Remove" Id="8222ef77-6c7e-48af-be40-15253b787300" RegularExpression="^func(?&lt;eid&gt;[A-F0-9]{8}),(?&lt;id&gt;\w+)(?:,(?&lt;charge&gt;\d))?" MutexToCapture="auraremove">
                     <Actions>
-                      <Action OrderNumber="1" OBSEndPoint="" VariableName="d${eid}${id}stack" VariableExpression="${count}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="1" MutexOpType="Acquire" MutexName="auraremove" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Mutex">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="2" VariableName="d${eid}${id}${charge}used" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="2" OBSEndPoint="" VariableName="d${eid}${id}stack" VariableExpression="${count}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="3" AuraOp="DeactivateAura" AuraName="${eid}${id}${charge}tc" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="${eid}${id}${charge}tc" TextAuraFontName="Microsoft Sans Serif" TriggerId="bb9278eb-5968-4ece-8bfd-4354d03210c4" TriggerText="${eid},${ename},Stormbite,${dur}" ActionType="Aura">
+                      <Action OrderNumber="3" VariableName="d${eid}${id}${charge}used" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="4" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="${eid}${id}${charge}tc" TextAuraFontName="Microsoft Sans Serif" TriggerId="bb9278eb-5968-4ece-8bfd-4354d03210c4" TriggerText="${eid},${ename},Stormbite,${dur}" ActionType="TextAura">
+                      <Action OrderNumber="4" AuraOp="DeactivateAura" AuraName="${eid}${id}${charge}tc" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="${eid}${id}${charge}tc" TextAuraFontName="Microsoft Sans Serif" TriggerId="bb9278eb-5968-4ece-8bfd-4354d03210c4" TriggerText="${eid},${ename},Stormbite,${dur}" ActionType="Aura">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="5" ListVariableOp="Remove" ListVariableName="${eid}dList" ListVariableIndex="${lvar:${eid}dList.indexof(${eid},${id},${charge})}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                      <Action OrderNumber="5" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="${eid}${id}${charge}tc" TextAuraFontName="Microsoft Sans Serif" TriggerId="bb9278eb-5968-4ece-8bfd-4354d03210c4" TriggerText="${eid},${ename},Stormbite,${dur}" ActionType="TextAura">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="6" ListVariableOp="Remove" ListVariableName="${eid}dList" ListVariableIndex="${lvar:${eid}dList.indexof(${eid},${id},${charge})}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="7" MutexName="auraremove" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Mutex">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                     </Actions>
@@ -3822,10 +3842,10 @@
                       <Action OrderNumber="7" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="9.75" TextAuraForeground="#80FFFF" TextAuraOutline="Black" TextAuraName="${eid}${id}${charge}tc" TextAuraExpression="${var:d${eid}${id}${var:d${eid}${id}charge}stack}" TextAuraXIniExpression="${_imageaura[${eid}${id}${charge}ic].x}" TextAuraYIniExpression="${_imageaura[${eid}${id}${charge}ic].y}+7" TextAuraWIniExpression="${_imageaura[${eid}${id}${charge}ic].w}" TextAuraHIniExpression="${_imageaura[${eid}${id}${charge}ic].h}" TextAuraOIniExpression="${_imageaura[${eid}${id}${charge}ic].opacity}" TextAuraXTickExpression="${_imageaura[${eid}${id}${charge}ic].x}" TextAuraYTickExpression="${_imageaura[${eid}${id}${charge}ic].y}+7" TextAuraTTLTickExpression="${var:d${eid}${id}${charge}used}-${_systemtimems}+(${cd}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" DebugLevel="Warning">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${stack}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                          <ConditionSingle Enabled="false" ExpressionL="${count}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="8" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="9.75" TextAuraName="${eid}${id}${charge}tc" TextAuraExpression="${var:d${eid}${id}${var:d${eid}${id}charge}stack}" TextAuraXIniExpression="${_imageaura[${eid}${id}${charge}ic].x}" TextAuraYIniExpression="${_imageaura[${eid}${id}${charge}ic].y}+7" TextAuraWIniExpression="${_imageaura[${eid}${id}${charge}ic].w}" TextAuraHIniExpression="${_imageaura[${eid}${id}${charge}ic].h}" TextAuraOIniExpression="${_imageaura[${eid}${id}${charge}ic].opacity}" TextAuraXTickExpression="${_imageaura[${eid}${id}${charge}ic].x}" TextAuraYTickExpression="${_imageaura[${eid}${id}${charge}ic].y}+7" TextAuraTTLTickExpression="${var:d${eid}${id}${charge}used}-${_systemtimems}+(${cd}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" DebugLevel="Warning">
+                      <Action OrderNumber="8" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="9.75" TextAuraName="${eid}${id}${charge}tc" TextAuraExpression="${var:d${eid}${id}${var:d${eid}${id}charge}stack}" TextAuraXIniExpression="${_imageaura[${eid}${id}${charge}ic].x}" TextAuraYIniExpression="${_imageaura[${eid}${id}${charge}ic].y}+7" TextAuraWIniExpression="${_imageaura[${eid}${id}${charge}ic].w}" TextAuraHIniExpression="${_imageaura[${eid}${id}${charge}ic].h}" TextAuraOIniExpression="${_imageaura[${eid}${id}${charge}ic].opacity}" TextAuraXTickExpression="${_imageaura[${eid}${id}${charge}ic].x}" TextAuraYTickExpression="${_imageaura[${eid}${id}${charge}ic].y}+7" TextAuraTTLTickExpression="${var:d${eid}${id}${charge}used}-${_systemtimems}+(${cd}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura" DebugLevel="Warning">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${stack}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                           <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
@@ -4161,24 +4181,22 @@
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="x CombatantRemoval" Id="58a12559-6d49-4de5-b014-032bdb1d419c" RegularExpression="^04\|[^|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Z][\w'-]* [A-Z][a-z'-]*)\|" DebugLevel="Verbose">
                     <Actions>
-                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8222ef77-6c7e-48af-be40-15253b787300" TriggerText="func${lvar:${eid}dList[1]}" ActionType="Trigger">
+                      <Action OrderNumber="1" MutexOpType="Acquire" MutexName="auraremove" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Mutex">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8222ef77-6c7e-48af-be40-15253b787300" TriggerText="func${lvar:${eid}dList[1]}" ActionType="Trigger">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="58a12559-6d49-4de5-b014-032bdb1d419c" TriggerText="04|.|${eid}|${ename}|" ActionType="Trigger">
+                      <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="58a12559-6d49-4de5-b014-032bdb1d419c" TriggerText="04|.|${eid}|${ename}|" ActionType="Trigger" ExecutionDelayExpression="100">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="3" ListVariableName="${eid}dList" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="9fcfb80e-171f-40d1-8edf-81ae63428f3b" TriggerText="func${eid},${ename},${lvar:dJobHots[2]}" ActionType="ListVariable">
+                      <Action OrderNumber="4" ListVariableName="${eid}dList" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="9fcfb80e-171f-40d1-8edf-81ae63428f3b" TriggerText="func${eid},${ename},${lvar:dJobHots[2]}" ActionType="ListVariable">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="d70d45dd-2548-4b6a-a018-9a48c4a4e372" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${elvar:${eid}dList}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
                       </Action>
                       <Action OrderNumber="5" ListVariableOp="Remove" ListVariableName="dTelestoPartyMembernames" ListVariableExpression="${name}" ListVariableIndex="${lvar:dTelestoPartyMembernames.indexof(${ename})}" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
@@ -4187,15 +4205,18 @@
                           <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembernames.indexof(${ename})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="6" ListVariableOp="Remove" ListVariableName="dTelestoPartyMembers" ListVariableExpression="${_ffxiventity[${name}].id}" ListVariableIndex="${lvar:dTelestoPartyMembernames.indexof(${eid})}" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
-                        <Condition Enabled="true" Grouping="Or">
+                      <Action OrderNumber="6" ListVariableOp="Remove" ListVariableName="dTelestoPartyMembers" ListVariableExpression="${_ffxiventity[${name}].id}" ListVariableIndex="${lvar:dTelestoPartyMembers.indexof(${eid})}" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                        <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${elvar:${eid}dList}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                           <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                         </Condition>
                       </Action>
+                      <Action OrderNumber="7" MutexName="auraremove" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Mutex">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:${eid}dList.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                     </Condition>
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Add Combatant" Id="2d011bea-1ed2-4ae1-98ec-088e33bc72ef" RegularExpression="^03\|[^|]*\|(?&lt;eid&gt;[A-Fa-f0-9]{8})\|(?&lt;ename&gt;[^|]*)\|(?&lt;job&gt;[^|]*)\|(?&lt;level&gt;[^|]*)\|" DebugLevel="Verbose" PrevActions="Interrupt">
@@ -4205,7 +4226,7 @@
                           <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${job})}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8658d090-6f7f-4e95-80cc-9e5d33dc0183" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                      <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8658d090-6f7f-4e95-80cc-9e5d33dc0183" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="1500" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${job})}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
                         </Condition>
@@ -4217,7 +4238,7 @@
                           <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].job}" ExpressionTypeL="String" ExpressionR="SGE" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="d70d45dd-2548-4b6a-a018-9a48c4a4e372" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="1500" Asynchronous="False">
+                      <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="d70d45dd-2548-4b6a-a018-9a48c4a4e372" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${job})}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
                         </Condition>
@@ -4242,7 +4263,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${ename}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Echo GetPartyMembers" Id="2683b511-1c1d-4c2e-a0cd-d0183b56c281" RegularExpression="^00\|[^\|]*\|0038\|\|Player (?&lt;number&gt;\d): ?(?&lt;name&gt;[A-Z][\w']* [A-Z][^A-Z|]*)?">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Echo GetPartyMembers" Id="2683b511-1c1d-4c2e-a0cd-d0183b56c281" RegularExpression="^00\|[^\|]*\|0038\|\|Player (?&lt;number&gt;\d): ?(?&lt;name&gt;[A-Z][\w-']* [A-Z][^A-Z|]*)?">
                     <Actions>
                       <Action OrderNumber="1" MutexOpType="Acquire" MutexName="echopartymembers" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Mutex">
                         <Condition Enabled="false" Grouping="Or" />
@@ -4322,7 +4343,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${partysize}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="Buffs Check" Id="66041b7d-a146-48d1-9ba2-27c206dc8379" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|(?:40A8|113[123456]|76|3E8[4B]|3F4[1234]|DE5|1CE[46]|1D60|5F55|64[BC]9)\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
+                  <Trigger Enabled="false" Source="FFXIVNetwork" Name="Buffs Check" Id="66041b7d-a146-48d1-9ba2-27c206dc8379" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|(?:40A8|113[123456]|76|3E8[4B]|3F4[1234]|DE5|1CE[46]|1D60|5F55|64[BC]9)\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="d70d45dd-2548-4b6a-a018-9a48c4a4e372" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or">
@@ -4336,7 +4357,6 @@
                       </ConditionGroup>
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -4472,7 +4492,7 @@
     <Triggers>
       <Trigger Enabled="true" IsReadme="True" Name="## INSTRUCTIONS - SEE DESCRIPTION TAB" Id="e64e8c23-1c5b-4e30-b8e4-1e6370a389a6" RegularExpression="" Description="These triggers are based on Dansa's HoT triggers, with additional customization and functionality added by SableCentaur.&#xD;&#xA;1. Make sure your party list order in FFXIV matches your configured party order in Triggernometry's settings.&#xD;&#xA; Telesto plugin for Dalamud is required for this repo to work properly.&#xD;&#xA; Please install it before trying to use this repo.&#xD;&#xA; https://github.com/paissaheavyindustries/Dalamud-Repo&#xD;&#xA; If you don't want to use Telesto, you can instead choose to populate the party list manually using the following macro:&#xD;&#xA; /e Player 1: &lt;1&gt;&#xD;&#xA; /e Player 2: &lt;2&gt;&#xD;&#xA; /e Player 3: &lt;3&gt;&#xD;&#xA; /e Player 4: &lt;4&gt;&#xD;&#xA; /e Player 5: &lt;5&gt;&#xD;&#xA; /e Player 6: &lt;6&gt;&#xD;&#xA; /e Player 7: &lt;7&gt;&#xD;&#xA; /e Player 8: &lt;8&gt;&#xD;&#xA;2. Copy the Party List Settings to your Triggernometry startup folder and disable it in the remote repository.&#xD;&#xA;3. Open the settings trigger and configure it.&#xD;&#xA; Open the Party List Position action and use the visual guide for placement to place the aura.&#xD;&#xA; After moving the aura to the desired location, right click the image and click Save Settings.&#xD;&#xA; Each of the other actions in these triggers are labeled as to what settings they change.&#xD;&#xA;&#xD;&#xA;The triggers have TTS capability that will notify you the name of the player, and the name of the skill they used.&#xD;&#xA;To enable TTS alerts, copy the TTS folder from the repo's Startup folder to your Startup folder.&#xD;&#xA;*you must copy the FOLDER for the TTS setup to work properly*&#xD;&#xA;After copying the folder, move the TTS Settings trigger out of the TTS folder into the Startup folder.&#xD;&#xA;See the description tab of the TTS Settings trigger for instructions on configuring TTS.&#xD;&#xA;&#xD;&#xA;To turn off auras for abilities you don't care about, find the relevant ability in folders inside the MultiCooldowns folder&#xD;&#xA; Enable/disable the triggers as desired. &#xD;&#xA;All the triggers are designed for use at level 90.&#xD;&#xA;I don't plan to support them at levels below that, but if you make a fix, pull requests are welcome.&#xD;&#xA;&#xD;&#xA;Support for these triggers is limited, but questions/comments/suggestions may be DM'd to SableCentaur#1297 on Discord.&#xD;&#xA;If your question is answered in these instructions or in Triggernometry's FAQ, I will not answer.">
         <Actions>
-          <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="9bbed845-5654-414e-871c-8a0222ab2aeb" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+          <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="2140d3be-b37f-43d5-9864-71fa6c4a686f" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${job})}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
             </Condition>
@@ -4485,7 +4505,7 @@
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
-      <Trigger Enabled="true" Name="##2.06 updates - see description tab" Id="9bbed845-5654-414e-871c-8a0222ab2aeb" RegularExpression="" Description="Planned:&#xD;&#xA;continue working on adding planned abilities&#xD;&#xA;add functionality for targetted mitigation &amp; healing skills to show the player they are on (optional?)&#xD;&#xA;-&gt; show cd on source player&#xD;&#xA;&#xD;&#xA;10.2.2022 2.06&#xD;&#xA; Extended duration of auras for counters (afflatus, nadi, sen, meditation, astrodyne) to account for players that don't use them frequently (which is dumb but whatever)&#xD;&#xA; Added another check for players not getting added to the party list&#xD;&#xA; Fixed bug with emergency tactics not handling properly if the buff falls off without being used&#xD;&#xA; Added some death handlers for if players die while they have buffs/stacks that they will lose when they die (songs, nadi, sen/meditation, afflatus progression)&#xD;&#xA;&#xD;&#xA;9.27.2022 2.05&#xD;&#xA;Added another option for populating the party list using an in game macro, in case Telesto is down or user doesn't want to use Telesto&#xD;&#xA;Improved aura trigger to account for the party list being added to.&#xD;&#xA;Fixed bug with SMN bahamut/phoenix abilities not being removed correctly if not used during the duration of the summon&#xD;&#xA;Fixed bug with Phantom Kamaitachi not being properly removed when it is used&#xD;&#xA;&#xD;&#xA;9.24.22 2.04&#xD;&#xA;Added:&#xD;&#xA;AST Astrodyne counter&#xD;&#xA;AST Synastry&#xD;&#xA;MNK Beast Chakra counter&#xD;&#xA;BLM Manaward - Mitigation/Utility&#xD;&#xA;BLU Magic Hammer - Mitigation/Utility&#xD;&#xA;BRD songs&#xD;&#xA;BRD Dots&#xD;&#xA;BRD Nature's Minne - Mitigation/Utility&#xD;&#xA;SCH Emergency Tactics - Mitigation/Utility&#xD;&#xA;SCH Deployment Tactics - Mitigation/Utility&#xD;&#xA;MCH Automaton Queen&#xD;&#xA;MCH Hypercharge&#xD;&#xA;MCH Reassemble&#xD;&#xA;NIN Phantom Kamaitachi&#xD;&#xA;NIN Shade Shift - Mitigation/Utility&#xD;&#xA;SGE Pepsis - Mitigation/Utility&#xD;&#xA;PLD Blade of Faith/Truth/Valor counter&#xD;&#xA;RDM Acceleration&#xD;&#xA;SAM Meditation/Shoha counter&#xD;&#xA;SAM Meikyo Shisui&#xD;&#xA;SAM Sen counter&#xD;&#xA;SMN Elemental Attunement&#xD;&#xA;SMN Enkindle&#xD;&#xA;SMN Primal Favors&#xD;&#xA;SMN Primal Summons&#xD;&#xA;SMN Rekindle&#xD;&#xA;WHM Afflatus counter&#xD;&#xA;Sprint&#xD;&#xA;Surecast&#xD;&#xA;&#xD;&#xA;optimized AST card logic&#xD;&#xA;&#xD;&#xA;9.22.22 2.03&#xD;&#xA; fixed bug with party order&#xD;&#xA; adjusted DRK living dead &amp; DNC technical step to be more consistent (and so that DRK living dead won't fire the TTS alert twice)&#xD;&#xA; added support for RDM melee combos at 50 and 80&#xD;&#xA; added trigger to cancel the melee aura if the RDM dies during their combo&#xD;&#xA; adjusted SAM ikishoten/ogi namikuri ready to be more consistent with other triggers&#xD;&#xA; added check to ensure duplicates of abilities are not getting added to the aura lists (which creates empty spaces)&#xD;&#xA; moved SCH's dissipation to the personal cd folder, since they were the only job that didn't have any at all lol&#xD;&#xA; moved DNC's standard step to personal cd folder&#xD;&#xA;&#xD;&#xA;9.20.22 2.02&#xD;&#xA; added TTS capability &amp; customization options w/ documentation &amp; instructions&#xD;&#xA; to configure TTS, please see the description tab of the TTS Settings trigger in the startup folder!&#xD;&#xA; moved all triggers to using ability IDs instead of ability names&#xD;&#xA; cleaned up disabled actions&#xD;&#xA; fixed some bugs with oblation, technical step/finish, and RDM melee combo&#xD;&#xA; sort cooldown lists to have active abilities at the start of the list (closest to the party list)&#xD;&#xA; then move them to the farthest space when the ability is on cooldown&#xD;&#xA;&#xD;&#xA;9.17.22 2.01&#xD;&#xA; revamped RDM melee combo; now tracks the gcds instead of showing an arbitrary timer&#xD;&#xA; will cancel itself if the RDM breaks their combo by casting a spell or letting their combo fall off&#xD;&#xA; added trick attack&#xD;&#xA; adjusted cd initialize trigger to better accomodate for &quot;counter&quot; cds, now is less likely to erroneously clear variables&#xD;&#xA; removed references to player names in variables and trigger logic; still needs to be removed from regex&#xD;&#xA;&#xD;&#xA;9.16.22 2.00&#xD;&#xA; added functionality for &quot;counter&quot; abilities&#xD;&#xA;  when buff is active, aura shows number of stacks remaining instead of duration left&#xD;&#xA;  when buff falls off, aura will switch to showing CD&#xD;&#xA;  ex. Soteria, Manafication, Delirium, Blood Weapon, Requiescat. also affects Technical Step&#xD;&#xA; added functionality for other abilities that can end early but don't have stacks&#xD;&#xA;  when buff is active, aura shows time left until it ends automatically&#xD;&#xA;  when buff falls off or ability is ended, aura will switch to showing CD&#xD;&#xA;  for abilities that trigger other buffs (regen from arcane crest, invuln from living dead, etc), these effects&#xD;&#xA;  will show up as a separate aura from the original ability's cooldown&#xD;&#xA;  ex. Macrocosmos, Earthly Star, Living Dead, Arcane Crest, Divine Veil&#xD;&#xA; added customizability to party list settings&#xD;&#xA;  new options include changing the width/height and opacity of icons&#xD;&#xA;  text size customizability is impossible for now :(&#xD;&#xA;  to use these new options, copy and paste a new copy of the Party List Settings trigger to the startup folder&#xD;&#xA;  and customize as desired&#xD;&#xA; actions with multiple charges now use a single trigger to queue aura activation&#xD;&#xA;  most of these triggers still have disabled actions, will clean these up later after ensuring consistency&#xD;&#xA;  as a result of this change, there are much fewer messy variables left over when exiting duties!&#xD;&#xA; removed outdated references to DoT tracker&#xD;&#xA; simplified HoT logic&#xD;&#xA; converted all triggers to use network lines&#xD;&#xA; added Telesto compatibility to allow for continued use until Trig party data populates correctly again&#xD;&#xA;  https://github.com/paissaheavyindustries/Triggernometry/issues/71&#xD;&#xA;  if/when this is fixed, it should be possible to go back to using it without Telesto with no updates needed&#xD;&#xA; updated level requirement to show Kerachole as a regen for SGE&#xD;&#xA; added new abilities to track&#xD;&#xA;  AST - Draw, Exaltation, BLM - Amplifier, PLD - Divine Veil, SGE - Physis&#xD;&#xA; added wipe command to allow easier testing and cleanup&#xD;&#xA; reorganized folders to make abilities easier to find, and backend/aura commands less intrusive&#xD;&#xA; updated instructions&#xD;&#xA; fixed bug with reprisal">
+      <Trigger Enabled="true" Name="##2.07 updates - see description tab" Id="2140d3be-b37f-43d5-9864-71fa6c4a686f" RegularExpression="" Description="Planned:&#xD;&#xA;continue working on adding planned abilities&#xD;&#xA;add functionality for targetted mitigation &amp; healing skills to show the player they are on (optional?)&#xD;&#xA;-&gt; show cd on source player&#xD;&#xA;&#xD;&#xA;10.14.2022 2.07&#xD;&#xA; Moved SMN Phoenix Rekindle trackers to mitigation folder&#xD;&#xA; Fixed bug with Excog not being removed properly if the healing is applied too quickly after the buff is given&#xD;&#xA;&#xD;&#xA;10.2.2022 2.06&#xD;&#xA; Extended duration of auras for counters (afflatus, nadi, sen, meditation, astrodyne) to account for players that don't use them frequently (which is dumb but whatever)&#xD;&#xA; Added another check for players not getting added to the party list&#xD;&#xA; Fixed bug with emergency tactics not handling properly if the buff falls off without being used&#xD;&#xA; Added some death handlers for if players die while they have buffs/stacks that they will lose when they die (songs, nadi, sen/meditation, afflatus progression)&#xD;&#xA;&#xD;&#xA;9.27.2022 2.05&#xD;&#xA;Added another option for populating the party list using an in game macro, in case Telesto is down or user doesn't want to use Telesto&#xD;&#xA;Improved aura trigger to account for the party list being added to.&#xD;&#xA;Fixed bug with SMN bahamut/phoenix abilities not being removed correctly if not used during the duration of the summon&#xD;&#xA;Fixed bug with Phantom Kamaitachi not being properly removed when it is used&#xD;&#xA;&#xD;&#xA;9.24.22 2.04&#xD;&#xA;Added:&#xD;&#xA;AST Astrodyne counter&#xD;&#xA;AST Synastry&#xD;&#xA;MNK Beast Chakra counter&#xD;&#xA;BLM Manaward - Mitigation/Utility&#xD;&#xA;BLU Magic Hammer - Mitigation/Utility&#xD;&#xA;BRD songs&#xD;&#xA;BRD Dots&#xD;&#xA;BRD Nature's Minne - Mitigation/Utility&#xD;&#xA;SCH Emergency Tactics - Mitigation/Utility&#xD;&#xA;SCH Deployment Tactics - Mitigation/Utility&#xD;&#xA;MCH Automaton Queen&#xD;&#xA;MCH Hypercharge&#xD;&#xA;MCH Reassemble&#xD;&#xA;NIN Phantom Kamaitachi&#xD;&#xA;NIN Shade Shift - Mitigation/Utility&#xD;&#xA;SGE Pepsis - Mitigation/Utility&#xD;&#xA;PLD Blade of Faith/Truth/Valor counter&#xD;&#xA;RDM Acceleration&#xD;&#xA;SAM Meditation/Shoha counter&#xD;&#xA;SAM Meikyo Shisui&#xD;&#xA;SAM Sen counter&#xD;&#xA;SMN Elemental Attunement&#xD;&#xA;SMN Enkindle&#xD;&#xA;SMN Primal Favors&#xD;&#xA;SMN Primal Summons&#xD;&#xA;SMN Rekindle&#xD;&#xA;WHM Afflatus counter&#xD;&#xA;Sprint&#xD;&#xA;Surecast&#xD;&#xA;&#xD;&#xA;optimized AST card logic&#xD;&#xA;&#xD;&#xA;9.22.22 2.03&#xD;&#xA; fixed bug with party order&#xD;&#xA; adjusted DRK living dead &amp; DNC technical step to be more consistent (and so that DRK living dead won't fire the TTS alert twice)&#xD;&#xA; added support for RDM melee combos at 50 and 80&#xD;&#xA; added trigger to cancel the melee aura if the RDM dies during their combo&#xD;&#xA; adjusted SAM ikishoten/ogi namikuri ready to be more consistent with other triggers&#xD;&#xA; added check to ensure duplicates of abilities are not getting added to the aura lists (which creates empty spaces)&#xD;&#xA; moved SCH's dissipation to the personal cd folder, since they were the only job that didn't have any at all lol&#xD;&#xA; moved DNC's standard step to personal cd folder&#xD;&#xA;&#xD;&#xA;9.20.22 2.02&#xD;&#xA; added TTS capability &amp; customization options w/ documentation &amp; instructions&#xD;&#xA; to configure TTS, please see the description tab of the TTS Settings trigger in the startup folder!&#xD;&#xA; moved all triggers to using ability IDs instead of ability names&#xD;&#xA; cleaned up disabled actions&#xD;&#xA; fixed some bugs with oblation, technical step/finish, and RDM melee combo&#xD;&#xA; sort cooldown lists to have active abilities at the start of the list (closest to the party list)&#xD;&#xA; then move them to the farthest space when the ability is on cooldown&#xD;&#xA;&#xD;&#xA;9.17.22 2.01&#xD;&#xA; revamped RDM melee combo; now tracks the gcds instead of showing an arbitrary timer&#xD;&#xA; will cancel itself if the RDM breaks their combo by casting a spell or letting their combo fall off&#xD;&#xA; added trick attack&#xD;&#xA; adjusted cd initialize trigger to better accomodate for &quot;counter&quot; cds, now is less likely to erroneously clear variables&#xD;&#xA; removed references to player names in variables and trigger logic; still needs to be removed from regex&#xD;&#xA;&#xD;&#xA;9.16.22 2.00&#xD;&#xA; added functionality for &quot;counter&quot; abilities&#xD;&#xA;  when buff is active, aura shows number of stacks remaining instead of duration left&#xD;&#xA;  when buff falls off, aura will switch to showing CD&#xD;&#xA;  ex. Soteria, Manafication, Delirium, Blood Weapon, Requiescat. also affects Technical Step&#xD;&#xA; added functionality for other abilities that can end early but don't have stacks&#xD;&#xA;  when buff is active, aura shows time left until it ends automatically&#xD;&#xA;  when buff falls off or ability is ended, aura will switch to showing CD&#xD;&#xA;  for abilities that trigger other buffs (regen from arcane crest, invuln from living dead, etc), these effects&#xD;&#xA;  will show up as a separate aura from the original ability's cooldown&#xD;&#xA;  ex. Macrocosmos, Earthly Star, Living Dead, Arcane Crest, Divine Veil&#xD;&#xA; added customizability to party list settings&#xD;&#xA;  new options include changing the width/height and opacity of icons&#xD;&#xA;  text size customizability is impossible for now :(&#xD;&#xA;  to use these new options, copy and paste a new copy of the Party List Settings trigger to the startup folder&#xD;&#xA;  and customize as desired&#xD;&#xA; actions with multiple charges now use a single trigger to queue aura activation&#xD;&#xA;  most of these triggers still have disabled actions, will clean these up later after ensuring consistency&#xD;&#xA;  as a result of this change, there are much fewer messy variables left over when exiting duties!&#xD;&#xA; removed outdated references to DoT tracker&#xD;&#xA; simplified HoT logic&#xD;&#xA; converted all triggers to use network lines&#xD;&#xA; added Telesto compatibility to allow for continued use until Trig party data populates correctly again&#xD;&#xA;  https://github.com/paissaheavyindustries/Triggernometry/issues/71&#xD;&#xA;  if/when this is fixed, it should be possible to go back to using it without Telesto with no updates needed&#xD;&#xA; updated level requirement to show Kerachole as a regen for SGE&#xD;&#xA; added new abilities to track&#xD;&#xA;  AST - Draw, Exaltation, BLM - Amplifier, PLD - Divine Veil, SGE - Physis&#xD;&#xA; added wipe command to allow easier testing and cleanup&#xD;&#xA; reorganized folders to make abilities easier to find, and backend/aura commands less intrusive&#xD;&#xA; updated instructions&#xD;&#xA; fixed bug with reprisal">
         <Actions>
           <Action OrderNumber="1" AuraName="dupdate" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/General/Party%20Cooldowns/Update.png" AuraXIniExpression="0" AuraYIniExpression="0" AuraWIniExpression="779" AuraHIniExpression="311" AuraOIniExpression="100" AuraTTLTickExpression="30-${_since}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
             <Condition Enabled="false" Grouping="Or" />
