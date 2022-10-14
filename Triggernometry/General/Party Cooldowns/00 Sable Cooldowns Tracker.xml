@@ -2033,7 +2033,7 @@
             </Folders>
             <Triggers />
           </Folder>
-          <Folder FFXIVJobFilter="554193387520" Id="522e1648-267f-412c-bd4b-63ab07a8cfa6" Name="HoTs" Enabled="false">
+          <Folder FFXIVJobFilter="554193387520" Id="522e1648-267f-412c-bd4b-63ab07a8cfa6" Name="HoTs" Enabled="true">
             <Folders>
               <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="4294967296" Id="fc8f14b4-b8fc-4fe8-86bf-7c31e319c158" Name="Astrologian" Enabled="true">
                 <Folders />
