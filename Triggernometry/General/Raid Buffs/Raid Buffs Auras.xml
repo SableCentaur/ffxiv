@@ -5,7 +5,7 @@
       <Folder Id="ccfc9251-9b74-464e-96d6-fc701e9b7e10" Name="Auras" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Name="DRG,1,battle_litany,120,15,1" Id="8ae263e3-10e7-4c3c-80a0-6431826a6ed6" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|DE5\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Name="DRG,1,battle_litany,120,15,1,15" Id="8ae263e3-10e7-4c3c-80a0-6431826a6ed6" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|DE5\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
             <Actions>
               <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="68d0bf52-bfa2-48f6-91bf-c7dceb897669" TriggerText="func${eid},${_triggername}" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
@@ -19,31 +19,31 @@
                 </Condition>
               </Action>
             </Actions>
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-              <ConditionSingle Enabled="false" ExpressionL="${ename}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Name="BRD,2,radiant_finale,110,15,1" Id="dbe41177-30d8-41dc-b9f7-184731c02546" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|64B9\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Name="BRD,2,radiant_finale,110,15,1,15" Id="dbe41177-30d8-41dc-b9f7-184731c02546" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|64B9\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
             <Actions>
               <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="68d0bf52-bfa2-48f6-91bf-c7dceb897669" TriggerText="func${eid},${_triggername}" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="f1bf17f0-aedc-42dd-9238-d0d032b9bc0b" TriggerText="func${eid},${_triggername}" ActionType="Trigger" ExecutionDelayExpression="100">
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="f1bf17f0-aedc-42dd-9238-d0d032b9bc0b" TriggerText="func${eid},${_triggername}" ActionType="Trigger" ExecutionDelayExpression="200">
                 <Condition Enabled="true" Grouping="Not">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:activebuffsList.indexof(buff${eid}radiant_finale)}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
                 </Condition>
               </Action>
             </Actions>
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-              <ConditionSingle Enabled="false" ExpressionL="${ename}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Name="MNK,1,brotherhood,120,15,1" Id="25c7ecae-e21d-41f2-a5f2-73a5b0a99833" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|1CE4\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Name="MNK,1,brotherhood,120,15,1,15" Id="25c7ecae-e21d-41f2-a5f2-73a5b0a99833" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|1CE4\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
             <Actions>
               <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="68d0bf52-bfa2-48f6-91bf-c7dceb897669" TriggerText="func${eid},${_triggername}" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
@@ -57,23 +57,26 @@
                 </Condition>
               </Action>
             </Actions>
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-              <ConditionSingle Enabled="false" ExpressionL="${ename}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Name="DNC,1,devilment,120,20,1" Id="6610a999-b11f-4c45-9570-f045d13732ef" RegularExpression="^26\|[^\|]*\|721\|(?:[^\|]*\|){2}(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|[A-Z0-9]{8}\|(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+)\|">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Name="DNC,1,devilment,120,20,1,20" Id="6610a999-b11f-4c45-9570-f045d13732ef" RegularExpression="^26\|[^\|]*\|721\|(?:[^\|]*\|){2}(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|[A-Z0-9]{8}\|(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+)\|">
             <Actions>
               <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="68d0bf52-bfa2-48f6-91bf-c7dceb897669" TriggerText="func${eid},${_triggername}" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
             <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${player}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionGroup Enabled="true" Grouping="Or">
+                <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              </ConditionGroup>
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Name="SMN,1,searing_light,120,30,1" Id="8ccf9cea-a3ee-4f84-92e5-c37ada880f3d" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|64C9\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Name="SMN,1,searing_light,120,30,1,30" Id="8ccf9cea-a3ee-4f84-92e5-c37ada880f3d" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|64C9\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
             <Actions>
               <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="68d0bf52-bfa2-48f6-91bf-c7dceb897669" TriggerText="func${eid},${_triggername}" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
@@ -87,12 +90,12 @@
                 </Condition>
               </Action>
             </Actions>
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-              <ConditionSingle Enabled="false" ExpressionL="${ename}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Name="AST,2,divination,120,15,1" Id="921141b9-fdf3-428f-9143-36b370dea309" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|40A8\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Name="AST,2,divination,120,15,1,15" Id="921141b9-fdf3-428f-9143-36b370dea309" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|40A8\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
             <Actions>
               <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="68d0bf52-bfa2-48f6-91bf-c7dceb897669" TriggerText="func${eid},${_triggername}" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
@@ -106,11 +109,12 @@
                 </Condition>
               </Action>
             </Actions>
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Name="DRG,2,dragon_sight,120,20,1" Id="b5a0ef26-23e1-451b-9d67-10645d391651" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|1CE6\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z']+ [A-Za-z']+)\|">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Name="DRG,2,dragon_sight,120,20,1,20" Id="b5a0ef26-23e1-451b-9d67-10645d391651" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|1CE6\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z']+ [A-Za-z']+)\|">
             <Actions>
               <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="68d0bf52-bfa2-48f6-91bf-c7dceb897669" TriggerText="func${eid},${_triggername}" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
@@ -125,11 +129,12 @@
                 </Condition>
               </Action>
             </Actions>
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Name="RDM,1,embolden,120,20,1" Id="0eed1579-7d4a-4dd6-81fb-eb307da019e4" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|1D60\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Name="RDM,1,embolden,120,20,1,20" Id="0eed1579-7d4a-4dd6-81fb-eb307da019e4" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|1D60\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
             <Actions>
               <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="68d0bf52-bfa2-48f6-91bf-c7dceb897669" TriggerText="func${eid},${_triggername}" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
@@ -143,9 +148,9 @@
                 </Condition>
               </Action>
             </Actions>
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-              <ConditionSingle Enabled="false" ExpressionL="${ename}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Trigger>
           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="DNC,2,technical_finish,120,20,1" Id="ef6725a4-3776-4509-b604-164a5852c07b" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|(?:3E84|3F41|3F42|3F43|3F44)\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
@@ -167,9 +172,9 @@
                 </Condition>
               </Action>
             </Actions>
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-              <ConditionSingle Enabled="false" ExpressionL="${ename}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Trigger>
           <Trigger Enabled="true" Source="FFXIVNetwork" Name="SCH,1,chain_stratagem,120,15,1" Id="ceb8f452-8897-4b7f-957d-17f554f19857" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|1D0C\|">
@@ -178,11 +183,9 @@
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
-            <Condition Enabled="false" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-            </Condition>
+            <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Name="BRD,1,battle_voice,120,15,1" Id="b636733f-3657-477d-8865-d3647e99be18" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|76\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Name="BRD,1,battle_voice,120,15,1,15" Id="b636733f-3657-477d-8865-d3647e99be18" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|76\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
             <Actions>
               <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="68d0bf52-bfa2-48f6-91bf-c7dceb897669" TriggerText="func${eid},${_triggername}" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
@@ -196,8 +199,9 @@
                 </Condition>
               </Action>
             </Actions>
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Trigger>
           <Trigger Enabled="true" Source="FFXIVNetwork" Name="NIN,1,mug,120,20,1" Id="52d94cc2-e065-43a1-8359-30ff8c8d9448" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|8C8\|">
@@ -206,11 +210,9 @@
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
-            <Condition Enabled="false" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-            </Condition>
+            <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Name="RPR,1,arcane_circle,120,20,1" Id="4e7c142a-b688-4551-a8e8-54b4e57ceb69" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|5F55\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Name="RPR,1,arcane_circle,120,20,1,20" Id="4e7c142a-b688-4551-a8e8-54b4e57ceb69" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|5F55\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
             <Actions>
               <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="68d0bf52-bfa2-48f6-91bf-c7dceb897669" TriggerText="func${eid},${_triggername}" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
@@ -224,9 +226,9 @@
                 </Condition>
               </Action>
             </Actions>
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-              <ConditionSingle Enabled="false" ExpressionL="${ename}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Trigger>
           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="AST,1,card,15,15,0" Id="3e897aa7-b202-458c-bca4-6ed0f6819881" RegularExpression="^21\|(?:[^\|]*\|){3}(?&lt;card&gt;113[123456])\|(?:[^\|]*\|){2}(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
@@ -321,7 +323,8 @@
               </Action>
             </Actions>
             <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Trigger>
           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="BRD,0,mages_ballad,120,45,0" Id="16b5a55a-9cf9-4613-a647-27a586669ebb" RegularExpression="^21\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|72\|" PrevActions="Interrupt">
@@ -345,8 +348,9 @@
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Trigger>
           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="BRD,0,wanderers_minuet,120,45,0" Id="ddc52856-b2e3-4496-8451-74351ff2dcaf" RegularExpression="^21\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|DE7\|" PrevActions="Interrupt">
@@ -370,8 +374,9 @@
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Trigger>
           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="DNC,2,technical_step,15,15,0" Id="ae09fb8e-e864-4ff5-b62b-3ad555a8a2e6" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|3E7E\|">
@@ -408,7 +413,8 @@
               </Action>
             </Actions>
             <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${ename}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Trigger>
           <Trigger Enabled="true" Source="FFXIVNetwork" Name="DNC,2,technical_step,countdown" Id="a54b2953-bd47-4832-b68d-02eb03a700e9" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|3E(?:7F|80|81|82)\|">
@@ -419,7 +425,7 @@
                 </Condition>
               </Action>
             </Actions>
-            <Condition Enabled="true" Grouping="Or">
+            <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${evar:buff${eid}technical_steps}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Trigger>
@@ -432,10 +438,10 @@
           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3e897aa7-b202-458c-bca4-6ed0f6819881" TriggerText="21||||1131|||${_ffxivplayer}|" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="921141b9-fdf3-428f-9143-36b370dea309" TriggerText="22||12341234|${_ffxivplayer}|40A8|||${_ffxivplayer}|" ActionType="Trigger">
+          <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="921141b9-fdf3-428f-9143-36b370dea309" TriggerText="22||${_ffxivparty[${_ffxivplayer}].id}|${_ffxivparty[1]}|40A8|||${_ffxivparty[1]}|" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="2faffabe-dc62-473b-ba49-896225551e7e" TriggerText="21||12341234|${_ffxivplayer}|74|" ActionType="Trigger">
+          <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="2faffabe-dc62-473b-ba49-896225551e7e" TriggerText="21||${_ffxivplayer}.id|${_ffxivplayer}|74|" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
           <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b636733f-3657-477d-8865-d3647e99be18" TriggerText="21||12341234|${_ffxivplayer}|76|||${_ffxivplayer}|" ActionType="Trigger">
@@ -502,6 +508,11 @@
           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="9f5efc6b-98fa-44bc-ac5e-4a4a66c58879" TriggerForce="regexp" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
+          <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="247f5b1c-4dfa-40a9-b505-16b7eabda991" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="5000" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${job})}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+            </Condition>
+          </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
@@ -522,16 +533,19 @@
           <Action OrderNumber="3" ListVariableOp="UnsetRegex" ListVariableName="buffsList" VariableOp="UnsetRegex" VariableName="d[A-F0-9]{8}[A-Za-z ]{0,50}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="4" AuraOp="DeactivateAuraRegex" AuraName="buff.*" ListVariableOp="UnsetRegex" ListVariableName="buffsList" VariableOp="UnsetRegex" VariableName="d[A-F0-9]{8}[A-Za-z ]{0,50}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
+          <Action OrderNumber="4" ListVariableOp="UnsetRegex" ListVariableName="buffsList" VariableOp="UnsetRegex" VariableName="buff[A-Z0-9]{8}.*" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="5" AuraOp="DeactivateAuraRegex" AuraName="buff.*" ListVariableOp="UnsetRegex" ListVariableName="buffsList" VariableOp="UnsetRegex" VariableName="d[A-F0-9]{8}[A-Za-z ]{0,50}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="8.25" TextAuraName="buff.*" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
+          <Action OrderNumber="5" AuraOp="DeactivateAuraRegex" AuraName="buff.*" ListVariableOp="UnsetRegex" ListVariableName="buffsList" VariableOp="UnsetRegex" VariableName="d[A-F0-9]{8}[A-Za-z ]{0,50}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="6" AuraOp="DeactivateAuraRegex" AuraName="buff.*" ListVariableOp="UnsetRegex" ListVariableName="buffsList" VariableOp="UnsetRegex" VariableName="d[A-F0-9]{8}[A-Za-z ]{0,50}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="8.25" TextAuraName="buff.*" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
-      <Trigger Enabled="true" Name="On Wipe" Id="6af2ff8d-a998-4342-9401-0a58d299c905" RegularExpression="^\[[^\]]*\][^:]*21:([0-9,a-f,A-F]{8}):40000010:">
+      <Trigger Enabled="true" Source="FFXIVNetwork" Name="On Wipe" Id="6af2ff8d-a998-4342-9401-0a58d299c905" RegularExpression="^33\|[^|]*\|[^|]*\|400000(?&gt;03|0F)\|">
         <Actions>
           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="68d0bf52-bfa2-48f6-91bf-c7dceb897669" TriggerForce="regexp" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or">
@@ -548,10 +562,15 @@
           <Action OrderNumber="3" AuraOp="DeactivateAuraRegex" AuraName="buff.*" ListVariableOp="UnsetRegex" ListVariableName="buffsList" VariableOp="UnsetRegex" VariableName="d[A-F0-9]{8}[A-Za-z ]{0,50}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="8.25" TextAuraName="buff.*" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
+          <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="194030c6-82fd-4348-ad57-f73c9ae20d36" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${job})}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+            </Condition>
+          </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
-      <Trigger Enabled="true" Source="None" IsReadme="True" Name="##INSTRUCTIONS -&gt; Description tab##" Id="d132b886-2ad9-448d-88c8-363d4f4800d2" RegularExpression="" Description="1. Copy Buffs Positions trigger to a local folder&#xD;&#xA;2. Set that folder as your startup folder in the Triggernometry configuration&#xD;&#xA; (options dropdown &gt; edit configuration; select the folder in the box at the bottom)&#xD;&#xA;3. Open the local Buffs Positions trigger&#xD;&#xA;4. Open the Buffs Position action&#xD;&#xA;5. Click the Use visual guide for placement button&#xD;&#xA;6. Move the overlay to where you want it to appear&#xD;&#xA; If you can't find it, hit Alt+F4 and set the X and Y location values to 0, then try again. Should be in the top left&#xD;&#xA;7. Right click the overlay and click Save Changes&#xD;&#xA;8. Click Save Changes&#xD;&#xA;9. Click Save Changes again&#xD;&#xA;10. You're done. Type &quot;/e _buffs test&quot; in game chat to test the overlay. Type &quot;/e _buffs off&quot; to turn them off.&#xD;&#xA;&#xD;&#xA;You don't need to copy any of the other triggers locally, but you can enable/disable the ones in the Auras folder as you prefer.&#xD;&#xA;Note that Technical Finish will not work properly ifTechnical Step is not enabled&#xD;&#xA;&#xD;&#xA;Features:&#xD;&#xA;- Shows cooldowns with blue text and saturated icons when buffs are up&#xD;&#xA;- Shows cooldowns with black text and desaturated icons when buffs are on cooldown&#xD;&#xA;- When buff is off cooldown but not used yet, desaturated icon remains, but cooldown text disappears&#xD;&#xA;- When technical step is up, shows a countdown showing how many dance steps are left before tech finish is ready&#xD;&#xA;- If a buff is used but misses the player, the cooldown will go straight to the desaturated/black text to indicate the buff missed them&#xD;&#xA;- Supports buff tracking of multiple of the same job&#xD;&#xA;- Auras will disappear upon changing zones&#xD;&#xA;- Cooldown text will disappear upon instance wipe, but auras will stay&#xD;&#xA;&#xD;&#xA;Questions and bugs can be reported to Sable#1297 on Discord, but be noted I'm kind of a bitch, so sorry in advance.">
+      <Trigger Enabled="true" Source="None" IsReadme="True" Name="##INSTRUCTIONS -&gt; Description tab##" Id="d132b886-2ad9-448d-88c8-363d4f4800d2" RegularExpression="" Description="1. Copy Buffs Positions trigger to a local folder&#xD;&#xA;2. Set that folder as your startup folder in the Triggernometry configuration&#xD;&#xA; (options dropdown &gt; edit configuration; select the folder in the box at the bottom)&#xD;&#xA;3. Open the local Buffs Positions trigger&#xD;&#xA;4. Open the Buffs Position action&#xD;&#xA;5. Click the Use visual guide for placement button&#xD;&#xA;6. Move the overlay to where you want it to appear&#xD;&#xA; If you can't find it, hit Alt+F4 and set the X and Y location values to 0, then try again.&#xD;&#xA; Should be in the top left of your primary monitor.&#xD;&#xA;7. Right click the overlay and click Save Changes&#xD;&#xA;8. Click Save Changes&#xD;&#xA;9. Click Save Changes again&#xD;&#xA;10. You're done. Type &quot;/e _buffs test&quot; in game chat to test the overlay. Type &quot;/e _buffs off&quot; to turn them off.&#xD;&#xA;&#xD;&#xA;You don't need to copy any of the other triggers locally, but you can enable/disable the ones in the Auras folder as you prefer.&#xD;&#xA;Note that Technical Finish will not work properly ifTechnical Step is not enabled&#xD;&#xA;&#xD;&#xA;##IMPORTANT##&#xD;&#xA;There is a feature in Triggernometry that is currently broken that is required for these triggers to work properly.&#xD;&#xA;As a workaround, please install Telesto in XIVLauncher:&#xD;&#xA;https://github.com/paissaheavyindustries/Dalamud-Repo&#xD;&#xA;&#xD;&#xA;Features:&#xD;&#xA;- Shows cooldowns with blue text and saturated icons when buffs are up&#xD;&#xA;- Shows cooldowns with black text and desaturated icons when buffs are on cooldown&#xD;&#xA;- When buff is off cooldown but not used yet, desaturated icon remains, but cooldown text disappears&#xD;&#xA;- When technical step is up, shows a countdown showing how many dance steps are left before tech finish is ready&#xD;&#xA;- If a buff is used but misses the player, the cooldown will go straight to the desaturated/black text to indicate the buff missed them&#xD;&#xA;- Supports buff tracking of multiple of the same job&#xD;&#xA;- Auras will disappear upon changing zones&#xD;&#xA;- Cooldown text will disappear upon instance wipe, but auras will stay&#xD;&#xA;&#xD;&#xA;Questions and bugs can be reported to Sable#1297 on Discord, but be noted I'm kind of a bitch, so sorry in advance.">
         <Actions />
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
@@ -641,7 +660,7 @@
               <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsList.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="4" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="18" TextAuraName="buff${eid}${skill}cd" TextAuraExpression="${numeric:${cd}-${ef}-${_since}}" TextAuraXIniExpression="${_imageaura[buff${eid}${skill}cd].x}" TextAuraYIniExpression="${_imageaura[buff${eid}${skill}cd].y}+10" TextAuraWIniExpression="45" TextAuraHIniExpression="45" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buff${eid}${skill}cd].x}" TextAuraTTLTickExpression="${cd}-${ef}-${_since}" TextAuraUseOutline="True" TextAuraFontName="Malgun Gothic" ActionType="TextAura" DebugLevel="Warning">
+          <Action OrderNumber="4" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="18" TextAuraName="buff${eid}${skill}cd" TextAuraExpression="${numeric:${cd}+${ef2}-${ef}-${_since}}" TextAuraXIniExpression="${_imageaura[buff${eid}${skill}cd].x}" TextAuraYIniExpression="${_imageaura[buff${eid}${skill}cd].y}+10" TextAuraWIniExpression="45" TextAuraHIniExpression="45" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buff${eid}${skill}cd].x}" TextAuraTTLTickExpression="${cd}+${ef2}-${ef}-${_since}" TextAuraUseOutline="True" TextAuraFontName="Malgun Gothic" ActionType="TextAura" DebugLevel="Warning">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${showcd}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
@@ -650,6 +669,84 @@
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${showcd}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Source="FFXIVNetwork" Name="Buffs Check" Id="66041b7d-a146-48d1-9ba2-27c206dc8379" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|(?:113[123456]|40A8|76|64B9|3E8B|3E84|3F4[1-4]|DE5|1CE6|1CE4|1D60|5F55|64C9)\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
+        <Actions>
+          <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="504cb007-193c-4823-afd4-0e7e3bc4b7dd" TriggerForce="regexp,active" ActionType="Trigger" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${job})}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+            </Condition>
+          </Action>
+        </Actions>
+        <Condition Enabled="true" Grouping="And">
+          <ConditionGroup Enabled="true" Grouping="Not">
+            <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            <ConditionSingle Enabled="true" ExpressionL="${ename}" ExpressionTypeL="Numeric" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+          </ConditionGroup>
+          <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+        </Condition>
+      </Trigger>
+      <Trigger Enabled="false" Source="FFXIVNetwork" Sequential="True" Name="Telesto GetPartyMembers" Id="504cb007-193c-4823-afd4-0e7e3bc4b7dd" RegularExpression="">
+        <Actions>
+          <Action OrderNumber="1" ListVariableName="dTelestoPartyMembers" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" ListVariableName="dTelestoPartyMembernames" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" ListVariableName="dTelestoPartyMembers" OBSEndPoint="" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" JsonResultVariable="dTelestoPartyMembers" JsonEndpointExpression="http://localhost:51323" JsonPayloadExpression="{ &quot;version&quot;: 1, &quot;id&quot;: 123456, &quot;type&quot;: &quot;GetPartyMembers&quot; }" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="dTelestoPartyMembers" VariableJsonTarget="dTelestoPartyMembernames" VariableExpression="$.response[*].fullname" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="6" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="dTelestoPartyMembers" VariableJsonTarget="dTelestoPartyMembers" VariableExpression="$.response[*].actor" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="7" ListVariableOp="Join" ListVariableName="dTelestoPartyMembers" ListVariableExpression="," ListVariableIndex="1" ListVariableTarget="dTelestoPartyMembers" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableJsonTarget="dTelestoPartyMembers" VariableExpression="$.response[*].actor" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="8" ListVariableOp="Join" ListVariableName="dTelestoPartyMembers" ListVariableExpression="," ListVariableIndex="1" ListVariableTarget="dTelestoPartyMembers" OBSEndPoint="" VariableOp="SetString" VariableName="dTelestoPartyMembers" VariableJsonTarget="dTelestoPartyMembers" VariableExpression="${func:toupper:${var:dTelestoPartyMembers}}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="9" ListVariableOp="Split" ListVariableName="dTelestoPartyMembers" ListVariableExpression="," ListVariableIndex="1" ListVariableTarget="dTelestoPartyMembers" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableJsonTarget="dTelestoPartyMembers" VariableExpression="$.response[*].actor" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="10" ListVariableOp="Split" ListVariableName="dTelestoPartyMembers" ListVariableExpression="," ListVariableIndex="1" ListVariableTarget="dTelestoPartyMembers" OBSEndPoint="" VariableName="dTelestoPartyMembers" VariableJsonTarget="dTelestoPartyMembers" VariableExpression="$.response[*].actor" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="11" LogMessageText="${_responsecode}" LogLevel="Verbose" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="12" LogMessageText="Player 1: ${lvar:dTelestoPartyMembers[1]} - ${lvar:dTelestoPartyMembernames[1]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="13" LogMessageText="Player 2: ${lvar:dTelestoPartyMembers[2]} - ${lvar:dTelestoPartyMembernames[2]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="14" LogMessageText="Player 3: ${lvar:dTelestoPartyMembers[3]} - ${lvar:dTelestoPartyMembernames[3]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="15" LogMessageText="Player 4: ${lvar:dTelestoPartyMembers[4]} - ${lvar:dTelestoPartyMembernames[4]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="16" LogMessageText="Player 5: ${lvar:dTelestoPartyMembers[5]} - ${lvar:dTelestoPartyMembernames[5]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="17" LogMessageText="Player 6: ${lvar:dTelestoPartyMembers[6]} - ${lvar:dTelestoPartyMembernames[6]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="18" LogMessageText="Player 7: ${lvar:dTelestoPartyMembers[7]} - ${lvar:dTelestoPartyMembernames[7]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="19" LogMessageText="Player 8: ${lvar:dTelestoPartyMembers[8]} - ${lvar:dTelestoPartyMembernames[8]}" LogLevel="Info" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+            <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
