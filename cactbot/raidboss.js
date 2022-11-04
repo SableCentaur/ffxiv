@@ -77,9 +77,9 @@ const mitEntryToTimeline = (origTime, mitStr) => {
 window.mitMapToTimeline = (mitMap) => {
   const timeline = [];
   for (const [mit, timestamps] of Object.entries(mitMap)) {
-      for (const timestamp of timestamps)
+      for (const timestamp of timestamps) {
         timeline.push(mitEntryToTimeline(timestamp, mit));
-    }
+      }
   }
   return timeline;
 };
