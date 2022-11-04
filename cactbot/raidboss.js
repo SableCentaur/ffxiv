@@ -76,12 +76,9 @@ const mitEntryToTimeline = (origTime, mitStr) => {
 
 window.mitMapToTimeline = (mitMap) => {
   const timeline = [];
-  for (const [origTime, mit] of Object.entries(mitMap)) {
-    if (typeof mit === 'string') {
-      timeline.push(mitEntryToTimeline(origTime, mit));
-    } else {
-      for (const mitStr of mit)
-        timeline.push(mitEntryToTimeline(origTime, mitStr));
+  for (const [mit, timestamps] of Object.entries(mitMap)) {
+      for (const timestamp of timestamps)
+        timeline.push(mitEntryToTimeline(timestamp, mit));
     }
   }
   return timeline;
@@ -95,51 +92,51 @@ Options.Triggers = [
 		const mitList = [];
 		if (data.CanFeint()) {
 			mitList.push(mitMapToTimeline({
-				15: 'Feint', // this would just be lines of "time: 'Feint'," - can this be condensed/more efficient in some way?
+				'Feint': [15], // each integer in the list is a timestamp for when the mitigation needs to be active
 			}));
 			if(data.job == 'NIN') {
 			mitList.push(mitMapToTimeline({
-				15: 'Mudra',
+				'Mudra': [15],
 			}));
 			}
 			if(data.job == 'SAM') {
 			mitList.push(mitMapToTimeline({
-				15: 'Third Eye',
+				'Third Eye': [15],
 			}));
 			}
 		}
 		if (data.CanAddle()) {
 			mitList.push(mitMapToTimeline({
-				15: 'Addle',
+				'Addle': [15],
 			}));
 			if(data.job == 'BLM') {
 			mitList.push(mitMapToTimeline({
-				15: 'Manaward',
+				'Manaward': [15],
 			}));
 			}
 			if(data.job == 'SMN') {
 			mitList.push(mitMapToTimeline({
-				15: 'Radiant Aegis',
+				'Radiant Aegis': [15],
 			}));
 			}
 			if(data.job == 'RDM') {
 			mitList.push(mitMapToTimeline({
-				15: 'Magick Barrier',
+				'Magick Barrier': [15],
 			}));
 			}
 		}
 		if (data.job == 'DNC' || data.job == 'MCH' || data.job == 'BRD') {
 			mitList.push(mitMapToTimeline({
-				15: 'Tactician',
+				'Tactician': [15],
 			}));
 			if(data.job == 'DNC') {
 			mitList.push(mitMapToTimeline({
-				20: 'Improvisation',
+				'Improvisation': [20],
 			}));
 			}
 			if(data.job == 'BRD') {
 			mitList.push(mitMapToTimeline({
-				15: 'Nature\'s Minne',
+				'Nature\'s Minne': [15],
 			}));
 			}
 		}
