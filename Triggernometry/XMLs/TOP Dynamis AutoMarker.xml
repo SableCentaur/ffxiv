@@ -13,7 +13,7 @@
               <Action OrderNumber="2" OBSEndPoint="" TriggerId="52027673-91b1-4d11-a763-96f2af361903" TriggerText="26||D72|Hello, Near World|44.00||||${lvar:dTelestoPartyMembernames[4]}|" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" OBSEndPoint="" TriggerId="f01c2d46-9b2b-48a1-8719-82b01d35c261" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="5000">
+              <Action OrderNumber="3" OBSEndPoint="" TriggerId="f01c2d46-9b2b-48a1-8719-82b01d35c261" TriggerForce="regexp,parent" ActionType="Trigger" ExecutionDelayExpression="5000">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -48,7 +48,7 @@
               <Action OrderNumber="9" OBSEndPoint="" TriggerId="52027673-91b1-4d11-a763-96f2af361903" TriggerText="26||D72|Hello, Near World|56.00||||${lvar:dTelestoPartyMembernames[2]}|" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="10" OBSEndPoint="" TriggerId="f01c2d46-9b2b-48a1-8719-82b01d35c261" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="5000">
+              <Action OrderNumber="10" OBSEndPoint="" TriggerId="f01c2d46-9b2b-48a1-8719-82b01d35c261" TriggerForce="regexp,parent" ActionType="Trigger" ExecutionDelayExpression="5000">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -144,61 +144,68 @@
           </Trigger>
           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="GetPartyMembers Telesto" Id="9642f76a-2204-4e3a-a7cb-01b042b079bf" RegularExpression="^2[12]\|(?:[^\|]*\|){3}7B7C\|">
             <Actions>
-              <Action OrderNumber="1" ListVariableName="dTelestoPartyMembers" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable">
+              <Action OrderNumber="1" ListVariableName="dTelestoPartyMembernames" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" ListVariableName="dTelestoPartyMembernames" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable">
+              <Action OrderNumber="2" JsonResultVariable="dTelestoPartyMembers" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}" JsonPayloadExpression="{ &quot;version&quot;: 1, &quot;id&quot;: 123456, &quot;type&quot;: &quot;GetPartyMembers&quot; }" OBSEndPoint="" ActionType="GenericJson">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" ListVariableName="dTelestoPartyMembers" OBSEndPoint="" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="Variable">
+              <Action OrderNumber="3" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="dTelestoPartyMembers" VariableJsonTarget="dTelestoPartyMembernames" VariableExpression="$.response[*].fullname" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" JsonResultVariable="dTelestoPartyMembers" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}" JsonPayloadExpression="{ &quot;version&quot;: 1, &quot;id&quot;: 123456, &quot;type&quot;: &quot;GetPartyMembers&quot; }" OBSEndPoint="" ActionType="GenericJson">
+              <Action OrderNumber="4" LogMessageText="${_responsecode}" LogLevel="Verbose" OBSEndPoint="" ActionType="LogMessage">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="5" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="dTelestoPartyMembers" VariableJsonTarget="dTelestoPartyMembernames" VariableExpression="$.response[*].fullname" ActionType="Variable">
+              <Action OrderNumber="5" LogMessageText="Player 1: ${lvar:dTelestoPartyMembernames[1]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[2]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[3]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[4]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[5]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[6]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[7]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[8]}, " LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="6" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="dTelestoPartyMembers" VariableJsonTarget="dTelestoPartyMembers" VariableExpression="$.response[*].actor" ActionType="Variable">
+              <Action OrderNumber="6" LogMessageText="Player 2: ${lvar:dTelestoPartyMembers[2]} - ${lvar:dTelestoPartyMembernames[2]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="7" ListVariableOp="Join" ListVariableName="dTelestoPartyMembers" ListVariableExpression="," ListVariableIndex="1" ListVariableTarget="dTelestoPartyMembers" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableJsonTarget="dTelestoPartyMembers" VariableExpression="$.response[*].actor" ActionType="ListVariable">
+              <Action OrderNumber="7" LogMessageText="Player 3: ${lvar:dTelestoPartyMembers[3]} - ${lvar:dTelestoPartyMembernames[3]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="8" ListVariableOp="Join" ListVariableName="dTelestoPartyMembers" ListVariableExpression="," ListVariableIndex="1" ListVariableTarget="dTelestoPartyMembers" OBSEndPoint="" VariableOp="SetString" VariableName="dTelestoPartyMembers" VariableJsonTarget="dTelestoPartyMembers" VariableExpression="${func:toupper:${var:dTelestoPartyMembers}}" ActionType="Variable">
+              <Action OrderNumber="8" LogMessageText="Player 4: ${lvar:dTelestoPartyMembers[4]} - ${lvar:dTelestoPartyMembernames[4]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="9" ListVariableOp="Split" ListVariableName="dTelestoPartyMembers" ListVariableExpression="," ListVariableIndex="1" ListVariableTarget="dTelestoPartyMembers" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableJsonTarget="dTelestoPartyMembers" VariableExpression="$.response[*].actor" ActionType="ListVariable">
+              <Action OrderNumber="9" LogMessageText="Player 5: ${lvar:dTelestoPartyMembers[5]} - ${lvar:dTelestoPartyMembernames[5]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="10" ListVariableOp="Split" ListVariableName="dTelestoPartyMembers" ListVariableExpression="," ListVariableIndex="1" ListVariableTarget="dTelestoPartyMembers" OBSEndPoint="" VariableName="dTelestoPartyMembers" VariableJsonTarget="dTelestoPartyMembers" VariableExpression="$.response[*].actor" ActionType="Variable">
+              <Action OrderNumber="10" LogMessageText="Player 6: ${lvar:dTelestoPartyMembers[6]} - ${lvar:dTelestoPartyMembernames[6]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="11" LogMessageText="${_responsecode}" LogLevel="Verbose" OBSEndPoint="" ActionType="LogMessage">
+              <Action OrderNumber="11" LogMessageText="Player 7: ${lvar:dTelestoPartyMembers[7]} - ${lvar:dTelestoPartyMembernames[7]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="12" LogMessageText="Player 1: ${lvar:dTelestoPartyMembers[1]} - ${lvar:dTelestoPartyMembernames[1]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+              <Action OrderNumber="12" LogMessageText="Player 8: ${lvar:dTelestoPartyMembers[8]} - ${lvar:dTelestoPartyMembernames[8]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="13" LogMessageText="Player 2: ${lvar:dTelestoPartyMembers[2]} - ${lvar:dTelestoPartyMembernames[2]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder ZoneFilterEnabled="True" Id="b531369a-0938-48d0-aaad-ddc6ec4474d2" ZoneFilterRegularExpression="The Omega Protocol \(Ultimate\)" Name="Reset" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="#Reset" Id="f01c2d46-9b2b-48a1-8719-82b01d35c261" RegularExpression="^33\|[^|]*\|[^|]*\|400000(?&gt;03|0F)\|">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="UnsetRegex" VariableName="TOPdynamisAM.*" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="14" LogMessageText="Player 3: ${lvar:dTelestoPartyMembers[3]} - ${lvar:dTelestoPartyMembernames[3]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+              <Action OrderNumber="2" ListVariableOp="UnsetRegex" ListVariableName="TOPdynamisAM.*" ListVariableExpression="${lvar:dTelestoPartyMembernames[3]}" ActionType="ListVariable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="15" LogMessageText="Player 4: ${lvar:dTelestoPartyMembers[4]} - ${lvar:dTelestoPartyMembernames[4]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+              <Action OrderNumber="3" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="52027673-91b1-4d11-a763-96f2af361903" TriggerForce="regexp" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="16" LogMessageText="Player 5: ${lvar:dTelestoPartyMembers[5]} - ${lvar:dTelestoPartyMembernames[5]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+              <Action OrderNumber="4" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="59f1da9d-0177-4f92-9b48-d085d95b4afa" TriggerForce="regexp" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="17" LogMessageText="Player 6: ${lvar:dTelestoPartyMembers[6]} - ${lvar:dTelestoPartyMembernames[6]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+              <Action OrderNumber="5" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="1e88cd2b-eab1-49e4-8b0d-126a2e32c980" TriggerForce="regexp" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="18" LogMessageText="Player 7: ${lvar:dTelestoPartyMembers[7]} - ${lvar:dTelestoPartyMembernames[7]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="19" LogMessageText="Player 8: ${lvar:dTelestoPartyMembers[8]} - ${lvar:dTelestoPartyMembernames[8]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+              <Action OrderNumber="6" OBSEndPoint="" TriggerId="3ce3f535-156e-4f9b-9075-7c1caf9f658b" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="5000">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -302,28 +309,7 @@
       </Trigger>
       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="#CLEAR MARKS" Id="3ce3f535-156e-4f9b-9075-7c1caf9f658b" RegularExpression="">
         <Actions>
-          <Action OrderNumber="1" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;1&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" Asynchronous="False" Description="${lvar:TOPsigmaparty[1]} - NAME OF PERSON&#xD;&#xA;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPsigmaparty[1]})} - index of person in party">
-            <Condition Enabled="false" Grouping="And" />
-          </Action>
-          <Action OrderNumber="2" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;2&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" Asynchronous="False" Description="${lvar:TOPsigmaparty[1]} - NAME OF PERSON&#xD;&#xA;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPsigmaparty[1]})} - index of person in party">
-            <Condition Enabled="false" Grouping="And" />
-          </Action>
-          <Action OrderNumber="3" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;3&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" Asynchronous="False" Description="${lvar:TOPsigmaparty[1]} - NAME OF PERSON&#xD;&#xA;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPsigmaparty[1]})} - index of person in party">
-            <Condition Enabled="false" Grouping="And" />
-          </Action>
-          <Action OrderNumber="4" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;4&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" Asynchronous="False" Description="${lvar:TOPsigmaparty[1]} - NAME OF PERSON&#xD;&#xA;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPsigmaparty[1]})} - index of person in party">
-            <Condition Enabled="false" Grouping="And" />
-          </Action>
-          <Action OrderNumber="5" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;5&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" Asynchronous="False" Description="${lvar:TOPsigmaparty[1]} - NAME OF PERSON&#xD;&#xA;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPsigmaparty[1]})} - index of person in party">
-            <Condition Enabled="false" Grouping="And" />
-          </Action>
-          <Action OrderNumber="6" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;6&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" Asynchronous="False" Description="${lvar:TOPsigmaparty[1]} - NAME OF PERSON&#xD;&#xA;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPsigmaparty[1]})} - index of person in party">
-            <Condition Enabled="false" Grouping="And" />
-          </Action>
-          <Action OrderNumber="7" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;7&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" Asynchronous="False" Description="${lvar:TOPsigmaparty[1]} - NAME OF PERSON&#xD;&#xA;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPsigmaparty[1]})} - index of person in party">
-            <Condition Enabled="false" Grouping="And" />
-          </Action>
-          <Action OrderNumber="8" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;8&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" Asynchronous="False" Description="${lvar:TOPsigmaparty[1]} - NAME OF PERSON&#xD;&#xA;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPsigmaparty[1]})} - index of person in party">
+          <Action OrderNumber="1" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;1&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;2&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;3&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;4&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;5&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;6&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;7&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;8&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" Asynchronous="False" Description="${lvar:TOPsigmaparty[1]} - NAME OF PERSON&#xD;&#xA;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPsigmaparty[1]})} - index of person in party">
             <Condition Enabled="false" Grouping="And" />
           </Action>
         </Actions>
@@ -393,7 +379,7 @@
               </ConditionGroup>
             </Condition>
           </Action>
-          <Action OrderNumber="5" LoopInitExpression="1" ActionType="Loop" Asynchronous="False" Description="Sigma Loop">
+          <Action OrderNumber="5" LoopInitExpression="1" Enabled="False" ActionType="Loop" Asynchronous="False" Description="Sigma Loop">
             <LoopCondition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${_loopiterator}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
@@ -467,68 +453,27 @@
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
-      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="#Reset" Id="f01c2d46-9b2b-48a1-8719-82b01d35c261" RegularExpression="^33\|[^|]*\|[^|]*\|400000(?&gt;03|0F)\|">
-        <Actions>
-          <Action OrderNumber="1" VariableOp="UnsetRegex" VariableName="TOPdynamisAM.*" ActionType="Variable">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="2" ListVariableOp="UnsetRegex" ListVariableName="TOPdynamisAM.*" ListVariableExpression="${lvar:dTelestoPartyMembernames[3]}" ActionType="ListVariable">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="3" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="52027673-91b1-4d11-a763-96f2af361903" TriggerForce="regexp" ActionType="Trigger">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="4" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="59f1da9d-0177-4f92-9b48-d085d95b4afa" TriggerForce="regexp" ActionType="Trigger">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="5" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="1e88cd2b-eab1-49e4-8b0d-126a2e32c980" TriggerForce="regexp" ActionType="Trigger">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="6" OBSEndPoint="" TriggerId="3ce3f535-156e-4f9b-9075-7c1caf9f658b" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="5000">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-        </Actions>
-        <Condition Enabled="false" Grouping="Or" />
-      </Trigger>
       <Trigger Enabled="true" Source="FFXIVNetwork" Name="Mark 3 - Far Baits and Near Baits" Id="814d3427-09f9-4428-95a2-fa5057c4545b" RegularExpression="">
         <Actions>
-          <Action OrderNumber="1" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk ignore1 &lt;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPdynamisAMparty[1]})}&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" Asynchronous="False">
+          <Action OrderNumber="1" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk ignore1 &lt;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPdynamisAMparty[1]})}&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk ignore2 &lt;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPdynamisAMparty[2]})}&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk bind2 &lt;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPdynamisAMparty[3]})}&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk bind1 &lt;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPdynamisAMparty[4]})}&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" Asynchronous="False">
             <Condition Enabled="false" Grouping="And" />
           </Action>
-          <Action OrderNumber="2" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk ignore2 &lt;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPdynamisAMparty[2]})}&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" Asynchronous="False">
+          <Action OrderNumber="2" LogMessageText="TOP Dynamis Automarker&#xD;&#xA;Far Bait 1: ${lvar:TOPdynamisAMparty[1]}, &#xD;&#xA;Far Bait 2: ${lvar:TOPdynamisAMparty[2]},&#xD;&#xA;Near Bait 1: ${lvar:TOPdynamisAMparty[4]}&#xD;&#xA;Near Bait 2: ${lvar:TOPdynamisAMparty[1]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" ListVariableName="TOPdynamisAMparty" ListVariableIndex="${lvar:TOPdynamisAMparty.indexof(${var:TOPdynamisAMsecondfar})}" ActionType="ListVariable" ExecutionDelayExpression="100">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" VariableName="TOPdynamisAM.mech0" VariableExpression="${var:TOPdynamisAMsecondfar}" ActionType="Variable" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" VariableName="TOPdynamisAM.mech1" VariableExpression="${var:TOPdynamisAMsecondfar}" ActionType="Variable" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="6" VariableName="TOPdynamisAMsecondfar" VariableExpression="${player}" ActionType="Variable">
             <Condition Enabled="false" Grouping="And" />
           </Action>
-          <Action OrderNumber="3" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk bind1 &lt;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPdynamisAMparty[4]})}&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" Asynchronous="False">
-            <Condition Enabled="false" Grouping="And" />
-          </Action>
-          <Action OrderNumber="4" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk bind2 &lt;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPdynamisAMparty[3]})}&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" Asynchronous="False">
-            <Condition Enabled="false" Grouping="And" />
-          </Action>
-          <Action OrderNumber="5" LogMessageText="TOP Dynamis Automarker Far Bait 1: ${lvar:TOPdynamisAMparty[1]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="6" LogMessageText="TOP Dynamis Automarker Far Bait 2: ${lvar:TOPdynamisAMparty[2]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="7" LogMessageText="TOP Dynamis Automarker Near Bait 1: ${lvar:TOPdynamisAMparty[4]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="8" LogMessageText="TOP Dynamis Automarker Near Bait 2: ${lvar:TOPdynamisAMparty[1]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="9" ListVariableName="TOPdynamisAMparty" ListVariableIndex="${lvar:TOPdynamisAMparty.indexof(${var:TOPdynamisAMsecondfar})}" ActionType="ListVariable" ExecutionDelayExpression="100">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="10" VariableName="TOPdynamisAM.mech0" VariableExpression="${var:TOPdynamisAMsecondfar}" ActionType="Variable" Asynchronous="False">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="11" VariableName="TOPdynamisAM.mech1" VariableExpression="${var:TOPdynamisAMsecondfar}" ActionType="Variable" Asynchronous="False">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="12" VariableName="TOPdynamisAMsecondfar" VariableExpression="${player}" ActionType="Variable">
-            <Condition Enabled="false" Grouping="And" />
-          </Action>
-          <Action OrderNumber="13" VariableName="TOPdynamisAMsecondnear" VariableExpression="${player}" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="7" VariableName="TOPdynamisAMsecondnear" VariableExpression="${player}" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="false" Grouping="And" />
           </Action>
         </Actions>
@@ -604,7 +549,7 @@
               <ConditionSingle Enabled="false" ExpressionL="${id}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="12" OBSEndPoint="" TriggerId="f01c2d46-9b2b-48a1-8719-82b01d35c261" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="12000">
+          <Action OrderNumber="12" OBSEndPoint="" TriggerId="f01c2d46-9b2b-48a1-8719-82b01d35c261" TriggerForce="regexp,parent" ActionType="Trigger" ExecutionDelayExpression="12000">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
