@@ -379,7 +379,7 @@
               </ConditionGroup>
             </Condition>
           </Action>
-          <Action OrderNumber="5" LoopInitExpression="1" Enabled="False" ActionType="Loop" Asynchronous="False" Description="Sigma Loop">
+          <Action OrderNumber="5" LoopInitExpression="1" ActionType="Loop" Asynchronous="False" Description="Sigma Loop">
             <LoopCondition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${_loopiterator}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
@@ -458,7 +458,7 @@
           <Action OrderNumber="1" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk ignore1 &lt;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPdynamisAMparty[1]})}&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk ignore2 &lt;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPdynamisAMparty[2]})}&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk bind2 &lt;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPdynamisAMparty[3]})}&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk bind1 &lt;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPdynamisAMparty[4]})}&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" Asynchronous="False">
             <Condition Enabled="false" Grouping="And" />
           </Action>
-          <Action OrderNumber="2" LogMessageText="TOP Dynamis Automarker&#xD;&#xA;Far Bait 1: ${lvar:TOPdynamisAMparty[1]}, &#xD;&#xA;Far Bait 2: ${lvar:TOPdynamisAMparty[2]},&#xD;&#xA;Near Bait 1: ${lvar:TOPdynamisAMparty[4]}&#xD;&#xA;Near Bait 2: ${lvar:TOPdynamisAMparty[1]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+          <Action OrderNumber="2" LogMessageText="TOP Dynamis Automarker &#xD;&#xA;Far Bait 1: ${lvar:TOPdynamisAMparty[1]}, &#xD;&#xA;Far Bait 2: ${lvar:TOPdynamisAMparty[2]}, &#xD;&#xA;Near Bait 1: ${lvar:TOPdynamisAMparty[4]}, &#xD;&#xA;Near Bait 2: ${lvar:TOPdynamisAMparty[1]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
           <Action OrderNumber="3" ListVariableName="TOPdynamisAMparty" ListVariableIndex="${lvar:TOPdynamisAMparty.indexof(${var:TOPdynamisAMsecondfar})}" ActionType="ListVariable" ExecutionDelayExpression="100">
