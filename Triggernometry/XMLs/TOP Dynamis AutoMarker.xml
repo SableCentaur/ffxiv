@@ -127,7 +127,7 @@
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder Id="144d4379-21e4-4cd5-896c-a4529f6f038a" Name="Party List" Enabled="true">
+      <Folder Id="144d4379-21e4-4cd5-896c-a4529f6f038a" Name="*copy to local and enable*" Enabled="true">
         <Folders />
         <Triggers>
           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="GetPartyMembers Reset  - &quot;/e _reset&quot; to manually trigger telesto to get party members" Id="5cef065e-4f80-4ee6-a1b3-c9e2b8215db8" RegularExpression="^00\|[^\|]*\|0038\|\|_reset" DebugLevel="Verbose" PrevActions="Interrupt">
@@ -156,29 +156,51 @@
               <Action OrderNumber="4" LogMessageText="${_responsecode}" LogLevel="Verbose" OBSEndPoint="" ActionType="LogMessage">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="5" LogMessageText="Player 1: ${lvar:dTelestoPartyMembernames[1]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[2]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[3]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[4]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[5]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[6]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[7]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[8]}, " LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+              <Action OrderNumber="5" LogMessageText="TOP Dynamis Automarker Player 1: ${lvar:dTelestoPartyMembernames[1]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[2]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[3]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[4]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[5]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[6]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[7]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[8]}, " LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="6" LogMessageText="Player 2: ${lvar:dTelestoPartyMembers[2]} - ${lvar:dTelestoPartyMembernames[2]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="#Priority (copy to local to customize priority)" Id="1e88cd2b-eab1-49e4-8b0d-126a2e32c980" RegularExpression="^20\|(?:[^\|]*\|){3}(?&lt;cast&gt;7B88|801[45])\|">
+            <Actions>
+              <Action OrderNumber="1" OBSEndPoint="" TriggerId="3ce3f535-156e-4f9b-9075-7c1caf9f658b" TriggerForce="regexp" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="7" LogMessageText="Player 3: ${lvar:dTelestoPartyMembers[3]} - ${lvar:dTelestoPartyMembernames[3]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+              <Action OrderNumber="2" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[4]}" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="8" LogMessageText="Player 4: ${lvar:dTelestoPartyMembers[4]} - ${lvar:dTelestoPartyMembernames[4]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+              <Action OrderNumber="3" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[4]}" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="9" LogMessageText="Player 5: ${lvar:dTelestoPartyMembers[5]} - ${lvar:dTelestoPartyMembernames[5]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+              <Action OrderNumber="4" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[5]}" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="10" LogMessageText="Player 6: ${lvar:dTelestoPartyMembers[6]} - ${lvar:dTelestoPartyMembernames[6]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+              <Action OrderNumber="5" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[6]}" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="11" LogMessageText="Player 7: ${lvar:dTelestoPartyMembers[7]} - ${lvar:dTelestoPartyMembernames[7]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+              <Action OrderNumber="6" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[7]}" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="12" LogMessageText="Player 8: ${lvar:dTelestoPartyMembers[8]} - ${lvar:dTelestoPartyMembernames[8]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+              <Action OrderNumber="7" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[1]}" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[8]}" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[2]}" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[3]}" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" LogMessageText="TOP Dynamis Automarker Priority: ${lvar:TOPdynamisAMparty[1]} - ${lvar:TOPdynamisAMparty[2]} - ${lvar:TOPdynamisAMparty[3]} - ${lvar:TOPdynamisAMparty[4]} - ${lvar:TOPdynamisAMparty[5]} - ${lvar:TOPdynamisAMparty[6]} - ${lvar:TOPdynamisAMparty[7]} - ${lvar:TOPdynamisAMparty[8]} " LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="12" OBSEndPoint="" TriggerId="1e88cd2b-eab1-49e4-8b0d-126a2e32c980" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="40000">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${cast}" ExpressionTypeL="Numeric" ExpressionR="8015" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
@@ -260,52 +282,9 @@
             </Condition>
           </Action>
         </Actions>
-        <Condition Enabled="false" Grouping="Or">
+        <Condition Enabled="true" Grouping="Or">
           <ConditionSingle Enabled="true" ExpressionL="${dur}" ExpressionTypeL="Numeric" ExpressionR="50" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
         </Condition>
-      </Trigger>
-      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="#Priority (copy to local to customize priority)" Id="1e88cd2b-eab1-49e4-8b0d-126a2e32c980" RegularExpression="^20\|(?:[^\|]*\|){3}(?&lt;cast&gt;7B88|801[45])\|">
-        <Actions>
-          <Action OrderNumber="1" OBSEndPoint="" TriggerId="3ce3f535-156e-4f9b-9075-7c1caf9f658b" TriggerForce="regexp" ActionType="Trigger">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="2" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[4]}" ActionType="ListVariable" Asynchronous="False">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="3" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[4]}" ActionType="ListVariable" Asynchronous="False">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="4" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[5]}" ActionType="ListVariable" Asynchronous="False">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="5" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[6]}" ActionType="ListVariable" Asynchronous="False">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="6" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[7]}" ActionType="ListVariable" Asynchronous="False">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="7" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[1]}" ActionType="ListVariable" Asynchronous="False">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="8" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[8]}" ActionType="ListVariable" Asynchronous="False">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="9" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[2]}" ActionType="ListVariable" Asynchronous="False">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="10" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[3]}" ActionType="ListVariable" Asynchronous="False">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="11" LogMessageText="TOP Dynamis Automarker Priority: ${lvar:TOPdynamisAMparty[1]} - ${lvar:TOPdynamisAMparty[2]} - ${lvar:TOPdynamisAMparty[3]} - ${lvar:TOPdynamisAMparty[4]} - ${lvar:TOPdynamisAMparty[5]} - ${lvar:TOPdynamisAMparty[6]} - ${lvar:TOPdynamisAMparty[7]} - ${lvar:TOPdynamisAMparty[8]} " LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="12" OBSEndPoint="" TriggerId="1e88cd2b-eab1-49e4-8b0d-126a2e32c980" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="40000">
-            <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${cast}" ExpressionTypeL="Numeric" ExpressionR="8015" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-            </Condition>
-          </Action>
-        </Actions>
-        <Condition Enabled="false" Grouping="Or" />
       </Trigger>
       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="#CLEAR MARKS" Id="3ce3f535-156e-4f9b-9075-7c1caf9f658b" RegularExpression="">
         <Actions>
