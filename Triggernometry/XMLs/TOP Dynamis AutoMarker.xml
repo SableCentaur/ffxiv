@@ -138,9 +138,7 @@
                 </Condition>
               </Action>
             </Actions>
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${partysize}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-            </Condition>
+            <Condition Enabled="false" Grouping="And" />
           </Trigger>
           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="GetPartyMembers Telesto" Id="9642f76a-2204-4e3a-a7cb-01b042b079bf" RegularExpression="^2[12]\|(?:[^\|]*\|){3}7B7C\|">
             <Actions>
