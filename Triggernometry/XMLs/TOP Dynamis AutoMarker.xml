@@ -132,7 +132,7 @@
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="4afe5d44-8f35-438d-b0b9-6f0427b17c2a" Name="*copy to local and enable*" Enabled="true">
+          <Folder Id="4afe5d44-8f35-438d-b0b9-6f0427b17c2a" Name="*copy to local and enable*" Enabled="false">
             <Folders />
             <Triggers>
               <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="#Priority (edit this trigger to customize priority)" Id="3110f235-5ce9-408a-ba70-d9ef607883d3" RegularExpression="^20\|(?:[^\|]*\|){3}(?&lt;cast&gt;7B88|801[45])\|">
@@ -255,25 +255,19 @@
                   <ConditionSingle Enabled="true" ExpressionL="${dur}" ExpressionTypeL="Numeric" ExpressionR="50" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="8" VariableOp="SetString" VariableName="TOPdynamisAMsecondfar" VariableExpression="${player}" ActionType="SystemBeep">
+              <Action OrderNumber="8" LogMessageText="TOP Dynamis Automarker Omega FAR 2: ${player}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                   <ConditionSingle Enabled="true" ExpressionL="${dur}" ExpressionTypeL="Numeric" ExpressionR="50" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="9" LogMessageText="TOP Dynamis Automarker Omega FAR 2: ${player}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
-                <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                  <ConditionSingle Enabled="true" ExpressionL="${dur}" ExpressionTypeL="Numeric" ExpressionR="50" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                </Condition>
-              </Action>
-              <Action OrderNumber="10" LogMessageText="TOP Dynamis Automarker Omega NEAR 2: ${player}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+              <Action OrderNumber="9" LogMessageText="TOP Dynamis Automarker Omega NEAR 2: ${player}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                   <ConditionSingle Enabled="true" ExpressionL="${dur}" ExpressionTypeL="Numeric" ExpressionR="50" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="11" OBSEndPoint="" TriggerId="7db03c4a-afca-448f-9823-3fd8c6511b8c" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="100" RefireInterrupt="True" RefireRequeue="False">
+              <Action OrderNumber="10" OBSEndPoint="" TriggerId="7db03c4a-afca-448f-9823-3fd8c6511b8c" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="100" RefireInterrupt="True" RefireRequeue="False">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionGroup Enabled="false" Grouping="Or">
                     <ConditionSingle Enabled="true" ExpressionL="${var:TOPdynamisAM.${lvar:TOPdynamisAMparty[1]}count}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
