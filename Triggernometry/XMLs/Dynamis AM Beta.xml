@@ -1,0 +1,1033 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="76fc956f-cbcb-4282-a7f2-9f150c22743d" Name="TOP Dynamis AutoMarker" Enabled="true">
+    <Folders>
+      <Folder Id="c8e6f4cb-ecd8-490d-a362-c5a862c4c9ca" Name="Test Triggers (check instructions for info)" Enabled="false">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="1 Delta &quot;/e _test delta&quot;" Id="35c195c6-1cca-46ca-8592-f53edb8d14f8" RegularExpression="^00\|[^\|]*\|0038\|\|_test delta" Description="1 - cross&#xD;&#xA;4 - triangle">
+            <Actions>
+              <Action OrderNumber="1" OBSEndPoint="" TriggerId="f9946ded-efde-446d-8740-83e9dd026583" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="35c195c6-1cca-46ca-8592-f53edb8d14f8" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="a9b0de5e-f0ce-495f-b232-f9e442758621" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="ab5e56a9-a2a3-4344-8c72-271b6aacb31e" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" LogMessageTarget="NetworkFFXIV" LogMessageText="20||||8014|" LogProcess="True" OBSEndPoint="" TriggerId="3110f235-5ce9-408a-ba70-d9ef607883d3" TriggerForce="regexp,active" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D73|Hello, Distant World|44.00||||${lvar:dTelestoPartyMembernames[1]}|" LogProcess="True" OBSEndPoint="" TriggerId="89c91b1f-d830-4a6d-b9f5-fe34ef91b1eb" TriggerText="26||D73|Hello, Distant World|44.00||||${lvar:dTelestoPartyMembernames[1]}|" ActionType="LogMessage" ExecutionDelayExpression="4000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D72|Hello, Near World|44.00||||${lvar:dTelestoPartyMembernames[4]}|" LogProcess="True" OBSEndPoint="" TriggerId="89c91b1f-d830-4a6d-b9f5-fe34ef91b1eb" TriggerText="26||D72|Hello, Near World|44.00||||${lvar:dTelestoPartyMembernames[4]}|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" OBSEndPoint="" TriggerId="f9946ded-efde-446d-8740-83e9dd026583" TriggerForce="regexp,parent" ActionType="Trigger" ExecutionDelayExpression="44000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" ListVariableName="TOPdynamisAMrandom" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="2 Sigma &quot;/e _test sigma&quot;" Id="a9b0de5e-f0ce-495f-b232-f9e442758621" RegularExpression="^00\|[^\|]*\|0038\|\|_test sigma" Description="1 cross&#xD;&#xA;2 triangle&#xD;&#xA;3 chain1&#xD;&#xA;4 attack1&#xD;&#xA;5 attack2&#xD;&#xA;6 ignore1&#xD;&#xA;7 ignore2&#xD;&#xA;8 chain2">
+            <Actions>
+              <Action OrderNumber="1" OBSEndPoint="" TriggerId="f9946ded-efde-446d-8740-83e9dd026583" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="35c195c6-1cca-46ca-8592-f53edb8d14f8" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="a9b0de5e-f0ce-495f-b232-f9e442758621" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="ab5e56a9-a2a3-4344-8c72-271b6aacb31e" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" LogMessageTarget="NetworkFFXIV" LogMessageText="20||||8014|" LogProcess="True" OBSEndPoint="" TriggerId="3110f235-5ce9-408a-ba70-d9ef607883d3" TriggerForce="regexp,active" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[4]}|01|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[4]}|01|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[5]}|01|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[5]}|01|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[7]}|01|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[7]}|01|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[8]}|01|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[8]}|01|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[1]}|01|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[1]}|01|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[2]}|01|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[2]}|01|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="12" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D73|Hello, Distant World|56.00||||${lvar:dTelestoPartyMembernames[1]}|" LogProcess="True" OBSEndPoint="" TriggerText="26||D73|Hello, Distant World|56.00||||${lvar:dTelestoPartyMembernames[1]}|" ActionType="LogMessage" ExecutionDelayExpression="4000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="13" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D72|Hello, Near World|56.00||||${lvar:dTelestoPartyMembernames[2]}|" LogProcess="True" OBSEndPoint="" TriggerId="ec9a9bcf-0147-4275-a26c-85c2678c8622" TriggerText="26||D72|Hello, Near World|56.00||||${lvar:dTelestoPartyMembernames[2]}|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="14" OBSEndPoint="" TriggerId="f9946ded-efde-446d-8740-83e9dd026583" TriggerForce="regexp,parent" ActionType="Trigger" ExecutionDelayExpression="56000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="3 Omega &quot;/e _test omega&quot; (will go through both patterns, takes about 50 seconds to complete!)" Id="ab5e56a9-a2a3-4344-8c72-271b6aacb31e" RegularExpression="^00\|[^\|]*\|0038\|\|_test omega" Description="marks (first set)&#xD;&#xA;1 - attack2&#xD;&#xA;2 - bind1&#xD;&#xA;3 - attack1&#xD;&#xA;4 - ignore1&#xD;&#xA;5 - triangle&#xD;&#xA;6 - plus&#xD;&#xA;7 - ignore2&#xD;&#xA;8 - bind2&#xD;&#xA;&#xD;&#xA;marks (second set)&#xD;&#xA;1 - bind1&#xD;&#xA;2 - attack2&#xD;&#xA;3 - triangle&#xD;&#xA;4 - ignore1&#xD;&#xA;5 - ignore2&#xD;&#xA;6 - attack1&#xD;&#xA;7 - bind2&#xD;&#xA;8 - plus">
+            <Actions>
+              <Action OrderNumber="1" OBSEndPoint="" TriggerId="f9946ded-efde-446d-8740-83e9dd026583" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="35c195c6-1cca-46ca-8592-f53edb8d14f8" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="a9b0de5e-f0ce-495f-b232-f9e442758621" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="ab5e56a9-a2a3-4344-8c72-271b6aacb31e" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" LogMessageTarget="NetworkFFXIV" LogMessageText="20||||8015|" LogProcess="True" OBSEndPoint="" TriggerId="3110f235-5ce9-408a-ba70-d9ef607883d3" TriggerText="20||||8015|" TriggerForce="active" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" TextAuraAlignment="MiddleLeft" TextAuraFontSize="8.25" TextAuraForeground="Yellow" TextAuraBackground="Black" TextAuraName="_debug_p0" TextAuraExpression="Dynamis:&#xD;&#xA;${lvar:dTelestoPartyMembernames[4]} - ${var:TOPdynamisAM.${lvar:dTelestoPartyMembernames[4]}count}&#xD;&#xA;${lvar:dTelestoPartyMembernames[5]} - ${var:TOPdynamisAM.${lvar:dTelestoPartyMembernames[5]}count}&#xD;&#xA;${lvar:dTelestoPartyMembernames[6]} - ${var:TOPdynamisAM.${lvar:dTelestoPartyMembernames[6]}count}&#xD;&#xA;${lvar:dTelestoPartyMembernames[7]} - ${var:TOPdynamisAM.${lvar:dTelestoPartyMembernames[7]}count}&#xD;&#xA;${lvar:dTelestoPartyMembernames[1]} - ${var:TOPdynamisAM.${lvar:dTelestoPartyMembernames[1]}count}&#xD;&#xA;${lvar:dTelestoPartyMembernames[8]} - ${var:TOPdynamisAM.${lvar:dTelestoPartyMembernames[8]}count}&#xD;&#xA;${lvar:dTelestoPartyMembernames[2]} - ${var:TOPdynamisAM.${lvar:dTelestoPartyMembernames[2]}count}&#xD;&#xA;${lvar:dTelestoPartyMembernames[3]} - ${var:TOPdynamisAM.${lvar:dTelestoPartyMembernames[3]}count}&#xD;&#xA;Party:&#xD;&#xA;${lvar:TOPdynamisAMparty[1]} - ${lvar:TOPdynamisAMparty[2]} - ${lvar:TOPdynamisAMparty[3]} - ${lvar:TOPdynamisAMparty[4]} - ${lvar:TOPdynamisAMparty[5]} - ${lvar:TOPdynamisAMparty[6]} - ${lvar:TOPdynamisAMparty[7]} - ${lvar:TOPdynamisAMparty[8]}&#xD;&#xA;Mech 1: ${var:TOPdynamisAM.mech0} | Mech 2: ${var:TOPdynamisAM.mech1}&#xD;&#xA;Second Far: ${var:TOPdynamisAMsecondfar} | Second Near: ${var:TOPdynamisAMsecondnear}&#xD;&#xA;${evar:TOPdynamisAM.mech1}" TextAuraXIniExpression="2372" TextAuraYIniExpression="1115" TextAuraWIniExpression="505" TextAuraHIniExpression="222" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[4]}|01|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[4]}|02|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[5]}|01|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[5]}|01|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[6]}|02|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[6]}|02|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[7]}|01|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[7]}|01|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[1]}|02|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[1]}|02|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="12" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[8]}|01|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[8]}|01|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="13" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[2]}|02|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[2]}|01|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="14" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[3]}|02|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[3]}|02|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="15" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D73|Hello, Distant World|32.00||||${lvar:dTelestoPartyMembernames[6]}|" LogProcess="True" OBSEndPoint="" TriggerId="5dff2de3-0a34-4c32-aecd-dd4013bd4a15" TriggerText="26||D73|Hello, Distant World|32.00||||${lvar:dTelestoPartyMembernames[6]}|" ActionType="LogMessage" ExecutionDelayExpression="4000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="16" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D72|Hello, Near World|32.00||||${lvar:dTelestoPartyMembernames[5]}|" LogProcess="True" OBSEndPoint="" TriggerId="5dff2de3-0a34-4c32-aecd-dd4013bd4a15" TriggerText="26||D72|Hello, Near World|32.00||||${lvar:dTelestoPartyMembernames[5]}|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="17" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D73|Hello, Distant World|50.00||||${lvar:dTelestoPartyMembernames[8]}|" LogProcess="True" OBSEndPoint="" TriggerId="8e796cec-f77d-409a-a5e9-6e862546cce4" TriggerText="26||D73|Hello, Distant World|50.00||||${lvar:dTelestoPartyMembernames[8]}|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="18" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D72|Hello, Near World|50.00||||${lvar:dTelestoPartyMembernames[3]}|" LogProcess="True" OBSEndPoint="" TriggerId="8e796cec-f77d-409a-a5e9-6e862546cce4" TriggerText="26||D72|Hello, Near World|50.00||||${lvar:dTelestoPartyMembernames[3]}|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="19" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[4]}|02|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[4]}|02|" ActionType="LogMessage" ExecutionDelayExpression="34000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="20" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[5]}|02|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[5]}|02|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="21" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[6]}|03|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[6]}|03|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="22" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[7]}|02|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[7]}|02|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="23" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[1]}|03|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[1]}|03|" Enabled="False" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="24" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[8]}|02|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[8]}|02|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="25" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[2]}|03|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[2]}|02|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="26" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[3]}|02|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[3]}|02|" Enabled="False" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="27" OBSEndPoint="" TriggerId="f9946ded-efde-446d-8740-83e9dd026583" TriggerForce="regexp,parent" ActionType="Trigger" ExecutionDelayExpression="16000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder ZoneFilterEnabled="True" Id="78812c99-afc1-43f0-a8fd-9c278d00edb0" ZoneFilterRegularExpression="The Omega Protocol \(Ultimate\)" Name="Reset" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Dynamis Reset Encounter" Id="f9946ded-efde-446d-8740-83e9dd026583" RegularExpression="^33\|[^|]*\|[^|]*\|400000(?&gt;01|06|03)\|">
+            <Actions>
+              <Action OrderNumber="1" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="5ed5fe50-cc0d-483c-ad37-9e5fc4af94f9" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="9b48e5d6-a002-4f30-b30e-c731f9b9467c" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" VariableOp="UnsetRegex" VariableName="TOPdynamisAM.*" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" ListVariableName="TOPdynamisAMparty" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" ListVariableName="TOPdynamisAMrandom" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" OBSEndPoint="" TriggerId="5ed5fe50-cc0d-483c-ad37-9e5fc4af94f9" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" OBSEndPoint="" TriggerId="ea55a1de-c80f-47c8-bb8b-a5334d171056" TriggerForce="regexp,conditions,parent" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${elvar:TOPdynamisAMmarkers}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="8" OBSEndPoint="" TriggerId="f7362953-6b4f-4faa-82b3-fd340b997748" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${elvar:dTelestoPartyMembernames}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="b189a186-1720-4b2d-a78f-d40e666bcd37" Name="Telesto" Enabled="false">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Telesto Dynamis Get Party" Id="f7362953-6b4f-4faa-82b3-fd340b997748" RegularExpression="^2[12]\|(?:[^\|]*\|){3}7B7C\|">
+            <Actions>
+              <Action OrderNumber="1" ListVariableName="dTelestoPartyMembernames" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" JsonResultVariable="dTelestoPartyMembers" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}" JsonPayloadExpression="{ &quot;version&quot;: 1, &quot;id&quot;: 123456, &quot;type&quot;: &quot;GetPartyMembers&quot; }" OBSEndPoint="" ActionType="GenericJson">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="dTelestoPartyMembers" VariableJsonTarget="dTelestoPartyMembernames" VariableExpression="$.response[*].fullname" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" LogMessageText="TOP Dynamis Automarker Player 1: ${lvar:dTelestoPartyMembernames[1]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[2]}, &#xD;&#xA;Player 3: ${lvar:dTelestoPartyMembernames[3]}, &#xD;&#xA;Player 4: ${lvar:dTelestoPartyMembernames[4]}, &#xD;&#xA;Player 5: ${lvar:dTelestoPartyMembernames[5]}, &#xD;&#xA;Player 6: ${lvar:dTelestoPartyMembernames[6]}, &#xD;&#xA;Player 7: ${lvar:dTelestoPartyMembernames[7]}, &#xD;&#xA;Player 8: ${lvar:dTelestoPartyMembernames[8]}, Trig version ${_const[TriggernometryVersionMajor]}.${_const[TriggernometryVersionMinor]}.${_const[TriggernometryVersionBuild]}.${_const[TriggernometryVersionRevision]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Telesto Dynamis Reset  - &quot;/e _reset&quot; to manually trigger telesto to get party members" Id="eaf5f700-f859-4e8e-9979-75d01a078fe1" RegularExpression="^00\|[^\|]*\|0038\|\|_reset" DebugLevel="Verbose" PrevActions="Interrupt">
+            <Actions>
+              <Action OrderNumber="1" TriggerId="f7362953-6b4f-4faa-82b3-fd340b997748" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${job})}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="And" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="c2b8df4b-300b-4232-9d0b-9520a52f5983" Name="*copy to local* - READ INSTRUCTIONS TO CUSTOMIZE" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Dynamis AM Priority &amp; Delays" Id="caf0b53e-2cfa-4392-9380-5470c6782d49" RegularExpression="^20\|(?:[^\|]*\|){3}(?&lt;cast&gt;7B88|801[45])\|" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[4]}" ActionType="ListVariable" Asynchronous="False" Description="Do Not Edit" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[4]}" ActionType="ListVariable" Asynchronous="False" Description="Player 4" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[5]}" ActionType="ListVariable" Asynchronous="False" Description="Player 5" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[6]}" ActionType="ListVariable" Asynchronous="False" Description="Player 6" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[7]}" ActionType="ListVariable" Asynchronous="False" Description="Player 7" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[1]}" ActionType="ListVariable" Asynchronous="False" Description="Player 1" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[8]}" ActionType="ListVariable" Asynchronous="False" Description="Player 8" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[2]}" ActionType="ListVariable" Asynchronous="False" Description="Player 2" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" ListVariableOp="Push" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[3]}" ActionType="ListVariable" Asynchronous="False" Description="Player 3" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" VariableOp="SetNumeric" VariableName="TOPdynamisAMdelay" VariableExpression="26" Enabled="False" ActionType="Variable" Description="Sigma Marker Delay (seconds)" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${cast}" ExpressionTypeL="String" ExpressionR="8014" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="11" VariableOp="SetNumeric" VariableName="TOPdynamisAMdelay" VariableExpression="17" Enabled="False" ActionType="Variable" Description="Omega Part 1 Marker Delay (seconds)" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${cast}" ExpressionTypeL="String" ExpressionR="8015" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="12" VariableOp="SetNumeric" VariableName="TOPdynamisAMmarkdelay" VariableExpression="1000" Enabled="False" ActionType="Variable" Description="Multi Marker Delay (milliseconds) - adds small delays to simulate manual marking with variation of +/- 100 ms" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="13" LogMessageText="TOP Dynamis Automarker ${cast} &#xD;&#xA;PRIORITY: ${lvar:TOPdynamisAMparty[1]} - ${lvar:TOPdynamisAMparty[2]} - ${lvar:TOPdynamisAMparty[3]} - ${lvar:TOPdynamisAMparty[4]} - ${lvar:TOPdynamisAMparty[5]} - ${lvar:TOPdynamisAMparty[6]} - ${lvar:TOPdynamisAMparty[7]} - ${lvar:TOPdynamisAMparty[8]} &#xD;&#xA;DELAYS: Sigma/Omega ${var:TOPdynamisAMdelay} - MultiMarker ${var:TOPdynamisAMmarkdelay}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage" Description="Do Not Edit" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Dynamis AM Markers" Id="ea55a1de-c80f-47c8-bb8b-a5334d171056" RegularExpression="^01\|[^|]*\|(?&lt;zone&gt;[^|]*)\|" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="1000" EditAutofire="True">
+            <Actions>
+              <Action OrderNumber="1" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="${lvar:dTelestoPartyMembernames[4]}" ActionType="ListVariable" Asynchronous="False" Description="Do Not Edit" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="triangle" Enabled="False" ActionType="ListVariable" Asynchronous="False" Description="NEAR WORLD Marker" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="plus" Enabled="False" ActionType="ListVariable" Asynchronous="False" Description="DISTANT WORLD Marker" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="4" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="bind1" Enabled="False" ActionType="ListVariable" Asynchronous="False" Description="MECH1 Marker" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="5" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="bind2" Enabled="False" ActionType="ListVariable" Asynchronous="False" Description="MECH2 Marker" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="6" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="attack1" Enabled="False" ActionType="ListVariable" Asynchronous="False" Description="FAR1 BAIT Marker" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="7" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="attack4" Enabled="False" ActionType="ListVariable" Asynchronous="False" Description="FAR2 BAIT Marker" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="8" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="attack2" Enabled="False" ActionType="ListVariable" Asynchronous="False" Description="NEAR1 BAIT Marker" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="9" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="attack3" Enabled="False" ActionType="ListVariable" Asynchronous="False" Description="NEAR2 BAIT Marker" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="10" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="triangle" ActionType="ListVariable" Asynchronous="False" Description="NEAR WORLD Marker" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="11" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="plus" ActionType="ListVariable" Asynchronous="False" Description="DISTANT WORLD Marker" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="12" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="attack1" ActionType="ListVariable" Asynchronous="False" Description="MECH 1 Marker" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="13" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="attack2" ActionType="ListVariable" Asynchronous="False" Description="MECH2 Marker" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="14" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="ignore1" ActionType="ListVariable" Asynchronous="False" Description="FAR1 BAIT Marker" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="15" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="ignore2" ActionType="ListVariable" Asynchronous="False" Description="FAR2 BAIT Marker" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="16" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="bind1" ActionType="ListVariable" Asynchronous="False" Description="NEAR1 BAIT Marker" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="17" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="bind2" ActionType="ListVariable" Asynchronous="False" Description="NEAR2 BAIT Marker" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="18" LogMessageText="TOP Dynamis Automarker MARKERS: Near: ${lvar:TOPdynamisAMmarkers[1]} Far: ${lvar:TOPdynamisAMmarkers[2]} Mech1: ${lvar:TOPdynamisAMmarkers[3]} Mech2: ${lvar:TOPdynamisAMmarkers[4]} Far1: ${lvar:TOPdynamisAMmarkers[5]} Far2: ${lvar:TOPdynamisAMmarkers[6]} Near1: ${lvar:TOPdynamisAMmarkers[7]} Near2: ${lvar:TOPdynamisAMmarkers[8]} " LogLevel="Info" OBSEndPoint="" ActionType="LogMessage" Description="Do Not Edit" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${elvar:TOPdynamisAMmarkers}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="4c9e7fd1-d476-422b-b971-8fc70d57f3d6" Name="Randomized Test Triggers" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="1 Delta &quot;/e _test delta&quot;" Id="00bae6ab-fb6c-45ed-9079-8021f290720d" RegularExpression="^00\|[^\|]*\|0038\|\|_test delta" PeriodRefire="Deny" RefirePeriodExpression="10000" Description="1 - cross&#xD;&#xA;4 - triangle">
+            <Actions>
+              <Action OrderNumber="1" OBSEndPoint="" TriggerId="f9946ded-efde-446d-8740-83e9dd026583" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="00bae6ab-fb6c-45ed-9079-8021f290720d" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="42c7b0c9-4072-495c-b0fc-10c9217d3d21" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="54bcacf6-7ec7-4548-b907-8336baea6d27" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="9b48e5d6-a002-4f30-b30e-c731f9b9467c" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" LogMessageTarget="NetworkFFXIV" LogMessageText="20||||8014|" LogProcess="True" OBSEndPoint="" TriggerId="3110f235-5ce9-408a-ba70-d9ef607883d3" TriggerForce="regexp,active" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" ListVariableOp="Copy" ListVariableName="dTelestoPartyMembernames" ListVariableTarget="TOPdynamisAMrandom" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" VariableOp="SetString" VariableName="TOPdynamisAMrandom" VariableExpression="${lvar:TOPdynamisAMrandom[${numeric:random(1,${lvar:TOPdynamisAMrandom.size}+1)}]}" ActionType="Variable" ExecutionDelayExpression="50" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D73|Hello, Distant World|44.00||||${var:TOPdynamisAMrandom}|" LogProcess="True" OBSEndPoint="" TriggerText="26||D73|Hello, Distant World|44.00||||${lvar:dTelestoPartyMembernames[1]}|" ActionType="LogMessage" ExecutionDelayExpression="4000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" ListVariableOp="Remove" ListVariableName="TOPdynamisAMrandom" ListVariableIndex="${lvar:TOPdynamisAMrandom.indexof(${var:TOPdynamisAMrandom})}" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" VariableOp="SetString" VariableName="TOPdynamisAMrandom" VariableExpression="${lvar:TOPdynamisAMrandom[${numeric:random(1,${lvar:TOPdynamisAMrandom.size}+1)}]}" ActionType="Variable" ExecutionDelayExpression="50" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="12" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D72|Hello, Near World|44.00||||${var:TOPdynamisAMrandom}|" LogProcess="True" OBSEndPoint="" TriggerText="26||D72|Hello, Near World|44.00||||${lvar:dTelestoPartyMembernames[4]}|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="13" ListVariableOp="Remove" ListVariableName="TOPdynamisAMrandom" ListVariableIndex="${lvar:TOPdynamisAMrandom.indexof(${var:TOPdynamisAMrandom})}" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="14" OBSEndPoint="" TriggerId="f9946ded-efde-446d-8740-83e9dd026583" TriggerForce="regexp,parent" ActionType="Trigger" ExecutionDelayExpression="44000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="15" ListVariableName="TOPdynamisAMrandom" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="2 Sigma &quot;/e _test sigma&quot;" Id="42c7b0c9-4072-495c-b0fc-10c9217d3d21" RegularExpression="^00\|[^\|]*\|0038\|\|_test sigma" PeriodRefire="Deny" RefirePeriodExpression="10000" Description="1 cross&#xD;&#xA;2 triangle&#xD;&#xA;3 chain1&#xD;&#xA;4 attack1&#xD;&#xA;5 attack2&#xD;&#xA;6 ignore1&#xD;&#xA;7 ignore2&#xD;&#xA;8 chain2">
+            <Actions>
+              <Action OrderNumber="1" OBSEndPoint="" TriggerId="f9946ded-efde-446d-8740-83e9dd026583" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="00bae6ab-fb6c-45ed-9079-8021f290720d" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="42c7b0c9-4072-495c-b0fc-10c9217d3d21" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="54bcacf6-7ec7-4548-b907-8336baea6d27" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="9b48e5d6-a002-4f30-b30e-c731f9b9467c" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" LogMessageTarget="NetworkFFXIV" LogMessageText="20||||8014|" LogProcess="True" OBSEndPoint="" TriggerId="3110f235-5ce9-408a-ba70-d9ef607883d3" TriggerForce="regexp,active" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" ListVariableOp="Copy" ListVariableName="dTelestoPartyMembernames" ListVariableTarget="TOPdynamisAMrandom" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" LoopDelayExpression="50" LoopInitExpression="1" ActionType="Loop" ExecutionDelayExpression="50" Asynchronous="False">
+                <LoopCondition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:TOPdynamisAMrandloop}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                </LoopCondition>
+                <LoopActions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="TOPdynamisAMrandloop" VariableExpression="${var:TOPdynamisAMrandloop}+1" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" VariableOp="SetString" VariableName="TOPdynamisAMrandom" VariableExpression="${lvar:TOPdynamisAMrandom[${numeric:random(1,${lvar:TOPdynamisAMrandom.size}+1)}]}" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" ListVariableOp="Remove" ListVariableName="TOPdynamisAMrandom" ListVariableIndex="${lvar:TOPdynamisAMrandom.indexof(${var:TOPdynamisAMrandom})}" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${var:TOPdynamisAMrandom}|01|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[4]}|01|" ActionType="LogMessage" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </LoopActions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" ListVariableOp="Copy" ListVariableName="dTelestoPartyMembernames" ListVariableTarget="TOPdynamisAMrandom" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" VariableOp="SetString" VariableName="TOPdynamisAMrandom" VariableExpression="${lvar:TOPdynamisAMrandom[${numeric:random(1,${lvar:TOPdynamisAMrandom.size}+1)}]}" ActionType="Variable" ExecutionDelayExpression="50" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" ListVariableOp="Remove" ListVariableName="TOPdynamisAMrandom" ListVariableIndex="${lvar:TOPdynamisAMrandom.indexof(${var:TOPdynamisAMrandom})}" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="12" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D73|Hello, Distant World|56.00||||${var:TOPdynamisAMrandom}|" LogProcess="True" OBSEndPoint="" TriggerText="26||D73|Hello, Distant World|44.00||||${lvar:dTelestoPartyMembernames[1]}|" ActionType="LogMessage" ExecutionDelayExpression="4000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="13" VariableOp="SetString" VariableName="TOPdynamisAMrandom" VariableExpression="${lvar:TOPdynamisAMrandom[${numeric:random(1,${lvar:TOPdynamisAMrandom.size}+1)}]}" ActionType="Variable" ExecutionDelayExpression="50" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="14" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D72|Hello, Near World|56.00||||${var:TOPdynamisAMrandom}|" LogProcess="True" OBSEndPoint="" TriggerText="26||D72|Hello, Near World|44.00||||${lvar:dTelestoPartyMembernames[4]}|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="15" ListVariableOp="Remove" ListVariableName="TOPdynamisAMrandom" ListVariableIndex="${lvar:TOPdynamisAMrandom.indexof(${var:TOPdynamisAMrandom})}" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="16" OBSEndPoint="" TriggerId="f9946ded-efde-446d-8740-83e9dd026583" TriggerForce="regexp,parent" ActionType="Trigger" ExecutionDelayExpression="56000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="3 Omega &quot;/e _test omega&quot; (will go through both patterns, takes about 50 seconds to complete!)" Id="54bcacf6-7ec7-4548-b907-8336baea6d27" RegularExpression="^00\|[^\|]*\|0038\|\|_test omega" PeriodRefire="Deny" RefirePeriodExpression="10000" Description="marks (first set)&#xD;&#xA;1 - attack2&#xD;&#xA;2 - bind1&#xD;&#xA;3 - attack1&#xD;&#xA;4 - ignore1&#xD;&#xA;5 - triangle&#xD;&#xA;6 - plus&#xD;&#xA;7 - ignore2&#xD;&#xA;8 - bind2&#xD;&#xA;&#xD;&#xA;marks (second set)&#xD;&#xA;1 - bind1&#xD;&#xA;2 - attack2&#xD;&#xA;3 - triangle&#xD;&#xA;4 - ignore1&#xD;&#xA;5 - ignore2&#xD;&#xA;6 - attack1&#xD;&#xA;7 - bind2&#xD;&#xA;8 - plus">
+            <Actions>
+              <Action OrderNumber="1" OBSEndPoint="" TriggerId="f9946ded-efde-446d-8740-83e9dd026583" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="00bae6ab-fb6c-45ed-9079-8021f290720d" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="42c7b0c9-4072-495c-b0fc-10c9217d3d21" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="54bcacf6-7ec7-4548-b907-8336baea6d27" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="9b48e5d6-a002-4f30-b30e-c731f9b9467c" TriggerForce="regexp,parent" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" LogMessageTarget="NetworkFFXIV" LogMessageText="20||||8015|" LogProcess="True" OBSEndPoint="" TriggerId="3110f235-5ce9-408a-ba70-d9ef607883d3" TriggerText="20||||8015|" TriggerForce="active" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" ListVariableOp="Copy" ListVariableName="dTelestoPartyMembernames" ListVariableTarget="TOPdynamisAMrandom" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" LoopDelayExpression="50" LoopInitExpression="1" ActionType="Loop" ExecutionDelayExpression="1000" Asynchronous="False">
+                <LoopCondition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:TOPdynamisAMrandloop}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                </LoopCondition>
+                <LoopActions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="TOPdynamisAMrandloop" VariableExpression="${var:TOPdynamisAMrandloop}+1" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" VariableOp="SetString" VariableName="TOPdynamisAMrandom" VariableExpression="${lvar:TOPdynamisAMrandom[${numeric:random(1,${lvar:TOPdynamisAMrandom.size}+1)}]}" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" ListVariableOp="Remove" ListVariableName="TOPdynamisAMrandom" ListVariableIndex="${lvar:TOPdynamisAMrandom.indexof(${var:TOPdynamisAMrandom})}" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${var:TOPdynamisAMrandom}|01|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[4]}|01|" ActionType="LogMessage" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </LoopActions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" LoopDelayExpression="50" LoopInitExpression="1" ActionType="Loop" ExecutionDelayExpression="1000" Asynchronous="False">
+                <LoopCondition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:TOPdynamisAMrandloop}" ExpressionTypeL="Numeric" ExpressionR="8" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                </LoopCondition>
+                <LoopActions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="TOPdynamisAMrandloop" VariableExpression="${var:TOPdynamisAMrandloop}+1" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" VariableOp="SetString" VariableName="TOPdynamisAMrandom" VariableExpression="${lvar:TOPdynamisAMrandom[${numeric:random(1,${lvar:TOPdynamisAMrandom.size}+1)}]}" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" ListVariableOp="Remove" ListVariableName="TOPdynamisAMrandom" ListVariableIndex="${lvar:TOPdynamisAMrandom.indexof(${var:TOPdynamisAMrandom})}" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${var:TOPdynamisAMrandom}|02|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[4]}|01|" ActionType="LogMessage" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </LoopActions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" ListVariableOp="Copy" ListVariableName="dTelestoPartyMembernames" ListVariableTarget="TOPdynamisAMrandom" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" VariableOp="SetString" VariableName="TOPdynamisAMrandom" VariableExpression="${lvar:TOPdynamisAMrandom[${numeric:random(1,${lvar:TOPdynamisAMrandom.size}+1)}]}" ActionType="Variable" ExecutionDelayExpression="50" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="12" ListVariableOp="Remove" ListVariableName="TOPdynamisAMrandom" ListVariableIndex="${lvar:TOPdynamisAMrandom.indexof(${var:TOPdynamisAMrandom})}" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="13" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D73|Hello, Distant World|32.00||||${var:TOPdynamisAMrandom}|" LogProcess="True" OBSEndPoint="" TriggerText="26||D73|Hello, Distant World|44.00||||${lvar:dTelestoPartyMembernames[1]}|" ActionType="LogMessage" ExecutionDelayExpression="2000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="14" VariableOp="SetString" VariableName="TOPdynamisAMrandom" VariableExpression="${lvar:TOPdynamisAMrandom[${numeric:random(1,${lvar:TOPdynamisAMrandom.size}+1)}]}" ActionType="Variable" ExecutionDelayExpression="50" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="15" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D72|Hello, Near World|32.00||||${var:TOPdynamisAMrandom}|" LogProcess="True" OBSEndPoint="" TriggerText="26||D72|Hello, Near World|44.00||||${lvar:dTelestoPartyMembernames[4]}|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="16" ListVariableOp="Remove" ListVariableName="TOPdynamisAMrandom" ListVariableIndex="${lvar:TOPdynamisAMrandom.indexof(${var:TOPdynamisAMrandom})}" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="17" VariableOp="SetString" VariableName="TOPdynamisAMrandom" VariableExpression="${lvar:TOPdynamisAMrandom[${numeric:random(1,${lvar:TOPdynamisAMrandom.size}+1)}]}" ActionType="Variable" ExecutionDelayExpression="50" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="18" ListVariableOp="Remove" ListVariableName="TOPdynamisAMrandom" ListVariableIndex="${lvar:TOPdynamisAMrandom.indexof(${var:TOPdynamisAMrandom})}" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="19" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D73|Hello, Distant World|50.00||||${var:TOPdynamisAMrandom}|" LogProcess="True" OBSEndPoint="" TriggerText="26||D73|Hello, Distant World|44.00||||${lvar:dTelestoPartyMembernames[1]}|" ActionType="LogMessage" ExecutionDelayExpression="2000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="20" VariableOp="SetString" VariableName="TOPdynamisAMrandom" VariableExpression="${lvar:TOPdynamisAMrandom[${numeric:random(1,${lvar:TOPdynamisAMrandom.size}+1)}]}" ActionType="Variable" ExecutionDelayExpression="50" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="21" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D72|Hello, Near World|50.00||||${var:TOPdynamisAMrandom}|" LogProcess="True" OBSEndPoint="" TriggerText="26||D72|Hello, Near World|44.00||||${lvar:dTelestoPartyMembernames[4]}|" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="22" ListVariableOp="Remove" ListVariableName="TOPdynamisAMrandom" ListVariableIndex="${lvar:TOPdynamisAMrandom.indexof(${var:TOPdynamisAMrandom})}" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="23" VariableOp="SetString" VariableName="TOPdynamisrandmech0" VariableExpression="${var:TOPdynamisAM.mech0}" ActionType="Variable" ExecutionDelayExpression="1500" Asynchronous="False">
+                <Condition Enabled="false" Grouping="And" />
+              </Action>
+              <Action OrderNumber="24" VariableOp="SetString" VariableName="TOPdynamisrandmech1" VariableExpression="${var:TOPdynamisAM.mech1}" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="And" />
+              </Action>
+              <Action OrderNumber="25" LoopDelayExpression="50" LoopInitExpression="1" ActionType="Loop" ExecutionDelayExpression="30500" Asynchronous="False">
+                <LoopCondition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:TOPdynamisAMrandloop}" ExpressionTypeL="Numeric" ExpressionR="8" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                </LoopCondition>
+                <LoopActions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="TOPdynamisAMrandloop" VariableExpression="${var:TOPdynamisAMrandloop}+1" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" LogMessageTarget="NetworkFFXIV" LogMessageText="26||D74||||||${lvar:dTelestoPartyMembernames[${var:TOPdynamisAMrandloop}]}|0${numeric:${var:TOPdynamisAM.${lvar:dTelestoPartyMembernames[${var:TOPdynamisAMrandloop}]}count}+1}|" LogProcess="True" OBSEndPoint="" TriggerId="d800d7e4-3d83-4647-93ee-b5861f7b48f3" TriggerText="26||D74||||||${lvar:dTelestoPartyMembernames[4]}|01|" ActionType="LogMessage" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Not">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:TOPdynamisrandmech0}" ExpressionTypeL="String" ExpressionR="${lvar:dTelestoPartyMembernames[${var:TOPdynamisAMrandloop}]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:TOPdynamisrandmech1}" ExpressionTypeL="String" ExpressionR="${lvar:dTelestoPartyMembernames[${var:TOPdynamisAMrandloop}]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                </LoopActions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="26" TextAuraAlignment="MiddleLeft" TextAuraFontSize="8.25" TextAuraForeground="Yellow" TextAuraBackground="Black" TextAuraName="_debug_p0" TextAuraExpression="Dynamis:&#xD;&#xA;${lvar:dTelestoPartyMembernames[4]} - ${var:TOPdynamisAM.${lvar:dTelestoPartyMembernames[4]}count}&#xD;&#xA;${lvar:dTelestoPartyMembernames[5]} - ${var:TOPdynamisAM.${lvar:dTelestoPartyMembernames[5]}count}&#xD;&#xA;${lvar:dTelestoPartyMembernames[6]} - ${var:TOPdynamisAM.${lvar:dTelestoPartyMembernames[6]}count}&#xD;&#xA;${lvar:dTelestoPartyMembernames[7]} - ${var:TOPdynamisAM.${lvar:dTelestoPartyMembernames[7]}count}&#xD;&#xA;${lvar:dTelestoPartyMembernames[1]} - ${var:TOPdynamisAM.${lvar:dTelestoPartyMembernames[1]}count}&#xD;&#xA;${lvar:dTelestoPartyMembernames[8]} - ${var:TOPdynamisAM.${lvar:dTelestoPartyMembernames[8]}count}&#xD;&#xA;${lvar:dTelestoPartyMembernames[2]} - ${var:TOPdynamisAM.${lvar:dTelestoPartyMembernames[2]}count}&#xD;&#xA;${lvar:dTelestoPartyMembernames[3]} - ${var:TOPdynamisAM.${lvar:dTelestoPartyMembernames[3]}count}&#xD;&#xA;Party:&#xD;&#xA;${lvar:TOPdynamisAMparty[1]} - ${lvar:TOPdynamisAMparty[2]} - ${lvar:TOPdynamisAMparty[3]} - ${lvar:TOPdynamisAMparty[4]} - ${lvar:TOPdynamisAMparty[5]} - ${lvar:TOPdynamisAMparty[6]} - ${lvar:TOPdynamisAMparty[7]} - ${lvar:TOPdynamisAMparty[8]}&#xD;&#xA;Mech 1: ${var:TOPdynamisAM.mech0} | Mech 2: ${var:TOPdynamisAM.mech1}&#xD;&#xA;Second Far: ${var:TOPdynamisAMsecondfar} | Second Near: ${var:TOPdynamisAMsecondnear}&#xD;&#xA;${evar:TOPdynamisAM.mech1}" TextAuraXIniExpression="2372" TextAuraYIniExpression="1115" TextAuraWIniExpression="505" TextAuraHIniExpression="222" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="27" OBSEndPoint="" TriggerId="f9946ded-efde-446d-8740-83e9dd026583" TriggerForce="regexp,parent" ActionType="Trigger" ExecutionDelayExpression="16000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers>
+      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Dynamis Marks Clear" Id="5ed5fe50-cc0d-483c-ad37-9e5fc4af94f9" RegularExpression="^26\|[^\|]*\|D7(?&lt;id&gt;[3])\|[^\|]*\|(?&lt;dur&gt;\d*)(?:[^\|]*\|){4}(?&lt;player&gt;[^|]*)\|">
+        <Actions>
+          <Action OrderNumber="1" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;1&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;2&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;3&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;4&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;5&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;6&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;7&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;8&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" Asynchronous="False" RefireInterrupt="True" Description="${lvar:TOPsigmaparty[1]} - NAME OF PERSON&#xD;&#xA;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPsigmaparty[1]})} - index of person in party">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${dur}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="2" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;1&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;2&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;3&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;4&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;5&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;6&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;7&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk off &lt;8&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" ExecutionDelayExpression="(${dur}-1)*1000" Asynchronous="False" Description="${lvar:TOPsigmaparty[1]} - NAME OF PERSON&#xD;&#xA;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPsigmaparty[1]})} - index of person in party">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${dur}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            </Condition>
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Dynamis Buff" Id="d800d7e4-3d83-4647-93ee-b5861f7b48f3" RegularExpression="^26\|[^\|]*\|D74\|(?:[^\|]*\|){5}(?&lt;player&gt;[^|]*)\|(?&lt;count&gt;[^|]*)\|">
+        <Actions>
+          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="TOPdynamisAM.${player}count" VariableExpression="${count}" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" LogMessageText="TOP Dynamis Automarker ${player}: Dynamis: ${count}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" IsReadme="True" Name="##INSTRUCTIONS README" Id="f1f39291-0474-4294-a32f-b93bc7f85088" RegularExpression="https://github.com/SableCentaur/ffxiv/blob/master/Triggernometry/XMLs/Dynamis%20AM%20README.md" Description="https://github.com/SableCentaur/ffxiv/blob/master/Triggernometry/XMLs/Dynamis%20AM%20README.md">
+        <Actions />
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="#1 DELTA Dynamis" Id="ace39318-bc29-4bc0-986e-deeea261fa50" RegularExpression="^26\|[^\|]*\|D7(?&lt;id&gt;[23])\|[^\|]*\|(?&lt;dur&gt;44)(?:[^\|]*\|){4}(?&lt;player&gt;[^|]*)\|" MutexToCapture="TOPdynamis">
+        <Actions>
+          <Action OrderNumber="1" ListVariableOp="Remove" ListVariableName="TOPdynamisAMparty" ListVariableIndex="${lvar:TOPdynamisAMparty.indexof(${player})}" ActionType="ListVariable" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" VariableOp="SetString" VariableName="TOPdynamisAMfar" VariableExpression="${player}" ActionType="Variable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="3" VariableOp="SetString" VariableName="TOPdynamisAMnear" VariableExpression="${player}" ActionType="Variable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="4" TriggerId="97d37a7c-cac7-4d4f-a2fd-bbf5587b8d0b" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMfar}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMnear}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="5" LogMessageText="TOP Dynamis Automarker Delta FAR: ${var:TOPdynamisAMfar} &amp; NEAR: ${var:TOPdynamisAMnear}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMfar}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMnear}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            </Condition>
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Dynamis Mark Players" Id="97d37a7c-cac7-4d4f-a2fd-bbf5587b8d0b" RegularExpression="" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="5000" MutexToCapture="TOPdynamis" Description="v1.0 - release 3/14&#xD;&#xA;adds version number to debug line&#xD;&#xA;incorporates force telesto list repopulate on reset which should improve performance of the test triggers.&#xD;&#xA;no longer required to use /e _reset before any tests.&#xD;&#xA;adds option to add configurable delays between marks&#xD;&#xA;adds option to customize marker assignments">
+        <Actions>
+          <Action OrderNumber="1" ListVariableOp="Remove" ListVariableName="TOPdynamisAMparty" ListVariableIndex="${lvar:TOPdynamisAMparty.indexof(${var:TOPdynamisAM.mech0})}" ActionType="ListVariable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech1}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="2" ListVariableOp="Remove" ListVariableName="TOPdynamisAMparty" ListVariableIndex="${lvar:TOPdynamisAMparty.indexof(${var:TOPdynamisAM.mech1})}" ActionType="ListVariable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech1}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="3" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/e ----------------------------------------------------------------------&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/e 1: Far: ${var:TOPdynamisAMfar} (${var:TOPdynamisAM.${var:TOPdynamisAMfar}count}) &amp; Near: ${var:TOPdynamisAMnear} (${var:TOPdynamisAM.${var:TOPdynamisAMnear}count})&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/e 2: Far: ${var:TOPdynamisAMsecondfar} (${var:TOPdynamisAM.${var:TOPdynamisAMsecondfar}count}) &amp; Near ${var:TOPdynamisAMsecondnear} (${var:TOPdynamisAM.${var:TOPdynamisAMsecondnear}count})&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/e Mech: ${var:TOPdynamisAM.mech0} (${var:TOPdynamisAM.${var:TOPdynamisAM.mech0}count}) &amp; ${var:TOPdynamisAM.mech1} (${var:TOPdynamisAM.${var:TOPdynamisAM.mech1}count})&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/e Far Baits: ${lvar:TOPdynamisAMparty[1]} (${var:TOPdynamisAM.${lvar:TOPdynamisAMparty[1]}count}) &amp; ${lvar:TOPdynamisAMparty[2]} (${var:TOPdynamisAM.${lvar:TOPdynamisAMparty[2]}count})&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/e Near Baits: ${lvar:TOPdynamisAMparty[4]} (${var:TOPdynamisAM.${lvar:TOPdynamisAMparty[4]}count}) &amp; ${lvar:TOPdynamisAMparty[3]} (${var:TOPdynamisAM.${lvar:TOPdynamisAMparty[3]}count})&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" ExecutionDelayExpression="100" Asynchronous="False" Description="Debug Echo" DescriptionOverride="True">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMfar}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:TOPdynamisAMparty.size}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="4" TriggerForce="regexp" ActionType="Placeholder" ExecutionDelayExpression="${var:TOPdynamisAMdelay}*1000" Asynchronous="False" RefireInterrupt="True">
+            <Condition Enabled="false" Grouping="And" />
+          </Action>
+          <Action OrderNumber="5" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk ${lvar:TOPdynamisAMmarkers[2]} &lt;${lvar:dTelestoPartyMembernames.indexof(${var:TOPdynamisAMfar})}&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk ${lvar:TOPdynamisAMmarkers[1]} &lt;${lvar:dTelestoPartyMembernames.indexof(${var:TOPdynamisAMnear})}&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" Asynchronous="False" RefireRequeue="False" Description="Distant/Near World Bundled" DescriptionOverride="True">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMfar}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMnear}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMmarkdelay}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="6" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk ${lvar:TOPdynamisAMmarkers[5]} &lt;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPdynamisAMparty[1]})}&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk ${lvar:TOPdynamisAMmarkers[6]} &lt;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPdynamisAMparty[2]})}&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk ${lvar:TOPdynamisAMmarkers[8]} &lt;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPdynamisAMparty[3]})}&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk ${lvar:TOPdynamisAMmarkers[7]} &lt;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPdynamisAMparty[4]})}&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk ${lvar:TOPdynamisAMmarkers[3]} &lt;${lvar:dTelestoPartyMembernames.indexof(${var:TOPdynamisAM.mech0})}&gt;&quot;}},&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk ${lvar:TOPdynamisAMmarkers[4]} &lt;${lvar:dTelestoPartyMembernames.indexof(${var:TOPdynamisAM.mech1})}&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" Asynchronous="False" RefireRequeue="False" Description="Mechanic/Near/Far Baits Bundled" DescriptionOverride="True">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech0}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:TOPdynamisAMparty.size}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMmarkdelay}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="7" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk ${lvar:TOPdynamisAMmarkers[1]} &lt;${lvar:dTelestoPartyMembernames.indexof(${var:TOPdynamisAMnear})}&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" Asynchronous="False" RefireRequeue="False" Description="Near World" DescriptionOverride="True">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMnear}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMmarkdelay}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="8" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk ${lvar:TOPdynamisAMmarkers[2]} &lt;${lvar:dTelestoPartyMembernames.indexof(${var:TOPdynamisAMfar})}&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" ExecutionDelayExpression="${var:TOPdynamisAMmarkdelay}+random(-100,100)" Asynchronous="False" RefireRequeue="False" Description="Distant World" DescriptionOverride="True">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMfar}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMmarkdelay}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="9" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk ${lvar:TOPdynamisAMmarkers[3]} &lt;${lvar:dTelestoPartyMembernames.indexof(${var:TOPdynamisAM.mech0})}&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" ExecutionDelayExpression="${var:TOPdynamisAMmarkdelay}+random(-100,100)" Asynchronous="False" Description="Mechanic 1" DescriptionOverride="True">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech0}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMmarkdelay}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="10" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk ${lvar:TOPdynamisAMmarkers[4]} &lt;${lvar:dTelestoPartyMembernames.indexof(${var:TOPdynamisAM.mech1})}&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" ExecutionDelayExpression="${var:TOPdynamisAMmarkdelay}+random(-100,100)" Asynchronous="False" Description="Mechanic 2" DescriptionOverride="True">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMmarkdelay}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="11" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk ${lvar:TOPdynamisAMmarkers[5]} &lt;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPdynamisAMparty[1]})}&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" ExecutionDelayExpression="${var:TOPdynamisAMmarkdelay}+random(-100,100)" Asynchronous="False" Description="Far Bait 1" DescriptionOverride="True">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:TOPdynamisAMparty.size}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMmarkdelay}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="12" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk ${lvar:TOPdynamisAMmarkers[6]} &lt;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPdynamisAMparty[2]})}&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" ExecutionDelayExpression="${var:TOPdynamisAMmarkdelay}+random(-100,100)" Asynchronous="False" Description="Far Bait 2" DescriptionOverride="True">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:TOPdynamisAMparty.size}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMmarkdelay}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="13" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk ${lvar:TOPdynamisAMmarkers[8]} &lt;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPdynamisAMparty[3]})}&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" ExecutionDelayExpression="${var:TOPdynamisAMmarkdelay}+random(-100,100)" Asynchronous="False" Description="Near Bait 2" DescriptionOverride="True">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:TOPdynamisAMparty.size}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMmarkdelay}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="14" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}" JsonPayloadExpression="{&quot;version&quot;: 1, &quot;id&quot;: 1, &quot;type&quot;: &quot;Bundle&quot;, &quot;payload&quot;: [&#xD;&#xA; {&quot;version&quot;: 1, &quot;id&quot;: 2, &quot;type&quot;: &quot;ExecuteCommand&quot;, &quot;payload&quot;: {&quot;command&quot;: &quot;/mk ${lvar:TOPdynamisAMmarkers[7]} &lt;${lvar:dTelestoPartyMembernames.indexof(${lvar:TOPdynamisAMparty[4]})}&gt;&quot;}}&#xD;&#xA;]}" KeypressType="WindowMessage" KeyPressExpression="{F1}" KeyPressCode="112" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" ActionType="GenericJson" ExecutionDelayExpression="${var:TOPdynamisAMmarkdelay}+random(-100,100)" Asynchronous="False" Description="Near Bait 1" DescriptionOverride="True">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:TOPdynamisAMparty.size}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMmarkdelay}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="15" LogMessageText="TOP Dynamis Automarker v1.0 &#xD;&#xA;Far Bait 1: ${lvar:TOPdynamisAMparty[1]}, &#xD;&#xA;Far Bait 2: ${lvar:TOPdynamisAMparty[2]}, &#xD;&#xA;Near Bait 1: ${lvar:TOPdynamisAMparty[4]}, &#xD;&#xA;Near Bait 2: ${lvar:TOPdynamisAMparty[3]}, &#xD;&#xA;Delay: ${var:TOPdynamisAMdelay}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="16" ListVariableName="TOPdynamisAMparty" ListVariableIndex="${lvar:TOPdynamisAMparty.indexof(${var:TOPdynamisAMsecondfar})}" ActionType="ListVariable" ExecutionDelayExpression="3000">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="17" VariableOp="UnsetRegex" VariableName="TOPdynamisAM(?!.*count)" VariableExpression="${var:TOPdynamisAMsecondfar}" ActionType="Variable" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="#2 SIGMA Dynamis" Id="10646aca-43ef-4fde-8fe1-29ba054732b9" RegularExpression="^26\|[^\|]*\|D7(?&lt;id&gt;[23])\|[^\|]*\|(?&lt;dur&gt;56)(?:[^\|]*\|){4}(?&lt;player&gt;[^|]*)\|" Scheduling="FromLastAction" MutexToCapture="TOPdynamis">
+        <Actions>
+          <Action OrderNumber="1" ListVariableOp="Remove" ListVariableName="TOPdynamisAMparty" ListVariableIndex="${lvar:TOPdynamisAMparty.indexof(${player})}" ActionType="ListVariable" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" VariableOp="SetString" VariableName="TOPdynamisAMfar" VariableExpression="${player}" ActionType="Variable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="3" VariableOp="SetString" VariableName="TOPdynamisAMnear" VariableExpression="${player}" ActionType="Variable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="4" LoopDelayExpression="1" LoopInitExpression="1" ActionType="Loop" Asynchronous="False" RefireInterrupt="True">
+            <LoopCondition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${var:TOPdynamisAMloop}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </LoopCondition>
+            <LoopActions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="TOPdynamisAMloop" VariableExpression="${var:TOPdynamisAMloop}+1" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetString" VariableName="TOPdynamisAM.mech${evar:TOPdynamisAM.mech0}" VariableExpression="${lvar:TOPdynamisAMparty[${var:TOPdynamisAMloop}]}" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:TOPdynamisAM.${lvar:TOPdynamisAMparty[${var:TOPdynamisAMloop}]}count}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:TOPdynamisAM.mech0}" ExpressionTypeL="String" ExpressionR="${lvar:TOPdynamisAMparty[${var:TOPdynamisAMloop}]}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                </Condition>
+              </Action>
+            </LoopActions>
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:TOPdynamisAMparty.size}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="5" LogMessageText="TOP Dynamis Automarker Sigma FAR: ${var:TOPdynamisAMfar}, NEAR: ${var:TOPdynamisAMnear}, MECH1: ${var:TOPdynamisAM.mech0}, MECH2: ${var:TOPdynamisAM.mech1}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMfar}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMnear}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech0}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="6" TriggerId="97d37a7c-cac7-4d4f-a2fd-bbf5587b8d0b" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:TOPdynamisAMparty.size}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMfar}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMnear}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech0}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            </Condition>
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="#3 OMEGA 1 Dynamis (Monitors)" Id="a0543770-99b5-4368-87fa-0568a1b00718" RegularExpression="^26\|[^\|]*\|D7(?&lt;id&gt;[23])\|[^\|]*\|(?&lt;dur&gt;32|50)(?:[^\|]*\|){4}(?&lt;player&gt;[^|]*)\|" MutexToCapture="TOPdynamis">
+        <Actions>
+          <Action OrderNumber="1" VariableOp="SetString" VariableName="TOPdynamisAM.mech${evar:TOPdynamisAM.mech0}" VariableExpression="${player}" ActionType="Variable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${var:TOPdynamisAM.${player}count}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${dur}" ExpressionTypeL="Numeric" ExpressionR="50" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="2" VariableOp="SetString" VariableName="TOPdynamisAM.mech${evar:TOPdynamisAM.mech0}" VariableExpression="${player}" ActionType="Variable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${var:TOPdynamisAM.${player}count}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${dur}" ExpressionTypeL="Numeric" ExpressionR="50" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="3" ListVariableOp="Remove" ListVariableName="TOPdynamisAMparty" ListVariableIndex="${lvar:TOPdynamisAMparty.indexof(${player})}" ActionType="ListVariable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${dur}" ExpressionTypeL="Numeric" ExpressionR="32" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="4" VariableOp="SetString" VariableName="TOPdynamisAMfar" VariableExpression="${player}" ActionType="Variable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${dur}" ExpressionTypeL="Numeric" ExpressionR="32" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="5" VariableOp="SetString" VariableName="TOPdynamisAMnear" VariableExpression="${player}" ActionType="Variable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${dur}" ExpressionTypeL="Numeric" ExpressionR="32" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="6" VariableOp="SetString" VariableName="TOPdynamisAMsecondfar" VariableExpression="${player}" ActionType="Variable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${dur}" ExpressionTypeL="Numeric" ExpressionR="50" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="7" VariableOp="SetString" VariableName="TOPdynamisAMsecondnear" VariableExpression="${player}" ActionType="Variable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${dur}" ExpressionTypeL="Numeric" ExpressionR="50" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="8" LoopDelayExpression="1" LoopInitExpression="1" ActionType="Loop" Asynchronous="False" RefireInterrupt="True">
+            <LoopCondition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${var:TOPdynamisAMloop}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </LoopCondition>
+            <LoopActions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="TOPdynamisAMloop" VariableExpression="${var:TOPdynamisAMloop}+1" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetString" VariableName="TOPdynamisAM.mech${evar:TOPdynamisAM.mech0}" VariableExpression="${lvar:TOPdynamisAMparty[${var:TOPdynamisAMloop}]}" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:TOPdynamisAM.${lvar:TOPdynamisAMparty[${var:TOPdynamisAMloop}]}count}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:TOPdynamisAM.mech0}" ExpressionTypeL="String" ExpressionR="${lvar:TOPdynamisAMparty[${var:TOPdynamisAMloop}]}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                </Condition>
+              </Action>
+            </LoopActions>
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:TOPdynamisAMparty.size}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMsecondnear}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMsecondfar}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionGroup Enabled="true" Grouping="Or">
+                <ConditionSingle Enabled="true" ExpressionL="${var:TOPdynamisAM.${var:TOPdynamisAMsecondfar}count}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                <ConditionSingle Enabled="true" ExpressionL="${var:TOPdynamisAM.${var:TOPdynamisAMsecondnear}count}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+              </ConditionGroup>
+            </Condition>
+          </Action>
+          <Action OrderNumber="9" TriggerId="97d37a7c-cac7-4d4f-a2fd-bbf5587b8d0b" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False" RefireInterrupt="True">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:TOPdynamisAMparty.size}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMfar}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMsecondnear}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech0}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMsecondfar}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMnear}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="10" LogMessageText="TOP Dynamis Automarker Omega 1 FAR 1: ${var:TOPdynamisAMfar}, NEAR 1: ${var:TOPdynamisAMnear}, FAR 2: ${var:TOPdynamisAMsecondfar}, NEAR 2: ${var:TOPdynamisAMsecondnear}, MECH1: ${var:TOPdynamisAM.mech0}, MECH2: ${var:TOPdynamisAM.mech1}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMfar}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMnear}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech0}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMsecondfar}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMsecondnear}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            </Condition>
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="#3 OMEGA 2 Dynamis (Tethers)" Id="9b48e5d6-a002-4f30-b30e-c731f9b9467c" RegularExpression="^26\|[^\|]*\|D7(?&lt;id&gt;[23])\|[^\|]*\|(?&lt;dur&gt;50)(?:[^\|]*\|){4}(?&lt;player&gt;[^|]*)\|">
+        <Actions>
+          <Action OrderNumber="1" LogMessageTarget="NetworkFFXIV" LogMessageText="20||||7B88|" LogProcess="True" OBSEndPoint="" TriggerId="3110f235-5ce9-408a-ba70-d9ef607883d3" TriggerText="20||||8015|" TriggerForce="active" ActionType="LogMessage" ExecutionDelayExpression="30000" Asynchronous="False">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="2" ActionType="Placeholder" ExecutionDelayExpression="5000" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" MutexOpType="Acquire" MutexName="TOPdynamis" ActionType="Mutex">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" ListVariableOp="Remove" ListVariableName="TOPdynamisAMparty" ListVariableIndex="${lvar:TOPdynamisAMparty.indexof(${player})}" ActionType="ListVariable" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" VariableOp="SetString" VariableName="TOPdynamisAMfar" VariableExpression="${player}" ActionType="Variable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="6" VariableOp="SetString" VariableName="TOPdynamisAMnear" VariableExpression="${player}" ActionType="Variable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="7" LoopDelayExpression="1" LoopInitExpression="1" ActionType="Loop" Asynchronous="False" RefireInterrupt="True">
+            <LoopCondition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${var:TOPdynamisAMloop}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </LoopCondition>
+            <LoopActions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="TOPdynamisAMloop" VariableExpression="${var:TOPdynamisAMloop}+1" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetString" VariableName="TOPdynamisAM.mech${evar:TOPdynamisAM.mech0}" VariableExpression="${lvar:TOPdynamisAMparty[${var:TOPdynamisAMloop}]}" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:TOPdynamisAM.${lvar:TOPdynamisAMparty[${var:TOPdynamisAMloop}]}count}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:TOPdynamisAM.mech0}" ExpressionTypeL="String" ExpressionR="${lvar:TOPdynamisAMparty[${var:TOPdynamisAMloop}]}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                </Condition>
+              </Action>
+            </LoopActions>
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:TOPdynamisAMparty.size}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="8" LogMessageText="TOP Dynamis Automarker Omega 2 FAR: ${var:TOPdynamisAMfar}, NEAR: ${var:TOPdynamisAMnear}, MECH1: ${var:TOPdynamisAM.mech0}, MECH2: ${var:TOPdynamisAM.mech1}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMfar}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMnear}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech0}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="9" TriggerId="97d37a7c-cac7-4d4f-a2fd-bbf5587b8d0b" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False" RefireInterrupt="True">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMfar}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMnear}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:TOPdynamisAMparty.size}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech0}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAM.mech1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="10" MutexName="TOPdynamis" ActionType="Mutex">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
