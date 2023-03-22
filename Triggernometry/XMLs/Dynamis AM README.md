@@ -32,7 +32,7 @@ Markers: <br />
 Markers will self clear once the Near/Far World debuffs resolve, or upon party wipe.
 
 Priority: <br />
-The default priority is 45671823. Players 4 and 5 in the party list will never get near baits, and players 2 and 3 will never get far baits. Players close to the top of the priority list will get marked for mechanics (fist tethers, monitors) first if they meet dynnamis requirements, and players closer to the top of the list are more likely to be assigned far baits. <br />
+The default priority is 45671823. Players close to the top of the list are more likely to be assigned near baits, while players close to the end of the list are more likely to be assigned far baits: players 4 and 5 in the party list will never get near baits, and players 2 and 3 will never get far baits. Players close to the top of the priority list will get marked for mechanics (fist tethers, monitors) first if they meet dynnamis requirements. <br />
 
 Delay: No delay is set by default for both Sigma and Omega; markers will go out shortly after the Hello World buffs are assigned in Sigma and Omega 1. <br />
 Multi-Marker Delay: No delay is set by default between individual markers; all the marks will go out at once instead of being delayed a short time.
