@@ -83,9 +83,9 @@ To change the marker configuration you can customize the Markers trigger in the 
 
 # Test Triggers
 To test, you can go into any instance of with a party of 8. Then, use one of the following commands: <br />
-   /e \_test delta
-   /e \_test sigma
-   /e \_test omega
+   - /e \_test delta
+   - /e \_test sigma
+   - /e \_test omega
    
-Please note that the test triggers will take a few seconds to mark. The omega trigger also simulates both parts of the mechanic (monitors and tethers), so it will take another 35 seconds to mark the second set. The markers will self clear once the simulation is complete (when the near/far world debuffs would resolve for each trio). If you fire another test trigger before it completes, it will interrupt them and clear the marks so they should not interfere with each other. The test triggers are preset scenarios which means you'll get the same variation every time, and cannot effectively be used to practice. <br />
+Please note that the test triggers will take a few seconds to mark. The omega trigger also simulates both parts of the mechanic (monitors and tethers), so it will take another 35 seconds to mark the second set. The markers will self clear once the simulation is complete (when the near/far world debuffs would resolve for each trio). If you fire another test trigger before it completes, it will interrupt them and clear the marks so they should not interfere with each other. The test triggers are intended to test that the marks are going out, and are preset scenarios which means you'll get the same variation every time, so cannot effectively be used to practice. <br />
 ****If you add marker delays in the Priority & Delays configuration trigger, the test triggers will also be affected****
