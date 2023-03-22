@@ -18,14 +18,24 @@ Happy progging!
    I recommend adding the repo as a <a href=https://github.com/paissaheavyindustries/Triggernometry/tree/master/Repositories#how-to-use-repositories>remote repository</a> to ensure you automatically get any bug-fixing updates. The default settings are all fine. Use the following url for the address: <br />
    https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/XMLs/TOP%20Dynamis%20AutoMarker.xml<br/>
    ![image](https://user-images.githubusercontent.com/20386522/224921222-59723f69-e34a-4300-b5e5-0a7a71440515.png)
+   
+   If you desire any customization, you will need to copy the setup triggers to your local triggers. Ensure that the remote copy is disabled, and the local copy is enabled. If the default settings described below work for you, no copying is necessary, and you can leave the remote copy enabled.<br />
+  ![image](https://user-images.githubusercontent.com/20386522/226791656-4995fa4d-5fc1-430b-a291-23920566697b.png)
 
-<b>Default Markers</b> <br />
-   TRIANGLE - Near World<br />
-   PLUS - Far World<br />
-   Attack1&2 - Mechanic (fists, monitors, tethers)<br />
-   Ignore1&2 - Far Bait<br />
-   Bind1&2 - Near Bait<br />
+<b>Default Configuration</b> <br />
+Markers: <br />
+   - TRIANGLE - Near World<br />
+   - PLUS - Far World<br />
+   - Attack1&2 - Mechanic (fists, monitors, tethers)<br />
+   - Ignore1&2 - Far Bait<br />
+   - Bind1&2 - Near Bait<br />
 Markers will self clear once the Near/Far World debuffs resolve, or upon party wipe.
+
+Priority: <br />
+The default priority is 45671823. Players 4 and 5 in the party list will never get near baits, and players 2 and 3 will never get far baits. Players close to the top of the priority list will get marked for mechanics (fist tethers, monitors) first if they meet dynnamis requirements, and players closer to the top of the list are more likely to be assigned far baits. <br />
+
+Delay: No delay is set by default for both Sigma and Omega; markers will go out shortly after the Hello World buffs are assigned in Sigma and Omega 1. <br />
+Multi-Marker Delay: No delay is set by default between individual markers; all the marks will go out at once instead of being delayed a short time.
 
 <b>Cheatsheets</b> <br />
 Sigma - attack1&2 and ignore1 always go to the female, everyone else go across from the female.
@@ -60,7 +70,7 @@ Once Near/Far World and Mechanic players are eliminated from the priority list, 
 done in the following order: Far 1, Far 2, Near 2, Near 1
    
 <b>Delays</b> <br />
-The Sigma and/or Omega part 1 markers can be delayed to prevent visual clutter during playstation and M/F+Wave Cannons. Enable the delay actions in your local Priority & Delays trigger. The suggested/default values are 26 for sigma (markers will appear during towers knockback) and 17 for omega (markers will appear during the second aoe dodge), but you can edit them if you would like longer/shorter delays.<br />
+The Sigma and/or Omega part 1 markers can be delayed to prevent visual clutter during playstation and M/F+Wave Cannons. Enable the delay actions in your local Priority & Delays trigger. The suggested values are 26 for sigma (markers will appear during towers knockback) and 17 for omega (markers will appear during the second aoe dodge), but you can edit them if you would like longer/shorter delays. The delay for omega will only affect the first half of omega; markers for the second part will always go out once the debuffs for part 1 have resolved.<br />
    ***Added delays will impact the test triggers too, so you'll have to remember to be patient if you use the test triggers*** <br />
    ![image](https://user-images.githubusercontent.com/20386522/224922504-82bcd3ae-be26-418e-aeec-a2ed69ab2928.png)
 
