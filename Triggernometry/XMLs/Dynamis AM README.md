@@ -19,7 +19,7 @@ Happy progging!
    https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/XMLs/TOP%20Dynamis%20AutoMarker.xml<br/>
    ![image](https://user-images.githubusercontent.com/20386522/224921222-59723f69-e34a-4300-b5e5-0a7a71440515.png)
    
-   If you desire any customization, you will need to copy the setup triggers to your local triggers. Ensure that the remote copy is disabled, and the local copy is enabled. If the default settings described below work for you, no copying is necessary, and you can leave the remote copy enabled.<br />
+   If you desire any customization, you will need to copy the setup triggers to your local triggers. Ensure that the remote copy is disabled, and the local copy is enabled. If the default settings described below work for you, no copying is necessary, and you can leave the remote copy enabled. See the customization section for instructions on changing these settings.<br />
   ![image](https://user-images.githubusercontent.com/20386522/226791656-4995fa4d-5fc1-430b-a291-23920566697b.png)
 
 <b>Default Configuration</b> <br />
