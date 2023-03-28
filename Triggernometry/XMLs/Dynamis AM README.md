@@ -82,7 +82,7 @@ To change the marker configuration you can customize the Markers trigger in the 
 ![image](https://user-images.githubusercontent.com/20386522/224917688-49dee4cf-b2e0-426b-9af4-c9bb8c125855.png)
 
 # Test Triggers
-To test, you can go into any instance of with a party of 8. Then, use one of the following commands: <br />
+To test, you can go into the ultimate instance or into The Mothercrystal (Hydaelyn normal mode) with a party of 8 (it will not work with trusts or duty support unless you build the party list manually). Then, use one of the following commands: <br />
    - /e \_test delta
    - /e \_test sigma
    - /e \_test omega
