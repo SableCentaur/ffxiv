@@ -172,10 +172,10 @@
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder ZoneFilterEnabled="True" Id="78812c99-afc1-43f0-a8fd-9c278d00edb0" ZoneFilterRegularExpression="The Omega Protocol \(Ultimate\)" Name="Reset" Enabled="true">
+      <Folder ZoneFilterEnabled="True" Id="78812c99-afc1-43f0-a8fd-9c278d00edb0" ZoneFilterRegularExpression="The Omega Protocol \(Ultimate\)|The Mothercrystal" Name="Reset" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Dynamis Reset Encounter" Id="f9946ded-efde-446d-8740-83e9dd026583" RegularExpression="^33\|[^|]*\|[^|]*\|400000(?&gt;01|06|03)\|">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Dynamis Reset Encounter" Id="f9946ded-efde-446d-8740-83e9dd026583" RegularExpression="^33\|[^|]*\|[^|]*\|40000006\|">
             <Actions>
               <Action OrderNumber="1" OBSEndPoint="" TriggerOp="CancelTrigger" TriggerId="5ed5fe50-cc0d-483c-ad37-9e5fc4af94f9" TriggerForce="regexp" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
@@ -195,57 +195,34 @@
               <Action OrderNumber="6" OBSEndPoint="" TriggerId="5ed5fe50-cc0d-483c-ad37-9e5fc4af94f9" TriggerForce="regexp" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="7" OBSEndPoint="" TriggerId="ea55a1de-c80f-47c8-bb8b-a5334d171056" TriggerForce="regexp,conditions,parent" ActionType="Trigger">
+              <Action OrderNumber="7" OBSEndPoint="" TriggerId="ea55a1de-c80f-47c8-bb8b-a5334d171056" TriggerForce="regexp,conditions,parent" ActionType="Trigger" ExecutionDelayExpression="2500">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${elvar:TOPdynamisAMmarkers}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="8" OBSEndPoint="" TriggerId="f7362953-6b4f-4faa-82b3-fd340b997748" TriggerForce="regexp" ActionType="Trigger">
-                <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${elvar:dTelestoPartyMembernames}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                </Condition>
-              </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-        </Triggers>
-      </Folder>
-      <Folder Id="b189a186-1720-4b2d-a78f-d40e666bcd37" Name="Telesto" Enabled="true">
-        <Folders />
-        <Triggers>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Telesto Dynamis Get Party" Id="f7362953-6b4f-4faa-82b3-fd340b997748" RegularExpression="^2[12]\|(?:[^\|]*\|){3}7B7C\|">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Exit Instance Cleanup" Id="a7880c3e-70ac-4fda-8868-8b7ada924eb7" RegularExpression="^41\|[^|]*\|(?&lt;instance&gt;800375AC|80034E6D)\|(?&lt;id&gt;5FE)\|">
             <Actions>
-              <Action OrderNumber="1" ListVariableName="dTelestoPartyMembernames" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable">
+              <Action OrderNumber="1" OBSEndPoint="" TriggerId="f9946ded-efde-446d-8740-83e9dd026583" TriggerForce="regexp,parent" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" JsonResultVariable="dTelestoPartyMembers" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}" JsonPayloadExpression="{ &quot;version&quot;: 1, &quot;id&quot;: 123456, &quot;type&quot;: &quot;GetPartyMembers&quot; }" OBSEndPoint="" ActionType="GenericJson">
+              <Action OrderNumber="2" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="${lvar:dTelestoPartyMembernames[4]}" ActionType="ListVariable" ExecutionDelayExpression="5000" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="dTelestoPartyMembers" VariableJsonTarget="dTelestoPartyMembernames" VariableExpression="$.response[*].fullname" ActionType="Variable">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="4" LogMessageText="TOP Dynamis Automarker Player 1: ${lvar:dTelestoPartyMembernames[1]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[2]}, &#xD;&#xA;Player 3: ${lvar:dTelestoPartyMembernames[3]}, &#xD;&#xA;Player 4: ${lvar:dTelestoPartyMembernames[4]}, &#xD;&#xA;Player 5: ${lvar:dTelestoPartyMembernames[5]}, &#xD;&#xA;Player 6: ${lvar:dTelestoPartyMembernames[6]}, &#xD;&#xA;Player 7: ${lvar:dTelestoPartyMembernames[7]}, &#xD;&#xA;Player 8: ${lvar:dTelestoPartyMembernames[8]}, Trig version ${_const[TriggernometryVersionMajor]}.${_const[TriggernometryVersionMinor]}.${_const[TriggernometryVersionBuild]}.${_const[TriggernometryVersionRevision]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+              <Action OrderNumber="3" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[4]}" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-          </Trigger>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Telesto Dynamis Reset  - &quot;/e _reset&quot; to manually trigger telesto to get party members" Id="eaf5f700-f859-4e8e-9979-75d01a078fe1" RegularExpression="^00\|[^\|]*\|0038\|\|_reset" DebugLevel="Verbose" PrevActions="Interrupt">
-            <Actions>
-              <Action OrderNumber="1" TriggerId="f7362953-6b4f-4faa-82b3-fd340b997748" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
-                <Condition Enabled="false" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${job})}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
-                </Condition>
-              </Action>
-            </Actions>
-            <Condition Enabled="false" Grouping="And" />
           </Trigger>
         </Triggers>
       </Folder>
       <Folder Id="c2b8df4b-300b-4232-9d0b-9520a52f5983" Name="*copy to local* - READ INSTRUCTIONS TO CUSTOMIZE" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Dynamis AM Priority &amp; Delays" Id="caf0b53e-2cfa-4392-9380-5470c6782d49" RegularExpression="^20\|(?:[^\|]*\|){3}(?&lt;cast&gt;7B88|801[45])\|" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="1000">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Dynamis AM Priority &amp; Delays" Id="caf0b53e-2cfa-4392-9380-5470c6782d49" RegularExpression="^20\|(?:[^\|]*\|){3}(?&lt;cast&gt;7B88|801[45])\|" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="1000" EditAutofire="True">
             <Actions>
               <Action OrderNumber="1" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[4]}" ActionType="ListVariable" Asynchronous="False" Description="Do Not Edit" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
@@ -293,7 +270,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Dynamis AM Markers" Id="ea55a1de-c80f-47c8-bb8b-a5334d171056" RegularExpression="^01\|[^|]*\|(?&lt;zone&gt;[^|]*)\|" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="1000" EditAutofire="True">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Dynamis AM Markers" Id="ea55a1de-c80f-47c8-bb8b-a5334d171056" RegularExpression="^01\|[^|]*\|(?:462|3E3)\|" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="1000" EditAutofire="True">
             <Actions>
               <Action OrderNumber="1" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="${lvar:dTelestoPartyMembernames[4]}" ActionType="ListVariable" Asynchronous="False" Description="Do Not Edit" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
@@ -348,6 +325,51 @@
           </Trigger>
         </Triggers>
       </Folder>
+      <Folder Id="b189a186-1720-4b2d-a78f-d40e666bcd37" Name="Telesto" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Dynamis Telesto Get Party" Id="f7362953-6b4f-4faa-82b3-fd340b997748" RegularExpression="^2[12]\|(?:[^\|]*\|){3}7B7C\|" PrevActionsRefire="Deny" RefirePeriodExpression="5000">
+            <Actions>
+              <Action OrderNumber="1" ListVariableName="dTelestoPartyMembernames" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" JsonResultVariable="dTelestoPartyMembers" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}" JsonPayloadExpression="{ &quot;version&quot;: 1, &quot;id&quot;: 123456, &quot;type&quot;: &quot;GetPartyMembers&quot; }" OBSEndPoint="" ActionType="GenericJson">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="dTelestoPartyMembers" VariableJsonTarget="dTelestoPartyMembernames" VariableExpression="$.response[*].fullname" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" LogMessageText="TOP Dynamis Automarker Player 1: ${lvar:dTelestoPartyMembernames[1]}, &#xD;&#xA;Player 2: ${lvar:dTelestoPartyMembernames[2]}, &#xD;&#xA;Player 3: ${lvar:dTelestoPartyMembernames[3]}, &#xD;&#xA;Player 4: ${lvar:dTelestoPartyMembernames[4]}, &#xD;&#xA;Player 5: ${lvar:dTelestoPartyMembernames[5]}, &#xD;&#xA;Player 6: ${lvar:dTelestoPartyMembernames[6]}, &#xD;&#xA;Player 7: ${lvar:dTelestoPartyMembernames[7]}, &#xD;&#xA;Player 8: ${lvar:dTelestoPartyMembernames[8]}, Trig version ${_const[TriggernometryVersionMajor]}.${_const[TriggernometryVersionMinor]}.${_const[TriggernometryVersionBuild]}.${_const[TriggernometryVersionRevision]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" OBSEndPoint="" VariableName="dTelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Dynamis Telesto Reset  - &quot;/e _reset&quot; to manually trigger telesto to get party members" Id="eaf5f700-f859-4e8e-9979-75d01a078fe1" RegularExpression="^00\|[^\|]*\|0038\|\|_reset" DebugLevel="Verbose" PrevActions="Interrupt">
+            <Actions>
+              <Action OrderNumber="1" TriggerId="f7362953-6b4f-4faa-82b3-fd340b997748" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${job})}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="And" />
+          </Trigger>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Dynamis Telesto Enter Instance" Id="600a548e-d079-48d8-986e-eb0ecd0566e8" RegularExpression="^33\|[^|]*\|800375AC\|400000(?&gt;01)\|">
+            <Actions>
+              <Action OrderNumber="1" TriggerId="f7362953-6b4f-4faa-82b3-fd340b997748" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${job})}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
     </Folders>
     <Triggers>
       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Dynamis Marks Clear" Id="5ed5fe50-cc0d-483c-ad37-9e5fc4af94f9" RegularExpression="^26\|[^\|]*\|D7(?&lt;id&gt;[3])\|[^\|]*\|(?&lt;dur&gt;\d*)(?:[^\|]*\|){4}(?&lt;player&gt;[^|]*)\|">
@@ -376,7 +398,7 @@
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
-      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" IsReadme="True" Name="##INSTRUCTIONS README" Id="f1f39291-0474-4294-a32f-b93bc7f85088" RegularExpression="https://github.com/SableCentaur/ffxiv/blob/master/Triggernometry/XMLs/Dynamis%20AM%20README.md" Description="https://github.com/SableCentaur/ffxiv/blob/master/Triggernometry/XMLs/Dynamis%20AM%20README.md">
+      <Trigger Enabled="false" Source="FFXIVNetwork" Sequential="True" IsReadme="True" Name="##INSTRUCTIONS README" Id="f1f39291-0474-4294-a32f-b93bc7f85088" RegularExpression="https://github.com/SableCentaur/ffxiv/blob/master/Triggernometry/XMLs/Dynamis%20AM%20README.md" Description="https://github.com/SableCentaur/ffxiv/blob/master/Triggernometry/XMLs/Dynamis%20AM%20README.md">
         <Actions />
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
