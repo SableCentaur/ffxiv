@@ -358,7 +358,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="And" />
           </Trigger>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Dynamis Telesto Enter Instance" Id="600a548e-d079-48d8-986e-eb0ecd0566e8" RegularExpression="^33\|[^|]*\|800375AC\|400000(?&gt;01)\|">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Dynamis Telesto Enter Instance" Id="600a548e-d079-48d8-986e-eb0ecd0566e8" RegularExpression="^33\|[^|]*\|8003(75AC|4E6D)\|400000(?&gt;01)\|">
             <Actions>
               <Action OrderNumber="1" TriggerId="f7362953-6b4f-4faa-82b3-fd340b997748" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or">
