@@ -195,7 +195,12 @@
               <Action OrderNumber="6" OBSEndPoint="" TriggerId="5ed5fe50-cc0d-483c-ad37-9e5fc4af94f9" TriggerForce="regexp" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="7" OBSEndPoint="" TriggerId="ea55a1de-c80f-47c8-bb8b-a5334d171056" TriggerForce="regexp,conditions,parent" ActionType="Trigger" ExecutionDelayExpression="2500">
+              <Action OrderNumber="7" LogMessageTarget="NetworkFFXIV" LogMessageText="01||462|" LogProcess="True" OBSEndPoint="" TriggerId="ea55a1de-c80f-47c8-bb8b-a5334d171056" TriggerForce="regexp,conditions,parent,active" ActionType="LogMessage">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${elvar:TOPdynamisAMmarkers}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="8" OBSEndPoint="" TriggerId="ea55a1de-c80f-47c8-bb8b-a5334d171056" TriggerForce="regexp,conditions,parent,active" ActionType="Trigger" ExecutionDelayExpression="2500">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${elvar:TOPdynamisAMmarkers}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
@@ -222,6 +227,59 @@
       <Folder Id="c2b8df4b-300b-4232-9d0b-9520a52f5983" Name="*copy to local* - READ INSTRUCTIONS TO CUSTOMIZE" Enabled="true">
         <Folders />
         <Triggers>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Dynamis AM Markers" Id="ea55a1de-c80f-47c8-bb8b-a5334d171056" RegularExpression="^01\|[^|]*\|(?:462|3E3)\|" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="1000" EditAutofire="True">
+            <Actions>
+              <Action OrderNumber="1" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="${lvar:dTelestoPartyMembernames[4]}" ActionType="ListVariable" Asynchronous="False" Description="Do Not Edit" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="triangle" ActionType="ListVariable" Asynchronous="False" Description="NEAR WORLD Marker" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="plus" ActionType="ListVariable" Asynchronous="False" Description="DISTANT WORLD Marker" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="4" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="attack1" ActionType="ListVariable" Asynchronous="False" Description="MECH 1 Marker" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="5" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="attack2" ActionType="ListVariable" Asynchronous="False" Description="MECH2 Marker" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="6" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="ignore1" ActionType="ListVariable" Asynchronous="False" Description="FAR1 BAIT Marker" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="7" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="ignore2" ActionType="ListVariable" Asynchronous="False" Description="FAR2 BAIT Marker" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="8" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="bind1" ActionType="ListVariable" Asynchronous="False" Description="NEAR1 BAIT Marker" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="9" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="bind2" ActionType="ListVariable" Asynchronous="False" Description="NEAR2 BAIT Marker" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="10" LogMessageText="TOP Dynamis Automarker MARKERS: Near: ${lvar:TOPdynamisAMmarkers[1]} Far: ${lvar:TOPdynamisAMmarkers[2]} Mech1: ${lvar:TOPdynamisAMmarkers[3]} Mech2: ${lvar:TOPdynamisAMmarkers[4]} Far1: ${lvar:TOPdynamisAMmarkers[5]} Far2: ${lvar:TOPdynamisAMmarkers[6]} Near1: ${lvar:TOPdynamisAMmarkers[7]} Near2: ${lvar:TOPdynamisAMmarkers[8]} " LogLevel="Info" OBSEndPoint="" ActionType="LogMessage" Description="Do Not Edit" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${elvar:TOPdynamisAMmarkers}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Dynamis AM Priority &amp; Delays" Id="caf0b53e-2cfa-4392-9380-5470c6782d49" RegularExpression="^20\|(?:[^\|]*\|){3}(?&lt;cast&gt;7B88|801[45])\|" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="1000" EditAutofire="True">
             <Actions>
               <Action OrderNumber="1" ListVariableName="TOPdynamisAMparty" ListVariableExpression="${lvar:dTelestoPartyMembernames[4]}" ActionType="ListVariable" Asynchronous="False" Description="Do Not Edit" DescriptionOverride="True">
@@ -266,59 +324,6 @@
               </Action>
               <Action OrderNumber="13" LogMessageText="TOP Dynamis Automarker ${cast} &#xD;&#xA;PRIORITY: ${lvar:TOPdynamisAMparty[1]} - ${lvar:TOPdynamisAMparty[2]} - ${lvar:TOPdynamisAMparty[3]} - ${lvar:TOPdynamisAMparty[4]} - ${lvar:TOPdynamisAMparty[5]} - ${lvar:TOPdynamisAMparty[6]} - ${lvar:TOPdynamisAMparty[7]} - ${lvar:TOPdynamisAMparty[8]} &#xD;&#xA;DELAYS: Sigma/Omega ${var:TOPdynamisAMdelay} - MultiMarker ${var:TOPdynamisAMmarkdelay}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage" Description="Do Not Edit" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
-              </Action>
-            </Actions>
-            <Condition Enabled="false" Grouping="Or" />
-          </Trigger>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Dynamis AM Markers" Id="ea55a1de-c80f-47c8-bb8b-a5334d171056" RegularExpression="^01\|[^|]*\|(?:462|3E3)\|" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="1000" EditAutofire="True">
-            <Actions>
-              <Action OrderNumber="1" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="${lvar:dTelestoPartyMembernames[4]}" ActionType="ListVariable" Asynchronous="False" Description="Do Not Edit" DescriptionOverride="True">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-              <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="triangle" ActionType="ListVariable" Asynchronous="False" Description="NEAR WORLD Marker" DescriptionOverride="True">
-                <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                </Condition>
-              </Action>
-              <Action OrderNumber="3" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="plus" ActionType="ListVariable" Asynchronous="False" Description="DISTANT WORLD Marker" DescriptionOverride="True">
-                <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                </Condition>
-              </Action>
-              <Action OrderNumber="4" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="attack1" ActionType="ListVariable" Asynchronous="False" Description="MECH 1 Marker" DescriptionOverride="True">
-                <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                </Condition>
-              </Action>
-              <Action OrderNumber="5" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="attack2" ActionType="ListVariable" Asynchronous="False" Description="MECH2 Marker" DescriptionOverride="True">
-                <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                </Condition>
-              </Action>
-              <Action OrderNumber="6" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="ignore1" ActionType="ListVariable" Asynchronous="False" Description="FAR1 BAIT Marker" DescriptionOverride="True">
-                <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                </Condition>
-              </Action>
-              <Action OrderNumber="7" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="ignore2" ActionType="ListVariable" Asynchronous="False" Description="FAR2 BAIT Marker" DescriptionOverride="True">
-                <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                </Condition>
-              </Action>
-              <Action OrderNumber="8" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="bind1" ActionType="ListVariable" Asynchronous="False" Description="NEAR1 BAIT Marker" DescriptionOverride="True">
-                <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                </Condition>
-              </Action>
-              <Action OrderNumber="9" ListVariableOp="Push" ListVariableName="TOPdynamisAMmarkers" ListVariableExpression="bind2" ActionType="ListVariable" Asynchronous="False" Description="NEAR2 BAIT Marker" DescriptionOverride="True">
-                <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${zone}" ExpressionTypeL="Numeric" ExpressionR="462" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                </Condition>
-              </Action>
-              <Action OrderNumber="10" LogMessageText="TOP Dynamis Automarker MARKERS: Near: ${lvar:TOPdynamisAMmarkers[1]} Far: ${lvar:TOPdynamisAMmarkers[2]} Mech1: ${lvar:TOPdynamisAMmarkers[3]} Mech2: ${lvar:TOPdynamisAMmarkers[4]} Far1: ${lvar:TOPdynamisAMmarkers[5]} Far2: ${lvar:TOPdynamisAMmarkers[6]} Near1: ${lvar:TOPdynamisAMmarkers[7]} Near2: ${lvar:TOPdynamisAMmarkers[8]} " LogLevel="Info" OBSEndPoint="" ActionType="LogMessage" Description="Do Not Edit" DescriptionOverride="True">
-                <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${elvar:TOPdynamisAMmarkers}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                </Condition>
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
