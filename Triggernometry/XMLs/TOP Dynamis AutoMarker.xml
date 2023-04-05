@@ -525,7 +525,7 @@
               <ConditionSingle Enabled="true" ExpressionL="${evar:TOPdynamisAMmarkdelay}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
             </Condition>
           </Action>
-          <Action OrderNumber="15" LogMessageText="TOP Dynamis Automarker v2.0 &#xD;&#xA;Far Bait 1: ${lvar:TOPdynamisAMparty[1]}, &#xD;&#xA;Far Bait 2: ${lvar:TOPdynamisAMparty[2]}, &#xD;&#xA;Near Bait 1: ${lvar:TOPdynamisAMparty[4]}, &#xD;&#xA;Near Bait 2: ${lvar:TOPdynamisAMparty[3]}, &#xD;&#xA;Delay: ${var:TOPdynamisAMdelay}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage" Asynchronous="False">
+          <Action OrderNumber="15" LogMessageText="TOP Dynamis Automarker v2.1 &#xD;&#xA;Far Bait 1: ${lvar:TOPdynamisAMparty[1]}, &#xD;&#xA;Far Bait 2: ${lvar:TOPdynamisAMparty[2]}, &#xD;&#xA;Near Bait 1: ${lvar:TOPdynamisAMparty[4]}, &#xD;&#xA;Near Bait 2: ${lvar:TOPdynamisAMparty[3]}, &#xD;&#xA;Delay: ${var:TOPdynamisAMdelay}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
           <Action OrderNumber="16" ListVariableName="TOPdynamisAMparty" ListVariableIndex="${lvar:TOPdynamisAMparty.indexof(${var:TOPdynamisAMsecondfar})}" ActionType="ListVariable" ExecutionDelayExpression="3000">
