@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="4d40f224-0c34-4582-85f2-5122bc07f599" Name="Brink 182 Diagrams" Enabled="true">
+    <Folders />
+    <Triggers>
+      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="*copy to local* Settings" Id="6e75a751-0a6d-40e9-ac7a-e0300c1f167a" RegularExpression="" EditAutofire="True">
+        <Actions>
+          <Action OrderNumber="1" ListVariableExpressionType="Numeric" ListVariableName="brink182diagconfig" ListVariableExpression="${_imageaura[buffs.preview1].x}" ListVariableIndex="1" ListSourcePersist="True" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" ActionType="ListVariable" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="brink182config" AuraImage="C:\Users\Sable\Downloads\Brink182Diagram1.png" AuraXIniExpression="1956" AuraYIniExpression="73" AuraWIniExpression="456" AuraHIniExpression="911" AuraOIniExpression="0" AuraTTLTickExpression="5-${_since}" ActionType="Aura" Description="Double click to edit -&gt; Use Visual Guide for placement" DescriptionOverride="True">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="brink182diagconfig" ListVariableExpression="${_imageaura[brink182config].x}" ListVariableIndex="1" ListSourcePersist="True" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" ActionType="ListVariable" ExecutionDelayExpression="50" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="brink182diagconfig" ListVariableExpression="${_imageaura[brink182config].y}" ListVariableIndex="1" ListSourcePersist="True" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" ActionType="ListVariable" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="brink182diagconfig" ListVariableExpression="${_imageaura[brink182config].w}" ListVariableIndex="1" ListSourcePersist="True" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" ActionType="ListVariable" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="6" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="brink182diagconfig" ListVariableExpression="${_imageaura[brink182config].h}" ListVariableIndex="1" ListSourcePersist="True" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" Enabled="False" ActionType="ListVariable" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="DSR Playstation" Id="14cdfc45-37a3-4c91-89c0-3f86e032fab3" RegularExpression="^20\|(?:[^|]*\|){2}Ser Charibert\|62DE\|">
+        <Actions>
+          <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="C:\Users\Sable\Downloads\DSR-Playstation.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="100" AuraTTLTickExpression="10-${_since}" ActionType="Aura">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
