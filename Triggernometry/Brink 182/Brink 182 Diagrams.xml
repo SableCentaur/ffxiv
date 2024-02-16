@@ -24,6 +24,15 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="DSR Wroth" Id="95227acb-2d66-4fb2-b5e2-e97f00292173" RegularExpression="^20\|(?:[^|]*\|){2}Nidhogg\|6D45\|" PeriodRefire="Deny">
+                <Actions>
+                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/DSR-Wroth.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="30-${_since}" ActionType="Aura" RefireRequeue="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
             </Triggers>
           </Folder>
         </Folders>
