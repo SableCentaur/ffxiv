@@ -1,0 +1,20 @@
+hideall "--Reset--"
+hideall "--sync--"
+
+0.0 "--Reset--" sync / 21:........:4000000F:/ window 100000 jump 0
+
+0.0 "--sync--" sync /Engage!/ window 0,1
+0.0 "--sync--" sync / 104:[^:]*:1($|:)/ window 0,1
+
+6.5 "Metal Cutter" Ability { id: "1E40", source: "Zurvan" } window 6.5,2.5
+10.6 "Metal Cutter" Ability { id: "1E40", source: "Zurvan" }
+13.7 "Flare Star (circles)" Ability { id: "1C4E", source: "Zurvan" }
+16.7 "Flare Star (explosion)" Ability { id: "1C4F", source: "Zurvan" }
+21.8 "Metal Cutter" Ability { id: "1E3F", source: "Zurvan" }
+28.0 "Metal Cutter" Ability { id: "1E3F", source: "Zurvan" }
+32.1 "Flare Star (circles)" Ability { id: "1C4E", source: "Zurvan" }
+35.0 "Flare Star (explosion)" Ability { id: "1C4F", source: "Zurvan" }
+40.4 "the Purge" Ability { id: "1C50", source: "Zurvan" } window 40.6,10
+49.6 "--untargetable--"
+
+58.5 "--targetable--"
