@@ -1,11 +1,18 @@
 console.log('git raidboss user/raidboss/test.js file');
 
-Options.Triggers.push(
+ Options.Triggers.push(
 	{
 		zoneRegex: /(^The Royal Menagerie$)/,
 		timeline: (data) => {
 
 			const mitList = [];
+			
+			mitList.push(
+				// timeline entries without alerts
+				`10 "Test1"`,
+				`20 "Test2"`
+			);
+			
 			mitList.push(mitMapToTimeline({
 				// alerts that show for every job
 				'Raidboss File Injection Test': [
@@ -54,24 +61,26 @@ Options.Triggers.push(
 						'30%': [
 							20,
 						],
+						25: ['Reprisal', 'Rampart'],
 					}));
 				}
 			}
-			if (data.CanFeint()) {
+ 			if (data.CanFeint()) {
 				mitList.push(mitMapToTimeline({
 					// alerts that show for every melee
 					'Feint': [ // each integer in the list is a timestamp for when the mitigation needs to be active
-						15,
-						25
+						//15,
+						25,
 					],
 				}));
-				if (data.job == 'NIN') {
-					mitList.push(mitMapToTimeline({
-						'Mudra': [
-							15,
-						],
+  				if (data.job == 'NIN') {
+ 					mitList.push(mitMapToTimeline({
+					// mudras
+						5: 'Suiton',
+						15: ['Suiton', 'Feint'],
+						20.5: 'Huton', 
 					}));
-				}
+				} 
 				if (data.job == 'SAM') {
 					mitList.push(mitMapToTimeline({
 						'Third Eye': [
@@ -79,7 +88,7 @@ Options.Triggers.push(
 						],
 					}));
 				}
-			}
+			} 
 			if (data.CanAddle()) {
 				mitList.push(mitMapToTimeline({
 					// alerts that show for every caster
@@ -116,20 +125,16 @@ Options.Triggers.push(
 					}));
 				}
 			}
-			if (data.job == 'DNC' || data.job == 'MCH' || data.job == 'BRD') {
+			if (Util.isRangedDpsJob) {
 				mitList.push(mitMapToTimeline({
 					// alerts that show for every ranged dps
-					'Tactician': [
-						15,
+					'Troubadour': [
 					],
 				}));
-				if (data.job == 'DNC') {
+				if (data.job == 'MCH') {
 					mitList.push(mitMapToTimeline({
-						'Curing Waltz': [
-							10,
-						],
-						'Improvisation': [
-							20,
+						'Dismantle': [
+							15,
 						],
 					}));
 				}
@@ -140,15 +145,25 @@ Options.Triggers.push(
 						],
 					}));
 				}
+				if (data.job == 'DNC') {
+					mitList.push(mitMapToTimeline({
+						'Curing Waltz': [
+							10,
+						],
+						'Improvisation': [
+							20,
+						],
+					}));
+				}
 			}
 
 			console.log("Mit Timeline " + mitList);
 			return mitList;
 		},
-	},
+	}, 
 
 	{
-		zoneRegex: /(^Middle La Noscea$)/,
+		zoneRegex: /(^The Mist$)/,
 		timeline: (data) => {
 			const mitList = [];
 			mitList.push(mitMapToTimeline({

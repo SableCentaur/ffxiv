@@ -1,0 +1,62 @@
+hideall "--Reset--"
+hideall "--sync--"
+
+0.0 "--Reset--" sync / 21:........:4000000F:/ window 100000 jump 0
+
+0.0 "--sync--" sync /Engage!/ window 0,1
+0.0 "--sync--" sync / 104:[^:]*:1($|:)/ window 0,1
+
+# 260 line is start of combat, use that as zero
+# 20 line starts casting, 21 and 22 finish
+# 34 line toggles nameplates - boss becomes un/targetable; final value is 0 for hidden, 1 for show
+# remember to make the .js file and get the zone id from 01 line
+
+# branch example
+# => Snake first branch
+# 58.7 "--sync--" #Ability { id: "7108", source: "Hephaistos" }
+# 63.9 "--sync--" Ability { id: "794C", source: "Hephaistos" } window 100,100 forcejump "snake-first"
+# 71.2 "Snaking Kick?" #Ability { id: "7929", source: "Hephaistos" }
+# 77.3 "Gorgomanteia?" #Ability { id: "791A", source: "Hephaistos" }
+# 83.4 "Into the Shadows?" #Ability { id: "792A", source: "Hephaistos" }
+
+# => Beast first branch
+# 58.7 "--sync--" Ability { id: "7108", source: "Hephaistos" }
+# 63.9 "--sync--" Ability { id: "794B", source: "Hephaistos" } window 100,100 forcejump "beast-first"
+# 70.3 "Footprint?" #Ability { id: "7109", source: "Hephaistos" }
+
+# Snake 1 (Snake first)
+# 163.9 label "snake-first"
+# 163.9 "Reforged Reflection" Ability { id: "794C", source: "Hephaistos" }
+# 171.2 "Snaking Kick" Ability { id: "7929", source: "Hephaistos" }
+# ...
+
+# Beast 1 (Beast first)
+# 1163.9 label "beast-first"
+# 1163.9 "Reforged Reflection" Ability { id: "794B", source: "Hephaistos" }
+# 1170.3 "Footprint" Ability { id: "7109", source: "Hephaistos" } window 100,100
+# ...
+
+0 "--sync--" GameLog { code: "0039", line: "Engage!.*?" } window 100000,100000
+0 "--sync--" GameLog { code: "001D", line: "You bow courteously to the striking dummy.*?" } window 0,1
+3 "Almagest"
+6 "Angry Dummy"
+10 "Long Castbar" duration 10
+15 "Final Sting"
+18 "Pentacle Sac (DPS)"
+25 "Super Tankbuster" GameLog { code: "0038", line: "test sync1.*?" } window 30,30
+30 "Dummy Stands Still"
+40 "Death"
+
+50 "--sync--" GameLog { code: "0038", line: "test sync2.*?" } window 100,1 forcejump "loop"
+
+# Loop test!
+100 label "loop"
+102 "Two"
+103 label "three"
+103 "Three"
+104 "Four"
+106 "Six"
+110 "Ten" #duration 100
+115 "Fifteen"
+118 "Force Jump Three" GameLog { code: "0038", line: "test sync3.*?" } window 10,10 forcejump "three"
+120 "Invisible" GameLog { code: "0038", line: "test sync4.*?" } forcejump 1000
