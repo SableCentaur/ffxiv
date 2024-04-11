@@ -67,7 +67,7 @@
             <Triggers>
               <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Superchain I" Id="2b240db7-72ab-4267-a4cc-c50b256a0bad" RegularExpression="^20\|(?:[^|]*\|){2}Athena\|82DA\|">
                 <Actions>
-                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://i.imgur.com/NXqV0cq.pngf5c08ac9f3&amp;" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="10-${_since}" ActionType="Aura">
+                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://i.imgur.com/NXqV0cq.pngf5c08ac9f3&amp;" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="30-${_since}" ActionType="Aura">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
