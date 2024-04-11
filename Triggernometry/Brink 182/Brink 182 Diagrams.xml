@@ -22,11 +22,52 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="DSR Wroth" Id="95227acb-2d66-4fb2-b5e2-e97f00292173" RegularExpression="^20\|(?:[^|]*\|){2}Nidhogg\|6D45\|" PeriodRefire="Deny">
                 <Actions>
                   <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/DSR-Wroth.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="30-${_since}" ActionType="Aura" RefireRequeue="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="93176fc1-8cfc-4bc7-a27f-e85c6bb6d655" Name="Aloalo" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Spring Crystals 1" Id="a7773265-0c57-4e2e-a83f-23fd5d19e949" RegularExpression="The Dawn Trial will be sealed off">
+                <Actions>
+                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="C:\Users\Sable\Downloads\Alo-Whale.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="57-${_since}" ActionType="Aura" ExecutionDelayExpression="27000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Lala Square" Id="4bb64e84-20d9-4d78-a62d-f77526458d3e" RegularExpression="^20\|(?:[^|]*\|){3}8898\|">
+                <Actions>
+                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="C:\Users\Sable\Downloads\Alo-Lala1.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="15-${_since}" ActionType="Aura">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Lala Lasers" Id="d011c71a-b721-41c4-baa0-a1c62fb88e94" RegularExpression="^20\|(?:[^|]*\|){3}88A0\|">
+                <Actions>
+                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="C:\Users\Sable\Downloads\Alo-Lala2.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="25-${_since}" ActionType="Aura">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="a4532244-55d2-4e20-b202-281d556ba48e" Name="P12S" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Superchain I" Id="2b240db7-72ab-4267-a4cc-c50b256a0bad" RegularExpression="^20\|(?:[^|]*\|){2}Athena\|82DA\|">
+                <Actions>
+                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://i.imgur.com/NXqV0cq.pngf5c08ac9f3&amp;" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="10-${_since}" ActionType="Aura">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
