@@ -72,12 +72,29 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Pangenesis" Id="572c21aa-09f7-41c4-aad7-f0950a1575c5" RegularExpression="">
+                <Actions>
+                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://i.imgur.com/pJJlrBO.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="30-${_since}" ActionType="Aura">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
               </Trigger>
             </Triggers>
           </Folder>
         </Folders>
-        <Triggers />
+        <Triggers>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Test" Id="065a666b-9772-4c1c-971f-a253cc13d10d" RegularExpression="_test">
+            <Actions>
+              <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/DSR-Playstation.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="10-${_since}" ActionType="Aura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+        </Triggers>
       </Folder>
       <Folder Id="27e4dc22-7bb1-4e24-b1eb-5f6c7e41b5c0" Name="7.X Dawntrail" Enabled="true">
         <Folders />
