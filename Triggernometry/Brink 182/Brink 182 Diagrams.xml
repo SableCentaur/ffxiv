@@ -92,12 +92,30 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
       <Folder Id="27e4dc22-7bb1-4e24-b1eb-5f6c7e41b5c0" Name="7.X Dawntrail" Enabled="true">
         <Folders />
+        <Triggers />
+      </Folder>
+      <Folder Id="a06b0baa-afed-4a05-972a-4165cb683684" Name="5.X Shadowbringers" Enabled="true">
+        <Folders>
+          <Folder Id="2735008a-bfb9-4e56-b7a7-21f523fc3b1b" Name="E8S" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Light Rampant" Id="8d2b05d1-b7fc-4d7a-a70f-8b19812d5ecb" RegularExpression="^20\|(?:[^|]*\|){2}Shiva\|4D73\|">
+                <Actions>
+                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/lightrampant.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="45-${_since}" ActionType="Aura">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
         <Triggers />
       </Folder>
     </Folders>
