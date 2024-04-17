@@ -140,6 +140,18 @@
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
+      <Trigger Enabled="true" Source="FFXIVNetwork" Name="On Wipe" Id="d3501a51-d0e1-4e51-82c1-02b80d2e544d" RegularExpression="^33\|[^|]*\|[^|]*\|400000(?&gt;03|0F)\|">
+        <Actions>
+          <Action OrderNumber="1" AuraOp="DeactivateAuraRegex" AuraName="brink182.*" VariableOp="UnsetRegex" VariableName="(?&lt;job&gt;)[A-Za-z]{3}.*" TriggerId="352cf9fb-a0c5-4d66-84aa-a2c50c286c52" TriggerForce="regexp" ActionType="Aura">
+            <Condition Enabled="false" Grouping="Or">
+              <ConditionSingle Enabled="false" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="MNK" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+              <ConditionSingle Enabled="true" ExpressionL="${job}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
     </Triggers>
   </ExportedFolder>
 </TriggernometryExport>
