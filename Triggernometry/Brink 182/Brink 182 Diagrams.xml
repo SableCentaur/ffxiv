@@ -4,95 +4,266 @@
     <Folders>
       <Folder Id="7ba8f0f3-a25e-487e-ba90-882d7482c6bf" Name="6.X Endwalker" Enabled="true">
         <Folders>
-          <Folder ZoneFilterEnabled="True" Id="dcec822a-c13e-40f0-ad0d-67bb31907d49" ZoneFilterRegularExpression="^Dragonsong's\ Reprise\ \(Ultimate\)$" Name="DSR" Enabled="true">
-            <Folders />
-            <Triggers>
-              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="DSR Playstation" Id="14cdfc45-37a3-4c91-89c0-3f86e032fab3" RegularExpression="^20\|(?:[^|]*\|){2}Ser Charibert\|62DE\|">
-                <Actions>
-                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/DSR-Playstation.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="10-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
+          <Folder Id="d4acf95e-cffa-4f36-91c4-2f48327cf9b7" Name="Pandaemonium" Enabled="true">
+            <Folders>
+              <Folder Id="a4532244-55d2-4e20-b202-281d556ba48e" Name="P12S" Enabled="false">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Superchain I" Id="2b240db7-72ab-4267-a4cc-c50b256a0bad" RegularExpression="^20\|(?:[^|]*\|){2}Athena\|82DA\|">
+                    <Actions>
+                      <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://i.imgur.com/NXqV0cq.pngf5c08ac9f3&amp;" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="30-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or" />
-              </Trigger>
-              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="DSR Death of the Heavens" Id="521c0ad0-72f8-4f16-a597-935aab45ebe3" RegularExpression="^20\|(?:[^|]*\|){2}King Thordan\|6B92\|">
-                <Actions>
-                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/DSR-Doom.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="40-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Pangenesis" Id="572c21aa-09f7-41c4-aad7-f0950a1575c5" RegularExpression="">
+                    <Actions>
+                      <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://i.imgur.com/pJJlrBO.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="30-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or" />
-              </Trigger>
-              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="DSR Wroth" Id="95227acb-2d66-4fb2-b5e2-e97f00292173" RegularExpression="^20\|(?:[^|]*\|){2}Nidhogg\|6D45\|" PeriodRefire="Deny">
-                <Actions>
-                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/DSR-Wroth.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="30-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura" RefireRequeue="False">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or" />
-              </Trigger>
-            </Triggers>
+                  </Trigger>
+                </Triggers>
+              </Folder>
+            </Folders>
+            <Triggers />
           </Folder>
-          <Folder Id="93176fc1-8cfc-4bc7-a27f-e85c6bb6d655" Name="Aloalo" Enabled="true">
-            <Folders />
-            <Triggers>
-              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Spring Crystals 1" Id="a7773265-0c57-4e2e-a83f-23fd5d19e949" RegularExpression="The Dawn Trial will be sealed off">
-                <Actions>
-                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="C:\Users\Sable\Downloads\Alo-Whale.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="57-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura" ExecutionDelayExpression="27000">
+          <Folder Id="40f65cb6-a982-4aec-823a-7cd169ef20f1" Name="Ultimates" Enabled="true">
+            <Folders>
+              <Folder ZoneFilterEnabled="True" Id="dcec822a-c13e-40f0-ad0d-67bb31907d49" ZoneFilterRegularExpression="^Dragonsong's\ Reprise\ \(Ultimate\)$" Name="DSR" Enabled="false">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="DSR Playstation" Id="14cdfc45-37a3-4c91-89c0-3f86e032fab3" RegularExpression="^20\|(?:[^|]*\|){2}Ser Charibert\|62DE\|">
+                    <Actions>
+                      <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/DSR-Playstation.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="10-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or" />
-              </Trigger>
-              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Lala Square" Id="4bb64e84-20d9-4d78-a62d-f77526458d3e" RegularExpression="^20\|(?:[^|]*\|){3}8898\|">
-                <Actions>
-                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="C:\Users\Sable\Downloads\Alo-Lala1.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="15-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="DSR Death of the Heavens" Id="521c0ad0-72f8-4f16-a597-935aab45ebe3" RegularExpression="^20\|(?:[^|]*\|){2}King Thordan\|6B92\|">
+                    <Actions>
+                      <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/DSR-Doom.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="40-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or" />
-              </Trigger>
-              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Lala Lasers" Id="d011c71a-b721-41c4-baa0-a1c62fb88e94" RegularExpression="^20\|(?:[^|]*\|){3}88A0\|">
-                <Actions>
-                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="C:\Users\Sable\Downloads\Alo-Lala2.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="25-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="DSR Wroth" Id="95227acb-2d66-4fb2-b5e2-e97f00292173" RegularExpression="^20\|(?:[^|]*\|){2}Nidhogg\|6D45\|" PeriodRefire="Deny">
+                    <Actions>
+                      <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/DSR-Wroth.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="30-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura" RefireRequeue="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or" />
-              </Trigger>
-            </Triggers>
+                  </Trigger>
+                </Triggers>
+              </Folder>
+              <Folder Id="a51a6976-400c-48b1-b447-97346b02f6d3" Name="TOP" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="false" Source="FFXIVNetwork" Sequential="True" Name="P5 #Hello Near/Distant World TTS" Id="4ae4c237-58fa-46e9-a2b1-8d157c73d42f" RegularExpression="^26\|[^|]*\|D7(?&lt;id&gt;[23])\|[^|]*\|(?&lt;dur&gt;[^|]*)\|(?:[^|]*\|){3}(?&lt;player&gt;[^|]*)\|">
+                    <Actions>
+                      <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Near World" ActionType="UseTTS" ExecutionDelayExpression="(${dur}-8)*1000">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Far World" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${player}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="P3 Monitors" Id="693ebade-a911-4b9c-af5b-20fc57533dc4" RegularExpression="^20\|(?:[^|]*\|){3}7B6(?&lt;id&gt;[4BC])\|">
+                    <Actions>
+                      <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="left safe" Enabled="False" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="B" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="SetNumeric" VariableName="brink182.TOPMonitors" VariableExpression="1" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="4" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="3" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/TOP-MonitorsLeft.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="10-${_since}" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="left safe" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="B" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${var:brink182.TOPMonitors}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="4" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/TOP-MonitorsRight.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="10-${_since}" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="left safe" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="C" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${var:brink182.TOPMonitors}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="5" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="right safe" Enabled="False" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="C" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="6" AuraImageMode="Zoom" AuraName="TOPmonitors" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/TOP-MonitorsRight.png" AuraXIniExpression="2570" AuraYIniExpression="413" AuraWIniExpression="501" AuraHIniExpression="505" AuraOIniExpression="75" AuraTTLTickExpression="10-${_since}" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="left safe" Enabled="False" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="C" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${var:TOPMonitors}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="7" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableName="brink182.TOPMonitors" VariableExpression="1" ActionType="Variable" ExecutionDelayExpression="20000">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="4" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="P5 1-Delta" Id="9489daf8-754c-4b15-8a83-90454cb1456d" RegularExpression="^20\|(?:[^|]*\|){3}7B88\|">
+                    <Actions>
+                      <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/TOP-Delta.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="52-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura" ExecutionDelayExpression="40000">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="P5 2.0-Sigma Mid/Far Glitch" Id="ec748365-572e-449b-b631-ba9707a09936" RegularExpression="^26\|[^|]*\|D6([34])\|[^|]*\|(?:[^|]*\|){4}(?&lt;player&gt;[^|]*)\|">
+                    <Actions>
+                      <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" Enabled="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/TOP-SigmaClose.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="30-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura" ExecutionDelayExpression="20000">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="3" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/TOP-SigmaFar.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="30-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="4" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:brink182.TOPSigma}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="P5 2.1-Sigma Near/Far World" Id="7abcb6e6-38a6-400f-b5f8-ee03fbfe7eb0" RegularExpression="^20\|(?:[^\|]*\|){3}8014\|">
+                    <Actions>
+                      <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" Enabled="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="SetNumeric" VariableName="brink182.TOPSigma" VariableExpression="1" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/TOP-Sigma2.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="70-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura" ExecutionDelayExpression="40000">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="4" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableName="brink182.TOPSigma" VariableExpression="1" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="P5 3-Omega" Id="9655d68f-e668-46d2-a71a-ef58ba8018d2" RegularExpression="^20\|(?:[^\|]*\|){3}8015\|">
+                    <Actions>
+                      <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" Enabled="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/TOP-Omega1.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="40-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura" ExecutionDelayExpression="30000">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/TOP-Omega2.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="60-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura" ExecutionDelayExpression="13000">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="P2 Party Synergy Mid/Far Glitch" Id="da61178e-6576-472d-b2ba-7e40b379a7ef" RegularExpression="^26\|[^|]*\|D(?&lt;id&gt;A[BC]|6[34])\|[^|]*\|(?:[^|]*\|){4}(?&lt;player&gt;[^|]*)\|">
+                    <Actions>
+                      <Action OrderNumber="1" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="SetNumeric" VariableName="brink182.TOPSynergy" VariableExpression="1" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="AC" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="AB" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/TOP-Mid.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="15-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="63" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${var:brink182.TOPSynergy}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="3" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/TOP-Remote.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="15-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="64" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${var:brink182.TOPSynergy}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="4" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableName="brink182.TOPSynergy" VariableExpression="1" ActionType="Variable" ExecutionDelayExpression="40000">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="AC" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="AB" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Trigger>
+                </Triggers>
+              </Folder>
+            </Folders>
+            <Triggers />
           </Folder>
-          <Folder Id="a4532244-55d2-4e20-b202-281d556ba48e" Name="P12S" Enabled="true">
-            <Folders />
-            <Triggers>
-              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Superchain I" Id="2b240db7-72ab-4267-a4cc-c50b256a0bad" RegularExpression="^20\|(?:[^|]*\|){2}Athena\|82DA\|">
-                <Actions>
-                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://i.imgur.com/NXqV0cq.pngf5c08ac9f3&amp;" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="30-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
+          <Folder Id="ddc22cdf-d7ad-41ba-a92b-60407df975f5" Name="Criterion" Enabled="true">
+            <Folders>
+              <Folder Id="93176fc1-8cfc-4bc7-a27f-e85c6bb6d655" Name="Aloalo" Enabled="false">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Spring Crystals 1" Id="a7773265-0c57-4e2e-a83f-23fd5d19e949" RegularExpression="The Dawn Trial will be sealed off">
+                    <Actions>
+                      <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="C:\Users\Sable\Downloads\Alo-Whale.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="57-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura" ExecutionDelayExpression="27000">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or" />
-              </Trigger>
-              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Pangenesis" Id="572c21aa-09f7-41c4-aad7-f0950a1575c5" RegularExpression="">
-                <Actions>
-                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://i.imgur.com/pJJlrBO.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="30-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Lala Square" Id="4bb64e84-20d9-4d78-a62d-f77526458d3e" RegularExpression="^20\|(?:[^|]*\|){3}8898\|">
+                    <Actions>
+                      <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="C:\Users\Sable\Downloads\Alo-Lala1.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="15-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or" />
-              </Trigger>
-            </Triggers>
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Lala Lasers" Id="d011c71a-b721-41c4-baa0-a1c62fb88e94" RegularExpression="^20\|(?:[^|]*\|){3}88A0\|">
+                    <Actions>
+                      <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="C:\Users\Sable\Downloads\Alo-Lala2.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="25-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+            </Folders>
+            <Triggers />
           </Folder>
         </Folders>
         <Triggers />
       </Folder>
       <Folder Id="27e4dc22-7bb1-4e24-b1eb-5f6c7e41b5c0" Name="7.X Dawntrail" Enabled="true">
         <Folders>
-          <Folder Id="91e3a9f7-ba12-4e59-bf7f-15a073679f3a" Name="R6 :: Arcadion" Enabled="true">
+          <Folder Id="91e3a9f7-ba12-4e59-bf7f-15a073679f3a" Name="Arcadion" Enabled="true">
             <Folders>
-              <Folder Id="4a317a7a-a318-4120-b953-a7e40b1d0be5" Name="04 - AAC Light-heavyweight M4" Enabled="true">
+              <Folder Id="4a317a7a-a318-4120-b953-a7e40b1d0be5" Name="04 - AAC Light-heavyweight M4" Enabled="false">
                 <Folders>
-                  <Folder Id="5864339f-fb65-4db3-aa98-c19e10371540" Name="Electrope Edge" Enabled="false">
+                  <Folder Id="5864339f-fb65-4db3-aa98-c19e10371540" Name="Electrope Edge" Enabled="true">
                     <Folders />
                     <Triggers>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Electrical Condenser Debuff" Id="148cbf04-d92c-4f04-9c40-6af683e940ab" RegularExpression="^26\|[^\|]*\|F9F\|[^\|]*\|(?&lt;dur&gt;[^\|]*)\|(?:[^\|]*\|){3}(?&lt;target&gt;[^|]*)\|" PrevActions="Interrupt">
@@ -153,7 +324,7 @@
                   </Folder>
                 </Folders>
                 <Triggers>
-                  <Trigger Enabled="false" Source="FFXIVNetwork" Sequential="True" Name="Sidewise Spark" Id="a5200d8b-3431-47a8-9785-4b704f8a0b50" RegularExpression="^20\|(?:[^\|]*\|){3}95E(D|C)\|">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Sidewise Spark" Id="a5200d8b-3431-47a8-9785-4b704f8a0b50" RegularExpression="^20\|(?:[^\|]*\|){3}95E(D|C)\|">
                     <Actions>
                       <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="right safe" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
@@ -170,7 +341,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="D" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="false" Source="FFXIVNetwork" Sequential="True" Name="Stampeding Thunder" Id="fa7a8d93-d639-4d4e-934e-181c688426a0" RegularExpression="^21\|(?:[^\|]*\|){3}95D(3|2)\|">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Stampeding Thunder" Id="fa7a8d93-d639-4d4e-934e-181c688426a0" RegularExpression="^21\|(?:[^\|]*\|){3}95D(3|2)\|">
                     <Actions>
                       <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="West" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
@@ -187,6 +358,26 @@
                   </Trigger>
                 </Triggers>
               </Folder>
+              <Folder Id="ff0ebfc6-acbe-4330-a2a6-818800b80227" Name="01 - AAC Light-heavyweight M1" Enabled="false">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Light parties/partners" Id="943d81b7-c8b1-4217-9be4-03d7df4a9a09" RegularExpression="^20\|(?:[^\|]*\|){2}Black Cat\|945(F|D)\|" PrevActionsRefire="Deny" RefirePeriodExpression="5000">
+                    <Actions>
+                      <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Light parties" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="F" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Partners" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="D" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                </Triggers>
+              </Folder>
             </Folders>
             <Triggers />
           </Folder>
@@ -195,18 +386,23 @@
       </Folder>
       <Folder Id="a06b0baa-afed-4a05-972a-4165cb683684" Name="5.X Shadowbringers" Enabled="true">
         <Folders>
-          <Folder Id="2735008a-bfb9-4e56-b7a7-21f523fc3b1b" Name="E8S" Enabled="true">
-            <Folders />
-            <Triggers>
-              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Light Rampant" Id="8d2b05d1-b7fc-4d7a-a70f-8b19812d5ecb" RegularExpression="^20\|(?:[^|]*\|){2}Shiva\|4D73\|">
-                <Actions>
-                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/lightrampant.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="40-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
+          <Folder Id="1189e816-f672-4eea-b0a8-48220d292c9f" Name="Eden" Enabled="true">
+            <Folders>
+              <Folder Id="2735008a-bfb9-4e56-b7a7-21f523fc3b1b" Name="E8S" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Light Rampant" Id="8d2b05d1-b7fc-4d7a-a70f-8b19812d5ecb" RegularExpression="^20\|(?:[^|]*\|){2}Shiva\|4D73\|">
+                    <Actions>
+                      <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Brink%20182/lightrampant.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="40-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or" />
-              </Trigger>
-            </Triggers>
+                  </Trigger>
+                </Triggers>
+              </Folder>
+            </Folders>
+            <Triggers />
           </Folder>
         </Folders>
         <Triggers />
