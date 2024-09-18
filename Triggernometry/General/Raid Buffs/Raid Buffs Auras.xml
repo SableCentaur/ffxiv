@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<TriggernometryExport Version="1">
+<TriggernometryExport PluginVersion="1.2.0.7">
   <ExportedFolder Id="20a7e813-18b7-4728-b0e3-eea1cb63d175" Name="Raid Buffs 2.0" Enabled="true">
     <Folders>
       <Folder Id="e770948b-e4c9-44ba-bb10-af5792bb0d35" Name="Buff Triggers" Enabled="true">
@@ -7,52 +7,52 @@
         <Triggers>
           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="BRD Song" Id="3cfd443e-5ddc-4519-a304-871fd2452451" RegularExpression="^21\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|(?&lt;song&gt;7[42]|DE7)\|" PrevActions="Interrupt">
             <Actions>
-              <Action OrderNumber="1" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="00000000,2,002000/002603" ActionType="Trigger" Asynchronous="False" Description="Army's Paeon (Remove)" DescriptionOverride="True">
+              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="00000000,2,002000/002603" ActionType="Trigger" Asynchronous="False" Description="Army's Paeon (Remove)" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsList.indexof(200000000002000/002603)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="2" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="00000000,2,002000/002602" ActionType="Trigger" Asynchronous="False" Description="Mage's Ballad (Remove)" DescriptionOverride="True">
+              <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="00000000,2,002000/002602" ActionType="Trigger" Asynchronous="False" Description="Mage's Ballad (Remove)" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsList.indexof(200000000002000/002602)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="00000000,2,002000/002607" ActionType="Trigger" Asynchronous="False" Description="Wanderer's Minuet (Remove)" DescriptionOverride="True">
+              <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="00000000,2,002000/002607" ActionType="Trigger" Asynchronous="False" Description="Wanderer's Minuet (Remove)" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsList.indexof(200000000002000/002607)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="4" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="00000000,2,002000/002603,45,45,0" ActionType="Trigger" Description="Army's Paeon (Add)" DescriptionOverride="True">
+              <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="00000000,2,002000/002603,45,45,0" ActionType="Trigger" Description="Army's Paeon (Add)" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${song}" ExpressionTypeL="String" ExpressionR="74" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="5" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="00000000,2,002000/002602,45,45,0" ActionType="Trigger" Description="Mage's Ballad (Add)" DescriptionOverride="True">
+              <Action OrderNumber="5" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="00000000,2,002000/002602,45,45,0" ActionType="Trigger" Description="Mage's Ballad (Add)" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${song}" ExpressionTypeL="String" ExpressionR="72" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="6" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="00000000,2,002000/002607,45,45,0" ActionType="Trigger" Description="Wanderer's Minuet (Add)" DescriptionOverride="True">
+              <Action OrderNumber="6" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="00000000,2,002000/002607,45,45,0" ActionType="Trigger" Description="Wanderer's Minuet (Add)" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${song}" ExpressionTypeL="String" ExpressionR="DE7" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="7" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="00000000,2,002000/002603" ActionType="Trigger" ExecutionDelayExpression="45000" Asynchronous="False" Description="Army's Paeon (Remove)" DescriptionOverride="True">
+              <Action OrderNumber="7" SoundRouting="None" TTSRouting="None" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="00000000,2,002000/002603" ActionType="Trigger" ExecutionDelayExpression="45000" Asynchronous="False" Description="Army's Paeon (Remove)" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsList.indexof(200000000002000/002603)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="8" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="00000000,2,002000/002602" ActionType="Trigger" Asynchronous="False" Description="Mage's Ballad (Remove)" DescriptionOverride="True">
+              <Action OrderNumber="8" SoundRouting="None" TTSRouting="None" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="00000000,2,002000/002602" ActionType="Trigger" Asynchronous="False" Description="Mage's Ballad (Remove)" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsList.indexof(200000000002000/002602)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="9" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="00000000,2,002000/002607" ActionType="Trigger" Asynchronous="False" Description="Wanderer's Minuet (Remove)" DescriptionOverride="True">
+              <Action OrderNumber="9" SoundRouting="None" TTSRouting="None" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="00000000,2,002000/002607" ActionType="Trigger" Asynchronous="False" Description="Wanderer's Minuet (Remove)" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsList.indexof(200000000002000/002607)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="10" Enabled="False" ActionType="SystemBeep">
+              <Action OrderNumber="10" SoundRouting="None" TTSRouting="None" Enabled="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -61,39 +61,39 @@
               <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="AST Card" Id="ba4f935d-ba5e-486c-9e96-beabc27a7164" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|[^\|]*\|(?&lt;card&gt;113[123456])\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="AST Card" Id="ba4f935d-ba5e-486c-9e96-beabc27a7164" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|[^\|]*\|(?&lt;card&gt;909F|90A2)\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
             <Actions>
-              <Action OrderNumber="1" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},0,003000/003110,15,15,0" ActionType="Trigger" Description="Balance" DescriptionOverride="True">
+              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},0,003000/003110,15,15,0" ActionType="Trigger" Description="Balance" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="${card}" ExpressionTypeL="Numeric" ExpressionR="1131" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${card}" ExpressionTypeL="String" ExpressionR="909F" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="2" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},0,003000/003112,15,15,0" ActionType="Trigger" Description="Arrow" DescriptionOverride="True">
+              <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},0,003000/003112,15,15,0" Enabled="False" ActionType="Trigger" Description="Arrow" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${card}" ExpressionTypeL="Numeric" ExpressionR="1132" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},0,003000/003113,15,15,0" ActionType="Trigger" Description="Spear" DescriptionOverride="True">
+              <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},0,003000/003113,15,15,0" ActionType="Trigger" Description="Spear" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="${card}" ExpressionTypeL="Numeric" ExpressionR="1133" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${card}" ExpressionTypeL="String" ExpressionR="90A2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="4" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},0,003000/003111,15,15,0" ActionType="Trigger" Description="Bole" DescriptionOverride="True">
+              <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},0,003000/003111,15,15,0" Enabled="False" ActionType="Trigger" Description="Bole" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${card}" ExpressionTypeL="Numeric" ExpressionR="1134" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="5" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},0,003000/003114,15,15,0" ActionType="Trigger" Description="Ewer" DescriptionOverride="True">
+              <Action OrderNumber="5" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},0,003000/003114,15,15,0" Enabled="False" ActionType="Trigger" Description="Ewer" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${card}" ExpressionTypeL="Numeric" ExpressionR="1135" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="6" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},0,003000/003115,15,15,0" ActionType="Trigger" Description="Spire" DescriptionOverride="True">
+              <Action OrderNumber="6" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},0,003000/003115,15,15,0" Enabled="False" ActionType="Trigger" Description="Spire" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${card}" ExpressionTypeL="Numeric" ExpressionR="1136" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="7" Enabled="False" ActionType="SystemBeep">
+              <Action OrderNumber="7" SoundRouting="None" TTSRouting="None" Enabled="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -101,39 +101,39 @@
               <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="AST Card OFF" Id="369cc701-fcc7-43ab-8a99-0b43efab3666" RegularExpression="^30\|[^|]*\|(?&lt;id&gt;75[ACDBEF])\|(?:[^|]*\|){2}(?&lt;eid&gt;[A-F0-9]{8})\|(?:[^|]*\|){2}(?&lt;name&gt;[^|]*)\|">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="AST Card OFF" Id="369cc701-fcc7-43ab-8a99-0b43efab3666" RegularExpression="^30\|[^|]*\|(?&lt;id&gt;F31|F2F)\|(?:[^|]*\|){2}(?&lt;eid&gt;[A-F0-9]{8})\|(?:[^|]*\|){2}(?&lt;name&gt;[^|]*)\|">
             <Actions>
-              <Action OrderNumber="1" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="${eid},0,003000/003110" ActionType="Trigger" Description="Balance" DescriptionOverride="True">
+              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="${eid},0,003000/003110" ActionType="Trigger" Description="Balance" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="75A" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="F2F" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="2" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="${eid},0,003000/003112" ActionType="Trigger" Description="Arrow" DescriptionOverride="True">
+              <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="${eid},0,003000/003112" Enabled="False" ActionType="Trigger" Description="Arrow" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="75C" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="${eid},0,003000/003113" ActionType="Trigger" Description="Spear" DescriptionOverride="True">
+              <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="${eid},0,003000/003113" ActionType="Trigger" Description="Spear" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="75D" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="F31" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="4" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="${eid},0,003000/003111" ActionType="Trigger" Description="Bole" DescriptionOverride="True">
+              <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="${eid},0,003000/003111" Enabled="False" ActionType="Trigger" Description="Bole" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="75B" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="5" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="${eid},0,003000/003114" ActionType="Trigger" Description="Ewer" DescriptionOverride="True">
+              <Action OrderNumber="5" SoundRouting="None" TTSRouting="None" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="${eid},0,003000/003114" Enabled="False" ActionType="Trigger" Description="Ewer" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="75E" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="6" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="${eid},0,003000/003115" ActionType="Trigger" Description="Spire" DescriptionOverride="True">
+              <Action OrderNumber="6" SoundRouting="None" TTSRouting="None" TriggerId="775b694c-9143-439f-bf8b-882c08e8d40b" TriggerText="${eid},0,003000/003115" Enabled="False" ActionType="Trigger" Description="Spire" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="75F" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="7" Enabled="False" ActionType="SystemBeep">
+              <Action OrderNumber="7" SoundRouting="None" TTSRouting="None" Enabled="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -143,17 +143,17 @@
           </Trigger>
           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="AST Divination" Id="54f63a47-c36b-490e-b06b-3a20a25c9a41" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|[^\|]*\|40A8\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
             <Actions>
-              <Action OrderNumber="1" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},1,003000/003553,120,15,1" ActionType="Trigger">
+              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},1,003000/003553,120,20,1" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="2" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},1,003000/003553,119" ActionType="Trigger" ExecutionDelayExpression="1000">
+              <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},1,003000/003553,119" ActionType="Trigger" ExecutionDelayExpression="1000">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsActive.indexof(${eid}003000/003553)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" Enabled="False" ActionType="SystemBeep">
+              <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" Enabled="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -164,17 +164,17 @@
           </Trigger>
           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="BRD Battle Voice" Id="50751ce1-48c6-45f5-99d8-d24cf084d2e0" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|[^\|]*\|76\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
             <Actions>
-              <Action OrderNumber="1" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},3,002000/002601,120,15,1" ActionType="Trigger">
+              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},3,002000/002601,120,20,1" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="2" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},3,002000/002601,119" ActionType="Trigger" ExecutionDelayExpression="1000">
+              <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},3,002000/002601,119" ActionType="Trigger" ExecutionDelayExpression="1000">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsActive.indexof(${eid}002000/002601)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" Enabled="False" ActionType="SystemBeep">
+              <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" Enabled="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -185,17 +185,17 @@
           </Trigger>
           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="BRD Radiant Finale" Id="42652947-26b7-4cf7-8f06-e3a0f6fed544" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|[^\|]*\|64B9\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
             <Actions>
-              <Action OrderNumber="1" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},3,002000/002622,110,15,1" ActionType="Trigger">
+              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},3,002000/002622,110,20,1" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="2" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},3,002000/002622,109" ActionType="Trigger" ExecutionDelayExpression="1000">
+              <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},3,002000/002622,109" ActionType="Trigger" ExecutionDelayExpression="1000">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsActive.indexof(${eid}002000/002622)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" Enabled="False" ActionType="SystemBeep">
+              <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" Enabled="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -204,40 +204,19 @@
               <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="DNC Devilment" Id="40f095d7-2da5-4f74-b3db-a817ebf1c0a5" RegularExpression="^26\|[^\|]*\|721\|(?:[^\|]*\|){2}(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|[A-Z0-9]{8}\|(?&lt;name&gt;[A-Za-z']+ [A-Za-z']+)\|">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="DNC Technical Finish" Id="4f2ed2d5-a753-4436-9105-932d4a149e3b" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|[^\|]*\|(?:81C2|81C1|81C0|81BF|3E84)\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
             <Actions>
-              <Action OrderNumber="1" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},4,003000/003471,120,20,1" ActionType="Trigger">
+              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},4,003000/003474,${numeric:round(120-(${_systemtimems}-${var:buff${eid}technical_stepused})/1000)},20,1" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="2" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},4,003000/003471,119" ActionType="Trigger" ExecutionDelayExpression="1000">
-                <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsActive.indexof(${eid}003000/003471)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                </Condition>
-              </Action>
-              <Action OrderNumber="3" Enabled="False" ActionType="SystemBeep">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-            </Actions>
-            <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-            </Condition>
-          </Trigger>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="DNC Technical Finish" Id="4f2ed2d5-a753-4436-9105-932d4a149e3b" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|[^\|]*\|(?:3E84|3F41|3F42|3F43|3F44)\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
-            <Actions>
-              <Action OrderNumber="1" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},4,003000/003474,${numeric:round(120-(${_systemtimems}-${var:buff${eid}technical_stepused})/1000)},20,1" ActionType="Trigger">
-                <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                </Condition>
-              </Action>
-              <Action OrderNumber="2" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},4,003000/003474,${numeric:round(120-(${_systemtimems}-${var:buff${eid}technical_stepused})/1000)}" ActionType="Trigger" ExecutionDelayExpression="1000">
+              <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},4,003000/003474,${numeric:round(120-(${_systemtimems}-${var:buff${eid}technical_stepused})/1000)}" ActionType="Trigger" ExecutionDelayExpression="1000">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsActive.indexof(${eid}003000/003474)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" Enabled="False" ActionType="SystemBeep">
+              <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" Enabled="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -248,36 +227,36 @@
           </Trigger>
           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="DNC Technical Step" Id="8e3d3dd2-ea4a-4b0d-b15a-6ec385042bc2" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|3E7E\|">
             <Actions>
-              <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffsList" ListVariableExpression="4${eid}003000/003474" ListVariableIndex="1" ActionType="ListVariable" Asynchronous="False">
+              <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffsList" ListVariableExpression="4${eid}003000/003474" ListVariableIndex="1" SoundRouting="None" TTSRouting="None" ActionType="ListVariable" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsList.indexof(4${eid}003000/003474)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="2" ListVariableOp="SortAlphaAsc" ListVariableName="buffsList" ListVariableExpression="${eid}${skill}" ListVariableIndex="1" ActionType="ListVariable">
+              <Action OrderNumber="2" ListVariableOp="SortAlphaAsc" ListVariableName="buffsList" ListVariableExpression="${eid}${skill}" ListVariableIndex="1" SoundRouting="None" TTSRouting="None" ActionType="ListVariable">
                 <Condition Enabled="false" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:dDots.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="buff${eid}technical_stepused" VariableExpression="${_systemtimems}" ActionType="Variable">
+              <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" VariableOp="SetNumeric" VariableName="buff${eid}technical_stepused" VariableExpression="${_systemtimems}" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="buff${eid}technical_steps" VariableExpression="5" ActionType="Variable">
+              <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" VariableOp="SetNumeric" VariableName="buff${eid}technical_steps" VariableExpression="5" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="5" AuraImageMode="CenterImage" AuraName="buff${eid}003000/003474" AuraImage="https://xivapi.com/i/003000/003473.png" AuraXIniExpression="${plvar:BuffsList[1]}" AuraYIniExpression="${plvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${plvar:BuffsList[1]}+(${lvar:buffsList.indexof(4${eid}003000/003474)}-1)*45" TextAuraAlignment="MiddleLeft" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" ActionType="Aura" DebugLevel="Info">
+              <Action OrderNumber="5" AuraImageMode="CenterImage" AuraName="buff${eid}003000/003474" AuraImage="https://xivapi.com/i/003000/003473.png" AuraXIniExpression="${plvar:BuffsList[1]}" AuraYIniExpression="${plvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${plvar:BuffsList[1]}+(${lvar:buffsList.indexof(4${eid}003000/003474)}-1)*45" SoundRouting="None" TTSRouting="None" TextAuraAlignment="MiddleLeft" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" ActionType="Aura" DebugLevel="Info">
                 <Condition Enabled="false" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsList.indexof(${job}${eid}${order}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="6" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="18" TextAuraForeground="#3DCCF5" TextAuraOutline="Black" TextAuraName="buff${eid}003000/003474" TextAuraExpression="${var:buff${eid}technical_steps}" TextAuraXIniExpression="${_imageaura[buff${eid}003000/003474].x}-10" TextAuraYIniExpression="${_imageaura[buff${eid}003000/003474].y}+10" TextAuraWIniExpression="45+20" TextAuraHIniExpression="45" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buff${eid}003000/003474].x}-10" TextAuraTTLTickExpression="15-${_since}" TextAuraUseOutline="True" TextAuraFontName="Malgun Gothic" ActionType="TextAura" DebugLevel="Warning">
+              <Action OrderNumber="6" SoundRouting="None" TTSRouting="None" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="18" TextAuraForeground="#3DCCF5" TextAuraOutline="Black" TextAuraName="buff${eid}003000/003474" TextAuraExpression="${var:buff${eid}technical_steps}" TextAuraXIniExpression="${_imageaura[buff${eid}003000/003474].x}-10" TextAuraYIniExpression="${_imageaura[buff${eid}003000/003474].y}+10" TextAuraWIniExpression="45+20" TextAuraHIniExpression="45" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buff${eid}003000/003474].x}-10" TextAuraTTLTickExpression="15-${_since}" TextAuraFontName="Malgun Gothic" ActionType="TextAura" DebugLevel="Warning">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="7" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},4,003000/003474,${numeric:round(120-(${_systemtimems}-${var:buff${eid}technical_stepused})/1000)}" ActionType="Trigger" ExecutionDelayExpression="15000">
+              <Action OrderNumber="7" SoundRouting="None" TTSRouting="None" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},4,003000/003474,${numeric:round(120-(${_systemtimems}-${var:buff${eid}technical_stepused})/1000)}" ActionType="Trigger" ExecutionDelayExpression="15000">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsActive.indexof(${eid}003000/003474)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="8" VariableName="buff${eid}technical_steps" VariableExpression="5" ActionType="Variable">
+              <Action OrderNumber="8" SoundRouting="None" TTSRouting="None" VariableName="buff${eid}technical_steps" VariableExpression="5" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -288,28 +267,31 @@
           </Trigger>
           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="DNC Technical Step Countdown" Id="2069d939-1086-4d9a-839e-ae010319a510" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|3E(?:7F|80|81|82)\|">
             <Actions>
-              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="buff${eid}technical_steps" VariableExpression="${var:buff${eid}technical_steps}-1" ActionType="Variable">
+              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" VariableOp="SetNumeric" VariableName="buff${eid}technical_steps" VariableExpression="${var:buff${eid}technical_steps}-1" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
-            <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            <Condition Enabled="true" Grouping="And">
+              <ConditionGroup Enabled="true" Grouping="Or">
+                <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              </ConditionGroup>
+              <ConditionSingle Enabled="true" ExpressionL="${evar:buff${eid}technical_steps}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Trigger>
           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="DRG Battle Littany" Id="0d06032b-c8c8-4921-91dc-bbf603cce8ed" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|[^\|]*\|DE5\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
             <Actions>
-              <Action OrderNumber="1" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},5,002000/002585,120,15,1" ActionType="Trigger">
+              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},6,002000/002585,120,20,1" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="2" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},5,002000/002585,119" ActionType="Trigger" ExecutionDelayExpression="1000">
+              <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},6,002000/002585,119" ActionType="Trigger" ExecutionDelayExpression="1000">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsActive.indexof(${eid}002000/002585)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" Enabled="False" ActionType="SystemBeep">
+              <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" Enabled="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -320,17 +302,17 @@
           </Trigger>
           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="MNK Brotherhood" Id="d5a74ac0-26c9-4a66-a1de-b0f6dc210e60" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|[^\|]*\|1CE4\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
             <Actions>
-              <Action OrderNumber="1" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},6,002000/002542,120,15,1" ActionType="Trigger">
+              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},7,002000/002542,120,20,1" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="2" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},6,002000/002542,119" ActionType="Trigger" ExecutionDelayExpression="1000">
+              <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},7,002000/002542,119" ActionType="Trigger" ExecutionDelayExpression="1000">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsActive.indexof(${eid}002000/002542)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" Enabled="False" ActionType="SystemBeep">
+              <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" Enabled="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -339,14 +321,14 @@
               <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="NIN Mug" Id="53eff36c-e4ca-4dbc-aba9-c808681dcbe3" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|[^\|]*\|8C8\|">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="NIN Mug" Id="53eff36c-e4ca-4dbc-aba9-c808681dcbe3" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|[^\|]*\|(?:8C8|905D)\|">
             <Actions>
-              <Action OrderNumber="1" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},7,000000/000613,120,20,1" ActionType="Trigger">
+              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},8,000000/000613,120,20,1" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="2" Enabled="False" ActionType="SystemBeep">
+              <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" Enabled="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -357,18 +339,15 @@
           </Trigger>
           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="RDM Embolden" Id="0e81fa26-dde1-4aa9-9c55-49c13e39385f" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|[^\|]*\|1D60\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
             <Actions>
-              <Action OrderNumber="1" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},8,003000/003218,120,20,1" ActionType="Trigger">
+              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},9,003000/003218,120,20,1" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="2" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},8,003000/003218,119" ActionType="Trigger" ExecutionDelayExpression="1000">
+              <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},9,003000/003218,119" ActionType="Trigger" ExecutionDelayExpression="1000">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsActive.indexof(${eid}003000/003218)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
-              </Action>
-              <Action OrderNumber="3" Enabled="False" ActionType="SystemBeep">
-                <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
             <Condition Enabled="true" Grouping="Or">
@@ -378,17 +357,17 @@
           </Trigger>
           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="RPR Arcane Circle" Id="6b3d4c87-c58b-4d73-83b5-44b1f784c75d" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|[^\|]*\|5F55\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
             <Actions>
-              <Action OrderNumber="1" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},9,003000/003633,120,20,1" ActionType="Trigger">
+              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},a,003000/003633,120,20,1" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="2" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},9,003000/003633,119" ActionType="Trigger" ExecutionDelayExpression="1000">
+              <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},a,003000/003633,119" ActionType="Trigger" ExecutionDelayExpression="1000">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsActive.indexof(${eid}003000/003633)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" Enabled="False" ActionType="SystemBeep">
+              <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" Enabled="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -399,12 +378,12 @@
           </Trigger>
           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="SCH Chain Stratagem" Id="cfd6d823-ffed-4639-a21c-4ed39f202aae" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|[^\|]*\|1D0C\|">
             <Actions>
-              <Action OrderNumber="1" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},a,002000/002815,120,15,1" ActionType="Trigger">
+              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},b,002000/002815,120,20,1" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="2" Enabled="False" ActionType="SystemBeep">
+              <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" Enabled="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -415,17 +394,142 @@
           </Trigger>
           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="SMN Searing Light" Id="5efcf4c7-d886-4514-b6b8-5706e37f0f70" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|[^\|]*\|64C9\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
             <Actions>
-              <Action OrderNumber="1" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},b,002000/002780,120,30,1" ActionType="Trigger">
+              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},c,002000/002780,120,20,1" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="2" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},b,002000/002780t,119" ActionType="Trigger" ExecutionDelayExpression="1000">
+              <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},c,002000/002780,119" ActionType="Trigger" ExecutionDelayExpression="1000">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsActive.indexof(${eid}002000/002780)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" Enabled="False" ActionType="SystemBeep">
+              <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" Enabled="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Trigger>
+          <Trigger Enabled="false" Source="FFXIVNetwork" Sequential="True" Name="DRG Tether" Id="53913abf-f14c-4ad7-b0b6-14b6ce59006f" RegularExpression="^26\|[^\|]*\|5AE\|(?:[^\|]*\|){2}(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|[A-Z0-9]{8}\|(?&lt;name&gt;[A-Za-z']+ [A-Za-z']+)\|">
+            <Actions>
+              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},5,002000/002587,120,20,1" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},5,002000/002587,119" ActionType="Trigger" ExecutionDelayExpression="1000">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsActive.indexof(${eid}002000/002587)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" Enabled="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="DRG Tether" Id="8d44c043-3917-4b37-bbb6-24ef74c1b60d" RegularExpression="^21\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;caster&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|1CE6\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
+            <Actions>
+              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},0,003000/003110,15,15,0" Enabled="False" ActionType="Trigger" Description="Balance" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${card}" ExpressionTypeL="Numeric" ExpressionR="1131" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},5,002000/002587,120,20,1" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${caster}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},5,002000/002587,120" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="Not">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${caster}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},5,002000/002587,120" Enabled="False" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="Not">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${caster}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="5" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},0,003000/003112,15,15,0" Enabled="False" ActionType="Trigger" Description="Arrow" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${card}" ExpressionTypeL="Numeric" ExpressionR="1132" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="6" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},0,003000/003113,15,15,0" Enabled="False" ActionType="Trigger" Description="Spear" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${card}" ExpressionTypeL="Numeric" ExpressionR="1133" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="7" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},0,003000/003111,15,15,0" Enabled="False" ActionType="Trigger" Description="Bole" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${card}" ExpressionTypeL="Numeric" ExpressionR="1134" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="8" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},0,003000/003114,15,15,0" Enabled="False" ActionType="Trigger" Description="Ewer" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${card}" ExpressionTypeL="Numeric" ExpressionR="1135" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="9" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},0,003000/003115,15,15,0" Enabled="False" ActionType="Trigger" Description="Spire" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${card}" ExpressionTypeL="Numeric" ExpressionR="1136" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="10" SoundRouting="None" TTSRouting="None" Enabled="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="PCT Starry Muse" Id="26418f01-0e16-45f8-8c09-b96749134311" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|[^\|]*\|8773\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
+            <Actions>
+              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},1,003000/003826,120,20,1" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},1,003000/003826,119" ActionType="Trigger" ExecutionDelayExpression="1000">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsActive.indexof(${eid}003000/003826)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" Enabled="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:dTelestoPartyMembers.indexof(${eid})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${eid}].inparty}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="DNC Devilment" Id="40f095d7-2da5-4f74-b3db-a817ebf1c0a5" RegularExpression="^26\|[^\|]*\|721\|(?:[^\|]*\|){2}(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|[A-Z0-9]{8}\|(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
+            <Actions>
+              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerText="${eid},4,003000/003471,120,20,1" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},4,003000/003471,119" Enabled="False" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="Not">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsActive.indexof(${eid}003000/003471)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${ename}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ename}" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" Enabled="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -440,35 +544,38 @@
     <Triggers>
       <Trigger Enabled="true" Source="None" Sequential="True" Name="#Buff Aura" Id="fa121a94-b386-4fb0-b021-5e40efd3fe29" RegularExpression="(?&lt;eid&gt;[A-F0-9]{8}),(?&lt;order&gt;\w),(?&lt;skill&gt;[^,]*),(?&lt;cd&gt;\d{1,3}),(?&lt;ef&gt;\d{1,3}),(?&lt;showcd&gt;\d)" DebugLevel="Info">
         <Actions>
-          <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffsList" ListVariableExpression="${order}${eid}${skill}" ListVariableIndex="1" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffsList" ListVariableExpression="${order}${eid}${skill}" ListVariableIndex="1" SoundRouting="None" TTSRouting="None" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsList.indexof(${order}${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="buffsActive" ListVariableExpression="${eid}${skill}" ListVariableIndex="1" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="buffsActive" ListVariableExpression="${eid}${skill}" ListVariableIndex="1" SoundRouting="None" TTSRouting="None" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsActive.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="3" ListVariableOp="SortAlphaAsc" ListVariableName="buffsList" ListVariableExpression="${eid}${skill}" ListVariableIndex="1" ActionType="ListVariable">
+          <Action OrderNumber="3" ListVariableOp="SortAlphaAsc" ListVariableName="buffsList" ListVariableExpression="${eid}${skill}" ListVariableIndex="1" SoundRouting="None" TTSRouting="None" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:dDots.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="4" AuraImageMode="CenterImage" AuraName="buff${eid}${skill}" AuraImage="https://xivapi.com/i/${skill}.png" AuraXIniExpression="${plvar:BuffsList[1]}" AuraYIniExpression="${plvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${plvar:BuffsList[1]}+(${lvar:buffsList.indexof(${order}${eid}${skill})}-1)*45" TextAuraAlignment="MiddleLeft" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" ActionType="Aura" DebugLevel="Info">
+          <Action OrderNumber="4" AuraImageMode="CenterImage" AuraName="buff${eid}${skill}" AuraImage="https://xivapi.com/i/${skill}.png" AuraXIniExpression="${plvar:BuffsList[1]}" AuraYIniExpression="${plvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${plvar:BuffsList[1]}+(${lvar:buffsList.indexof(${order}${eid}${skill})}-1)*45" SoundRouting="None" TTSRouting="None" TextAuraAlignment="MiddleLeft" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" ActionType="Aura" DebugLevel="Info">
             <Condition Enabled="false" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsList.indexof(${job}${eid}${order}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="5" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="18" TextAuraForeground="#3DCCF5" TextAuraOutline="Black" TextAuraName="buff${eid}${skill}" TextAuraExpression="${numeric:${ef}-${_since}}" TextAuraXIniExpression="${_imageaura[buff${eid}${skill}].x}-10" TextAuraYIniExpression="${_imageaura[buff${eid}${skill}].y}+10" TextAuraWIniExpression="45+20" TextAuraHIniExpression="45" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buff${eid}${skill}].x}-10" TextAuraTTLTickExpression="${ef}-${_since}" TextAuraUseOutline="True" TextAuraFontName="Malgun Gothic" ActionType="TextAura" DebugLevel="Warning">
+          <Action OrderNumber="5" SoundRouting="None" TTSRouting="None" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="18" TextAuraForeground="#000000" TextAuraOutline="#3DCCF5" TextAuraName="buff${eid}${skill}" TextAuraExpression="${numeric:${ef}-${_since}}" TextAuraXIniExpression="${_imageaura[buff${eid}${skill}].x}-10" TextAuraYIniExpression="${_imageaura[buff${eid}${skill}].y}+10" TextAuraWIniExpression="45+20" TextAuraHIniExpression="45" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buff${eid}${skill}].x}-10" TextAuraTTLTickExpression="${cd}-${_since}" TextAuraFontName="Malgun Gothic" ActionType="TextAura" DebugLevel="Warning">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="6" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},${order},${skill},${numeric:${cd}-${ef}}" ActionType="Trigger" ExecutionDelayExpression="${ef}*1000">
+          <Action OrderNumber="6" SoundRouting="None" TTSRouting="None" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="18" TextAuraForeground="#3DCCF5" TextAuraOutline="Black" TextAuraName="buff${eid}${skill}" TextAuraExpression="${numeric:${ef}-${_since}}" TextAuraXIniExpression="${_imageaura[buff${eid}${skill}].x}-10" TextAuraYIniExpression="${_imageaura[buff${eid}${skill}].y}+10" TextAuraWIniExpression="45+20" TextAuraHIniExpression="45" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buff${eid}${skill}].x}-10" TextAuraTTLTickExpression="${ef}-${_since}" TextAuraFontName="Malgun Gothic" Enabled="False" ActionType="TextAura" DebugLevel="Warning">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="7" SoundRouting="None" TTSRouting="None" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerText="${eid},${order},${skill},${numeric:${cd}-${ef}}" ActionType="Trigger" ExecutionDelayExpression="${ef}*1000">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${showcd}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="7" ListVariableOp="Remove" ListVariableName="buffsActive" ListVariableExpression="${eid}${skill}" ListVariableIndex="${lvar:buffsActive.indexof(${eid}${skill})}" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="8" ListVariableOp="Remove" ListVariableName="buffsActive" ListVariableExpression="${eid}${skill}" ListVariableIndex="${lvar:buffsActive.indexof(${eid}${skill})}" SoundRouting="None" TTSRouting="None" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsActive.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
             </Condition>
@@ -478,10 +585,15 @@
       </Trigger>
       <Trigger Enabled="true" Source="None" Sequential="True" Name="#CD Aura" Id="b10d05d2-bfe8-47df-aacc-99a3e6a37403" RegularExpression="(?&lt;eid&gt;[A-F0-9]{8}),(?&lt;order&gt;\w),(?&lt;skill&gt;[^,]*),(?&lt;cd&gt;\d{1,3})" DebugLevel="Info">
         <Actions>
-          <Action OrderNumber="1" AuraImageMode="CenterImage" AuraName="buff${eid}${skill}" AuraImage="https://xivapi.com/i/${skill}.png" AuraXIniExpression="${plvar:BuffsList[1]}" AuraYIniExpression="${plvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="60" AuraXTickExpression="${plvar:BuffsList[1]}+(${lvar:buffsList.indexof(${order}${eid}${skill})}-1)*45" TextAuraAlignment="MiddleLeft" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" ActionType="Aura" DebugLevel="Info">
+          <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="buffsList" ListVariableExpression="${order}${eid}${skill}" ListVariableIndex="1" SoundRouting="None" TTSRouting="None" ActionType="ListVariable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsList.indexof(${order}${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="2" AuraImageMode="CenterImage" AuraName="buff${eid}${skill}" AuraImage="https://xivapi.com/i/${skill}.png" AuraXIniExpression="${plvar:BuffsList[1]}" AuraYIniExpression="${plvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="60" AuraXTickExpression="${plvar:BuffsList[1]}+(${lvar:buffsList.indexof(${order}${eid}${skill})}-1)*45" SoundRouting="None" TTSRouting="None" TextAuraAlignment="MiddleLeft" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" ActionType="Aura" DebugLevel="Info">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="18" TextAuraName="buff${eid}${skill}" TextAuraExpression="${numeric:${cd}-${_since}}" TextAuraXIniExpression="${_imageaura[buff${eid}${skill}].x}-10" TextAuraYIniExpression="${_imageaura[buff${eid}${skill}].y}+10" TextAuraWIniExpression="45+20" TextAuraHIniExpression="45" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buff${eid}${skill}].x}-10" TextAuraTTLTickExpression="${cd}-${_since}" TextAuraUseOutline="True" TextAuraFontName="Malgun Gothic" ActionType="TextAura" DebugLevel="Warning">
+          <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="18" TextAuraForeground="#000000" TextAuraOutline="#3DCCF5" TextAuraName="buff${eid}${skill}" TextAuraExpression="${numeric:${cd}-${_since}}" TextAuraXIniExpression="${_imageaura[buff${eid}${skill}].x}-10" TextAuraYIniExpression="${_imageaura[buff${eid}${skill}].y}+10" TextAuraWIniExpression="45+20" TextAuraHIniExpression="45" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buff${eid}${skill}].x}-10" TextAuraTTLTickExpression="${cd}-${_since}" TextAuraFontName="Malgun Gothic" ActionType="TextAura" DebugLevel="Warning">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
@@ -489,17 +601,17 @@
       </Trigger>
       <Trigger Enabled="true" Source="None" Sequential="True" Name="#Remove Aura" Id="775b694c-9143-439f-bf8b-882c08e8d40b" RegularExpression="(?&lt;eid&gt;[A-F0-9]{8}),(?&lt;order&gt;\w),(?&lt;skill&gt;[^,]*)" DebugLevel="Info">
         <Actions>
-          <Action OrderNumber="1" ListVariableOp="Remove" ListVariableName="buffsList" ListVariableExpression="${order}${eid}${skill}" ListVariableIndex="${lvar:buffsList.indexof(${order}${eid}${skill})}" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="1" ListVariableOp="Remove" ListVariableName="buffsList" ListVariableExpression="${order}${eid}${skill}" ListVariableIndex="${lvar:buffsList.indexof(${order}${eid}${skill})}" SoundRouting="None" TTSRouting="None" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsList.indexof(${order}${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
             </Condition>
           </Action>
-          <Action OrderNumber="2" AuraOp="DeactivateAura" AuraImageMode="CenterImage" AuraName="buff${eid}${skill}" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/General/Raid%20Buffs/${skill}_cooldown.png" AuraXIniExpression="${lvar:BuffsList[1]}" AuraYIniExpression="${lvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffsList.indexof(${order}${eid}${skill})}-1)*45" TextAuraAlignment="MiddleLeft" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" ActionType="Aura" DebugLevel="Info">
+          <Action OrderNumber="2" AuraOp="DeactivateAura" AuraImageMode="CenterImage" AuraName="buff${eid}${skill}" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/General/Raid%20Buffs/${skill}_cooldown.png" AuraXIniExpression="${lvar:BuffsList[1]}" AuraYIniExpression="${lvar:BuffsList[2]}" AuraWIniExpression="45" AuraHIniExpression="45" AuraOIniExpression="100" AuraXTickExpression="${lvar:BuffsList[1]}+(${lvar:buffsList.indexof(${order}${eid}${skill})}-1)*45" SoundRouting="None" TTSRouting="None" TextAuraAlignment="MiddleLeft" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" ActionType="Aura" DebugLevel="Info">
             <Condition Enabled="false" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsList.indexof(${job}${eid}${order}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="3" TextAuraOp="DeactivateAura" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="18" TextAuraName="buff${eid}${skill}" TextAuraExpression="${numeric:${cd}-${_since}}" TextAuraXIniExpression="${_imageaura[buff${eid}${skill}].x}-10" TextAuraYIniExpression="${_imageaura[buff${eid}${skill}].y}+10" TextAuraWIniExpression="45+20" TextAuraHIniExpression="45" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buff${eid}${skill}].x}-10" TextAuraTTLTickExpression="${cd}-${_since}" TextAuraUseOutline="True" TextAuraFontName="Malgun Gothic" ActionType="TextAura" DebugLevel="Warning">
+          <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" TextAuraOp="DeactivateAura" TextAuraAlignment="BottomCenter" TextAuraEffect="Bold" TextAuraFontSize="18" TextAuraName="buff${eid}${skill}" TextAuraExpression="${numeric:${cd}-${_since}}" TextAuraXIniExpression="${_imageaura[buff${eid}${skill}].x}-10" TextAuraYIniExpression="${_imageaura[buff${eid}${skill}].y}+10" TextAuraWIniExpression="45+20" TextAuraHIniExpression="45" TextAuraOIniExpression="100" TextAuraXTickExpression="${_imageaura[buff${eid}${skill}].x}-10" TextAuraTTLTickExpression="${cd}-${_since}" TextAuraFontName="Malgun Gothic" ActionType="TextAura" DebugLevel="Warning">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
@@ -507,28 +619,28 @@
       </Trigger>
       <Trigger Enabled="true" Source="FFXIVNetwork" Name="On Wipe" Id="c5965804-7a8b-4f76-8b3d-6cc5a9184ba3" RegularExpression="^33\|[^|]*\|[^|]*\|400000(?&gt;03|0F)\|">
         <Actions>
-          <Action OrderNumber="1" TriggerOp="CancelTrigger" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerForce="regexp" Enabled="False" ActionType="Trigger">
+          <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerOp="CancelTrigger" TriggerId="b10d05d2-bfe8-47df-aacc-99a3e6a37403" TriggerForce="regexp" Enabled="False" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="MNK" ExpressionTypeR="String" ConditionType="StringEqualCase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="PGL" ExpressionTypeR="String" ConditionType="StringEqualCase" />
             </Condition>
           </Action>
-          <Action OrderNumber="2" TriggerOp="CancelTrigger" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerForce="regexp" ActionType="Trigger">
+          <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" TriggerOp="CancelTrigger" TriggerId="fa121a94-b386-4fb0-b021-5e40efd3fe29" TriggerForce="regexp" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="MNK" ExpressionTypeR="String" ConditionType="StringEqualCase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="PGL" ExpressionTypeR="String" ConditionType="StringEqualCase" />
             </Condition>
           </Action>
-          <Action OrderNumber="3" TriggerOp="CancelTrigger" TriggerId="8e3d3dd2-ea4a-4b0d-b15a-6ec385042bc2" TriggerForce="regexp" ActionType="Trigger">
+          <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" TriggerOp="CancelTrigger" TriggerId="8e3d3dd2-ea4a-4b0d-b15a-6ec385042bc2" TriggerForce="regexp" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="MNK" ExpressionTypeR="String" ConditionType="StringEqualCase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="PGL" ExpressionTypeR="String" ConditionType="StringEqualCase" />
             </Condition>
           </Action>
-          <Action OrderNumber="4" AuraOp="DeactivateAuraRegex" AuraName="buff.*" ListVariableOp="UnsetRegex" ListVariableName="buffsList" VariableOp="UnsetRegex" VariableName="d[A-F0-9]{8}[A-Za-z ]{0,50}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="8.25" TextAuraName="buff.*" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
+          <Action OrderNumber="4" AuraOp="DeactivateAuraRegex" AuraName="buff.*" ListVariableOp="UnsetRegex" ListVariableName="buffsList" SoundRouting="None" TTSRouting="None" VariableOp="UnsetRegex" VariableName="d[A-F0-9]{8}[A-Za-z ]{0,50}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="8.25" TextAuraName="buff.*" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="5" TriggerId="504cb007-193c-4823-afd4-0e7e3bc4b7dd" TriggerForce="regexp" Enabled="False" ActionType="Trigger" Asynchronous="False">
+          <Action OrderNumber="5" SoundRouting="None" TTSRouting="None" TriggerId="504cb007-193c-4823-afd4-0e7e3bc4b7dd" TriggerForce="regexp" Enabled="False" ActionType="Trigger" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${job})}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
             </Condition>
@@ -538,61 +650,61 @@
       </Trigger>
       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Telesto GetPartyMembers" Id="504cb007-193c-4823-afd4-0e7e3bc4b7dd" RegularExpression="">
         <Actions>
-          <Action OrderNumber="1" ListVariableName="dTelestoPartyMembers" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable">
+          <Action OrderNumber="1" ListVariableName="dTelestoPartyMembers" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" ListVariableName="dTelestoPartyMembernames" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable">
+          <Action OrderNumber="2" ListVariableName="dTelestoPartyMembernames" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="3" ListVariableName="dTelestoPartyMembers" OBSEndPoint="" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="Variable">
+          <Action OrderNumber="3" ListVariableName="dTelestoPartyMembers" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="4" JsonResultVariable="dTelestoPartyMembers" JsonEndpointExpression="http://localhost:51323" JsonPayloadExpression="{ &quot;version&quot;: 1, &quot;id&quot;: 123456, &quot;type&quot;: &quot;GetPartyMembers&quot; }" OBSEndPoint="" ActionType="GenericJson">
+          <Action OrderNumber="4" JsonResultVariable="dTelestoPartyMembers" JsonEndpointExpression="http://localhost:51323" JsonPayloadExpression="{ &quot;version&quot;: 1, &quot;id&quot;: 123456, &quot;type&quot;: &quot;GetPartyMembers&quot; }" OBSEndPoint="" SoundRouting="None" TTSRouting="None" ActionType="GenericJson">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="5" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="dTelestoPartyMembers" VariableJsonTarget="dTelestoPartyMembernames" VariableExpression="$.response[*].fullname" ActionType="Variable">
+          <Action OrderNumber="5" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="QueryJsonPathList" VariableName="dTelestoPartyMembers" VariableJsonTarget="dTelestoPartyMembernames" VariableExpression="$.response[*].fullname" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="6" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableName="dTelestoPartyMembers" VariableJsonTarget="dTelestoPartyMembers" VariableExpression="$.response[*].actor" ActionType="Variable">
+          <Action OrderNumber="6" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="QueryJsonPathList" VariableName="dTelestoPartyMembers" VariableJsonTarget="dTelestoPartyMembers" VariableExpression="$.response[*].actor" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="7" ListVariableOp="Join" ListVariableName="dTelestoPartyMembers" ListVariableExpression="," ListVariableIndex="1" ListVariableTarget="dTelestoPartyMembers" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableJsonTarget="dTelestoPartyMembers" VariableExpression="$.response[*].actor" ActionType="ListVariable">
+          <Action OrderNumber="7" ListVariableOp="Join" ListVariableName="dTelestoPartyMembers" ListVariableExpression="," ListVariableIndex="1" ListVariableTarget="dTelestoPartyMembers" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="QueryJsonPathList" VariableJsonTarget="dTelestoPartyMembers" VariableExpression="$.response[*].actor" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="8" ListVariableOp="Join" ListVariableName="dTelestoPartyMembers" ListVariableExpression="," ListVariableIndex="1" ListVariableTarget="dTelestoPartyMembers" OBSEndPoint="" VariableOp="SetString" VariableName="dTelestoPartyMembers" VariableJsonTarget="dTelestoPartyMembers" VariableExpression="${func:toupper:${var:dTelestoPartyMembers}}" ActionType="Variable">
+          <Action OrderNumber="8" ListVariableOp="Join" ListVariableName="dTelestoPartyMembers" ListVariableExpression="," ListVariableIndex="1" ListVariableTarget="dTelestoPartyMembers" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="SetString" VariableName="dTelestoPartyMembers" VariableJsonTarget="dTelestoPartyMembers" VariableExpression="${func:toupper:${var:dTelestoPartyMembers}}" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="9" ListVariableOp="Split" ListVariableName="dTelestoPartyMembers" ListVariableExpression="," ListVariableIndex="1" ListVariableTarget="dTelestoPartyMembers" OBSEndPoint="" VariableOp="QueryJsonPathList" VariableJsonTarget="dTelestoPartyMembers" VariableExpression="$.response[*].actor" ActionType="ListVariable">
+          <Action OrderNumber="9" ListVariableOp="Split" ListVariableName="dTelestoPartyMembers" ListVariableExpression="," ListVariableIndex="1" ListVariableTarget="dTelestoPartyMembers" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="QueryJsonPathList" VariableJsonTarget="dTelestoPartyMembers" VariableExpression="$.response[*].actor" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="10" ListVariableOp="Split" ListVariableName="dTelestoPartyMembers" ListVariableExpression="," ListVariableIndex="1" ListVariableTarget="dTelestoPartyMembers" OBSEndPoint="" VariableName="dTelestoPartyMembers" VariableJsonTarget="dTelestoPartyMembers" VariableExpression="$.response[*].actor" ActionType="Variable">
+          <Action OrderNumber="10" ListVariableOp="Split" ListVariableName="dTelestoPartyMembers" ListVariableExpression="," ListVariableIndex="1" ListVariableTarget="dTelestoPartyMembers" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableName="dTelestoPartyMembers" VariableJsonTarget="dTelestoPartyMembers" VariableExpression="$.response[*].actor" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="11" LogMessageText="${_responsecode}" LogLevel="Verbose" OBSEndPoint="" ActionType="LogMessage">
+          <Action OrderNumber="11" LogMessageText="${_responsecode}" LogLevel="Verbose" OBSEndPoint="" SoundRouting="None" TTSRouting="None" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="12" LogMessageText="Player 1: ${lvar:dTelestoPartyMembers[1]} - ${lvar:dTelestoPartyMembernames[1]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+          <Action OrderNumber="12" LogMessageText="Player 1: ${lvar:dTelestoPartyMembers[1]} - ${lvar:dTelestoPartyMembernames[1]}" LogLevel="Info" OBSEndPoint="" SoundRouting="None" TTSRouting="None" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="13" LogMessageText="Player 2: ${lvar:dTelestoPartyMembers[2]} - ${lvar:dTelestoPartyMembernames[2]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+          <Action OrderNumber="13" LogMessageText="Player 2: ${lvar:dTelestoPartyMembers[2]} - ${lvar:dTelestoPartyMembernames[2]}" LogLevel="Info" OBSEndPoint="" SoundRouting="None" TTSRouting="None" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="14" LogMessageText="Player 3: ${lvar:dTelestoPartyMembers[3]} - ${lvar:dTelestoPartyMembernames[3]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+          <Action OrderNumber="14" LogMessageText="Player 3: ${lvar:dTelestoPartyMembers[3]} - ${lvar:dTelestoPartyMembernames[3]}" LogLevel="Info" OBSEndPoint="" SoundRouting="None" TTSRouting="None" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="15" LogMessageText="Player 4: ${lvar:dTelestoPartyMembers[4]} - ${lvar:dTelestoPartyMembernames[4]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+          <Action OrderNumber="15" LogMessageText="Player 4: ${lvar:dTelestoPartyMembers[4]} - ${lvar:dTelestoPartyMembernames[4]}" LogLevel="Info" OBSEndPoint="" SoundRouting="None" TTSRouting="None" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="16" LogMessageText="Player 5: ${lvar:dTelestoPartyMembers[5]} - ${lvar:dTelestoPartyMembernames[5]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+          <Action OrderNumber="16" LogMessageText="Player 5: ${lvar:dTelestoPartyMembers[5]} - ${lvar:dTelestoPartyMembernames[5]}" LogLevel="Info" OBSEndPoint="" SoundRouting="None" TTSRouting="None" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="17" LogMessageText="Player 6: ${lvar:dTelestoPartyMembers[6]} - ${lvar:dTelestoPartyMembernames[6]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+          <Action OrderNumber="17" LogMessageText="Player 6: ${lvar:dTelestoPartyMembers[6]} - ${lvar:dTelestoPartyMembernames[6]}" LogLevel="Info" OBSEndPoint="" SoundRouting="None" TTSRouting="None" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="18" LogMessageText="Player 7: ${lvar:dTelestoPartyMembers[7]} - ${lvar:dTelestoPartyMembernames[7]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+          <Action OrderNumber="18" LogMessageText="Player 7: ${lvar:dTelestoPartyMembers[7]} - ${lvar:dTelestoPartyMembernames[7]}" LogLevel="Info" OBSEndPoint="" SoundRouting="None" TTSRouting="None" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="19" LogMessageText="Player 8: ${lvar:dTelestoPartyMembers[8]} - ${lvar:dTelestoPartyMembernames[8]}" LogLevel="Info" OBSEndPoint="" ActionType="LogMessage">
+          <Action OrderNumber="19" LogMessageText="Player 8: ${lvar:dTelestoPartyMembers[8]} - ${lvar:dTelestoPartyMembernames[8]}" LogLevel="Info" OBSEndPoint="" SoundRouting="None" TTSRouting="None" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
@@ -600,10 +712,10 @@
       </Trigger>
       <Trigger Enabled="true" Source="FFXIVNetwork" Name="Zone change" Id="b9349465-1a5c-40a1-87b5-1046e9d2bf47" RegularExpression="^01\|[^|]*\|[^|]*\|(?&lt;zone&gt;[^|]*)">
         <Actions>
-          <Action OrderNumber="1" TriggerId="9f5efc6b-98fa-44bc-ac5e-4a4a66c58879" TriggerForce="regexp" ActionType="Trigger">
+          <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="9f5efc6b-98fa-44bc-ac5e-4a4a66c58879" TriggerForce="regexp" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" TriggerId="c5965804-7a8b-4f76-8b3d-6cc5a9184ba3" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="5000" Asynchronous="False">
+          <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" TriggerId="c5965804-7a8b-4f76-8b3d-6cc5a9184ba3" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="5000" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${job})}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
             </Condition>
@@ -613,7 +725,7 @@
       </Trigger>
       <Trigger Enabled="true" Source="FFXIVNetwork" Name="Buffs Check" Id="66041b7d-a146-48d1-9ba2-27c206dc8379" RegularExpression="^2[12]\|[^\|]*\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|(?:113[123456]|40A8|76|64B9|3E8B|3E84|3F4[1-4]|DE5|1CE6|1CE4|1D60|5F55|64C9)\|(?:[^\|]*\|){2}(?&lt;name&gt;[A-Za-z'\-]+ [A-Za-z'\-]+)\|">
         <Actions>
-          <Action OrderNumber="1" TriggerId="504cb007-193c-4823-afd4-0e7e3bc4b7dd" TriggerForce="regexp,active" ActionType="Trigger" Asynchronous="False">
+          <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="504cb007-193c-4823-afd4-0e7e3bc4b7dd" TriggerForce="regexp,active" ActionType="Trigger" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${job})}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
             </Condition>
@@ -629,33 +741,33 @@
       </Trigger>
       <Trigger Enabled="true" Source="FFXIVNetwork" Name="Cancel Buffs" Id="9f5efc6b-98fa-44bc-ac5e-4a4a66c58879" RegularExpression="^00\|[^\|]*\|0038\|\|_buffs off">
         <Actions>
-          <Action OrderNumber="1" TriggerOp="CancelTrigger" TriggerId="68d0bf52-bfa2-48f6-91bf-c7dceb897669" TriggerForce="regexp" ActionType="Trigger">
+          <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerOp="CancelTrigger" TriggerId="68d0bf52-bfa2-48f6-91bf-c7dceb897669" TriggerForce="regexp" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="MNK" ExpressionTypeR="String" ConditionType="StringEqualCase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="PGL" ExpressionTypeR="String" ConditionType="StringEqualCase" />
             </Condition>
           </Action>
-          <Action OrderNumber="2" TriggerOp="CancelTrigger" TriggerId="ae09fb8e-e864-4ff5-b62b-3ad555a8a2e6" TriggerForce="regexp" ActionType="Trigger">
+          <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" TriggerOp="CancelTrigger" TriggerId="ae09fb8e-e864-4ff5-b62b-3ad555a8a2e6" TriggerForce="regexp" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="MNK" ExpressionTypeR="String" ConditionType="StringEqualCase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="PGL" ExpressionTypeR="String" ConditionType="StringEqualCase" />
             </Condition>
           </Action>
-          <Action OrderNumber="3" ListVariableName="buffsList" VariableOp="UnsetRegex" VariableName="d[A-F0-9]{8}[A-Za-z ]{0,50}" ActionType="ListVariable">
+          <Action OrderNumber="3" ListVariableName="buffsList" SoundRouting="None" TTSRouting="None" VariableOp="UnsetRegex" VariableName="d[A-F0-9]{8}[A-Za-z ]{0,50}" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="4" ListVariableName="buffsActive" ListVariableExpression="${eid}${skill}" ListVariableIndex="1" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="4" ListVariableName="buffsActive" ListVariableExpression="${eid}${skill}" ListVariableIndex="1" SoundRouting="None" TTSRouting="None" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:buffsActive.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
-          <Action OrderNumber="5" ListVariableOp="UnsetRegex" ListVariableName="buffsList" VariableOp="UnsetRegex" VariableName="buff[A-Z0-9]{8}.*" ActionType="Variable">
+          <Action OrderNumber="5" ListVariableOp="UnsetRegex" ListVariableName="buffsList" SoundRouting="None" TTSRouting="None" VariableOp="UnsetRegex" VariableName="buff[A-Z0-9]{8}.*" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="6" AuraOp="DeactivateAuraRegex" AuraName="buff.*" ListVariableOp="UnsetRegex" ListVariableName="buffsList" VariableOp="UnsetRegex" VariableName="d[A-F0-9]{8}[A-Za-z ]{0,50}" ActionType="Aura">
+          <Action OrderNumber="6" AuraOp="DeactivateAuraRegex" AuraName="buff.*" ListVariableOp="UnsetRegex" ListVariableName="buffsList" SoundRouting="None" TTSRouting="None" VariableOp="UnsetRegex" VariableName="d[A-F0-9]{8}[A-Za-z ]{0,50}" ActionType="Aura">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="7" AuraOp="DeactivateAuraRegex" AuraName="buff.*" ListVariableOp="UnsetRegex" ListVariableName="buffsList" VariableOp="UnsetRegex" VariableName="d[A-F0-9]{8}[A-Za-z ]{0,50}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="8.25" TextAuraName="buff.*" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
+          <Action OrderNumber="7" AuraOp="DeactivateAuraRegex" AuraName="buff.*" ListVariableOp="UnsetRegex" ListVariableName="buffsList" SoundRouting="None" TTSRouting="None" VariableOp="UnsetRegex" VariableName="d[A-F0-9]{8}[A-Za-z ]{0,50}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="8.25" TextAuraName="buff.*" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
@@ -663,16 +775,16 @@
       </Trigger>
       <Trigger Enabled="true" Source="None" Sequential="True" Name="##INITIAL SETUP - copy to local, edit buffs position, then save the trigger to complete setup" Id="1b004daf-7540-47bb-875c-05ee1d10a6d3" RegularExpression="" EditAutofire="True">
         <Actions>
-          <Action OrderNumber="1" ListVariableExpressionType="Numeric" ListVariableName="BuffsList" ListVariableExpression="${_imageaura[buffs.preview1].x}" ListVariableIndex="1" ListSourcePersist="True" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="1" ListVariableExpressionType="Numeric" ListVariableName="BuffsList" ListVariableExpression="${_imageaura[buffs.preview1].x}" ListVariableIndex="1" ListSourcePersist="True" SoundRouting="None" TTSRouting="None" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" AuraName="buffs.preview1" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid%20Buffs/Preview.png" AuraXIniExpression="0" AuraYIniExpression="0" AuraWIniExpression="601" AuraHIniExpression="48" AuraOIniExpression="0" AuraTTLTickExpression="10-${_since}" ActionType="Aura" RefireInterrupt="True" Description="Buffs Position EDIT ME &gt; Use visual guide for placement" DescriptionOverride="True">
+          <Action OrderNumber="2" AuraName="buffs.preview1" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/master/Triggernometry/Raid%20Buffs/Preview.png" AuraXIniExpression="4645" AuraYIniExpression="1184" AuraWIniExpression="601" AuraHIniExpression="48" AuraOIniExpression="100" AuraTTLTickExpression="10-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura" RefireInterrupt="True" Description="Buffs Position EDIT ME &gt; Use visual guide for placement" DescriptionOverride="True">
             <Condition Enabled="true" Grouping="Or" />
           </Action>
-          <Action OrderNumber="3" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="BuffsList" ListVariableExpression="${_imageaura[buffs.preview1].x}" ListVariableIndex="1" ListSourcePersist="True" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" ActionType="ListVariable" ExecutionDelayExpression="50" Asynchronous="False">
+          <Action OrderNumber="3" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="BuffsList" ListVariableExpression="${_imageaura[buffs.preview1].x}" ListVariableIndex="1" ListSourcePersist="True" SoundRouting="None" TTSRouting="None" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" ActionType="ListVariable" ExecutionDelayExpression="50" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="4" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="BuffsList" ListVariableExpression="${_imageaura[buffs.preview1].y}" ListVariableIndex="1" ListSourcePersist="True" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" ActionType="ListVariable" ExecutionDelayExpression="50" Asynchronous="False">
+          <Action OrderNumber="4" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="BuffsList" ListVariableExpression="${_imageaura[buffs.preview1].y}" ListVariableIndex="1" ListSourcePersist="True" SoundRouting="None" TTSRouting="None" VariableOp="SetNumeric" VariableName="PLx" VariableExpression="${_imageaura[PLPreview].x}" ActionType="ListVariable" ExecutionDelayExpression="50" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
