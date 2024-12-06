@@ -64,7 +64,7 @@
               <Folder Id="a51a6976-400c-48b1-b447-97346b02f6d3" Name="TOP" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="false" Source="FFXIVNetwork" Sequential="True" Name="P5 #Hello Near/Distant World TTS" Id="4ae4c237-58fa-46e9-a2b1-8d157c73d42f" RegularExpression="^26\|[^|]*\|D7(?&lt;id&gt;[23])\|[^|]*\|(?&lt;dur&gt;[^|]*)\|(?:[^|]*\|){3}(?&lt;player&gt;[^|]*)\|">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="P5 #Hello Near/Distant World TTS" Id="4ae4c237-58fa-46e9-a2b1-8d157c73d42f" RegularExpression="^26\|[^|]*\|D7(?&lt;id&gt;[23])\|[^|]*\|(?&lt;dur&gt;[^|]*)\|(?:[^|]*\|){3}(?&lt;player&gt;[^|]*)\|">
                     <Actions>
                       <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Near World" ActionType="UseTTS" ExecutionDelayExpression="(${dur}-8)*1000">
                         <Condition Enabled="true" Grouping="Or">
@@ -375,6 +375,255 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+            </Folders>
+            <Triggers />
+          </Folder>
+          <Folder Id="34ec45cc-ef08-43a8-969b-642a6f0155a7" Name="Future's Rewritten (Ultimate)" Enabled="false">
+            <Folders>
+              <Folder Id="c847d2bd-55fc-4793-8efc-67a70bb44ec8" Name="Phase 1 - Fatebreaker" Enabled="true">
+                <Folders>
+                  <Folder Id="ee31ac8d-75dd-4725-9240-8457b6d39f17" Name="Fall of Faith" Enabled="true">
+                    <Folders />
+                    <Triggers>
+                      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="#Reset" Id="c7a303e8-3929-42fc-b5ae-82052e585c30" RegularExpression="^33\|[^|]*\|[^|]*\|400000(?&gt;03|0F)\|">
+                        <Actions>
+                          <Action OrderNumber="1" ListVariableName="brink182party" ListVariableExpression="${name}" SoundRouting="None" TTSRouting="None" VariableOp="UnsetRegex" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="brink182party" ListVariableExpression="Kazu Tomi" SoundRouting="None" TTSRouting="None" VariableOp="UnsetRegex" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="3" ListVariableOp="Push" ListVariableName="brink182party" ListVariableExpression="Last Sun" SoundRouting="None" TTSRouting="None" VariableOp="UnsetRegex" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="4" ListVariableOp="Push" ListVariableName="brink182party" ListVariableExpression="Nox Box" SoundRouting="None" TTSRouting="None" VariableOp="UnsetRegex" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="5" ListVariableOp="Push" ListVariableName="brink182party" ListVariableExpression="Nox Rheos" SoundRouting="None" TTSRouting="None" VariableOp="UnsetRegex" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="6" ListVariableOp="Push" ListVariableName="brink182party" ListVariableExpression="Freya Gemini" SoundRouting="None" TTSRouting="None" VariableOp="UnsetRegex" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="7" ListVariableOp="Push" ListVariableName="brink182party" ListVariableExpression="Sable Centaura" SoundRouting="None" TTSRouting="None" VariableOp="UnsetRegex" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="8" ListVariableOp="Push" ListVariableName="brink182party" ListVariableExpression="Rereno Namo" SoundRouting="None" TTSRouting="None" VariableOp="UnsetRegex" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="9" ListVariableOp="Push" ListVariableName="brink182party" ListVariableExpression="Celestia Yamulain" SoundRouting="None" TTSRouting="None" VariableOp="UnsetRegex" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="10" OBSEndPoint="" SoundRouting="None" TTSRouting="None" TriggerId="572e0647-1019-4faf-bc20-a89861fd5fb2" TriggerText="01||462|" Enabled="False" ActionType="Trigger" ExecutionDelayExpression="5000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Source="FFXIVNetwork" Name="Prey count and lightning bait position" Id="d41f62c3-f951-462c-a764-4b475e483a0e" RegularExpression="^26\|[^|]*\|41B(?:[^|]*\|){6}(?&lt;player&gt;[A-Za-z']+ [A-Za-z']+)\|">
+                        <Actions>
+                          <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" VariableOp="SetNumeric" VariableName="brink182preycount" VariableExpression="${var:brink182preycount}+1" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="2" ListVariableOp="Remove" ListVariableName="brink182party" ListVariableExpression="Celestia Yamulain" ListVariableIndex="${lvar:brink182party.indexof(${player})}" SoundRouting="None" TTSRouting="None" VariableOp="UnsetRegex" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="3" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="${var:brink182prey}" ActionType="UseTTS" ExecutionDelayExpression="50">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="${player}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="4" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="West - north side" ActionType="UseTTS">
+                            <Condition Enabled="true" Grouping="And">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:brink182preycount}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                              <ConditionSingle Enabled="true" ExpressionL="${lvar:brink182party.indexof(${_ffxivplayer})}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="5" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="West - south side" ActionType="UseTTS">
+                            <Condition Enabled="true" Grouping="And">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:brink182preycount}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                              <ConditionSingle Enabled="true" ExpressionL="${lvar:brink182party.indexof(${_ffxivplayer})}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="6" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="East - South Side" ActionType="UseTTS">
+                            <Condition Enabled="true" Grouping="And">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:brink182preycount}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                              <ConditionSingle Enabled="true" ExpressionL="${lvar:brink182party.indexof(${_ffxivplayer})}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="7" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="East - North Side" ActionType="UseTTS">
+                            <Condition Enabled="true" Grouping="And">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:brink182preycount}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                              <ConditionSingle Enabled="true" ExpressionL="${lvar:brink182party.indexof(${_ffxivplayer})}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="8" SoundRouting="None" TTSRouting="None" VariableOp="UnsetRegex" VariableName="brink182prey.*" VariableExpression="${var:brink182prey}+1" ActionType="Variable" ExecutionDelayExpression="20000" RefireRequeue="False">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="9" OBSEndPoint="" SoundRouting="None" TTSRouting="None" TriggerId="c7a303e8-3929-42fc-b5ae-82052e585c30" TriggerForce="regexp" ActionType="Trigger" RefireRequeue="False">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                    </Triggers>
+                  </Folder>
+                </Folders>
+                <Triggers>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="Cyclonic Break" Id="0ea03859-ab2e-4668-a869-b0fbfa0272d6" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9(CD4|D8A|CD0|D89)\|">
+                    <Actions>
+                      <Action OrderNumber="1" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="spread" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="CD4" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="D8A" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="partners" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="CD0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="D89" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="Utopian Sky" Id="4ff21343-c587-4822-9f8c-4057bc8335d9" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9CD(A|B)\|">
+                    <Actions>
+                      <Action OrderNumber="1" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="spread" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="B" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="stack" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="A" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="3" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="spread" ActionType="UseTTS" ExecutionDelayExpression="15000">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="B" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="4" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="stack" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="A" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="Turn of the Heavens" Id="a7fbcb51-e088-4c4f-ba4b-b43d187edb7c" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9CD(6|7)\|">
+                    <Actions>
+                      <Action OrderNumber="1" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="blue safe" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="6" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="red safe" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="7" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="Burnt Strike" Id="c6f957f1-2b1d-4de9-9579-04e830ef46e2" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9CC(5|1)\|">
+                    <Actions>
+                      <Action OrderNumber="1" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="lightning out" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="5" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="knockback" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="3" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="hold" ActionType="UseTTS" ExecutionDelayExpression="7000">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="5" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+              <Folder Id="7b244cc2-b647-4115-8e49-89b5efce37c0" Name="Phase 2 - Usurper of Frost" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="Silence/Stillness" Id="5eb334c9-4290-42a8-95dc-9123b136fbd0" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9D0(1|2)\|">
+                    <Actions>
+                      <Action OrderNumber="1" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="front safe then back" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="back safe then front" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="Scythe/Axe Kick" Id="82d2659a-0569-4d7f-a0e3-c633e98abe2c" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9D0(A|B)\|">
+                    <Actions>
+                      <Action OrderNumber="1" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="OUT" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="A" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="IN" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="B" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="Banish" Id="da2bdba3-05a6-4f7a-b5c1-4f7abfacc5a1" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9D1(C|D)\|">
+                    <Actions>
+                      <Action OrderNumber="1" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="partners" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="C" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="spread" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="D" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+              <Folder Id="87a11ad2-3904-477f-9baf-cfdc83825243" Name="Phase 3 - Oracle of Darkness" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Ultimate Relativity Positions Cheatsheet" Id="2cbf731d-8019-4013-a7bf-a9d489cae76c" RegularExpression="^22\|(?:[^\|]*\|){3}9D4A\|">
+                    <Actions>
+                      <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://github.com/SableCentaur/ffxiv/blob/092161806b385194f7cde2d0361580628b5ce354/Triggernometry/Brink%20182/FRU-UR-DPS.png?raw=true" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="40-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://github.com/SableCentaur/ffxiv/blob/092161806b385194f7cde2d0361580628b5ce354/Triggernometry/Brink%20182/FRU-UR-Support.png?raw=true" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="40-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
