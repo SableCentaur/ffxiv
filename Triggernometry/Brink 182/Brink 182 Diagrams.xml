@@ -468,7 +468,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -554,7 +553,173 @@
                 </Triggers>
               </Folder>
               <Folder Id="7b244cc2-b647-4115-8e49-89b5efce37c0" Name="Phase 2 - Usurper of Frost" Enabled="true">
-                <Folders />
+                <Folders>
+                  <Folder Id="1bb86836-9410-40ec-93b3-044c57a3e188" Name="Diamond Dust" Enabled="true">
+                    <Folders>
+                      <Folder FfxivZoneFilterRegularExpression="^1238$" Id="0174b40b-16ea-405a-8b4e-607ed1298800" Name="Swap &amp; Knockback Direction Call (Leave Disabled)" Enabled="false">
+                        <Folders />
+                        <Triggers>
+                          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Icicle Identifier" Id="9df8b228-ce72-448b-b2b6-f3658af6dc5d" RegularExpression="^263\|(?:[^\|]*\|){2}9D06\|(?&lt;Coordinate&gt;[0-9.]*)\|(?&lt;Coordinate2&gt;[0-9.]*)\|" PeriodRefire="Deny" RefirePeriodExpression="15000">
+                            <Actions>
+                              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Fire" VariableOp="SetString" VariableName="brink182IcicleStartPos" VariableExpression="Cardinals" ActionType="Variable">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionSingle Enabled="true" ExpressionL="${Coordinate}" ExpressionTypeL="String" ExpressionR="100.009" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  <ConditionSingle Enabled="true" ExpressionL="${Coordinate}" ExpressionTypeL="String" ExpressionR="116.001" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  <ConditionSingle Enabled="true" ExpressionL="${Coordinate}" ExpressionTypeL="String" ExpressionR="83.987" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Fire" VariableOp="SetString" VariableName="brink182IcicleStartPos" VariableExpression="Intercardinals" ActionType="Variable">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionSingle Enabled="true" ExpressionL="${Coordinate}" ExpressionTypeL="String" ExpressionR="88.687" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  <ConditionSingle Enabled="true" ExpressionL="${Coordinate}" ExpressionTypeL="String" ExpressionR="111.301" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" VariableOp="SetString" VariableName="brink182SafeSpot" VariableExpression="Alpha Charlie" ActionType="Variable">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionSingle Enabled="true" ExpressionL="${Coordinate}" ExpressionTypeL="String" ExpressionR="100.009" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" VariableOp="SetString" VariableName="brink182SafeSpot" VariableExpression="Bravo Delta" ActionType="Variable">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionSingle Enabled="true" ExpressionL="${Coordinate}" ExpressionTypeL="String" ExpressionR="83.987" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  <ConditionSingle Enabled="true" ExpressionL="${Coordinate}" ExpressionTypeL="String" ExpressionR="116.001" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="5" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Northwest Southeast Safe" VariableOp="SetString" VariableName="brink182SafeSpot" VariableExpression="2 4" ActionType="Variable">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionGroup Enabled="true" Grouping="And">
+                                    <ConditionSingle Enabled="true" ExpressionL="${Coordinate}" ExpressionTypeL="String" ExpressionR="88.687" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                    <ConditionSingle Enabled="true" ExpressionL="${Coordinate2}" ExpressionTypeL="String" ExpressionR="88.687" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  </ConditionGroup>
+                                  <ConditionGroup Enabled="true" Grouping="And">
+                                    <ConditionSingle Enabled="true" ExpressionL="${Coordinate}" ExpressionTypeL="String" ExpressionR="111.301" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                    <ConditionSingle Enabled="true" ExpressionL="${Coordinate2}" ExpressionTypeL="String" ExpressionR="111.301" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  </ConditionGroup>
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="6" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Northwest Southeast Safe" VariableOp="SetString" VariableName="brink182SafeSpot" VariableExpression="1 3" ActionType="Variable">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionGroup Enabled="true" Grouping="And">
+                                    <ConditionSingle Enabled="true" ExpressionL="${Coordinate}" ExpressionTypeL="String" ExpressionR="88.687" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                    <ConditionSingle Enabled="true" ExpressionL="${Coordinate2}" ExpressionTypeL="String" ExpressionR="111.301" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  </ConditionGroup>
+                                  <ConditionGroup Enabled="true" Grouping="And">
+                                    <ConditionSingle Enabled="true" ExpressionL="${Coordinate}" ExpressionTypeL="String" ExpressionR="111.301" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                    <ConditionSingle Enabled="true" ExpressionL="${Coordinate2}" ExpressionTypeL="String" ExpressionR="88.687" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  </ConditionGroup>
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="7" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="${var:brink182IcicleStartPos}" Enabled="False" ActionType="UseTTS">
+                                <Condition Enabled="false" Grouping="Or">
+                                  <ConditionGroup Enabled="true" Grouping="And">
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:brink182IcicleStartPos}" ExpressionTypeL="String" ExpressionR="Cardinals" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:brink182starrole}" ExpressionTypeL="String" ExpressionR="Support" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  </ConditionGroup>
+                                  <ConditionGroup Enabled="true" Grouping="And">
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:brink182IcicleStartPos}" ExpressionTypeL="String" ExpressionR="Intercardinals" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:brink182starrole}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  </ConditionGroup>
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="8" SoundRouting="None" TTSRouting="None" TriggerId="76417894-c424-4434-b5cc-c961b47c525d" TriggerForce="regexp" Enabled="False" ActionType="Trigger" ExecutionDelayExpression="500">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
+                          </Trigger>
+                          <Trigger Enabled="true" Sequential="True" Name="Callout" Id="76417894-c424-4434-b5cc-c961b47c525d" RegularExpression="">
+                            <Actions>
+                              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Swap" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionGroup Enabled="true" Grouping="And">
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:brink182IcicleStartPos}" ExpressionTypeL="String" ExpressionR="Cardinals" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:brink182starrole}" ExpressionTypeL="String" ExpressionR="Support" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  </ConditionGroup>
+                                  <ConditionGroup Enabled="true" Grouping="And">
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:brink182IcicleStartPos}" ExpressionTypeL="String" ExpressionR="Intercardinals" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                    <ConditionSingle Enabled="true" ExpressionL="${var:brink182starrole}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  </ConditionGroup>
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="test ${var:brink182starrole}" Enabled="False" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionSingle Enabled="true" ExpressionL="${evar:brink182starrole}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="knockback ${var:brink182SafeSpot}" ActionType="UseTTS" ExecutionDelayExpression="6500">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" VariableName="brink182IcicleStartPos" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="5" SoundRouting="None" TTSRouting="None" VariableName="brink182SafeSpot" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="6" SoundRouting="None" TTSRouting="None" VariableName="brink182starrole" VariableExpression="DPS" ActionType="Variable">
+                                <Condition Enabled="false" Grouping="Or">
+                                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${target}].role" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                </Condition>
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
+                          </Trigger>
+                          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Starburst" Id="40b7a341-5d84-466a-ba84-de37ed7d53ec" RegularExpression="^27\|(?:[^|]*\|){2}(?&lt;target&gt;[^|]*)\|" PeriodRefire="Deny" RefirePeriodExpression="5000">
+                            <Actions>
+                              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" VariableOp="SetString" VariableName="brink182starrole" VariableExpression="DPS" ActionType="Variable">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${target}].role}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" VariableOp="SetString" VariableName="brink182starrole" VariableExpression="support" ActionType="Variable">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${target}].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${target}].role}" ExpressionTypeL="String" ExpressionR="Tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" TriggerId="76417894-c424-4434-b5cc-c961b47c525d" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="500">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="DPS Star" VariableOp="SetString" VariableName="brink182starrole" VariableExpression="DPS" Enabled="False" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${target}].role}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="5" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Support Star" VariableOp="SetString" VariableName="brink182starrole" VariableExpression="DPS" Enabled="False" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${target}].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${target}].role}" ExpressionTypeL="String" ExpressionR="Tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                </Condition>
+                              </Action>
+                              <Action OrderNumber="6" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Starburst" VariableOp="SetString" VariableName="brink182starrole" VariableExpression="DPS" Enabled="False" ActionType="UseTTS">
+                                <Condition Enabled="true" Grouping="Or">
+                                  <ConditionSingle Enabled="true" ExpressionL="${target}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                </Condition>
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
+                          </Trigger>
+                        </Triggers>
+                      </Folder>
+                    </Folders>
+                    <Triggers>
+                      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="#Diamond Dust Enabler" Id="c147a088-f513-4955-8792-26ed937f61a6" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9D05\|">
+                        <Actions>
+                          <Action OrderNumber="1" FolderId="0174b40b-16ea-405a-8b4e-607ed1298800" SoundRouting="None" TTSRouting="None" ActionType="Folder">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="2" FolderOp="DisableFolder" FolderId="0174b40b-16ea-405a-8b4e-607ed1298800" SoundRouting="None" TTSRouting="None" ActionType="Folder" ExecutionDelayExpression="25000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Trigger>
+                    </Triggers>
+                  </Folder>
+                </Folders>
                 <Triggers>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="Silence/Stillness" Id="5eb334c9-4290-42a8-95dc-9123b136fbd0" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9D0(1|2)\|">
                     <Actions>
@@ -570,7 +735,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="Scythe/Axe Kick" Id="82d2659a-0569-4d7f-a0e3-c633e98abe2c" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9D0(A|B)\|">
                     <Actions>
@@ -586,7 +750,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="Banish" Id="da2bdba3-05a6-4f7a-b5c1-4f7abfacc5a1" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9D1(C|D)\|">
                     <Actions>
@@ -602,31 +765,267 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
               <Folder Id="87a11ad2-3904-477f-9baf-cfdc83825243" Name="Phase 3 - Oracle of Darkness" Enabled="true">
-                <Folders />
+                <Folders>
+                  <Folder Id="4a1ee4ca-3b0c-4f11-ac4d-cb8477f767c5" Name="Ultimate Relativity" Enabled="true">
+                    <Folders />
+                    <Triggers>
+                      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Ultimate Relativity Positions Cheatsheet" Id="ddb068ae-a391-4991-a668-8ea45a5e363b" RegularExpression="^22\|(?:[^\|]*\|){3}9D4A\|" PeriodRefire="Deny" RefirePeriodExpression="5000">
+                        <Actions>
+                          <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" Enabled="False">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://github.com/SableCentaur/ffxiv/blob/092161806b385194f7cde2d0361580628b5ce354/Triggernometry/Brink%20182/FRU-UR-DPS.png?raw=true" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="40-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="3" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://github.com/SableCentaur/ffxiv/blob/092161806b385194f7cde2d0361580628b5ce354/Triggernometry/Brink%20182/FRU-UR-Support.png?raw=true" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="40-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Trigger>
+                      <Trigger Enabled="true" Source="FFXIVNetwork" Name="#Wipe" Id="e485b2e6-74da-4266-8106-2cb362e5034f" RegularExpression="^33\|[^|]*\|[^|]*\|400000(?&gt;03|0F)\|">
+                        <Actions>
+                          <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerOp="CancelTrigger" TriggerId="69f87c97-c86f-4ace-abfc-679307ea70d5" ActionType="Trigger">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" TriggerOp="CancelTrigger" TriggerId="4b6b560f-3ef3-47c0-87bb-cdc07980772d" ActionType="Trigger">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" TriggerOp="CancelTrigger" TriggerId="ccabdf27-57e9-4563-abd6-c95fb8670a3e" ActionType="Trigger">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" TriggerOp="CancelTrigger" TriggerId="77da4dbd-54b8-479a-8108-1eda2786cb07" ActionType="Trigger">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Trigger>
+                      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Short Fire" Id="77da4dbd-54b8-479a-8108-1eda2786cb07" RegularExpression="^26\|[^\|]*\|(?&lt;statusID&gt;997)\|[^\|]*\|(?&lt;duration&gt;11)\.00\|[^\|]*\|[^\|]*\|[^\|]*\|(?&lt;name&gt;[^\|]*)">
+                        <Actions>
+                          <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Short Fire Southwest Southeast" ActionType="UseTTS">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Short Fire North" ActionType="UseTTS">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="OUT" ActionType="UseTTS" ExecutionDelayExpression="4000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="place spread return" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="5" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="stack center" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="6" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="bait" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="7" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="stack" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="8" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="mid" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="9" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="look out" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Trigger>
+                      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Medium Fire" Id="ccabdf27-57e9-4563-abd6-c95fb8670a3e" RegularExpression="^26\|[^\|]*\|(?&lt;statusID&gt;997)\|[^\|]*\|(?&lt;duration&gt;21)\.00\|[^\|]*\|[^\|]*\|[^\|]*\|(?&lt;name&gt;[^\|]*)">
+                        <Actions>
+                          <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Medium Fire East" ActionType="UseTTS">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Medium Fire West" ActionType="UseTTS">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="stack" ActionType="UseTTS" ExecutionDelayExpression="4000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="place spread return" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="5" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="place water return" ActionType="UseTTS">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="6" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="OUT" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="7" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="mid" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="8" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="stack" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="9" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="bait" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="10" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="look out" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Trigger>
+                      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Ice" Id="69f87c97-c86f-4ace-abfc-679307ea70d5" RegularExpression="^26\|[^\|]*\|(?&lt;statusID&gt;99E)\|[^\|]*\|(?&lt;duration&gt;21)\.00\|[^\|]*\|[^\|]*\|[^\|]*\|(?&lt;name&gt;[^\|]*)">
+                        <Actions>
+                          <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Ice South" ActionType="UseTTS">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Ice North" ActionType="UseTTS">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="stack" ActionType="UseTTS" ExecutionDelayExpression="4000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="place spread return" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="5" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="bait" ActionType="UseTTS">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="6" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="stack center" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="7" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="place gaze return" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="8" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="bait" ActionType="UseTTS">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="9" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="stack" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="10" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="mid" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="11" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="look out" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Trigger>
+                      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Long Fire" Id="4b6b560f-3ef3-47c0-87bb-cdc07980772d" RegularExpression="^26\|[^\|]*\|(?&lt;statusID&gt;997)\|[^\|]*\|(?&lt;duration&gt;31)\.00\|[^\|]*\|[^\|]*\|[^\|]*\|(?&lt;name&gt;[^\|]*)">
+                        <Actions>
+                          <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Long Fire South" ActionType="UseTTS">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Long Fire Northwest Northeast" ActionType="UseTTS">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="stack" ActionType="UseTTS" ExecutionDelayExpression="4000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="bait" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="5" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="stack center" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="6" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="place gaze return" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="7" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="OUT" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="8" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="mid" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="9" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="look out" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Trigger>
+                    </Triggers>
+                  </Folder>
+                </Folders>
                 <Triggers>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Ultimate Relativity Positions Cheatsheet" Id="2cbf731d-8019-4013-a7bf-a9d489cae76c" RegularExpression="^22\|(?:[^\|]*\|){3}9D4A\|">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="Shell Crusher" Id="239afa13-3086-4cc2-9ad5-c4034b67fb6c" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9D5E\|">
                     <Actions>
-                      <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://github.com/SableCentaur/ffxiv/blob/092161806b385194f7cde2d0361580628b5ce354/Triggernometry/Brink%20182/FRU-UR-DPS.png?raw=true" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="40-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                        </Condition>
+                      <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Stack Stack Stack " ActionType="UseTTS">
+                        <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://github.com/SableCentaur/ffxiv/blob/092161806b385194f7cde2d0361580628b5ce354/Triggernometry/Brink%20182/FRU-UR-Support.png?raw=true" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="40-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Tank" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                        </Condition>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="Spirit Taker" Id="78ea60a3-fd10-4b2e-9851-9c2f1abf6aa1" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9D60\|">
+                    <Actions>
+                      <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Spread" ActionType="UseTTS">
+                        <Condition Enabled="false" Grouping="Or" />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Trigger>
                 </Triggers>
+              </Folder>
+              <Folder Id="b824217e-074d-4947-a2ad-5b2e8e9da683" Name="Phase 4 - Lesbians" Enabled="true">
+                <Folders />
+                <Triggers />
+              </Folder>
+              <Folder Id="18e1b1b7-7b9c-4d3e-8925-4456b9c60f8e" Name="Phase 5 - Pandora" Enabled="true">
+                <Folders />
+                <Triggers />
               </Folder>
             </Folders>
             <Triggers />
