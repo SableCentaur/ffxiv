@@ -1014,7 +1014,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Direction Identifier" Id="1628d3c0-742c-4f3c-b05a-23f3d6b4b58b" RegularExpression="^261\|[^|]*\|Add\|[^|]*\|(?:AggressionStatus\|[^|]*\|)?BNpcID\|1EB0FF\|BNpcNameID\|[^|]*\|(?:CastBuffID\|[^|]*\|)?(?:CastDurationCurrent\|[^|]*\|)?(?:CastDurationMax\|[^|]*\|)?(?:CastGroundTargetX\|[^|]*\|)?(?:CastGroundTargetY\|[^|]*\|)?(?:CastGroundTargetZ\|[^|]*\|)?(?:CastTargetID\|[^|]*\|)?(?:CurrentCP\|[^|]*\|)?(?:CurrentGP\|[^|]*\|)?(?:CurrentHP\|[^|]*\|)?(?:CurrentMP\|[^|]*\|)?(?:CurrentWorldID\|[^|]*\|)?(?:Distance\|[^|]*\|)?(?:EffectiveDistance\|[^|]*\|)?(?:Heading\|(?&lt;Heading&gt;[^|]*)\|)?(?:ID\|[^|]*\|)?(?:IsCasting1\|[^|]*\|)?(?:IsCasting2\|[^|]*\|)?(?:IsTargetable\|[^|]*\|)?(?:Job\|[^|]*\|)?(?:Level\|[^|]*\|)?(?:MaxCP\|[^|]*\|)?(?:MaxGP\|[^|]*\|)?(?:MaxHP\|[^|]*\|)?(?:MaxMP\|[^|]*\|)?(?:NPCTargetID\|[^|]*\|)?(?:PartyType\|[^|]*\|)?(?:PCTargetID\|[^|]*\|)?(?:PosX\|(?&lt;PosX&gt;[^|]*)\|)?(?:PosY\|(?&lt;PosY&gt;[^|]*)\|)?" PeriodRefire="Deny" RefirePeriodExpression="20000">
                         <Actions>
@@ -1047,7 +1046,6 @@
                           <ConditionSingle Enabled="true" ExpressionL="${PosX}" ExpressionTypeL="String" ExpressionR="100.0000" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${PosY}" ExpressionTypeL="String" ExpressionR="100.0000" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Rotation Identifier" Id="f55072da-7e18-41f0-aa67-9b7a5edaabb6" RegularExpression="^261\|[^|]*\|Add\|[^|]*\|(?:AggressionStatus\|[^|]*\|)?BNpcID\|1EB0FF\|BNpcNameID\|[^|]*\|(?:CastBuffID\|[^|]*\|)?(?:CastDurationCurrent\|[^|]*\|)?(?:CastDurationMax\|[^|]*\|)?(?:CastGroundTargetX\|[^|]*\|)?(?:CastGroundTargetY\|[^|]*\|)?(?:CastGroundTargetZ\|[^|]*\|)?(?:CastTargetID\|[^|]*\|)?(?:CurrentCP\|[^|]*\|)?(?:CurrentGP\|[^|]*\|)?(?:CurrentHP\|[^|]*\|)?(?:CurrentMP\|[^|]*\|)?(?:CurrentWorldID\|[^|]*\|)?(?:Distance\|[^|]*\|)?(?:EffectiveDistance\|[^|]*\|)?(?:Heading\|(?&lt;Heading&gt;[^|]*)\|)?(?:ID\|[^|]*\|)?(?:IsCasting1\|[^|]*\|)?(?:IsCasting2\|[^|]*\|)?(?:IsTargetable\|[^|]*\|)?(?:Job\|[^|]*\|)?(?:Level\|[^|]*\|)?(?:MaxCP\|[^|]*\|)?(?:MaxGP\|[^|]*\|)?(?:MaxHP\|[^|]*\|)?(?:MaxMP\|[^|]*\|)?(?:NPCTargetID\|[^|]*\|)?(?:PartyType\|[^|]*\|)?(?:PCTargetID\|[^|]*\|)?(?:PosX\|(?&lt;PosX&gt;[^|]*)\|)?(?:PosY\|(?&lt;PosY&gt;[^|]*)\|)?" PeriodRefire="Deny" RefirePeriodExpression="20000">
                         <Actions>
@@ -1146,7 +1144,6 @@
                             <ConditionSingle Enabled="true" ExpressionL="${PosY}" ExpressionTypeL="String" ExpressionR="100.0000" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           </ConditionGroup>
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="Callout Scheduler" Id="f3422e6d-cd57-4de4-89cf-d6dd1a8fff89" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9D68\|">
                         <Actions>
@@ -1158,7 +1155,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="Wipe Detector" Id="b6df089e-d996-4a01-a0f3-0dbdba7935ea" RegularExpression="^33\|[^|]*\|[A-F0-9]{8}\|4000000[3F]\|">
                         <Actions>
@@ -1173,7 +1169,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -1221,7 +1216,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Blue Ice" Id="bf337f4c-0eee-4403-bbf9-709159f48940" RegularExpression="^26\|[^\|]*\|(?&lt;statusID&gt;CC0|99E)\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|(?&lt;name&gt;[^\|]*)">
                         <Actions>
@@ -1274,7 +1268,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Blue Water" Id="3bb790d7-cb24-45e7-8de5-db669b96c839" RegularExpression="^26\|[^\|]*\|(?&lt;statusID&gt;99D)\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|(?&lt;name&gt;[^\|]*)">
                         <Actions>
@@ -1297,7 +1290,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Blue Stack" Id="c96ea833-c733-4f25-b639-732a7327a809" RegularExpression="^26\|[^\|]*\|(?&lt;statusID&gt;996)\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|(?&lt;name&gt;[^\|]*)">
                         <Actions>
@@ -1317,7 +1309,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Blue Eruption" Id="79684760-85b7-4b38-b3dd-2c1049787a0e" RegularExpression="^26\|[^\|]*\|(?&lt;statusID&gt;99C)\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|(?&lt;name&gt;[^\|]*)">
                         <Actions>
@@ -1337,16 +1328,14 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
-                      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="#Crystallize Time Cheatsheet" Id="7ce4d55e-f22f-4065-ac61-f324803bd2af" RegularExpression="^22\|(?:[^\|]*\|){3}9D6A\|" PeriodRefire="Deny" RefirePeriodExpression="5000">
+                      <Trigger Enabled="false" Source="FFXIVNetwork" Sequential="True" Name="#Crystallize Time Debuffs Cheatsheet (Choose ONE)" Id="7ce4d55e-f22f-4065-ac61-f324803bd2af" RegularExpression="^22\|(?:[^\|]*\|){3}9D6A\|" PeriodRefire="Deny" RefirePeriodExpression="5000">
                         <Actions>
                           <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://raw.githubusercontent.com/SableCentaur/ffxiv/refs/heads/master/Triggernometry/Brink%20182/FRU-CT-Cheatsheet.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="40-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Red Wind" Id="455a797d-67fe-491d-916d-37dd44cbb65c" RegularExpression="^26\|[^\|]*\|(?&lt;statusID&gt;CBF)\|[^\|]*\|(?&lt;duration&gt;40)\.00\|[^\|]*\|[^\|]*\|[^\|]*\|(?&lt;name&gt;[^\|]*)">
                         <Actions>
@@ -1366,11 +1355,24 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Place Return" Id="73fd4a57-10ba-4e91-ad99-2916a25d7631" RegularExpression="^26\|[^\|]*\|(?&lt;statusID&gt;1070)\|[^\|]*\|(?&lt;duration&gt;\d+)\.00\|[^\|]*\|[^\|]*\|[^\|]*\|(?&lt;name&gt;[^\|]*)">
                         <Actions>
                           <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Place Return" ActionType="UseTTS" ExecutionDelayExpression="(${duration}-5)*1000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="false" Source="FFXIVNetwork" Sequential="True" Name="#Crystallize Time Map Cheatsheet (Choose ONE)" Id="cb99027d-87df-4e04-94d0-638da65c302f" RegularExpression="^22\|(?:[^\|]*\|){3}9D6A\|" PeriodRefire="Deny" RefirePeriodExpression="5000">
+                        <Actions>
+                          <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" Enabled="False">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://github.com/SableCentaur/ffxiv/blob/master/Triggernometry/Brink%20182/FRU-CT-Start.png?raw=true" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="40-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="3" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://github.com/SableCentaur/ffxiv/blob/master/Triggernometry/Brink%20182/FRU-CT-Cleanse.png?raw=true" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="40-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura" ExecutionDelayExpression="15000">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                         </Actions>
@@ -1395,7 +1397,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Hallowed Wings L/R" Id="19eb463b-9029-4855-be69-210d295e4479" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9D2(3|4)\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|(?&lt;heading&gt;[^|]*)\|">
                     <Actions>
@@ -1411,7 +1412,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Crystallize Time Enabler" Id="c9de9ae2-993c-4c7f-8d5a-f0726ae20094" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9D6A\|">
                     <Actions>
@@ -1423,7 +1423,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Source="FFXIVNetwork" Sequential="True" Name="Darklit Tower Call (Leave Disabled)" Id="bd6beb13-914d-430e-93b6-49baf368e824" RegularExpression="^35\|(?:[^|]*\|){2}(?&lt;source&gt;[^|]*)\|[^|]*\|(?&lt;target&gt;[^|]*)\|">
                     <Actions>
@@ -1456,7 +1455,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${source}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${target}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Darklit Tower Enabler" Id="4239b5d3-22d2-43ae-9598-fc3263ce680a" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9D2F\|">
                     <Actions>
@@ -1468,7 +1466,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -1564,7 +1561,6 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
     </Triggers>
   </ExportedFolder>
