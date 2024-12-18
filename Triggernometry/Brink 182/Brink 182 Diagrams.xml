@@ -1,38 +1,16 @@
 <?xml version="1.0"?>
 <TriggernometryExport PluginVersion="1.2.0.7">
-  <ExportedFolder Id="4d40f224-0c34-4582-85f2-5122bc07f599" Name="Brink 182 Diagrams" Enabled="false">
+  <ExportedFolder Id="4d40f224-0c34-4582-85f2-5122bc07f599" Name="Brink 182 Triggers" Enabled="true">
     <Folders>
       <Folder Id="7ba8f0f3-a25e-487e-ba90-882d7482c6bf" Name="6.X Endwalker" Enabled="true">
         <Folders>
           <Folder Id="d4acf95e-cffa-4f36-91c4-2f48327cf9b7" Name="Pandaemonium" Enabled="true">
-            <Folders>
-              <Folder Id="a4532244-55d2-4e20-b202-281d556ba48e" Name="P12S" Enabled="false">
-                <Folders />
-                <Triggers>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Superchain I" Id="2b240db7-72ab-4267-a4cc-c50b256a0bad" RegularExpression="^20\|(?:[^|]*\|){2}Athena\|82DA\|">
-                    <Actions>
-                      <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://i.imgur.com/NXqV0cq.pngf5c08ac9f3&amp;" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="30-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Trigger>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Pangenesis" Id="572c21aa-09f7-41c4-aad7-f0950a1575c5" RegularExpression="">
-                    <Actions>
-                      <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="https://i.imgur.com/pJJlrBO.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="30-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Trigger>
-                </Triggers>
-              </Folder>
-            </Folders>
+            <Folders />
             <Triggers />
           </Folder>
           <Folder Id="40f65cb6-a982-4aec-823a-7cd169ef20f1" Name="Ultimates" Enabled="true">
             <Folders>
-              <Folder ZoneFilterEnabled="True" Id="dcec822a-c13e-40f0-ad0d-67bb31907d49" ZoneFilterRegularExpression="^Dragonsong's\ Reprise\ \(Ultimate\)$" Name="DSR" Enabled="false">
+              <Folder ZoneFilterEnabled="True" Id="dcec822a-c13e-40f0-ad0d-67bb31907d49" ZoneFilterRegularExpression="^Dragonsong's\ Reprise\ \(Ultimate\)$" Name="DSR" Enabled="true">
                 <Folders />
                 <Triggers>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="DSR Playstation" Id="14cdfc45-37a3-4c91-89c0-3f86e032fab3" RegularExpression="^20\|(?:[^|]*\|){2}Ser Charibert\|62DE\|">
@@ -220,40 +198,6 @@
             </Folders>
             <Triggers />
           </Folder>
-          <Folder Id="ddc22cdf-d7ad-41ba-a92b-60407df975f5" Name="Criterion" Enabled="true">
-            <Folders>
-              <Folder Id="93176fc1-8cfc-4bc7-a27f-e85c6bb6d655" Name="Aloalo" Enabled="false">
-                <Folders />
-                <Triggers>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Spring Crystals 1" Id="a7773265-0c57-4e2e-a83f-23fd5d19e949" RegularExpression="The Dawn Trial will be sealed off">
-                    <Actions>
-                      <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="C:\Users\Sable\Downloads\Alo-Whale.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="57-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura" ExecutionDelayExpression="27000">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Trigger>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Lala Square" Id="4bb64e84-20d9-4d78-a62d-f77526458d3e" RegularExpression="^20\|(?:[^|]*\|){3}8898\|">
-                    <Actions>
-                      <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="C:\Users\Sable\Downloads\Alo-Lala1.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="15-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Trigger>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Lala Lasers" Id="d011c71a-b721-41c4-baa0-a1c62fb88e94" RegularExpression="^20\|(?:[^|]*\|){3}88A0\|">
-                    <Actions>
-                      <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="brink182diagram" AuraImage="C:\Users\Sable\Downloads\Alo-Lala2.png" AuraXIniExpression="${plvar:brink182diagconfig[1]}" AuraYIniExpression="${plvar:brink182diagconfig[2]}" AuraWIniExpression="${plvar:brink182diagconfig[3]}" AuraHIniExpression="${plvar:brink182diagconfig[3]}*2" AuraOIniExpression="80" AuraTTLTickExpression="25-${_since}" SoundRouting="None" TTSRouting="None" ActionType="Aura">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Trigger>
-                </Triggers>
-              </Folder>
-            </Folders>
-            <Triggers />
-          </Folder>
         </Folders>
         <Triggers />
       </Folder>
@@ -261,7 +205,7 @@
         <Folders>
           <Folder Id="91e3a9f7-ba12-4e59-bf7f-15a073679f3a" Name="Arcadion" Enabled="true">
             <Folders>
-              <Folder Id="4a317a7a-a318-4120-b953-a7e40b1d0be5" Name="04 - AAC Light-heavyweight M4" Enabled="false">
+              <Folder Id="4a317a7a-a318-4120-b953-a7e40b1d0be5" Name="04 - AAC Light-heavyweight M4" Enabled="true">
                 <Folders>
                   <Folder Id="5864339f-fb65-4db3-aa98-c19e10371540" Name="Electrope Edge" Enabled="true">
                     <Folders />
@@ -358,7 +302,7 @@
                   </Trigger>
                 </Triggers>
               </Folder>
-              <Folder Id="ff0ebfc6-acbe-4330-a2a6-818800b80227" Name="01 - AAC Light-heavyweight M1" Enabled="false">
+              <Folder Id="ff0ebfc6-acbe-4330-a2a6-818800b80227" Name="01 - AAC Light-heavyweight M1" Enabled="true">
                 <Folders />
                 <Triggers>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Light parties/partners" Id="943d81b7-c8b1-4217-9be4-03d7df4a9a09" RegularExpression="^20\|(?:[^\|]*\|){2}Black Cat\|945(F|D)\|" PrevActionsRefire="Deny" RefirePeriodExpression="5000">
@@ -381,12 +325,12 @@
             </Folders>
             <Triggers />
           </Folder>
-          <Folder FfxivZoneFilterRegularExpression="^1238$" Id="34ec45cc-ef08-43a8-969b-642a6f0155a7" Name="Future's Rewritten (Ultimate)" Enabled="false">
+          <Folder FfxivZoneFilterRegularExpression="^1238$" Id="34ec45cc-ef08-43a8-969b-642a6f0155a7" Name="Future's Rewritten (Ultimate)" Enabled="true">
             <Folders>
               <Folder Id="c847d2bd-55fc-4793-8efc-67a70bb44ec8" Name="Phase 1 - Fatebreaker" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="Cyclonic Break" Id="0ea03859-ab2e-4668-a869-b0fbfa0272d6" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9(CD4|D8A|CD0|D89)\|">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="Cyclonic Break Element" Id="0ea03859-ab2e-4668-a869-b0fbfa0272d6" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9(CD4|D8A|CD0|D89)\|">
                     <Actions>
                       <Action OrderNumber="1" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="spread" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
@@ -403,7 +347,7 @@
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
                   </Trigger>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="Utopian Sky" Id="4ff21343-c587-4822-9f8c-4057bc8335d9" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9CD(A|B)\|">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="Utopian Sky Element" Id="4ff21343-c587-4822-9f8c-4057bc8335d9" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9CD(A|B)\|">
                     <Actions>
                       <Action OrderNumber="1" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="spread" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
@@ -428,7 +372,7 @@
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
                   </Trigger>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="Turn of the Heavens" Id="a7fbcb51-e088-4c4f-ba4b-b43d187edb7c" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9CD(6|7)\|">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="Turn of the Heavens Element" Id="a7fbcb51-e088-4c4f-ba4b-b43d187edb7c" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9CD(6|7)\|">
                     <Actions>
                       <Action OrderNumber="1" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="blue safe" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
@@ -443,7 +387,7 @@
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
                   </Trigger>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="Burnt Strike" Id="c6f957f1-2b1d-4de9-9579-04e830ef46e2" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9CC(5|1)\|">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="Burnt Strike Element" Id="c6f957f1-2b1d-4de9-9579-04e830ef46e2" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9CC(5|1)\|">
                     <Actions>
                       <Action OrderNumber="1" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="lightning out" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
@@ -666,6 +610,14 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="D" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="House of Light" Id="078dec9f-9aac-4266-96c4-986790ffc954" RegularExpression="^20\|(?:[^|]*\|){3}9CFD\|">
+                    <Actions>
+                      <Action OrderNumber="1" OBSEndPoint="" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="proteans" ActionType="UseTTS">
+                        <Condition Enabled="false" Grouping="Or" />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
@@ -1377,13 +1329,90 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                    </Triggers>
+                  </Folder>
+                  <Folder Id="447b28ea-9203-44ad-bb2c-d1a97e429ad2" Name="Darklit Tower" Enabled="true">
+                    <Folders />
+                    <Triggers>
+                      <Trigger Enabled="false" Source="FFXIVNetwork" Sequential="True" Name="Darklit Tower Chain Collect (Leave Disabled)" Id="bd6beb13-914d-430e-93b6-49baf368e824" RegularExpression="^35\|(?:[^|]*\|){2}(?&lt;source&gt;[^|]*)\|[^|]*\|(?&lt;target&gt;[^|]*)\|">
+                        <Actions>
+                          <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Chain" ActionType="UseTTS" RefireRequeue="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${source}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="brink182chain" ListVariableExpression="${source}" SoundRouting="None" TTSRouting="None" ActionType="ListVariable">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${source}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="3" ListVariableOp="Push" ListVariableName="brink182chain" ListVariableExpression="${target}" SoundRouting="None" TTSRouting="None" ActionType="ListVariable">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${target}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" TriggerId="7e94ace3-595f-497e-ad79-f8bad4efee74" TriggerForce="regexp" ActionType="Trigger" RefireRequeue="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${lvar:brink182chain.size}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="5" ListVariableName="brink182chain" ListVariableExpression="${source}" SoundRouting="None" TTSRouting="None" ActionType="ListVariable" ExecutionDelayExpression="10000">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${source}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                            </Condition>
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${source}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${target}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Trigger>
+                      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Darklit Tower Enabler" Id="4239b5d3-22d2-43ae-9598-fc3263ce680a" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9D2F\|">
+                        <Actions>
+                          <Action OrderNumber="1" FolderId="7f960a7c-1b8b-4267-91a5-bc0cdc649af6" SoundRouting="None" TTSRouting="None" TriggerOp="EnableTrigger" TriggerId="bd6beb13-914d-430e-93b6-49baf368e824" ActionType="Trigger">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="2" FolderId="7f960a7c-1b8b-4267-91a5-bc0cdc649af6" SoundRouting="None" TTSRouting="None" TriggerOp="DisableTrigger" TriggerId="bd6beb13-914d-430e-93b6-49baf368e824" ActionType="Trigger" ExecutionDelayExpression="10000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Darklit Tower Call" Id="7e94ace3-595f-497e-ad79-f8bad4efee74" RegularExpression="">
+                        <Actions>
+                          <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="South tower" ActionType="UseTTS" ExecutionDelayExpression="1000" RefireInterrupt="True">
+                            <Condition Enabled="true" Grouping="And">
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                              <ConditionGroup Enabled="true" Grouping="Or">
+                                <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:brink182chain[1]}].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                                <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:brink182chain[2]}].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                              </ConditionGroup>
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="North tower" ActionType="UseTTS" RefireInterrupt="True">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                              <ConditionGroup Enabled="true" Grouping="And">
+                                <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:brink182chain[1]}].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                                <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:brink182chain[2]}].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                              </ConditionGroup>
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="3" ListVariableName="brink182chain" ListVariableExpression="${source}" SoundRouting="None" TTSRouting="None" ActionType="ListVariable">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${source}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                            </Condition>
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
                         <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
                 </Folders>
                 <Triggers>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Usurper Spawn Location" Id="0c171bca-d5c5-434f-a28c-a2b1fd527051" RegularExpression="^03\|(?:[^\|]*\|){2}Usurper of Frost\|(?:[^\|]*\|){13}(?&lt;x&gt;[^|]*)\|(?&lt;y&gt;[^|]*)\|(?&lt;z&gt;[^|]*)\|(?&lt;heading&gt;[^|]*)\|">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Usurper Spawn Location" Id="0c171bca-d5c5-434f-a28c-a2b1fd527051" RegularExpression="^03\|(?:[^\|]*\|){2}Usurper of Frost\|(?:[^\|]*\|){13}(?&lt;x&gt;[^|]*)\|(?&lt;y&gt;[^|]*)\|(?&lt;z&gt;[^|]*)\|(?&lt;heading&gt;[^|]*)\|" PeriodRefire="Deny" RefirePeriodExpression="60000">
                     <Actions>
                       <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Boss at Alpha" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
@@ -1424,48 +1453,221 @@
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
                   </Trigger>
-                  <Trigger Enabled="false" Source="FFXIVNetwork" Sequential="True" Name="Darklit Tower Call (Leave Disabled)" Id="bd6beb13-914d-430e-93b6-49baf368e824" RegularExpression="^35\|(?:[^|]*\|){2}(?&lt;source&gt;[^|]*)\|[^|]*\|(?&lt;target&gt;[^|]*)\|">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Akh Rhai" Id="1ac29324-286c-4557-86f2-7e0fbc320297" RegularExpression="^20\|(?:[^|]*\|){3}9D2D\|" PrevActionsRefire="Deny" RefirePeriodExpression="5000">
                     <Actions>
-                      <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="${func:contain(Healer):${_ffxiventity[${source}].role}}" VariableOp="SetNumeric" VariableName="brink182darklit" VariableExpression="${var:brink182darklit} + ${func:contain(Healer):${_ffxiventity[${source}].role}}+ ${func:contain(Healer):${_ffxiventity[${target}].role}}" ActionType="Variable">
-                        <Condition Enabled="false" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${source}].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                          <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${target}].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="South tower" ActionType="UseTTS" ExecutionDelayExpression="500" RefireInterrupt="True">
-                        <Condition Enabled="true" Grouping="And">
-                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
-                          <ConditionSingle Enabled="true" ExpressionL="${var:brink182darklit}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="North tower" ActionType="UseTTS" RefireInterrupt="True">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
-                          <ConditionSingle Enabled="true" ExpressionL="${var:brink182darklit}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                        </Condition>
-                      </Action>
-                      <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="${func:contain(Healer):${_ffxiventity[${source}].role}}" VariableName="brink182darklit" VariableExpression="${var:brink182darklit} + ${func:contain(Healer):${_ffxiventity[${source}].role}}" ActionType="Variable" ExecutionDelayExpression="10000">
-                        <Condition Enabled="false" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${source}].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                          <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${target}].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                        </Condition>
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${source}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                      <ConditionSingle Enabled="true" ExpressionL="${target}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                    </Condition>
-                  </Trigger>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Darklit Tower Enabler" Id="4239b5d3-22d2-43ae-9598-fc3263ce680a" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9D2F\|">
-                    <Actions>
-                      <Action OrderNumber="1" FolderId="7f960a7c-1b8b-4267-91a5-bc0cdc649af6" SoundRouting="None" TTSRouting="None" TriggerOp="EnableTrigger" TriggerId="bd6beb13-914d-430e-93b6-49baf368e824" ActionType="Trigger">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="2" FolderId="7f960a7c-1b8b-4267-91a5-bc0cdc649af6" SoundRouting="None" TTSRouting="None" TriggerOp="DisableTrigger" TriggerId="bd6beb13-914d-430e-93b6-49baf368e824" ActionType="Trigger" ExecutionDelayExpression="10000">
+                      <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="MOVE" ActionType="UseTTS">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+              <Folder Id="d8fce491-32a2-4b00-b810-211106611568" Name="P3 Water Stacks Swap (Requires Telesto)" Enabled="false">
+                <Folders>
+                  <Folder Id="96c91280-1f74-4681-b21e-47cf0b0e3812" Name="Spell in Waiting - LEAVE DISABLED" Enabled="false">
+                    <Folders />
+                    <Triggers>
+                      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Water Debuff" Id="8522ca09-c5c7-4352-a50a-4dd59beab208" RegularExpression="^26\|[^|]*\|99D(?:[^|]*\|){2}(?&lt;timer&gt;[\d\.]{5})\|(?:[^|]*\|){3}(?&lt;name&gt;[^|]*)\|">
+                        <Actions>
+                          <Action OrderNumber="1" LogMessageText="Water Debuff Debug || ${name} - ${timer}" LogLevel="Info" SoundRouting="None" TTSRouting="None" ActionType="LogMessage">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" VariableOp="SetNumeric" VariableName="brink182watercount" VariableExpression="${var:brink182watercount}+1" ActionType="Variable" Asynchronous="False">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="3" DictVariableOp="Set" DictVariableValueType="Numeric" DictVariableName="brink182water" DictVariableKey="${player}" DictVariableValue="${timer}" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="${timer}" TableVariableX="3" TableVariableY="${tvar:brink182priowater.vlookup(${name},2)}" ActionType="TableVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" TriggerId="5d270363-9d50-4ea3-b4c4-4b973f194fe9" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="500" RefireRequeue="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:brink182watercount}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="5" DictVariableValueType="Numeric" DictVariableName="brink182water" DictVariableKey="${player}" DictVariableValue="${timer}" SoundRouting="None" TTSRouting="None" TableVariableName="brink182priowater" TableVariableX="3" ActionType="TableVariable" ExecutionDelayExpression="40000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="6" SoundRouting="None" TTSRouting="None" VariableName="brink182watercount" VariableExpression="${var:brink182watercount}+1" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="7" SoundRouting="None" TTSRouting="None" VariableName="brink182waterflex" VariableExpression="${var:brink182watercount}+1" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Trigger>
+                      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Flex Overlay" Id="5d270363-9d50-4ea3-b4c4-4b973f194fe9" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="5000">
+                        <Actions>
+                          <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" VariableOp="SetString" VariableName="brink182waterflex" VariableExpression="Water Flexes:" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Freya Flex" VariableOp="SetString" VariableName="brink182waterflex" VariableExpression="${var:brink182waterflex}&#xD;&#xA;[${func:pick(0,&quot; &quot;):${tvar:brink182priowater[2][4]}}]" ActionType="Variable" Description="${func:substring(0,${func:indexof(' '):${tvar:brink182priowater[2][1]}}):${tvar:brink182priowater[2][1]}}">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${tvar:brink182priowater[3][4]}" ExpressionTypeL="Numeric" ExpressionR="${tvar:brink182priowater[3][1]}" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                              <ConditionSingle Enabled="true" ExpressionL="${tvar:brink182priowater[3][4]}" ExpressionTypeL="Numeric" ExpressionR="${tvar:brink182priowater[3][3]}" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                              <ConditionSingle Enabled="true" ExpressionL="${tvar:brink182priowater[3][4]}" ExpressionTypeL="Numeric" ExpressionR="${tvar:brink182priowater[3][2]}" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Freya Flex" VariableOp="SetString" VariableName="brink182waterflex" VariableExpression="${var:brink182waterflex}&#xD;&#xA;[${func:pick(0,&quot; &quot;):${tvar:brink182priowater[2][3]}}]" ActionType="Variable" Description="${func:substring(0,${func:indexof(' '):${_ffxiventity[${tvar:brink182priowater[2][2]}].name}}):${_ffxiventity[${tvar:brink182priowater[2][2]}].name}}">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${tvar:brink182priowater[3][3]}" ExpressionTypeL="Numeric" ExpressionR="${tvar:brink182priowater[3][2]}" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                              <ConditionSingle Enabled="true" ExpressionL="${tvar:brink182priowater[3][3]}" ExpressionTypeL="Numeric" ExpressionR="${tvar:brink182priowater[3][1]}" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Freya Flex" VariableOp="SetString" VariableName="brink182waterflex" VariableExpression="${var:brink182waterflex}&#xD;&#xA;[${func:pick(0,&quot; &quot;):${tvar:brink182priowater[2][2]}}]" ActionType="Variable" Description="${func:substring(0,${func:indexof(' '):${_ffxiventity[${tvar:brink182priowater[2][2]}].name}}):${_ffxiventity[${tvar:brink182priowater[2][2]}].name}}">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${tvar:brink182priowater[3][2]}" ExpressionTypeL="Numeric" ExpressionR="${tvar:brink182priowater[3][1]}" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="5" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Freya Flex" VariableOp="SetString" VariableName="brink182waterflex" VariableExpression="${var:brink182waterflex}&#xD;&#xA;[${func:pick(0,&quot; &quot;):${tvar:brink182priowater[2][5]}}]" ActionType="Variable" Description="${func:substring(0,${func:indexof(' '):${_ffxiventity[${tvar:brink182priowater[2][2]}].name}}):${_ffxiventity[${tvar:brink182priowater[2][2]}].name}}">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${tvar:brink182priowater[3][5]}" ExpressionTypeL="Numeric" ExpressionR="${tvar:brink182priowater[3][6]}" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                              <ConditionSingle Enabled="true" ExpressionL="${tvar:brink182priowater[3][5]}" ExpressionTypeL="Numeric" ExpressionR="${tvar:brink182priowater[3][8]}" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                              <ConditionSingle Enabled="true" ExpressionL="${tvar:brink182priowater[3][5]}" ExpressionTypeL="Numeric" ExpressionR="${tvar:brink182priowater[3][7]}" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="6" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Freya Flex" VariableOp="SetString" VariableName="brink182waterflex" VariableExpression="${var:brink182waterflex}&#xD;&#xA;[${func:pick(0,&quot; &quot;):${tvar:brink182priowater[2][6]}}]" ActionType="Variable" Description="${func:substring(0,${func:indexof(' '):${_ffxiventity[${tvar:brink182priowater[2][2]}].name}}):${_ffxiventity[${tvar:brink182priowater[2][2]}].name}}">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${tvar:brink182priowater[3][6]}" ExpressionTypeL="Numeric" ExpressionR="${tvar:brink182priowater[3][8]}" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                              <ConditionSingle Enabled="true" ExpressionL="${tvar:brink182priowater[3][6]}" ExpressionTypeL="Numeric" ExpressionR="${tvar:brink182priowater[3][7]}" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="7" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Freya Flex" VariableOp="SetString" VariableName="brink182waterflex" VariableExpression="${var:brink182waterflex}&#xD;&#xA;[${func:pick(0,&quot; &quot;):${tvar:brink182priowater[2][7]}}]" ActionType="Variable" Description="${func:substring(0,${func:indexof(' '):${_ffxiventity[${tvar:brink182priowater[2][2]}].name}}):${_ffxiventity[${tvar:brink182priowater[2][2]}].name}}">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${tvar:brink182priowater[3][7]}" ExpressionTypeL="Numeric" ExpressionR="${tvar:brink182priowater[3][8]}" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="8" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Freya Flex" VariableOp="SetString" VariableName="brink182waterflex" VariableExpression="${var:brink182waterflex}&#xD;&#xA;-----" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="9" LogMessageText="Water Debuff Debug || Flexes: ${var:brink182waterflex}" LogLevel="Info" SoundRouting="None" TTSRouting="None" ActionType="LogMessage">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="10" SoundRouting="None" TTSRouting="None" TextAuraEffect="Bold" TextAuraFontSize="24" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="brink182waterflex" TextAuraExpression="${var:brink182waterflex}" TextAuraXIniExpression="${plvar:brink182diagconfig[1]}" TextAuraYIniExpression="${plvar:brink182diagconfig[2]}" TextAuraWIniExpression="${plvar:brink182diagconfig[3]}" TextAuraHIniExpression="${plvar:brink182diagconfig[3]}*2" TextAuraOIniExpression="100" TextAuraTTLTickExpression="38-${_since}" TextAuraFontName="Malgun Gothic" ActionType="TextAura">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Trigger>
+                    </Triggers>
+                  </Folder>
+                </Folders>
+                <Triggers>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Spell in Waiting Refrain enabler" Id="51277be6-405b-478c-8bf4-9a2eeab840a5" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9D4D\|">
+                    <Actions>
+                      <Action OrderNumber="1" FolderId="96c91280-1f74-4681-b21e-47cf0b0e3812" SoundRouting="None" TTSRouting="None" ActionType="Folder">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" LogMessageTarget="NetworkFFXIV" LogMessageText="PrioWater" LogProcess="True" SoundRouting="None" TTSRouting="None" TriggerId="f933f4f6-8717-41d6-be09-48cd98135333" TriggerForce="regexp" ActionType="LogMessage" RefireRequeue="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" FolderOp="DisableFolder" FolderId="96c91280-1f74-4681-b21e-47cf0b0e3812" SoundRouting="None" TTSRouting="None" ActionType="Folder" ExecutionDelayExpression="50000">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Water Stacks Prio - HHTTRMMC" Id="0279818c-89aa-4d3c-b398-430a4803ffcd" RegularExpression="^PrioWater">
+                    <Actions>
+                      <Action OrderNumber="1" ListVariableName="brink182prio" SoundRouting="None" TTSRouting="None" TableVariableName="brink182priowater" ActionType="TableVariable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="SCH" TableVariableX="1" TableVariableY="${tvar:brink182priowater.height}+1" ActionType="TableVariable" Description="SCH / 28" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="SGE" TableVariableX="1" TableVariableY="${tvar:brink182priowater.height}+1" ActionType="TableVariable" Description="SGE / 40" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="AST" TableVariableX="1" TableVariableY="${tvar:brink182priowater.height}+1" ActionType="TableVariable" Description="AST / 33" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="5" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="WHM" TableVariableX="1" TableVariableY="${tvar:brink182priowater.height}+1" ActionType="TableVariable" Description="WHM / 24" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="6" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="DRK" TableVariableX="1" TableVariableY="${tvar:brink182priowater.height}+1" ActionType="TableVariable" Description="DRK / 32" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="7" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="GNB" TableVariableX="1" TableVariableY="${tvar:brink182priowater.height}+1" ActionType="TableVariable" Description="GNB / 37" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="8" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="WAR" TableVariableX="1" TableVariableY="${tvar:brink182priowater.height}+1" ActionType="TableVariable" Description="WAR / 21" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="9" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="PLD" TableVariableX="1" TableVariableY="${tvar:brink182priowater.height}+1" ActionType="TableVariable" Description="PLD / 19" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="10" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="DNC" TableVariableX="1" TableVariableY="${tvar:brink182priowater.height}+1" ActionType="TableVariable" Description="DNC / 38" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="11" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="BRD" TableVariableX="1" TableVariableY="${tvar:brink182priowater.height}+1" ActionType="TableVariable" Description="BRD / 23" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="12" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="MCH" TableVariableX="1" TableVariableY="${tvar:brink182priowater.height}+1" ActionType="TableVariable" Description="MCH / 31" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="13" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="SAM" TableVariableX="1" TableVariableY="${tvar:brink182priowater.height}+1" ActionType="TableVariable" Description="SAM / 34" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="14" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="RPR" TableVariableX="1" TableVariableY="${tvar:brink182priowater.height}+1" ActionType="TableVariable" Description="RPR / 39" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="15" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="VPR" TableVariableX="1" TableVariableY="${tvar:brink182priowater.height}+1" ActionType="TableVariable" Description="VPR / 41" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="16" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="NIN" TableVariableX="1" TableVariableY="${tvar:brink182priowater.height}+1" ActionType="TableVariable" Description="NIN / 30" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="17" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="DRG" TableVariableX="1" TableVariableY="${tvar:brink182priowater.height}+1" ActionType="TableVariable" Description="DRG / 22" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="18" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="MNK" TableVariableX="1" TableVariableY="${tvar:brink182priowater.height}+1" ActionType="TableVariable" Description="MNK / 20" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="19" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="RDM" TableVariableX="1" TableVariableY="${tvar:brink182priowater.height}+1" ActionType="TableVariable" Description="RDM / 35" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="20" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="SMN" TableVariableX="1" TableVariableY="${tvar:brink182priowater.height}+1" ActionType="TableVariable" Description="SMN / 27" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="21" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="PCT" TableVariableX="1" TableVariableY="${tvar:brink182priowater.height}+1" ActionType="TableVariable" Description="PCT / 42" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="22" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="BLM" TableVariableX="1" TableVariableY="${tvar:brink182priowater.height}+1" ActionType="TableVariable" Description="BLM / 25" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="23" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="${tvar:TelestoPartyMembers[2][1]}" TableVariableX="2" TableVariableY="${tvar:brink182priowater.vlookup(${tvar:TelestoPartyMembers[3][1]},1)}" ActionType="TableVariable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="24" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="${tvar:TelestoPartyMembers[2][2]}" TableVariableX="2" TableVariableY="${tvar:brink182priowater.vlookup(${tvar:TelestoPartyMembers[3][2]},1)}" ActionType="TableVariable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="25" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="${tvar:TelestoPartyMembers[2][3]}" TableVariableX="2" TableVariableY="${tvar:brink182priowater.vlookup(${tvar:TelestoPartyMembers[3][3]},1)}" ActionType="TableVariable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="26" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="${tvar:TelestoPartyMembers[2][4]}" TableVariableX="2" TableVariableY="${tvar:brink182priowater.vlookup(${tvar:TelestoPartyMembers[3][4]},1)}" ActionType="TableVariable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="27" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="${tvar:TelestoPartyMembers[2][5]}" TableVariableX="2" TableVariableY="${tvar:brink182priowater.vlookup(${tvar:TelestoPartyMembers[3][5]},1)}" ActionType="TableVariable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="28" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="${tvar:TelestoPartyMembers[2][6]}" TableVariableX="2" TableVariableY="${tvar:brink182priowater.vlookup(${tvar:TelestoPartyMembers[3][6]},1)}" ActionType="TableVariable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="29" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="${tvar:TelestoPartyMembers[2][7]}" TableVariableX="2" TableVariableY="${tvar:brink182priowater.vlookup(${tvar:TelestoPartyMembers[3][7]},1)}" ActionType="TableVariable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="30" SoundRouting="None" TTSRouting="None" TableVariableOp="Set" TableVariableName="brink182priowater" TableVariableExpression="${tvar:TelestoPartyMembers[2][8]}" TableVariableX="2" TableVariableY="${tvar:brink182priowater.vlookup(${tvar:TelestoPartyMembers[3][8]},1)}" ActionType="TableVariable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="31" SoundRouting="None" TTSRouting="None" TableVariableOp="FilterLine" TableVariableName="brink182priowater" TableVariableTarget="brink182priowater" TableVariableY="${func:ifequal(&quot;&quot;,0,1):${_row[2]}}" ActionType="TableVariable" RefireInterrupt="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -1498,6 +1700,155 @@
         </Folders>
         <Triggers />
       </Folder>
+      <Folder Id="9265df64-40d8-488f-939b-2c14918c1063" Name="Telesto" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" IsReadme="True" Name="GetPartyMembers Echo (read Description tab when Dalamud is down)" Id="cc1bae3d-e449-458c-9f3b-a2dc5f2b18c4" RegularExpression="^00\|[^\|]*\|0038\|\|Player (?&lt;number&gt;\d): ?(?&lt;name&gt;[A-Z][\w']*(?: [A-Z][^A-Z|]*)?)?" Description="If Dalamud is down, Telesto will not automatically fill the party list.&#xD;&#xA;In this case, use this macro after zoning into the instance to manually populate the party list:&#xD;&#xA;&#xD;&#xA;/e Player 1: &lt;1&gt;&#xD;&#xA;/e Player 2: &lt;2&gt;&#xD;&#xA;/e Player 3: &lt;3&gt;&#xD;&#xA;/e Player 4: &lt;4&gt;&#xD;&#xA;/e Player 5: &lt;5&gt;&#xD;&#xA;/e Player 6: &lt;6&gt;&#xD;&#xA;/e Player 7: &lt;7&gt;&#xD;&#xA;/e Player 8: &lt;8&gt;">
+            <Actions>
+              <Action OrderNumber="1" MutexOpType="Acquire" MutexName="echopartymembers" SoundRouting="None" TTSRouting="None" ActionType="Mutex">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="Remove" ListVariableName="TelestoPartyMembers" ListVariableExpression="${_ffxiventity[${name}].id}" ListVariableIndex="${number}" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="[A-Z][\w']* [A-Z][^A-Z|]*" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" ListVariableOp="Set" ListVariableName="TelestoPartyMembernames" ListVariableExpression="${name}" ListVariableIndex="${number}" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyMembernames.indexof(${name})}" ExpressionTypeL="Numeric" ExpressionR="${number}" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="4" ListVariableOp="Set" ListVariableName="TelestoPartyMembers" ListVariableExpression="${_ffxiventity[${name}].id}" ListVariableIndex="${number}" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyMembers.indexof(${_ffxiventity[${name}].id})}" ExpressionTypeL="Numeric" ExpressionR="${number}" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="5" ListVariableOp="Insert" ListVariableName="TelestoPartyMembernames" ListVariableExpression="${name}" ListVariableIndex="${number}" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyMembernames.size}" ExpressionTypeL="Numeric" ExpressionR="${number}" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="6" ListVariableOp="Insert" ListVariableName="TelestoPartyMembers" ListVariableExpression="${_ffxiventity[${name}].id}" ListVariableIndex="${number}" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:TelestoPartyMembers.size}" ExpressionTypeL="Numeric" ExpressionR="${number}" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="7" MutexName="echopartymembers" SoundRouting="None" TTSRouting="None" ActionType="Mutex">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Party List Update" Id="cae9ab2d-8388-4919-a1ad-7414522e0a0b" RegularExpression="^11\|[^|]*\|(?&lt;partysize&gt;\d)\|" DebugLevel="Verbose" PrevActions="Interrupt">
+            <Actions>
+              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="c39132d8-572d-45b8-9b28-aa8c90e24686" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="500" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${job})}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${partysize}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Name="Reset  - &quot;/e _reset&quot; to manually trigger telesto to get party members" Id="e5f6538e-f577-4b97-a68b-0e0be54312fc" RegularExpression="^00\|[^\|]*\|0038\|\|_reset">
+            <Actions>
+              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="c39132d8-572d-45b8-9b28-aa8c90e24686" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${job})}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Telesto GetPartyMembers" Id="c39132d8-572d-45b8-9b28-aa8c90e24686" RegularExpression="" PrevActionsRefire="Deny">
+            <Actions>
+              <Action OrderNumber="1" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" TableVariableName="TelestoPartyMembers" ActionType="TableVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" ListVariableName="TelestoPartyMembers" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" ListVariableName="TelestoPartyMembernames" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" ListVariableName="TelestoPartyMembers" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" JsonResultVariable="TelestoPartyMembers" JsonEndpointExpression="http://${_const[TelestoEndpoint]}:${_const[TelestoPort]}" JsonPayloadExpression="{ &quot;version&quot;: 1, &quot;id&quot;: 123456, &quot;type&quot;: &quot;GetPartyMembers&quot; }" OBSEndPoint="" SoundRouting="None" TTSRouting="None" ActionType="GenericJson">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembernames" VariableExpression="$.response[*].fullname" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].actor" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" ListVariableOp="Join" ListVariableName="TelestoPartyMembers" ListVariableExpression="," ListVariableIndex="1" ListVariableTarget="TelestoPartyMembers" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="QueryJsonPathList" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].actor" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" ListVariableOp="Join" ListVariableName="TelestoPartyMembers" ListVariableExpression="," ListVariableIndex="1" ListVariableTarget="TelestoPartyMembers" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="SetString" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="${func:toupper:${var:TelestoPartyMembers}}" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" ListVariableOp="Split" ListVariableName="TelestoPartyMembers" ListVariableExpression="," ListVariableIndex="1" ListVariableTarget="TelestoPartyMembers" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="QueryJsonPathList" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].actor" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" SoundRouting="None" TTSRouting="None" TableVariableOp="Build" TableVariableTarget="TelestoPartyMembers" TableVariableExpression=",|${lvar:TelestoPartyMembers[1]},${lvar:TelestoPartyMembernames[1]},${_ffxiventity[${lvar:TelestoPartyMembers[1]}].job}|${lvar:TelestoPartyMembers[2]},${lvar:TelestoPartyMembernames[2]},${_ffxiventity[${lvar:TelestoPartyMembers[2]}].job}|${lvar:TelestoPartyMembers[3]},${lvar:TelestoPartyMembernames[3]},${_ffxiventity[${lvar:TelestoPartyMembers[3]}].job}|${lvar:TelestoPartyMembers[4]},${lvar:TelestoPartyMembernames[4]},${_ffxiventity[${lvar:TelestoPartyMembers[4]}].job}|${lvar:TelestoPartyMembers[5]},${lvar:TelestoPartyMembernames[5]},${_ffxiventity[${lvar:TelestoPartyMembers[5]}].job}|${lvar:TelestoPartyMembers[6]},${lvar:TelestoPartyMembernames[6]},${_ffxiventity[${lvar:TelestoPartyMembers[6]}].job}|${lvar:TelestoPartyMembers[7]},${lvar:TelestoPartyMembernames[7]},${_ffxiventity[${lvar:TelestoPartyMembers[7]}].job}|${lvar:TelestoPartyMembers[8]},${lvar:TelestoPartyMembernames[8]},${_ffxiventity[${lvar:TelestoPartyMembers[8]}].job}" ActionType="TableVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="12" ListVariableOp="Split" ListVariableName="TelestoPartyMembers" ListVariableExpression="," ListVariableIndex="1" ListVariableTarget="TelestoPartyMembers" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].actor" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="13" ListVariableName="TelestoPartyMembers" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="14" ListVariableName="TelestoPartyMembernames" OBSEndPoint="" SoundRouting="None" TTSRouting="None" VariableOp="QueryJsonPathList" VariableName="TelestoPartyMembers" VariableJsonTarget="TelestoPartyMembers" VariableExpression="$.response[*].fullname" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="15" LogMessageText="${_responsecode}" LogLevel="Verbose" OBSEndPoint="" SoundRouting="None" TTSRouting="None" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="16" LogMessageText="Player 1: ${tvar:TelestoPartyMembers[1][1]} - ${tvar:TelestoPartyMembers[2][1]}" LogLevel="Info" OBSEndPoint="" SoundRouting="None" TTSRouting="None" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="17" LogMessageText="Player 1: ${tvar:TelestoPartyMembers[1][2]} - ${tvar:TelestoPartyMembers[2][2]}" LogLevel="Info" OBSEndPoint="" SoundRouting="None" TTSRouting="None" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="18" LogMessageText="Player 1: ${tvar:TelestoPartyMembers[1][3]} - ${tvar:TelestoPartyMembers[2][3]}" LogLevel="Info" OBSEndPoint="" SoundRouting="None" TTSRouting="None" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="19" LogMessageText="Player 1: ${tvar:TelestoPartyMembers[1][4]} - ${tvar:TelestoPartyMembers[2][4]}" LogLevel="Info" OBSEndPoint="" SoundRouting="None" TTSRouting="None" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="20" LogMessageText="Player 1: ${tvar:TelestoPartyMembers[1][5]} - ${tvar:TelestoPartyMembers[2][5]}" LogLevel="Info" OBSEndPoint="" SoundRouting="None" TTSRouting="None" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="21" LogMessageText="Player 1: ${tvar:TelestoPartyMembers[1][6]} - ${tvar:TelestoPartyMembers[2][6]}" LogLevel="Info" OBSEndPoint="" SoundRouting="None" TTSRouting="None" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="22" LogMessageText="Player 1: ${tvar:TelestoPartyMembers[1][7]} - ${tvar:TelestoPartyMembers[2][7]}" LogLevel="Info" OBSEndPoint="" SoundRouting="None" TTSRouting="None" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="23" LogMessageText="Player 1: ${tvar:TelestoPartyMembers[1][8]} - ${tvar:TelestoPartyMembers[2][8]}" LogLevel="Info" OBSEndPoint="" SoundRouting="None" TTSRouting="None" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Duty Commence" Id="f83bc914-e288-4dc4-aa3a-2b1abe98cd7c" RegularExpression="^33\|[^|]*\|[^|]*\|40000001\|" DebugLevel="Verbose" PrevActions="Interrupt">
+            <Actions>
+              <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="c39132d8-572d-45b8-9b28-aa8c90e24686" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="500" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${numeric:hex2dec(${job})}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${partysize}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            </Condition>
+          </Trigger>
+        </Triggers>
+      </Folder>
     </Folders>
     <Triggers>
       <Trigger Enabled="false" Source="FFXIVNetwork" Sequential="True" Name="*copy to local* Brink 182 Diagrams Settings" Id="6e75a751-0a6d-40e9-ac7a-e0300c1f167a" RegularExpression="" EditAutofire="True">
@@ -1520,7 +1871,7 @@
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
-      <Trigger Enabled="true" Source="FFXIVNetwork" Name="#On Wipe" Id="d3501a51-d0e1-4e51-82c1-02b80d2e544d" RegularExpression="^33\|[^|]*\|[^|]*\|400000(?&gt;03|0F)\|">
+      <Trigger Enabled="true" Source="FFXIVNetwork" Name="#On Wipe/Victory" Id="d3501a51-d0e1-4e51-82c1-02b80d2e544d" RegularExpression="^33\|[^|]*\|[^|]*\|400000(?&gt;03|0F)\|">
         <Actions>
           <Action OrderNumber="1" AuraOp="DeactivateAuraRegex" AuraName="brink182.*" SoundRouting="None" TTSRouting="None" VariableOp="UnsetRegex" VariableName="(?&lt;job&gt;)[A-Za-z]{3}.*" TriggerId="352cf9fb-a0c5-4d66-84aa-a2c50c286c52" TriggerForce="regexp" ActionType="Aura">
             <Condition Enabled="false" Grouping="Or">
@@ -1529,6 +1880,12 @@
             </Condition>
           </Action>
           <Action OrderNumber="2" AuraOp="DeactivateAuraRegex" AuraName="brink182.*" SoundRouting="None" TTSRouting="None" VariableOp="UnsetRegex" VariableName="brink182.*" TriggerId="352cf9fb-a0c5-4d66-84aa-a2c50c286c52" TriggerForce="regexp" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or">
+              <ConditionSingle Enabled="false" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="MNK" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+              <ConditionSingle Enabled="true" ExpressionL="${job}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="3" AuraOp="DeactivateAuraRegex" AuraName="brink182.*" SoundRouting="None" TTSRouting="None" TableVariableOp="UnsetRegex" TableVariableName="brink182.*" TriggerId="352cf9fb-a0c5-4d66-84aa-a2c50c286c52" TriggerForce="regexp" ActionType="TableVariable">
             <Condition Enabled="false" Grouping="Or">
               <ConditionSingle Enabled="false" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="MNK" ExpressionTypeR="String" ConditionType="StringEqualCase" />
               <ConditionSingle Enabled="true" ExpressionL="${job}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
@@ -1552,12 +1909,6 @@
         <Actions>
           <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" TriggerId="d3501a51-d0e1-4e51-82c1-02b80d2e544d" TriggerForce="regexp" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
-          </Action>
-          <Action OrderNumber="2" AuraOp="DeactivateAuraRegex" AuraName="brink182.*" SoundRouting="None" TTSRouting="None" TableVariableOp="UnsetRegex" TableVariableName="brink182prio.*" TriggerId="352cf9fb-a0c5-4d66-84aa-a2c50c286c52" TriggerForce="regexp" ActionType="TableVariable">
-            <Condition Enabled="false" Grouping="Or">
-              <ConditionSingle Enabled="false" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="MNK" ExpressionTypeR="String" ConditionType="StringEqualCase" />
-              <ConditionSingle Enabled="true" ExpressionL="${job}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-            </Condition>
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
