@@ -1369,22 +1369,22 @@
                 <Triggers>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="Wings" Id="9e166be1-acc1-4c7d-b2ee-6403f85daba5" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|(?&lt;ID&gt;9D29|9D79)\|">
                     <Actions>
-                      <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Dark - tanks west and in - party far" ActionType="UseTTS">
+                      <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Dark - Freya LEFT - Loken IN" ActionType="UseTTS" Description="- tanks west and in - party far">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${ID}" ExpressionTypeL="String" ExpressionR="9D29" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Light - tanks east and out - party close" ActionType="UseTTS">
+                      <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Light - Freya RIGHT - Loken OUT" ActionType="UseTTS" Description="- tanks east and out - party close">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${ID}" ExpressionTypeL="String" ExpressionR="9D79" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="tanks west and far - party close" ActionType="UseTTS" ExecutionDelayExpression="6000">
+                      <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Loken LEFT - Freya OUT" ActionType="UseTTS" ExecutionDelayExpression="6000" Description="tanks west and far - party close">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${ID}" ExpressionTypeL="String" ExpressionR="9D29" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="tanks east and in - party far" ActionType="UseTTS">
+                      <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="Loken RIGHT - Freya IN" ActionType="UseTTS" Description="tanks east and in - party far">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${ID}" ExpressionTypeL="String" ExpressionR="9D79" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
@@ -1646,7 +1646,7 @@
                       </Folder>
                     </Folders>
                     <Triggers>
-                      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Wave" Id="62144b28-4ef6-4187-9222-3abe882c6163" RegularExpression="^263\|(?:[^|]*\|){2}9D3B\|(?&lt;PosX&gt;[^|]*)\|(?&lt;PosY&gt;[^|]*)\|">
+                      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Wave Gather" Id="62144b28-4ef6-4187-9222-3abe882c6163" RegularExpression="^263\|(?:[^|]*\|){2}9D3B\|(?&lt;PosX&gt;[^|]*)\|(?&lt;PosY&gt;[^|]*)\|">
                         <Actions>
                           <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="${numeric:round(${PosX})} ${numeric:round(${PosY})}" VariableOp="SetString" VariableName="brink182wave1" VariableExpression="East" ActionType="Variable">
                             <Condition Enabled="true" Grouping="And">
@@ -1794,6 +1794,206 @@
               </Folder>
             </Folders>
             <Triggers />
+          </Folder>
+          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^1241$" Id="d5ebb36b-8e08-4b20-b6e5-cddc535deb0f" Name="Chaotic Alliance - Cloud of Darkness" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Blade of Darkness" Id="da5eacf9-3066-4315-bb49-886ed9866e54" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9DF([BCDEF])\|" PeriodRefire="Deny" RefirePeriodExpression="5000">
+                <Actions>
+                  <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="under left" ActionType="UseTTS">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="D" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="E" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="under right" ActionType="UseTTS">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="B" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="C" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="out" ActionType="UseTTS">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="F" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="${var:encvars.knockback}" ActionType="UseTTS" ExecutionDelayExpression="2000">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${evar:encvars.knockback}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="${var:knockback}" VariableName="encvars.knockback" ActionType="Variable" ExecutionDelayExpression="1000">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${evar:encvars.knockback}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Grim Embrace Store" Id="b738e35f-bec8-44ad-ad35-25d929a089cb" RegularExpression="^22\|(?:[^|]*\|){3}9E3([9A])\|(?:[^|]*\|){2}(?&lt;name&gt;[^\|]*)\|" PeriodRefire="Deny" RefirePeriodExpression="5000">
+                <Actions>
+                  <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="under right" VariableOp="SetString" VariableName="encvars.embrace" VariableExpression="backward" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="9" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="under right" VariableOp="SetString" VariableName="encvars.embrace" VariableExpression="forward" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="A" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="${var:encvars.embrace} later" VariableOp="SetString" VariableName="embrace" VariableExpression="forward" ActionType="UseTTS" ExecutionDelayExpression="1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Grim Embrace Debuff Call" Id="7c4544cc-64ff-472e-a17b-50370f1cf249" RegularExpression="^26\|[^\|]*\|1055\|[^\|]*\|(?&lt;duration&gt;\d*)\.00\|[^\|]*\|[^\|]*\|[^\|]*\|(?&lt;name&gt;[^\|]*)\|" PeriodRefire="Deny">
+                <Actions>
+                  <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="walk ${var:encvars.embrace}" VariableOp="SetString" VariableName="embrace" VariableExpression="forward" ActionType="UseTTS" ExecutionDelayExpression="(${duration}-6)*1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="under right" VariableName="encvars.embrace" VariableExpression="behind" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="En[Aero|Death] Store" Id="b0b4f297-7bfd-40cf-adae-1f1677199909" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9E5(3|4)\|" PeriodRefire="Deny" RefirePeriodExpression="5000">
+                <Actions>
+                  <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="under right" VariableOp="SetString" VariableName="encvars.knockback" VariableExpression="suck in" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="under right" VariableOp="SetString" VariableName="encvars.knockback" VariableExpression="knock back" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="4" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="${var:encvars.knockback} later" VariableOp="SetString" VariableName="embrace" VariableExpression="forward" ActionType="UseTTS" ExecutionDelayExpression="1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Aero/Death/Break/Particle Beam" Id="d342ad27-ed3d-4deb-80ee-09eba13efb86" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9E(4[F3C0]|0D|10)\|" PeriodRefire="Deny" RefirePeriodExpression="5000">
+                <Actions>
+                  <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="knockback" ActionType="UseTTS">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="4C" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="suck in" ActionType="UseTTS">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="43" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="gaze" ActionType="UseTTS">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="4F" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="wild charge stack" ActionType="UseTTS">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="40" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="0D" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="spread" ActionType="UseTTS">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="10" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Atomos Spawn" Id="a67095f8-7f4b-4ef6-92cd-1a31fa882323" RegularExpression="^03\|[^|]*\|[^|]*\|Atomos\|">
+                <Actions>
+                  <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="kill add" ActionType="UseTTS">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].subrole}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].subrole}" ExpressionTypeL="String" ExpressionR="PhysicalRanged" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].subrole}" ExpressionTypeL="String" ExpressionR="MagicalRanged" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Ghastly Gloom" Id="5acc4efd-eca2-4f96-930d-4ac9ec0f6dfc" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|9E0([9B])\|" PeriodRefire="Deny" RefirePeriodExpression="5000">
+                <Actions>
+                  <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="go intercards" ActionType="UseTTS">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="9" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="donut" ActionType="UseTTS">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${1}" ExpressionTypeL="String" ExpressionR="B" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Curse of Darkness Debuff Call" Id="2a8daf1a-cc38-4aaa-828c-fbe1db64b40b" RegularExpression="^26\|[^\|]*\|953\|[^\|]*\|(?&lt;duration&gt;\d*)\.00\|[^\|]*\|[^\|]*\|[^\|]*\|(?&lt;name&gt;[^\|]*)\|" PeriodRefire="Deny">
+                <Actions>
+                  <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="look out" VariableOp="SetString" VariableName="embrace" VariableExpression="forward" ActionType="UseTTS" ExecutionDelayExpression="(${duration}-5)*1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Lateral|Core Phaser" Id="8e07d9fa-cb98-4b9d-9498-eb1a6befff06" RegularExpression="^20\|[^|]*\|(?&lt;mID&gt;[^|]*)\|[^|]*\|9E(?&lt;cast&gt;2F|30)\|(?:[^|]*\|){4}(?&lt;x&gt;[^.]*)\." PeriodRefire="Deny">
+                <Actions>
+                  <Action OrderNumber="1" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="sides then middle" TriggerText="${?d:&#xD;&#xA;2F = ides  iddle,&#xD;&#xA;30 = iddle  ides&#xD;&#xA;[${cast}]}" ActionType="UseTTS" Description="East TTS lateral-core" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="Numeric" ExpressionR="100" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_me.x}" ExpressionTypeL="Numeric" ExpressionR="119" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                      <ConditionSingle Enabled="true" ExpressionL="${cast}" ExpressionTypeL="String" ExpressionR="2F" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="middle then sides" TriggerText="${?d:&#xD;&#xA;2F = ides  iddle,&#xD;&#xA;30 = iddle  ides&#xD;&#xA;[${cast}]}" ActionType="UseTTS" Description="East TTS core-lateral" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="Numeric" ExpressionR="100" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_me.x}" ExpressionTypeL="Numeric" ExpressionR="119" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                      <ConditionSingle Enabled="true" ExpressionL="${cast}" ExpressionTypeL="String" ExpressionR="30" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="3" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="sides then middle" TriggerText="${?d:&#xD;&#xA;2F = iddle  ides,&#xD;&#xA;30 = ides  iddle&#xD;&#xA;[${cast}]}" ActionType="UseTTS" Description="West TTS lateral-core" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="Numeric" ExpressionR="100" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_me.x}" ExpressionTypeL="Numeric" ExpressionR="81" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                      <ConditionSingle Enabled="true" ExpressionL="${cast}" ExpressionTypeL="String" ExpressionR="2F" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" SoundRouting="None" TTSRouting="None" UseTTSTextExpression="middle then sides" TriggerText="${?d:&#xD;&#xA;2F = iddle  ides,&#xD;&#xA;30 = ides  iddle&#xD;&#xA;[${cast}]}" ActionType="UseTTS" Description="West TTS core-lateral" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="Numeric" ExpressionR="100" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_me.x}" ExpressionTypeL="Numeric" ExpressionR="81" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                      <ConditionSingle Enabled="true" ExpressionL="${cast}" ExpressionTypeL="String" ExpressionR="30" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${ev:Swap}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+            </Triggers>
           </Folder>
         </Folders>
         <Triggers />
